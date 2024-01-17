@@ -1,0 +1,725 @@
+// portfolio2.scss
+/* portfolio2.css */
+
+@import "../common/variable";
+@import "../common/mixin";
+
+/* fonts.css */
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Black-Han Sans';
+  src: url("../../font/Black_Han_Sans/BlackHanSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+  /* 전체 레이아웃 설정 */
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  margin: auto;
+  background-color: $color_white;
+  // padding: 0 100px;
+  font-family: "S-Core_Dream_OTF";
+  font-weight: 300;
+
+  // #headbox
+  /* #headbox */
+  #headbox {
+    width: 100%;
+    height: 70px;
+    line-height: 30px;
+    padding: 20px 100px;
+    position: sticky;
+    display: flex;
+    top: 0;
+    box-sizing: border-box;
+    background-color: $color_white;
+    z-index: 1000;
+
+    .headinner {
+      width: 75%;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+
+      /* logo */
+      h1 {
+        width: auto;
+        height: 100%;
+
+        a {
+          font-family: 'Black-Han-Sans';
+          font-size: map-get($map: $font_size, $key: projectsub);
+          font-weight: bolder;
+          letter-spacing: 9px;
+
+          .title_O {
+            color: $color_yellow;
+          }
+          .title_H {
+            color: $color_blue;
+          }
+          .title_A {
+            color: $color_orange;
+          }
+        }
+      }
+    }
+    .gnb {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      color: $color_black;
+      font-family: $font_family_score;
+      font-size: map-get($map:$font_size , $key:content1);
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+
+      & label {
+        width: 20%;
+        height: auto;
+        text-align: center;
+      }
+    }
+  }
+
+  main {
+    // #home
+    /* #home */
+    #home {
+      width: 100%;
+      height: 92vh;
+      display: flex;
+      padding: 40px 100px;
+      
+      .left_span {
+        position: relative;
+        right: 43%;
+        width: 330px;
+        rotate: 90deg;
+        font-size: map-get($map: $font_size, $key: pointcontent);
+        font-weight: $font_weight_regular;
+        // text-align: center;
+      }
+      .middle_content {
+        width: 420px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        & p:first-child {
+          width: 100%;
+          margin-top: 20%;
+          font-size: map-get($map: $font_size, $key: pointcontent);
+          font-weight: $font_weight_bold;
+          color: $color_red;
+        }
+        .cover_img img{
+          width: 335px;
+          height: 335px;
+          background-color: #eee;
+          margin-top: 30px;
+        }
+        & .blue_H {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          top: 385px;
+          left: 410px;
+          transform: rotate(-8.67deg);
+          background: $color_blue;
+        }
+        & .orange_A {
+          position: absolute;
+          width: 0px;
+          height: 0px;
+          border-bottom: 65px solid $color_orange;
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+          top: 250px;
+          left: 800px;
+          transform: rotate(36.306deg);
+        }
+        & .yellow_O {
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          top: 585px;
+          left: 760px;          
+          transform: rotate(36.306deg);
+          background-color: $color_yellow;
+        }
+        & p:last-child {
+          width: 100%;
+          margin-top: 10%;
+          font-size: map-get($map: $font_size, $key: pointcontent);
+          font-weight: $font_weight_medium;
+          color: $color_red;
+        }
+      }
+      .right_span {
+        position: relative;
+        left: 43%;
+        bottom: 143px;
+        width: 330px;
+        rotate: -90deg;
+        font-size: map-get($map: $font_size, $key: pointcontent);
+        font-weight: $font_weight_bold;
+        color: $color_red;
+        // text-align: center;
+      }
+    }
+
+    // #introduce
+    /* #introduce */
+    #introduce {
+      width: 100%;
+      height: 100%;
+      padding: 40px 100px;
+
+
+      h2 {
+        @include h2;
+      }
+
+      .about_inner {
+        width: 100%;
+        display: flex;
+        
+        .about_left {
+          width: 380px;
+
+          .greeting {
+            width: 269px;
+            height: 66px;
+
+            p {
+              font-size: map-get($map: $font_size, $key: pointcontent);
+              font-weight: $font_weight_medium;
+            }
+          }
+          .id_picture {
+            // width: 232px;
+            // height: 232px;
+            // margin-top: 15px;
+            // border-radius: 50%;
+            // background-color: #eee;
+
+            img {
+              width: 232px;
+              height: 232px;
+              margin-top: 15px;
+              border-radius: 50%;
+              background-color: #eee;
+            }
+          }
+          .sort_introduce {
+            width: 298px;
+            height: 187px;
+            margin-top: 30px;
+
+            span {
+              font-size: map-get($map: $font_size, $key: content1);
+            }
+          }
+        }
+        .about_midle {
+          width: 390px;
+
+          article h3 {
+            @include h3;
+            margin-top: 46px;
+          }
+          .profile h3 {
+            margin-top: 90px;
+          }
+          p {
+            margin-top: 15px;
+            font-size: map-get($map: $font_size, $key: content1);
+          }
+        }
+        .about_right {
+          width: 310px;
+
+          .skill {
+            margin-top: 90px;
+            display: flex;
+            margin-right: 45px;
+
+            .skill_title {
+              width: 66px;
+              height: 55px;
+              font-size: map-get($map: $font_size, $key: content1);
+              font-weight: $font_weight_bold;
+            }
+            .skill_title span:first-child::after {
+              content: '';
+              width: 13px;
+              margin: 10px 0;
+              display: block;
+              flex-grow: 1;
+              font-size: 0px;
+              line-height: 0px;
+              border: 1px solid #000
+            }
+            .skillBox {
+              display: flex;
+              flex-direction: column;
+
+              .skill_inner {
+                width: auto;
+                display: flex;
+                margin: 12px 0;
+                
+                p {
+                  font-size: map-get($map: $font_size, $key: content1);
+                }
+
+                .checkbox {
+                  width: 18px;
+                  height: 18px;
+                  line-height: 24px;
+                  border: 1px solid #cdcdcd;
+                  margin-right: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // #advantage
+    /* advantage */
+    #advantage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      padding: 40px 100px;
+      // padding-top: 140px;
+      z-index: 1;
+
+      .advantageBox {
+        position: relative;
+        flex: 1;
+        padding: 90px 26px 37px;
+        // opacity: 0.6;
+        transition: flex 1s, opacity 1s;
+        z-index: 1;
+        cursor: pointer;
+      }
+      .advantageBox:hover {
+        flex: 1.5;
+        opacity: 1;
+        z-index: 2;
+      }
+      .advantageBox:hover::before {
+        left: 0px;
+        opacity: 1;
+      }
+      .advantageBox:hover .advantage_inner .advantage_txt {
+        width: 75%;
+
+        h2 {
+          font-size: map-get($map: $font_size, $key: emphasis);
+          padding-top: 0px;
+        }
+        .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+          // width: 120px;
+        }
+      }
+      .advantageBox:hover .advantage_inner figure {
+        height: 25vh;
+        filter: saturate(120%);
+        transform: translateY(3vh);
+      }
+      .advantageBox::before {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 95%;
+        background: $color_yellow;
+        position: absolute;
+        top: 40px;
+        left: -50px;
+        opacity: 0;
+        transition: 1s;
+      }
+      .advantageBox .advantage_inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        position: relative;
+
+        .advantage_txt {
+          width: 100%;
+          transition: 0.5s;
+          margin-bottom: 40px;
+
+          h2 {
+            margin-bottom: 40px;
+            padding-top: 70px;
+            font-size: map-get($map: $font_size, $key: emphasis);
+            font-weight: $font_weight_bold;
+            color: $color_red;
+            transition: 1s;
+          }
+        }
+      }
+      .advantageBox .advantage_inner .advantage_txt h2::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: $color_blue;
+        margin-top: 20px;
+        transition: 1.5s;
+      }
+      .advantageBox .advantage_inner .advantage_txt p {
+        font-size: map-get($map: $font_size, $key: pointcontent);
+        font-weight: $font_weight_bold;
+      }
+      .advantageBox .advantage_inner .advantage_txt p:last-child {
+        font-size: map-get($map: $font_size, $key: content1);
+        font-weight: $font_weight_regular;
+        margin-top: 10px;
+      }
+      .advantageBox .advantage_inner figure {
+        width: 100%;
+        height: 118px;
+        background: #777;
+        transform-origin: left center;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        filter: saturate(10%);
+        transition: 1s;
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    // #project
+    /* #project */
+    #project {
+      width: 100%;
+      height: auto;
+      padding: 40px 100px 0px;
+
+      h2 {
+        @include h2;
+      }
+
+      // 프로젝트 설명
+      /* 프로젝트 설명 */
+      .project_intro {
+        display: flex;
+        margin-top: 32px;
+        padding: 40px 0;
+        gap: 88px;
+
+        .intro_txt {
+          width: 350px;
+          
+          h3 {
+            font-size: map-get($map: $font_size, $key: projecttitle);
+            font-weight: $font_weight_bold;
+            text-align: center;
+          }
+          .sub_txt {
+            font-size: map-get($map: $font_size, $key: content1);
+            text-align: center;
+          }
+          .detail {
+            display: flex;
+            gap: 36px;
+            margin-top: 50px;
+
+            .subtitle {
+              p {
+                font-size: map-get($map: $font_size, $key: subtitle);
+                font-weight: $font_weight_bold;
+                line-height: 30px;
+              }
+            }
+            .intro_content {
+              p {
+                font-size: map-get($map: $font_size, $key: content1);
+                line-height: 30px;
+              }
+            }
+          }
+          .project_explanation {
+            width: 325px;
+            height: 197px;
+            margin-top: 50px;
+            background-color: #eee;
+          }
+        }
+        .mokup {
+          width: 632px;
+          height: 483px;
+          background-color: #eee;
+          img {}
+        }
+      }
+
+      // 가이드라인 
+      /* 가이드라인 */
+      .guide {
+        width: 100%;
+        height: auto;
+        padding: 40px 0;
+
+        h3 {
+          font-size: map-get($map: $font_size, $key: projectsub);
+          font-weight: $font_weight_bold;
+          text-transform: capitalize;
+        }
+        .guide_content {
+          display: flex;
+          gap: 54px;
+
+          h4 {
+            font-size: map-get($map: $font_size, $key: subtitle);
+            font-weight: $font_weight_medium;
+            text-transform: capitalize;
+          }
+
+          .color_part {
+            width: 324px;
+            height: 482px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #eee;
+
+            h4 {
+              height: 130px;
+            }
+          }
+        }
+        .font_part {
+          width: 324px;
+          height: 482px;
+          margin-top: 30px;
+          background-color: #eee;
+        }
+        .icon_part {
+          width: 324px;
+          height: 482px;
+          margin-top: 30px;
+          background-color: #eee;
+        }
+      }
+
+      // 페이지 설명
+      /* 페이지 설명 */
+      .pagever_intro {
+        width: 100%;
+        height: auto;
+        padding-top: 40px;
+
+        h3 {
+          text-transform: capitalize;
+          font-size: map-get($map: $font_size, $key: projectsub);
+          font-weight: $font_weight_bold;
+        }
+        .mokup_img {
+          width: 526px;
+          height: 960px;
+          margin-top: 36px;
+          background-color: #eee;
+        }
+        .page_explanation {}
+        .page_explanation::after {
+          content: '';
+          width: 173px;
+          margin: 10px 0;
+          position: relative;
+          bottom: 800px;
+          left: 497px;
+          display: block;
+          flex-grow: 1;
+          font-size: 0px;
+          line-height: 0px;
+          border: 1px solid $color_blue;
+        }
+      }
+    }
+
+    // #contact
+    /* #contact */
+    #contact {
+      width: 100%;
+      height: 600px;
+      padding: 40px 100px;
+      background-color: #fffffc;
+
+      h2 {
+        @include h2;
+      }
+      .img_container {
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        display: flex;
+
+        img {
+          width: 240px;
+          height: 240px;
+          margin: auto;
+        }
+      }
+      p {
+        width: 100%;
+        height: 36px;
+        font-size: map-get($map: $font_size, $key: emphasis);
+        font-weight: $font_weight_bold;
+        text-align: center;
+        color: $color_red;
+        text-transform: capitalize;
+      }
+      .personal_data {
+        
+        p:first-child {
+          width: 100%;
+          height: 18px;
+          margin-top: 60px;
+          font-size: map-get($map: $font_size, $key: subtitle);
+          font-weight: $font_weight_bold;
+          text-align: center;
+        }
+        a {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+          margin-top: 25px;
+          text-align: center;
+          font-size: map-get($map: $font_size, $key: content1);
+        }
+      }
+    }
+  }
+
+  // #footBox
+  /* #footBox */
+  #footBox {
+    width: 100%;
+    position: sticky;
+    bottom: 0px;
+    z-index: 51;
+    
+    .footinner {
+      background-color: rgb(255, 255, 255);
+      border-top: 1px solid rgb(229, 229, 229);
+      bottom: 0px;
+      display: flex;
+      flex-direction: column;
+      font-size: 11px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+  
+      .fnb_container {
+        -webkit-box-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        padding: 0px 16px;
+        
+        h1 {
+          width: auto;
+          height: 100%;
+          line-height: 36px;
+          font-family: 'Black-Han-Sans';
+          font-size: map-get($map:$font_size , $key:fnb);
+          font-weight: $font_weight_bold;
+          letter-spacing: 9px;
+        }
+        .verical_divider {
+          background-color: rgb(225, 225, 225);
+          -webkit-box-flex: 0;
+          flex-grow: 0;
+          height: 12px;
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 1px;
+        }
+        .fnb {
+          -webkit-box-align: center;
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          height: 36px;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          width: 100%;
+          font-size: map-get($map: $font_size, $key: fnb);
+          font-weight: $font_weight_medium;
+          
+          & label {
+            width: 10%;
+            height: auto;
+            text-align: center;
+          }
+        }
+        .link_btn {
+          -webkit-box-align: center;
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          height: 36px;
+          -webkit-box-pack: end;
+          justify-content: flex-end;
+          width: 100%;
+          font-size: map-get($map: $font_size, $key: fnb);
+          gap: 20px;
+
+          a {
+            width: 86px;
+            height: 24px;
+            line-height: 24px;
+            font-weight: $font_weight_medium;
+          }
+
+          .resume_btn {
+            background-color: $color_yellow;
+            border-radius: 10px;
+          }
+          .github_btn {
+            background-color: $color_blue;
+            color: $color_white;
+            border-radius: 10px;
+          }
+          .notion_btn {
+            background-color: $color_orange;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
