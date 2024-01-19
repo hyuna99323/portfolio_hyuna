@@ -209,7 +209,7 @@
 }
 
 #wrap main #introduce .about_inner .about_left {
-  width: 380px;
+  width: 455px;
 }
 
 #wrap main #introduce .about_inner .about_left .greeting {
@@ -241,7 +241,7 @@
 }
 
 #wrap main #introduce .about_inner .about_midle {
-  width: 390px;
+  width: 315px;
 }
 
 #wrap main #introduce .about_inner .about_midle article h3 {
@@ -270,7 +270,7 @@
 #wrap main #introduce .about_inner .about_right .skill {
   margin-top: 90px;
   display: flex;
-  margin-right: 45px;
+  justify-content: end;
 }
 
 #wrap main #introduce .about_inner .about_right .skill .skill_title {
