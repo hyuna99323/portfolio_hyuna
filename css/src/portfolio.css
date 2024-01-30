@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: 'Black-Han Sans';
+  font-family: 'Black Han Sans', sans-serif;
   src: url("../../font/Black_Han_Sans/BlackHanSans-Regular.ttf");
   font-weight: 400;
   font-style: normal;
@@ -25,6 +25,9 @@
   font-family: "S-Core_Dream_OTF";
   font-weight: 300;
   /* #headbox */
+  /* #headBox */
+  /* #main */
+  /* #footBox */
   /* #footBox */
 }
 
@@ -39,6 +42,8 @@
   box-sizing: border-box;
   background-color: #fff;
   z-index: 1000;
+  /* headinner */
+  /* .gnb */
 }
 
 #wrap #headbox .headinner {
@@ -55,7 +60,7 @@
 }
 
 #wrap #headbox .headinner h1 a {
-  font-family: 'Black-Han-Sans';
+  font-family: "Black Han Sans", sans-serif;
   font-size: 20px;
   font-weight: bolder;
   letter-spacing: 9px;
@@ -91,11 +96,21 @@
   text-align: center;
 }
 
+#wrap #headbox .gnb label:hover {
+  color: #D71C02;
+  font-weight: 600;
+}
+
 #wrap main {
   /* #home */
+  /* #home */
+  /* #introduce */
   /* #introduce */
   /* advantage */
+  /* #advantage */
   /* #project */
+  /* #project */
+  /* #contact */
   /* #contact */
 }
 
@@ -107,12 +122,16 @@
 }
 
 #wrap main #home .left_span {
+  width: 338px;
+  height: 40px;
   position: relative;
-  right: 43%;
-  width: 330px;
+  right: 13.8%;
+  top: 298px;
   rotate: 90deg;
-  font-size: 18px;
-  font-weight: 300;
+  display: inline-block;
+  text-align: center;
+  line-height: 62px;
+  flex-shrink: 0;
 }
 
 #wrap main #home .middle_content {
@@ -130,11 +149,16 @@
   color: #D71C02;
 }
 
-#wrap main #home .middle_content .cover_img img {
-  width: 335px;
-  height: 335px;
-  background-color: #eee;
+#wrap main #home .middle_content .cover_img {
   margin-top: 30px;
+}
+
+#wrap main #home .middle_content .coverImgInner {
+  width: 335px;
+  height: 322px;
+  background-image: url(../../img/coverImg.JPG);
+  background-size: 100% 100%;
+  display: inline-block;
 }
 
 #wrap main #home .middle_content .blue_H {
@@ -179,14 +203,24 @@
 }
 
 #wrap main #home .right_span {
+  width: 338px;
+  height: 40px;
   position: relative;
-  left: 43%;
-  bottom: 143px;
-  width: 330px;
-  rotate: -90deg;
-  font-size: 18px;
-  font-weight: 600;
+  left: 13.8%;
+  top: 298px;
+  display: inline-block;
+  transform: rotate(-90deg);
+  text-align: center;
+  line-height: 60px;
+}
+
+#wrap main #home .right_span span {
   color: #D71C02;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 #wrap main #introduce {
@@ -222,12 +256,13 @@
   font-weight: 500;
 }
 
-#wrap main #introduce .about_inner .about_left .id_picture img {
+#wrap main #introduce .about_inner .about_left .id_picture {
   width: 232px;
   height: 232px;
   margin-top: 15px;
   border-radius: 50%;
-  background-color: #eee;
+  background-image: url(../../img/introduceImg.JPG);
+  background-size: 246px 300px;
 }
 
 #wrap main #introduce .about_inner .about_left .sort_introduce {
@@ -260,6 +295,7 @@
 
 #wrap main #introduce .about_inner .about_midle p {
   margin-top: 15px;
+  line-height: 22px;
   font-size: 14px;
 }
 
@@ -327,6 +363,7 @@
   position: relative;
   flex: 1;
   padding: 90px 26px 37px;
+  opacity: 0.6;
   transition: flex 1s, opacity 1s;
   z-index: 1;
   cursor: pointer;
@@ -348,8 +385,14 @@
 }
 
 #wrap main #advantage .advantageBox:hover .advantage_inner .advantage_txt h2 {
-  font-size: 30px;
+  font-size: 5vw;
   padding-top: 0px;
+}
+
+#wrap main #advantage .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+  width: 120px;
+  background: #006DA9;
+  height: 3px;
 }
 
 #wrap main #advantage .advantageBox:hover .advantage_inner figure {
@@ -400,7 +443,7 @@
   display: block;
   width: 40px;
   height: 2px;
-  background: #006DA9;
+  background: #777;
   margin-top: 20px;
   transition: 1.5s;
 }
@@ -432,16 +475,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.1);
 }
 
 #wrap main #project {
   width: 100%;
   height: auto;
-  padding: 40px 100px 0px;
-  /* 프로젝트 설명 */
-  /* 가이드라인 */
-  /* 페이지 설명 */
+  padding-top: 40px;
+  /* .portfolio_content - 포트폴리오 프로젝트 설명 */
+  /* 마녀배달부키키 프로젝트 설명 */
 }
 
 #wrap main #project h2 {
@@ -450,64 +491,799 @@
   font-weight: 500;
   color: #006DA9;
   text-transform: uppercase;
+  padding: 0 100px;
 }
 
-#wrap main #project .project_intro {
-  display: flex;
+#wrap main #project .portfolio_content {
   margin-top: 32px;
-  padding: 40px 0;
+  padding: 40px 100px 0;
+  /* 프로젝트 설명 */
+  /* project_intro - 프로젝트 설명 */
+  /* 가이드라인 */
+  /* guide - 가이드라인부분 */
+  /* 사이트 주기능 설명 */
+  /* pagever_intro - 사이트 주기능 설명 */
+}
+
+#wrap main #project .portfolio_content .project_intro {
+  display: flex;
   gap: 88px;
 }
 
-#wrap main #project .project_intro .intro_txt {
+#wrap main #project .portfolio_content .project_intro .intro_txt {
   width: 350px;
 }
 
-#wrap main #project .project_intro .intro_txt h3 {
+#wrap main #project .portfolio_content .project_intro .intro_txt h3 {
   font-size: 32px;
   font-weight: 600;
   text-align: center;
 }
 
-#wrap main #project .project_intro .intro_txt .sub_txt {
+#wrap main #project .portfolio_content .project_intro .intro_txt .sub_txt {
   font-size: 14px;
   text-align: center;
 }
 
-#wrap main #project .project_intro .intro_txt .detail {
+#wrap main #project .portfolio_content .project_intro .intro_txt .detail {
   display: flex;
   gap: 36px;
   margin-top: 50px;
 }
 
-#wrap main #project .project_intro .intro_txt .detail .subtitle p {
+#wrap main #project .portfolio_content .project_intro .intro_txt .detail .subtitle p {
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
 }
 
-#wrap main #project .project_intro .intro_txt .detail .intro_content p {
+#wrap main #project .portfolio_content .project_intro .intro_txt .detail .intro_content p {
   font-size: 14px;
   line-height: 30px;
 }
 
-#wrap main #project .project_intro .intro_txt .project_explanation {
-  width: 325px;
+#wrap main #project .portfolio_content .project_intro .intro_txt .project_explanation {
+  width: 350px;
   height: 197px;
   margin-top: 50px;
-  background-color: #eee;
 }
 
-#wrap main #project .project_intro .mokup {
+#wrap main #project .portfolio_content .project_intro .intro_txt .project_explanation p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+#wrap main #project .portfolio_content .project_intro .mokup {
   width: 632px;
   height: 483px;
-  background-color: #eee;
+}
+
+#wrap main #project .portfolio_content .project_intro .mokup img {
+  width: 100%;
+}
+
+#wrap main #project .portfolio_content .guide {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  /* 포트폴리오 프로젝트 설명 */
+  /* .port_content - 포트폴리오 프로젝트 설명 */
+}
+
+#wrap main #project .portfolio_content .guide h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content {
+  display: flex;
+  gap: 44px;
+  /* .logo_part - 로고 가이드라인 */
+  /* .font_part - 폰트 설명  */
+  /* color_part  - 가이드라인 color부분 */
+  /* color_part  - 가이드라인 color부분 */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part {
+  width: 350px;
+  height: auto;
+  margin-top: 30px;
+  flex-direction: column;
+  margin-left: 15px;
+  /* .font_color - 폰트 색상 */
+  /* .fontColorExp */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo {
+  margin-top: 22px;
+  margin-left: 5px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo span {
+  font-weight: 300;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 9px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo .title_O {
+  color: #FDD131;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo .title_H {
+  color: #006DA9;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo .title_A {
+  color: #FB8145;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part h5 {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  margin-top: 94px;
+  margin-left: 5px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font {
+  width: 340px;
+  margin-top: 10px;
+  margin-left: 5px;
+  display: flex;
+  gap: 14px;
+  /* .logoFontEx - 폰트 예시 이미지 */
+  /* 글꼴 설명 */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx {
+  width: 112px;
+  height: 156px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  /* .font_name - 폰트명 */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx span {
+  width: 100%;
+  height: 104px;
+  display: block;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 36px;
+  text-align: center;
+  line-height: 104px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name {
+  width: 100%;
+  height: 33px;
+  padding: 8.3px;
+  border-top: 1.5px solid #eee;
+  border-radius: 4px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p:last-child {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp {
+  width: 214px;
+  height: auto;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation {
+  font-size: 14px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation:nth-last-child(-n+2) {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .colorSubTilte {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  margin: 55px 0 20px 5px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color {
+  width: 100%;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  /* .color_list */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list {
+  display: flex;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_yellow {
+  width: 22px;
+  height: 22px;
+  margin-right: 14px;
+  border-radius: 50%;
+  background: #FDD131;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_bule {
+  width: 22px;
+  height: 22px;
+  margin-right: 14px;
+  background: #006DA9;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_orange {
+  width: 0px;
+  height: 0px;
+  border-bottom: 22px solid #FB8145;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .fontColorExp {
+  margin-top: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .fontColorExp p {
+  font-size: 14px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .logo_part .fontColorExp p:last-child {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part {
+  width: 328px;
+  height: 482px;
+  margin-top: 30px;
+  /* .font_ex */
+  /* 폰트 사이즈 가이드라인 */
+  /* .font_size - 폰트 사이즈 가이드라인 */
+  /* .fontSize32 */
+  /* .fontSize11 */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part h5 {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  margin-top: 18px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex {
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  /* .font_name */
+  /* .font_regular */
+  /* .font_medium */
+  /* .font_bold */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex span {
+  width: 100%;
+  height: 72px;
+  display: block;
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 76px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
+  width: 100%;
+  height: 33px;
+  padding: 8.3px;
+  border-top: 1.5px solid #eee;
+  border-radius: 4px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p:last-child {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_regular {
+  width: 98px;
+  height: 118px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium {
+  width: 98px;
+  height: 118px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium span {
+  width: 100%;
+  height: 72px;
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 76px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold {
+  width: 98px;
+  height: 118px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold span {
+  width: 100%;
+  height: 72px;
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 76px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size {
+  margin-top: 15px;
+  /* .fontSize30 */
+  /* .fontSize20 */
+  /* .fontSize18 */
+  /* .fontSize16 */
+  /* .fontSize14 */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size span {
+  font-size: 14px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize30 {
+  margin-top: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize30 p {
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize20 {
+  margin-top: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize20 p {
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize18 {
+  margin-top: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize18 p {
+  font-size: 18px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize16 {
+  margin-top: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize16 p {
+  font-size: 16px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize14 {
+  margin-top: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize14 p {
+  font-size: 14px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .fontSize32 p {
+  font-size: 32px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .fontSize11 {
+  margin-top: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .font_part .fontSize11 p {
+  font-size: 11px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part {
+  width: 300px;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  /* .color_content - 사용한 색상 가이드라인 */
+  /* .button_color */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content {
+  width: 300px;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  /* .icon_color */
+  /* .bottom_color */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .colorSubTitle {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content span {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color {
+  margin-top: 18px;
+  display: flex;
+  gap: 50px;
+  /* .icon_yellow */
+  /* .icon_bule */
+  /* .icon_orange */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow .yellow_shapes {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FDD131;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule .bule_shapes {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #006DA9;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange .orange_shapes {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FB8145;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color {
+  margin-top: 30px;
+  display: flex;
+  gap: 24px;
+  /* .point_color */
+  /* .background_color */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color .icon_red {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 50%;
+  background-color: #D71C02;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .icon_white {
+  width: 60px;
+  height: 60px;
+  margin-left: 8.77px;
+  margin-top: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  background-color: #fffffc;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .backgroundColorTxt {
+  text-align-last: left;
+  margin-left: 8.77px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color {
+  margin-top: 94px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 500;
+  /* .button_content */
+  /* 버튼 마우스 오버 시 색상 및 굵기 */
+  /* .button_hover */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content {
+  width: 294px;
+  display: flex;
+  margin-left: 5px;
+  gap: 18px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content .resume_btn {
+  width: 86px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #FDD131;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content .github_btn {
+  width: 86px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #006DA9;
+  color: #fff;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content .notion_btn {
+  width: 86px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #FB8145;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover {
+  display: flex;
+  margin-left: 5px;
+  gap: 30px;
+  /* .nomal_part */
+  /* .hover_part */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover h5 {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover span {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part .nomal_ex {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  padding-top: 20px;
+  text-align: center;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part {
+  /* .hover_ex */
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  padding-top: 20px;
+  text-align: center;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex span {
+  font-weight: 500;
+  color: #D71C02;
+}
+
+#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex p {
+  color: #D71C02;
+}
+
+#wrap main #project .portfolio_content .pagever_intro {
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .portfolio_mokup {
+  width: 526px;
+  height: 960px;
+  margin-top: 36px;
+  background-image: url(../../img/portfolio_capture.png);
+  background-size: 100% 100%;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .arrowLineBlue svg {
+  width: auto;
+  stroke-width: 3px;
+  position: relative;
+  top: 150px;
+  left: 410px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .arrowLineYellow svg {
+  width: auto;
+  stroke-width: 3px;
+  position: relative;
+  top: 450px;
+  left: 358px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .arrowLineOrenge svg {
+  width: auto;
+  stroke-width: 3px;
+  position: relative;
+  top: 650px;
+  left: 397px;
+}
+
+#wrap main #project .kiki_content {
+  background-color: #A5C2D3;
+  padding: 92px 100px 0;
+}
+
+#wrap main #project .kiki_content .project_intro {
+  display: flex;
+  gap: 88px;
+}
+
+#wrap main #project .kiki_content .project_intro .mokup {
+  width: 632px;
+  height: 483px;
+}
+
+#wrap main #project .kiki_content .project_intro .mokup img {
+  width: 100%;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt {
+  width: 350px;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt h3 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt .sub_txt {
+  font-size: 14px;
+  text-align: center;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt .detail {
+  display: flex;
+  gap: 36px;
+  margin-top: 50px;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt .detail .subtitle p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt .detail .intro_content p {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt .project_explanation {
+  width: 350px;
+  height: 197px;
+  margin-top: 50px;
+}
+
+#wrap main #project .kiki_content .project_intro .intro_txt .project_explanation p {
+  font-size: 14px;
+  line-height: 25px;
 }
 
 #wrap main #project .guide {
   width: 100%;
   height: auto;
   padding: 40px 0;
+  color: #0A4B41;
 }
 
 #wrap main #project .guide h3 {
@@ -518,41 +1294,474 @@
 
 #wrap main #project .guide .guide_content {
   display: flex;
-  gap: 54px;
+  gap: 44px;
 }
 
-#wrap main #project .guide .guide_content h4 {
+#wrap main #project .guide .guide_content .logo_part {
+  width: 350px;
+  height: auto;
+  margin-top: 30px;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+#wrap main #project .guide .guide_content .logo_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .guide .guide_content .color_part {
-  width: 324px;
-  height: 482px;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: #eee;
+#wrap main #project .guide .guide_content .logo_part .logo {
+  margin-top: 22px;
+  margin-left: 5px;
 }
 
-#wrap main #project .guide .guide_content .color_part h4 {
-  height: 130px;
+#wrap main #project .guide .guide_content .logo_part .logo img {
+  width: 118px;
+  height: 22px;
+}
+
+#wrap main #project .guide .guide_content .logo_part .logo p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#wrap main #project .guide .guide_content .logo_part .logo p:last-child {
+  font-size: 11px;
+  color: #888;
+}
+
+#wrap main #project .guide .guide_content .logo_part h5 {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  margin-top: 24px;
+  margin-left: 5px;
+}
+
+#wrap main #project .guide .guide_content .logo_part .button_box {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+#wrap main #project .guide .guide_content .logo_part .button_box .button_content {
+  width: 78px;
+  height: 96px;
+  border: 1.5px solid #0A4B41;
+  border-radius: 4px;
+}
+
+#wrap main #project .guide .guide_content .logo_part .button_box .button_content img {
+  width: 100%;
+  height: 54px;
+}
+
+#wrap main #project .guide .guide_content .logo_part .button_box .button_content .font_name {
+  width: 100%;
+  height: 33px;
+  padding: 8.3px;
+  border-top: 1.5px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 3px 0;
+}
+
+#wrap main #project .guide .guide_content .logo_part .button_box .button_content .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap main #project .guide .guide_content .logo_part .button_box .button_content .font_name p {
+  font-size: 12px;
+  text-align: center;
+  line-height: 27px;
 }
 
 #wrap main #project .guide .font_part {
-  width: 324px;
+  width: 328px;
   height: 482px;
   margin-top: 30px;
-  background-color: #eee;
+  /* .font_ex */
+  /* 폰트 사이즈 가이드라인 */
+  /* 96 */
+  /* .fontSize12 */
 }
 
-#wrap main #project .guide .icon_part {
-  width: 324px;
-  height: 482px;
+#wrap main #project .guide .font_part h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#wrap main #project .guide .font_part h5 {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  margin-top: 18px;
+}
+
+#wrap main #project .guide .font_part .font_ex {
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  /* .font_name */
+  /* .font_regular */
+  /* .font_medium */
+  /* .font_bold */
+}
+
+#wrap main #project .guide .font_part .font_ex span {
+  width: 100%;
+  height: 72px;
+  display: block;
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 76px;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_name {
+  width: 100%;
+  height: 33px;
+  padding: 8.3px;
+  border-top: 1.5px solid #eee;
+  border-radius: 4px;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_name p:last-child {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_regular {
+  width: 98px;
+  height: 118px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_medium {
+  width: 98px;
+  height: 118px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_medium span {
+  width: 100%;
+  height: 72px;
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 76px;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_bold {
+  width: 98px;
+  height: 118px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+#wrap main #project .guide .font_part .font_ex .font_bold span {
+  width: 100%;
+  height: 72px;
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 76px;
+}
+
+#wrap main #project .guide .font_part .font_size {
+  margin-top: 15px;
+  /* .fontSize30 */
+  /* .fontSize20 */
+  /* .fontSize18 */
+  /* .fontSize16 */
+  /* .fontSize14 */
+}
+
+#wrap main #project .guide .font_part .font_size span {
+  font-size: 14px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize30 {
+  margin-top: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize30 p {
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize20 {
+  margin-top: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize20 p {
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize18 {
+  margin-top: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize18 p {
+  font-size: 18px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize16 {
+  margin-top: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize16 p {
+  font-size: 16px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize14 {
+  margin-top: 10px;
+}
+
+#wrap main #project .guide .font_part .font_size .fontSize14 p {
+  font-size: 14px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .guide .font_part .font_regular, #wrap main #project .guide .font_part .font_medium, #wrap main #project .guide .font_part .font_bold {
+  background-color: #fff;
+}
+
+#wrap main #project .guide .font_part .fontSize96 p {
+  font-size: 44px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .guide .font_part .fontSize12 p {
+  font-size: 12px;
+  letter-spacing: 10px;
+}
+
+#wrap main #project .color_part {
+  width: 300px;
+  height: auto;
   margin-top: 30px;
-  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .color_part h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#wrap main #project .color_part .colorSubTitle {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  margin-top: 18px;
+  margin-left: 5px;
+}
+
+#wrap main #project .color_part .back_color {
+  display: flex;
+  margin-top: 18px;
+  margin-left: 5px;
+  flex-wrap: wrap;
+  column-gap: 26px;
+  row-gap: 20px;
+}
+
+#wrap main #project .color_part .back_color span {
+  width: 100%;
+  height: 34px;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 31px;
+}
+
+#wrap main #project .color_part .back_color .back_content {
+  width: 76px;
+  height: 104px;
+  border: 1.5px solid #888;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+#wrap main #project .color_part .back_color .back_content .green_shapes {
+  width: 73px;
+  height: 72px;
+  background-color: #0a4b41;
+}
+
+#wrap main #project .color_part .back_color .back_content .blue_shapes {
+  width: 73px;
+  height: 72px;
+  background-color: #1145a2;
+}
+
+#wrap main #project .color_part .back_color .back_content .bagie_shapes {
+  width: 73px;
+  height: 72px;
+  background-color: #d7dac7;
+}
+
+#wrap main #project .color_part .back_color .back_content .black_shapes {
+  width: 73px;
+  height: 72px;
+  background-color: #000000;
+}
+
+#wrap main #project .color_part .back_color .back_content .skyBule_shapes {
+  width: 73px;
+  height: 72px;
+  background-color: #b7cae8;
+}
+
+#wrap main #project .color_part .back_color .back_content .purple_shapes {
+  width: 73px;
+  height: 72px;
+  background-color: #4f4259;
+}
+
+#wrap main #project .point_part {
+  margin-top: 30px;
+  /* .font_bold */
+}
+
+#wrap main #project .point_part h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#wrap main #project .point_part .kikiPointColor {
+  display: flex;
+  gap: 32px;
+  margin-top: 18px;
+  margin-left: 5px;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointContent {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointContent .back_red {
+  width: 76px;
+  height: 104px;
+  border: 1.5px solid #888;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 10px;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointContent .back_red span {
+  width: 100%;
+  height: 34px;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  line-height: 31px;
+  text-transform: uppercase;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointContent .back_red .red_shapes {
+  width: 73px;
+  height: 72px;
+  background-color: #d71e15;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointfont {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold {
+  width: 84px;
+  height: 104px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold span {
+  width: 100%;
+  height: 66px;
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 68px;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
+  width: 100%;
+  height: 33px;
+  padding: 8.3px;
+  border-top: 1.5px solid #eee;
+  border-radius: 4px;
+  height: auto;
+  padding: 2px 4px;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+  font-size: 12px;
+}
+
+#wrap main #project .pointFontSize {
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+#wrap main #project .pointFontSize span {
+  font-size: 14px;
+}
+
+#wrap main #project .pointFontSize p {
+  font-size: 32px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
 }
 
 #wrap main #project .pagever_intro {
@@ -562,30 +1771,26 @@
 }
 
 #wrap main #project .pagever_intro h3 {
-  text-transform: capitalize;
   font-size: 20px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
-#wrap main #project .pagever_intro .mokup_img {
+#wrap main #project .pagever_intro .pagever_content {
+  display: flex;
+  gap: 30px;
+  margin-top: 36px;
+}
+
+#wrap main #project .pagever_intro .pagever_content .kiki_mockup {
   width: 526px;
   height: 960px;
-  margin-top: 36px;
   background-color: #eee;
 }
 
-#wrap main #project .pagever_intro .page_explanation::after {
-  content: '';
-  width: 173px;
-  margin: 10px 0;
-  position: relative;
-  bottom: 800px;
-  left: 497px;
-  display: block;
-  flex-grow: 1;
-  font-size: 0px;
-  line-height: 0px;
-  border: 1px solid #006DA9;
+#wrap main #project .pagever_intro .pagever_content .page_explanation {
+  width: 524px;
+  background-color: #eee;
 }
 
 #wrap main #contact {
@@ -593,6 +1798,7 @@
   height: 600px;
   padding: 40px 100px;
   background-color: #fffffc;
+  /* .personal_data */
 }
 
 #wrap main #contact h2 {
@@ -604,26 +1810,29 @@
 }
 
 #wrap main #contact .img_container {
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  display: flex;
-}
-
-#wrap main #contact .img_container img {
   width: 240px;
   height: 240px;
   margin: auto;
+  justify-content: center;
+  display: flex;
+  background-image: url(../../img/endingImg.JPG);
+  background-size: 100% 100%;
 }
 
 #wrap main #contact p {
   width: 100%;
   height: 36px;
+  margin-top: 35px;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
   color: #D71C02;
   text-transform: capitalize;
+}
+
+#wrap main #contact .personal_data {
+  /* p:first-child */
+  /* a */
 }
 
 #wrap main #contact .personal_data p:first-child {
@@ -650,6 +1859,7 @@
   position: sticky;
   bottom: 0px;
   z-index: 51;
+  /* .footinner */
 }
 
 #wrap #footBox .footinner {
@@ -662,6 +1872,7 @@
   position: relative;
   text-align: center;
   width: 100%;
+  /* .fnb_container */
 }
 
 #wrap #footBox .footinner .fnb_container {
@@ -670,6 +1881,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 16px;
+  /* h1 */
+  /* .verical_divider */
+  /* .fnb */
+  /* .link_btn */
 }
 
 #wrap #footBox .footinner .fnb_container h1 {
@@ -708,15 +1923,22 @@
   text-align: center;
 }
 
+#wrap #footBox .footinner .fnb_container .fnb label:hover {
+  color: #D71C02;
+  font-weight: 600;
+}
+
 #wrap #footBox .footinner .fnb_container .link_btn {
-  align-items: center;
+  width: 100%;
+  height: 36px;
   display: flex;
   flex-direction: row;
-  height: 36px;
-  justify-content: flex-end;
-  width: 100%;
-  font-size: 11px;
   gap: 20px;
+  font-size: 11px;
+  align-items: center;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-box-pack: end;
 }
 
 #wrap #footBox .footinner .fnb_container .link_btn a {
@@ -741,3 +1963,5 @@
   background-color: #FB8145;
   border-radius: 10px;
 }
+
+/* #wrap */

@@ -8,27 +8,12 @@
 // image
 
 
-@mixin sectionBasic () {
+@mixin sectionBasic() {
   width: 100%;
   height: 100vh;
 }
 
-@mixin project_flex () {
-  width: 100%;
-  // height: 210px;
-  display: flex;
-  margin-top: 100px;
-  // padding: 0 50px;
-}
-
-@mixin device_img () {
-  // width: 100%;
-  height: 100%;
-  margin: auto;
-  margin-right: 110px;
-}
-
-@mixin h2 () {
+@mixin h2() {
   text-align: right;
   font-size: map-get($map: $font_size, $key: subtitle);
   font-weight: $font_weight_medium;
@@ -36,7 +21,7 @@
   text-transform: uppercase;
 }
 
-@mixin h3 () {
+@mixin h3() {
   width: auto;
   height: 24px;
   font-size: map-get($map: $font_size, $key: subtitle);
@@ -45,10 +30,302 @@
   line-height: 24px;
 }
 
-@mixin cloneImg () {
-  font-size: map-get($map: $font_size_m, $key: pointContent2);
-  position: relative;
+@mixin guidelineh3 {
+  font-size: map-get($map: $font_size, $key: projectsub);
+  font-weight: $font_weight_bold;
+  text-transform: capitalize;
 }
+
+@mixin h4() {
+  font-size: map-get($map: $font_size, $key: subtitle);
+  font-weight: $font_weight_medium;
+  text-transform: capitalize;
+}
+
+@mixin h5() {
+  width: 100%;
+  font-size: map-get($map: $font_size, $key: subtitle);
+  font-weight: $font_weight_medium;
+  color: $color_gray;
+}
+
+@mixin guideBox() {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+}
+
+@mixin guideflex() {
+  display: flex;
+  gap: 44px;
+}
+
+@mixin guidelogoContent() {
+  width: 350px;
+  height: auto;
+  margin-top: 30px;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+@mixin fontName() {
+  width: 100%;
+  height: 33px;
+  padding: 8.3px;
+  border-top: 1.5px solid #eee;
+  border-radius: 4px;
+
+  p {
+    font-size: map-get($map: $font_size, $key: content1);
+    font-weight: $font_weight_medium;
+  }
+}
+
+@mixin logoMargin() {
+  margin-top: 22px;
+  margin-left: 5px;
+}
+
+@mixin logoInP {
+  margin-top: 10px;
+  font-size: map-get($map: $font_size, $key: content1);
+}
+
+@mixin fontPartBox() {
+  width: 328px;
+  height: 482px;
+  margin-top: 30px;
+
+  h4 {
+    @include h4();
+  }
+
+  h5 {
+    @include h5();
+    margin-top: 18px;
+  }
+
+  .font_ex {
+    margin-top: 18px;
+    display: flex;
+    gap: 18px;
+
+    span {
+      width: 100%;
+      height: 72px;
+      display: block;
+      font-size: 36px;
+      font-weight: $font_weight_regular;
+      text-align: center;
+      line-height: 76px;
+    }
+
+    .font_name {
+      @include fontName();
+      p {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      p:last-child {
+        font-size: 12px;
+        font-weight: 300;
+      }
+    } /* .font_name */
+
+    .font_regular {
+      width: 98px;
+      height: 118px;
+      border: 1.5px solid #ccc;
+      border-radius: 4px;
+    } /* .font_regular */
+
+    .font_medium {
+      width: 98px;
+      height: 118px;
+      border: 1.5px solid #ccc;
+      border-radius: 4px;
+
+      span {
+        width: 100%;
+        height: 72px;
+        display: block;
+        font-size: 36px;
+        font-weight: $font_weight_medium;
+        text-align: center;
+        line-height: 76px;
+      }
+    } /* .font_medium */
+
+    .font_bold {
+      width: 98px;
+      height: 118px;
+      border: 1.5px solid #ccc;
+      border-radius: 4px;
+
+      span {
+        width: 100%;
+        height: 72px;
+        display: block;
+        font-size: 36px;
+        font-weight: $font_weight_bold;
+        text-align: center;
+        line-height: 76px;
+      }
+    } /* .font_bold */
+  } /* .font_ex */
+
+  // 폰트 사이즈 가이드라인
+  /* 폰트 사이즈 가이드라인 */
+  .font_size {
+    margin-top: 15px;
+    span {
+      font-size: map-get($map: $font_size, $key: content1);
+    }
+
+
+
+    .fontSize30 {
+      @include fontSizeEx();
+
+      p {
+        font-size: map-get($map: $font_size, $key:emphasis);
+        letter-spacing: 10px;
+      }
+    } /* .fontSize30 */
+
+    .fontSize20 {
+      @include fontSizeEx();
+
+      p {
+        font-size: map-get($map: $font_size, $key: projectsub);
+        letter-spacing: 10px;
+      }
+    } /* .fontSize20 */
+
+    .fontSize18 {
+      @include fontSizeEx();
+
+      p {
+        font-size: map-get($map: $font_size, $key: pointcontent);
+        letter-spacing: 10px;
+      }
+    } /* .fontSize18 */
+
+    .fontSize16 {
+      @include fontSizeEx();
+
+      p {
+        font-size: map-get($map: $font_size, $key: subtitle);
+        letter-spacing: 10px;
+      }
+    } /* .fontSize16 */
+
+    .fontSize14 {
+      @include fontSizeEx();
+
+      p {
+        font-size: map-get($map: $font_size, $key: content1);
+        letter-spacing: 10px;
+      }
+    } /* .fontSize14 */
+  }
+}
+
+@mixin colorPartBox() {
+  width: 300px;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin ColorRgbTxt() {
+  font-size: map-get($map: $font_size, $key: content1);
+  text-align: center;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+@mixin backPointColor {
+  width: 76px;
+  height: 104px;
+  border: 1.5px solid $color_gray;
+  border-radius: 4px;
+  background-color: $color_white;
+}
+
+@mixin back_shapes() {
+  width: 73px;
+  height: 72px;
+}
+
+@mixin fnb() {
+  width: 86px;
+  height: 24px;
+  line-height: 24px;
+  font-size: map-get($map: $font_size, $key: fnb);
+  text-align: center;
+  font-weight: $font_weight_medium;
+  border-radius: 10px;
+}
+
+@mixin fontSizeEx() {
+  margin-top: 10px;
+}
+
+@mixin projectIntro() {
+  display: flex;
+  gap: 88px;
+}
+
+@mixin introTxt() {
+  .intro_txt {
+    width: 350px;
+    
+    h3 {
+      font-size: map-get($map: $font_size, $key: projecttitle);
+      font-weight: $font_weight_bold;
+      text-align: center;
+    }
+    .sub_txt {
+      font-size: map-get($map: $font_size, $key: content1);
+      text-align: center;
+    }
+    .detail {
+      display: flex;
+      gap: 36px;
+      margin-top: 50px;
+
+      .subtitle {
+        p {
+          font-size: map-get($map: $font_size, $key: subtitle);
+          font-weight: $font_weight_bold;
+          line-height: 30px;
+        }
+      }
+      .intro_content {
+        p {
+          font-size: map-get($map: $font_size, $key: content1);
+          line-height: 30px;
+        }
+      }
+    }
+    .project_explanation {
+      width: 350px;
+      height: 197px;
+      margin-top: 50px;
+
+      p {
+        font-size: map-get($map: $font_size, $key: content1);
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+
+
 
 
 // @media query --------------------------------------

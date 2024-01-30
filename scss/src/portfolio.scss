@@ -12,13 +12,13 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Black-Han Sans';
+  font-family: 'Black Han Sans', sans-serif;
   src: url("../../font/Black_Han_Sans/BlackHanSans-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
-  /* 전체 레이아웃 설정 */
+/* 전체 레이아웃 설정 */
 #wrap {
   width: 100%;
   height: auto;
@@ -55,7 +55,7 @@
         height: 100%;
 
         a {
-          font-family: 'Black-Han-Sans';
+          font-family: $font-family_black;
           font-size: map-get($map: $font_size, $key: projectsub);
           font-weight: bolder;
           letter-spacing: 9px;
@@ -71,7 +71,8 @@
           }
         }
       }
-    }
+    } /* headinner */
+
     .gnb {
       width: 100%;
       height: 100%;
@@ -88,10 +89,16 @@
         height: auto;
         text-align: center;
       }
-    }
-  }
+
+      label:hover {
+      color: $color_red;
+      font-weight: $font_weight_bold;
+      }
+    } /* .gnb */
+  } /* #headBox */
 
   main {
+    
     // #home
     /* #home */
     #home {
@@ -101,13 +108,16 @@
       padding: 40px 100px;
       
       .left_span {
+        width: 338px;
+        height: 40px;
         position: relative;
-        right: 43%;
-        width: 330px;
+        right: 13.8%;
+        top: 298px;
         rotate: 90deg;
-        font-size: map-get($map: $font_size, $key: pointcontent);
-        font-weight: $font_weight_regular;
-        // text-align: center;
+        display: inline-block;
+        text-align: center;
+        line-height: 62px;
+        flex-shrink: 0;
       }
       .middle_content {
         width: 420px;
@@ -122,11 +132,17 @@
           font-weight: $font_weight_bold;
           color: $color_red;
         }
-        .cover_img img{
-          width: 335px;
-          height: 335px;
-          background-color: #eee;
+        .cover_img{
+
+          // background-color: #eee;
           margin-top: 30px;
+        }
+        .coverImgInner {
+          width: 335px;
+          height: 322px;
+          background-image: url(../../img/coverImg.JPG);
+          background-size: 100% 100%;
+          display: inline-block;
         }
         & .blue_H {
           position: absolute;
@@ -167,17 +183,26 @@
         }
       }
       .right_span {
+        width: 338px;
+        height: 40px;
         position: relative;
-        left: 43%;
-        bottom: 143px;
-        width: 330px;
-        rotate: -90deg;
-        font-size: map-get($map: $font_size, $key: pointcontent);
-        font-weight: $font_weight_bold;
-        color: $color_red;
-        // text-align: center;
+        left: 13.8%;
+        top: 298px;
+        display: inline-block;
+        transform: rotate(-90deg);
+        text-align: center;
+        line-height: 60px;
+
+        span {
+          color: $color_red;
+          text-align: center;
+          font-size: map-get($map: $font_size, $key: pointcontent);
+          font-style: normal;
+          font-weight: $font_weight_bold;
+          line-height: normal;
+        }
       }
-    }
+    } /* #home */
 
     // #introduce
     /* #introduce */
@@ -208,19 +233,20 @@
             }
           }
           .id_picture {
-            // width: 232px;
-            // height: 232px;
-            // margin-top: 15px;
-            // border-radius: 50%;
-            // background-color: #eee;
+            // // width: 232px;
+            // // height: 232px;
+            // // margin-top: 15px;
+            // // border-radius: 50%;
+            // // background-color: #eee;
 
-            img {
+            // img {
               width: 232px;
               height: 232px;
               margin-top: 15px;
               border-radius: 50%;
-              background-color: #eee;
-            }
+              background-image: url(../../img/introduceImg.JPG);
+              background-size: 246px 300px;
+            // }
           }
           .sort_introduce {
             width: 298px;
@@ -244,6 +270,7 @@
           }
           p {
             margin-top: 15px;
+            line-height: 22px;
             font-size: map-get($map: $font_size, $key: content1);
           }
         }
@@ -296,7 +323,7 @@
           }
         }
       }
-    }
+    } /* #introduce */
 
     // #advantage
     /* advantage */
@@ -313,7 +340,7 @@
         position: relative;
         flex: 1;
         padding: 90px 26px 37px;
-        // opacity: 0.6;
+        opacity: 0.6;
         transition: flex 1s, opacity 1s;
         z-index: 1;
         cursor: pointer;
@@ -331,11 +358,13 @@
         width: 75%;
 
         h2 {
-          font-size: map-get($map: $font_size, $key: emphasis);
+          font-size: 5vw;
           padding-top: 0px;
         }
-        .advantageBox:hover .advantage_inner .advantage_txt h2::after {
-          // width: 120px;
+        h2::after {
+          width: 120px;
+          background: $color_blue;
+          height: 3px;
         }
       }
       .advantageBox:hover .advantage_inner figure {
@@ -377,193 +406,808 @@
             transition: 1s;
           }
         }
-      }
-      .advantageBox .advantage_inner .advantage_txt h2::after {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 2px;
-        background: $color_blue;
-        margin-top: 20px;
-        transition: 1.5s;
-      }
-      .advantageBox .advantage_inner .advantage_txt p {
-        font-size: map-get($map: $font_size, $key: pointcontent);
-        font-weight: $font_weight_bold;
-      }
-      .advantageBox .advantage_inner .advantage_txt p:last-child {
-        font-size: map-get($map: $font_size, $key: content1);
-        font-weight: $font_weight_regular;
-        margin-top: 10px;
-      }
-      .advantageBox .advantage_inner figure {
-        width: 100%;
-        height: 118px;
-        background: #777;
-        transform-origin: left center;
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-        position: relative;
-        overflow: hidden;
-        filter: saturate(10%);
-        transition: 1s;
-        video {
+        .advantage_txt h2::after {
+          content: "";
+          display: block;
+          width: 40px;
+          height: 2px;
+          background: #777;
+          margin-top: 20px;
+          transition: 1.5s;
+        }
+        .advantage_txt p {
+          font-size: map-get($map: $font_size, $key: pointcontent);
+          font-weight: $font_weight_bold;
+        }
+        .advantage_txt p:last-child {
+          font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_regular;
+          margin-top: 10px;
+        }
+
+        figure {
           width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transform: scale(1.1);
+          height: 118px;
+          background: #777;
+          transform-origin: left center;
+          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+          position: relative;
+          overflow: hidden;
+          filter: saturate(10%);
+          transition: 1s;
+
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
-    }
+    } /* #advantage */
 
     // #project
     /* #project */
     #project {
       width: 100%;
       height: auto;
-      padding: 40px 100px 0px;
+      padding-top: 40px;
 
       h2 {
         @include h2;
+        padding: 0 100px;
       }
-
-      // 프로젝트 설명
-      /* 프로젝트 설명 */
-      .project_intro {
-        display: flex;
+      .portfolio_content {
         margin-top: 32px;
-        padding: 40px 0;
-        gap: 88px;
-
-        .intro_txt {
-          width: 350px;
+        padding: 40px 100px 0;
+        // 프로젝트 설명
+        /* 프로젝트 설명 */
+        // @include projectIntro();
+        .project_intro {
+          @include projectIntro();
           
-          h3 {
-            font-size: map-get($map: $font_size, $key: projecttitle);
-            font-weight: $font_weight_bold;
-            text-align: center;
-          }
-          .sub_txt {
-            font-size: map-get($map: $font_size, $key: content1);
-            text-align: center;
-          }
-          .detail {
-            display: flex;
-            gap: 36px;
-            margin-top: 50px;
+          @include introTxt();
 
-            .subtitle {
-              p {
-                font-size: map-get($map: $font_size, $key: subtitle);
-                font-weight: $font_weight_bold;
-                line-height: 30px;
-              }
-            }
-            .intro_content {
-              p {
-                font-size: map-get($map: $font_size, $key: content1);
-                line-height: 30px;
-              }
+          .mokup {
+            width: 632px;
+            height: 483px;
+            // background-color: #eee;
+
+            img {
+              width: 100%;
             }
           }
-          .project_explanation {
-            width: 325px;
-            height: 197px;
-            margin-top: 50px;
-            background-color: #eee;
+        }/* project_intro - 프로젝트 설명 */
+
+        // 가이드라인 
+        /* 가이드라인 */
+        .guide {
+          @include guideBox();
+
+          h3 {
+            @include guidelineh3 ();
           }
-        }
-        .mokup {
-          width: 632px;
-          height: 483px;
-          background-color: #eee;
-          img {}
+
+          // 포트폴리오 프로젝트 설명
+          /* 포트폴리오 프로젝트 설명 */
+          .guide_content {
+            @include guideflex();
+
+            .logo_part {
+              @include guidelogoContent ();
+
+              h4 {
+                @include h4();
+              }
+              .logo {
+                @include logoMargin();
+
+
+                span{
+                  font-weight: $font_weight_regular;
+                  font-family: $font-family_black;
+                  font-size: map-get($map: $font_size, $key: projectsub);
+                  letter-spacing: 9px;
+                }
+
+                .title_O {
+                  color: $color_yellow;
+                }
+                .title_H {
+                  color: $color_blue;
+                }
+                .title_A {
+                  color: $color_orange;
+                }
+
+                p{
+                  @include logoInP();
+                }
+              }
+
+              h5 {
+                @include h5();
+                margin-top: 94px;
+                margin-left: 5px;
+              }
+
+              .logo_font {
+                width: 340px;
+                margin-top: 10px;
+                margin-left: 5px;
+                display: flex;
+                gap: 14px;
+
+                .logoFontEx {
+                  width: 112px;
+                  height: 156px;
+                  border: 1.5px solid $color_grayC;
+                  border-radius: 4px;
+
+                  span {
+                    width: 100%;
+                    height: 104px;
+                    display: block;
+                    font-family: $font-family_black;
+                    font-size: 36px;
+                    text-align: center;
+                    line-height: 104px;
+                  }
+                  .font_name {
+                    @include fontName ();
+                    p:last-child {
+                      font-size: map-get($map: $font_size, $key: content2);
+                      font-weight: $font_weight_regular;
+                    }
+                  } /* .font_name - 폰트명 */
+                } /* .logoFontEx - 폰트 예시 이미지 */
+
+                .fontExp {
+                  width: 214px;
+                  height: auto;
+                  
+                  .explanation {
+                    font-size: map-get($map: $font_size, $key: content1);
+                  }
+                  
+                  .explanation:nth-last-child(-n+2) {
+                    font-size: map-get($map: $font_size, $key: content1);
+                    margin-top: 12px;
+                  }
+                } /* 글꼴 설명 */
+              }
+              .colorSubTilte {
+                @include h5();
+                margin: 55px 0 20px 5px;
+              }
+
+              .font_color {
+                width: 100%;
+                margin-left: 5px;
+                display: flex;
+                flex-direction: column;
+
+                .color_list {
+                  // height: 70px;
+                  display: flex;
+
+                  .list_yellow {
+                    width: 22px;
+                    height: 22px;
+                    margin-right: 14px;
+                    border-radius: 50%;
+                    background: $color_yellow;
+                  }
+
+                  .list_bule {
+                    width: 22px;
+                    height: 22px;
+                    margin-right: 14px;
+                    background: $color_blue;
+                  }
+
+                  .list_orange {
+                    width: 0px;
+                    height: 0px;
+                    border-bottom: 22px solid #FB8145;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                  }
+                } /* .color_list */
+              } /* .font_color - 폰트 색상 */
+
+              .fontColorExp {
+                margin-top: 10px;
+                p {
+                  font-size: map-get($map: $font_size, $key: content1);
+                }
+                p:last-child {
+                  margin-top: 12px;
+                  font-size: map-get($map: $font_size, $key: content1);
+                }
+              } /* .fontColorExp */
+            } /* .logo_part - 로고 가이드라인 */
+          
+            .font_part {
+              @include fontPartBox(); /* .font_size - 폰트 사이즈 가이드라인 */ // 폰트 사이즈 가이드라인
+
+              .fontSize32 {
+                p {
+                  font-size: map-get($map: $font_size, $key: projecttitle);
+                  letter-spacing: 10px;
+                }
+              } /* .fontSize32 */
+
+              .fontSize11 {
+                @include fontSizeEx();
+          
+                p {
+                  font-size: map-get($map: $font_size, $key: fnb);
+                  letter-spacing: 10px;
+                }
+              } /* .fontSize11 */
+            } /* .font_part - 폰트 설명  */
+
+            // color_part - 가이드라인 color부분
+            /* color_part  - 가이드라인 color부분 */
+            .color_part {
+              width: 300px;
+              height: auto;
+              margin-top: 30px;
+              display: flex;
+              flex-direction: column;
+              
+              h4 {
+                @include h4();
+              }
+              .color_content {
+                @include colorPartBox();
+              
+                .colorSubTitle {
+                  @include h5();
+                }
+
+                span {
+                  @include ColorRgbTxt();
+                }
+
+                .icon_color {
+                  margin-top: 18px;
+                  display: flex;
+                  gap: 50px;
+                
+                  .icon_yellow {
+                    display: flex;
+                    flex-direction: column;
+                  
+                    .yellow_shapes {
+                      width: 60px;
+                      height: 60px;
+                      border-radius: 50%;
+                      background-color: $color_yellow;
+                    }
+                  } /* .icon_yellow */
+
+                  .icon_bule {
+                    display: flex;
+                    flex-direction: column;
+
+                    .bule_shapes {
+                      width: 60px;
+                      height: 60px;
+                      border-radius: 50%;
+                      background-color: $color_blue;
+                    }
+                  } /* .icon_bule */
+                  .icon_orange {
+                    display: flex;
+                    flex-direction: column;
+                  
+                    .orange_shapes {
+                      width: 60px;
+                      height: 60px;
+                      border-radius: 50%;
+                      background-color: $color_orange;
+                    }
+                  } /* .icon_orange */
+                } /* .icon_color */
+
+                .bottom_color {
+                  margin-top: 30px;
+                  display: flex;
+                  gap: 24px;
+                
+                  .point_color {
+                    display: flex;
+                    flex-direction: column;
+                  
+                    .icon_red {
+                      width: 60px;
+                      height: 60px;
+                      margin: auto;
+                      margin-top: 10px;
+                      border-radius: 50%;
+                      background-color: $color_red;
+                    }
+                  } /* .point_color */
+                  .background_color {
+                    display: flex;
+                    flex-direction: column;
+                  
+                    .icon_white {
+                      width: 60px;
+                      height: 60px;
+                      margin-left: 8.77px;
+                      margin-top: 10px;
+                      border: 1px solid #cfcfcf;
+                      border-radius: 50%;
+                      background-color: $color_graywhite;
+                    }
+
+                    .backgroundColorTxt {
+                      text-align-last: left;
+                      margin-left: 8.77px;
+                    }
+                  } /* .background_color */
+                } /* .bottom_color */
+              } /* .color_content - 사용한 색상 가이드라인 */
+
+              .button_color {
+                margin-top: 94px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                font-weight: $font_weight_medium;
+                
+                .button_content {
+                  width: 294px;
+                  display: flex;
+                  margin-left: 5px;
+                  gap: 18px;
+                
+                  .resume_btn {
+                    @include fnb ();
+                    background-color: $color_yellow;
+                  }
+
+                  .github_btn {
+                    @include fnb ();
+                    background-color: $color_blue;
+                    color: $color_white;
+                  }
+
+                  .notion_btn {
+                    @include fnb ();
+                    background-color: $color_orange;
+                  }
+                } /* .button_content */
+
+                // 버튼 마우스 오버 시 색상 및 굵기
+                /* 버튼 마우스 오버 시 색상 및 굵기 */
+                .button_hover {
+                  display: flex;
+                  margin-left: 5px;
+                  gap: 30px;
+                
+                  h5 {
+                    @include h5();
+                  }
+
+                  span {
+                    font-size: 36px;
+                    font-weight: $font_weight_regular;
+                  }
+
+                  p {
+                    font-size: map-get($map: $font_size, $key: content1);
+                    font-weight: $font_weight_regular;
+                  }
+
+                  .nomal_part {
+                    .nomal_ex {
+                      width: 100px;
+                      height: 100px;
+                      margin-top: 10px;
+                      padding-top: 20px;
+                      text-align: center;
+                      border: 1.5px solid $color_grayC;
+                      border-radius: 4px;
+                    }
+                  } /* .nomal_part */
+
+                  .hover_part {
+                    .hover_ex {
+                      width: 100px;
+                      height: 100px;
+                      margin-top: 10px;
+                      padding-top: 20px;
+                      text-align: center;
+                      border: 1.5px solid $color_grayC;
+                      border-radius: 4px;
+                    
+                      span {
+                        font-weight: $font_weight_medium;
+                        color: $color_red;
+                      }
+
+                      p {
+                        color: $color_red;
+                      }
+                    } /* .hover_ex */
+                  } /* .hover_part */
+                } /* .button_hover */
+              } /* .button_color */
+            } /* color_part  - 가이드라인 color부분 */ // color_part  - 가이드라인 color부분
+          } /* .port_content - 포트폴리오 프로젝트 설명 */
+        } /* guide - 가이드라인부분 */ // guide -가이드라인부분
+
+        // 사이트 주기능 설명
+        /* 사이트 주기능 설명 */
+        .pagever_intro {
+          width: 100%;
+          height: auto;
+          padding-top: 40px;
+
+          h3 {
+            @include guidelineh3 ();
+          }
+          .portfolio_mokup {
+            width: 526px;
+            height: 960px;
+            margin-top: 36px;
+            background-image: url(../../img/portfolio_capture.png);
+            background-size: 100% 100%;
+          }
+
+          .page_explanation {}
+
+          .arrowLineBlue svg{
+            width: auto;
+            stroke-width: 3px;
+            position: relative;
+            top: 150px;
+            left: 410px;
+          }
+          .arrowLineYellow svg{
+            width: auto;
+            stroke-width: 3px;
+            position: relative;
+            top: 450px;
+            left: 358px;
+          }
+          .arrowLineOrenge svg{
+            width: auto;
+            stroke-width: 3px;
+            position: relative;
+            top: 650px;
+            left: 397px;
+          }
+        } /* pagever_intro - 사이트 주기능 설명 */
+      } /* .portfolio_content - 포트폴리오 프로젝트 설명 */
+
+      // 마녀배달부키키 프로젝트 설명
+      /* 마녀배달부키키 프로젝트 설명 */
+      .kiki_content {
+        background-color: #A5C2D3;
+        padding: 92px 100px 0;
+
+        .project_intro {
+          @include projectIntro();
+
+          .mokup {
+            width: 632px;
+            height: 483px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          @include introTxt();
         }
       }
-
-      // 가이드라인 
-      /* 가이드라인 */
       .guide {
-        width: 100%;
-        height: auto;
-        padding: 40px 0;
+        @include guideBox();
+        color: $color_green;
 
         h3 {
-          font-size: map-get($map: $font_size, $key: projectsub);
-          font-weight: $font_weight_bold;
-          text-transform: capitalize;
+          @include guidelineh3();
         }
+
         .guide_content {
-          display: flex;
-          gap: 54px;
+          @include guideflex();
 
-          h4 {
-            font-size: map-get($map: $font_size, $key: subtitle);
-            font-weight: $font_weight_medium;
-            text-transform: capitalize;
-          }
-
-          .color_part {
-            width: 324px;
-            height: 482px;
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            background-color: #eee;
+          .logo_part {
+            @include guidelogoContent ();
 
             h4 {
-              height: 130px;
+              @include h4();
+            }
+            .logo {
+              @include logoMargin();
+
+              img {
+                width: 118px;
+                height: 22px;
+              }
+              p {
+                @include logoInP();
+              }
+              p:last-child {
+                font-size: map-get($map: $font_size, $key: fnb);
+                color: $color_gray
+              }
+            }
+            h5 {
+              @include h5();
+              margin-top: 24px;
+              margin-left: 5px;
+            }
+            .button_box {
+              margin-top: 20px;
+              display: flex;
+              flex-wrap: wrap;
+              column-gap: 30px;
+              row-gap: 15px;
+
+              .button_content {
+                width: 78px;
+                height: 96px;
+                border: 1.5px solid $color_green;
+                border-radius: 4px;
+
+                img {
+                  width: 100%;
+                  height: 54px;
+                }
+                .font_name {
+                  @include fontName();
+
+                  background-color: $color_white;
+                  padding: 3px 0;
+
+                  p {
+                    font-size: map-get($map: $font_size, $key: content2);
+                    text-align: center;
+                    line-height: 27px;
+                  }
+                }
+              }
             }
           }
         }
         .font_part {
-          width: 324px;
-          height: 482px;
-          margin-top: 30px;
-          background-color: #eee;
-        }
-        .icon_part {
-          width: 324px;
-          height: 482px;
-          margin-top: 30px;
-          background-color: #eee;
+          @include fontPartBox();
+
+          .font_regular, .font_medium, .font_bold {
+            background-color: $color_white;
+          }
+          .fontSize96 {
+            p {
+              font-size: 44px;
+              letter-spacing: 10px;
+            }
+          } /* 96 */
+
+          .fontSize12 {
+            p {
+              font-size: map-get($map: $font_size, $key: content2);
+              letter-spacing: 10px;
+            }
+          } /* .fontSize12 */
         }
       }
 
-      // 페이지 설명
-      /* 페이지 설명 */
+      .color_part {
+        @include colorPartBox();
+
+        h4 {
+          @include h4();
+        }
+
+        .colorSubTitle {
+          @include h5();
+          margin-top: 18px;
+          margin-left: 5px;
+        }
+
+        .back_color {
+          display: flex;
+          margin-top: 18px;
+          margin-left: 5px;
+          flex-wrap: wrap;
+          column-gap: 26px;
+          row-gap: 20px;
+
+          span {
+            width: 100%;
+            height: 34px;
+            display: block;
+            font-size: map-get($map: $font_size, $key: content1);
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 31px;
+          }
+
+          .back_content {
+            @include backPointColor();
+
+
+            .green_shapes {
+              @include back_shapes();
+              background-color: #0a4b41;
+            }
+
+            .blue_shapes {
+              @include back_shapes();
+              background-color: #1145a2;
+            }
+
+            .bagie_shapes {
+              @include back_shapes();
+              background-color: #d7dac7;
+            }
+
+            .black_shapes {
+              @include back_shapes();
+              background-color: #000000;
+            }
+
+            .skyBule_shapes {
+              @include back_shapes();
+              background-color: #b7cae8;
+            }
+
+            .purple_shapes {
+              @include back_shapes();
+              background-color: #4f4259;
+            }
+          }
+        }
+      }
+      .point_part {
+        margin-top: 30px;
+        
+        h4 {
+          @include h4();
+        }
+
+        .kikiPointColor {
+          display: flex;
+          gap: 32px;
+          margin-top: 18px;
+          margin-left: 5px;
+
+          .kikiPointContent {
+            display: flex;
+            flex-direction: column;
+
+            .colorSubTitle {
+              margin-top: 0px;
+              margin-left: 0px;
+            }
+            .back_red {
+              @include backPointColor();
+              margin: auto;
+              margin-top: 10px;
+
+              span {
+                width: 100%;
+                height: 34px;
+                display: block;
+                font-size: map-get($map: $font_size, $key: content1);
+                text-align: center;
+                line-height: 31px;
+                text-transform: uppercase;
+              }
+
+              .red_shapes {
+                @include back_shapes();
+                background-color: #d71e15;
+              }
+            }
+          }
+          .kikiPointfont {
+            display: flex;
+            flex-direction: column;
+
+            .colorSubTitle {
+              margin-top: 0px;
+              margin-left: 0px;
+            }
+            .font_bold {
+              width: 84px;
+              height: 104px;
+              border: 1.5px solid #ccc;
+              border-radius: 4px;
+              margin-top: 10px;
+              background-color: $color_white;
+        
+              span {
+                width: 100%;
+                height: 66px;
+                display: block;
+                font-size: 36px;
+                font-weight: $font_weight_bold;
+                text-align: center;
+                line-height: 68px;
+              }
+              .font_name {
+                @include fontName();
+                
+                height: auto;
+                padding: 2px 4px;
+                p { 
+                  font-size: map-get($map: $font_size, $key: content2);
+                }
+              }
+            }
+          }
+        } /* .font_bold */
+      }
+      .pointFontSize {
+        margin-top: 15px;
+        margin-left: 5px;
+
+        span {
+          font-size: map-get($map: $font_size, $key: content1);
+        }
+
+        p {
+          font-size: map-get($map: $font_size, $key: projecttitle);
+          letter-spacing: 10px;
+          text-transform: uppercase;
+        }
+      }
       .pagever_intro {
         width: 100%;
         height: auto;
         padding-top: 40px;
 
         h3 {
-          text-transform: capitalize;
-          font-size: map-get($map: $font_size, $key: projectsub);
-          font-weight: $font_weight_bold;
+          @include guidelineh3 ();
         }
-        .mokup_img {
-          width: 526px;
-          height: 960px;
+        .pagever_content {
+          display: flex;
+          gap: 30px;
           margin-top: 36px;
-          background-color: #eee;
-        }
-        .page_explanation {}
-        .page_explanation::after {
-          content: '';
-          width: 173px;
-          margin: 10px 0;
-          position: relative;
-          bottom: 800px;
-          left: 497px;
-          display: block;
-          flex-grow: 1;
-          font-size: 0px;
-          line-height: 0px;
-          border: 1px solid $color_blue;
+
+          .kiki_mockup {
+            width: 526px;
+            height: 960px;
+            background-color: #eee;
+            
+          }
+          
+          .page_explanation {
+            width: 524px;
+            background-color: #eee;
+
+            // .arrow_line {
+            //   width: 173px;
+            //   height: 0px;
+            //   flex-shrink: 0;
+            //   stroke-width: 3px;
+            //   stroke: var(--blue, #006DA9);
+            // }
+          }
+          
+          // .page_explanation::after {
+          //   content: '';
+          //   width: 173px;
+          //   margin: 10px 0;
+          //   position: relative;
+          //   top: 150px;
+          //   left: 397px;
+          //   display: block;
+          //   flex-grow: 1;
+          //   font-size: 0px;
+          //   line-height: 0px;
+          //   border: 1px solid $color_blue;
+          // }
+
         }
       }
-    }
+    } /* #project */
 
     // #contact
     /* #contact */
@@ -576,27 +1220,29 @@
       h2 {
         @include h2;
       }
+
       .img_container {
-        width: 100%;
+        width: 240px;
+        height: 240px;
         margin: auto;
         justify-content: center;
         display: flex;
-
-        img {
-          width: 240px;
-          height: 240px;
-          margin: auto;
-        }
+        background-image: url(../../img/endingImg.JPG);
+        background-size: 100% 100%;
       }
+      // } /* img_container */
+
       p {
         width: 100%;
         height: 36px;
+        margin-top: 35px;
         font-size: map-get($map: $font_size, $key: emphasis);
         font-weight: $font_weight_bold;
         text-align: center;
         color: $color_red;
         text-transform: capitalize;
       }
+
       .personal_data {
         
         p:first-child {
@@ -606,7 +1252,8 @@
           font-size: map-get($map: $font_size, $key: subtitle);
           font-weight: $font_weight_bold;
           text-align: center;
-        }
+        } /* p:first-child */
+
         a {
           width: 100%;
           display: flex;
@@ -615,10 +1262,10 @@
           margin-top: 25px;
           text-align: center;
           font-size: map-get($map: $font_size, $key: content1);
-        }
-      }
-    }
-  }
+        } /* a */
+      } /* .personal_data */
+    } /* #contact */
+  } /* #main */
 
   // #footBox
   /* #footBox */
@@ -656,7 +1303,8 @@
           font-size: map-get($map:$font_size , $key:fnb);
           font-weight: $font_weight_bold;
           letter-spacing: 9px;
-        }
+        } /* h1 */
+
         .verical_divider {
           background-color: rgb(225, 225, 225);
           -webkit-box-flex: 0;
@@ -665,7 +1313,8 @@
           margin-left: 10px;
           margin-right: 10px;
           width: 1px;
-        }
+        } /* .verical_divider */
+
         .fnb {
           -webkit-box-align: center;
           align-items: center;
@@ -683,18 +1332,24 @@
             height: auto;
             text-align: center;
           }
-        }
+
+          label:hover {
+            color: $color_red;
+            font-weight: $font_weight_bold;
+          }
+        } /* .fnb */
+
         .link_btn {
-          -webkit-box-align: center;
-          align-items: center;
+          width: 100%;
+          height: 36px;
           display: flex;
           flex-direction: row;
-          height: 36px;
-          -webkit-box-pack: end;
-          justify-content: flex-end;
-          width: 100%;
-          font-size: map-get($map: $font_size, $key: fnb);
           gap: 20px;
+          font-size: map-get($map: $font_size, $key: fnb);
+          align-items: center;
+          justify-content: flex-end;
+          -webkit-box-align: center;
+          -webkit-box-pack: end;
 
           a {
             width: 86px;
@@ -707,19 +1362,20 @@
             background-color: $color_yellow;
             border-radius: 10px;
           }
+
           .github_btn {
             background-color: $color_blue;
             color: $color_white;
             border-radius: 10px;
           }
+
           .notion_btn {
             background-color: $color_orange;
             border-radius: 10px;
           }
-        }
-      }
-    }
-  }
-}
-
+        } /* .link_btn */
+      } /* .fnb_container */
+    } /* .footinner */
+  } /* #footBox */
+} /* #wrap */
 
