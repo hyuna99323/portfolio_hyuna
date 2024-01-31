@@ -18,14 +18,18 @@
   font-style: normal;
 }
 
-/* 전체 레이아웃 설정 */
+*{
+  cursor: url(../../img/cursor.svg) 5 5, progress;
+}
+
+/* #wrap - 전체 레이아웃 설정 */
+// #wrap - 전체 레이아웃 설정
 #wrap {
   width: 100%;
   height: auto;
   min-height: 800px;
   margin: auto;
   background-color: $color_white;
-  // padding: 0 100px;
   font-family: "S-Core_Dream_OTF";
   font-weight: 300;
 
@@ -43,6 +47,8 @@
     background-color: $color_white;
     z-index: 1000;
 
+    // .headinner
+    /* .headinner */
     .headinner {
       width: 75%;
       height: 100%;
@@ -69,20 +75,22 @@
           .title_A {
             color: $color_orange;
           }
-        }
-      }
-    } /* headinner */
+        } /* --- a */
+      } /* --- h1 */
+    } /*  --- .headinner */
 
+    /* .gnb */
+    // .gnb
     .gnb {
       width: 100%;
       height: 100%;
       margin: auto;
-      color: $color_black;
+      display: flex;
+      justify-content: center;
       font-family: $font_family_score;
       font-size: map-get($map:$font_size , $key:content1);
       text-transform: uppercase;
-      display: flex;
-      justify-content: center;
+      color: $color_black;
 
       & label {
         width: 20%;
@@ -91,14 +99,15 @@
       }
 
       label:hover {
-      color: $color_red;
-      font-weight: $font_weight_bold;
+        @include navHover();
       }
-    } /* .gnb */
-  } /* #headBox */
+    } /* --- .gnb */
+  } /* --- #headBox */
 
+  // main
+  /* main */
   main {
-    
+
     // #home
     /* #home */
     #home {
@@ -132,9 +141,7 @@
           font-weight: $font_weight_bold;
           color: $color_red;
         }
-        .cover_img{
-
-          // background-color: #eee;
+        .cover_img {
           margin-top: 30px;
         }
         .coverImgInner {
@@ -181,7 +188,10 @@
           font-weight: $font_weight_medium;
           color: $color_red;
         }
-      }
+      } /* --- .middle_content */
+
+      /* .right_span */
+      // .right_span
       .right_span {
         width: 338px;
         height: 40px;
@@ -201,8 +211,8 @@
           font-weight: $font_weight_bold;
           line-height: normal;
         }
-      }
-    } /* #home */
+      } /* --- .right_span */
+    } /* --- #home */
 
     // #introduce
     /* #introduce */
@@ -216,6 +226,8 @@
         @include h2;
       }
 
+      /* .about_inner */
+      // .about_inner
       .about_inner {
         width: 100%;
         display: flex;
@@ -231,22 +243,17 @@
               font-size: map-get($map: $font_size, $key: pointcontent);
               font-weight: $font_weight_medium;
             }
-          }
-          .id_picture {
-            // // width: 232px;
-            // // height: 232px;
-            // // margin-top: 15px;
-            // // border-radius: 50%;
-            // // background-color: #eee;
+          } /* --- .greeting */
 
-            // img {
-              width: 232px;
-              height: 232px;
-              margin-top: 15px;
-              border-radius: 50%;
-              background-image: url(../../img/introduceImg.JPG);
-              background-size: 246px 300px;
-            // }
+          /* .id_picture */
+          // .id_picture
+          .id_picture {
+            width: 232px;
+            height: 232px;
+            margin-top: 15px;
+            border-radius: 50%;
+            background-image: url(../../img/introduceImg.JPG);
+            background-size: 246px 300px;
           }
           .sort_introduce {
             width: 298px;
@@ -256,8 +263,11 @@
             span {
               font-size: map-get($map: $font_size, $key: content1);
             }
-          }
-        }
+          } /* --- .sort_introduce */
+        } /* --- .about_left */
+
+        /* .about_midle */
+        // .about_midle
         .about_midle {
           width: 315px;
 
@@ -273,7 +283,10 @@
             line-height: 22px;
             font-size: map-get($map: $font_size, $key: content1);
           }
-        }
+        } /* --- .about_midle */
+
+        /* .about_right */
+        // .about_right
         .about_right {
           width: 310px;
 
@@ -298,6 +311,9 @@
               line-height: 0px;
               border: 1px solid #000
             }
+
+            /* .skillBox */
+            // .skillBox
             .skillBox {
               display: flex;
               flex-direction: column;
@@ -318,22 +334,21 @@
                   border: 1px solid #cdcdcd;
                   margin-right: 14px;
                 }
-              }
-            }
-          }
-        }
-      }
-    } /* #introduce */
+              } /* --- .skill_inner */
+            } /* --- .skillBox */
+          } /* --- .skill */
+        } /* --- .about_right */
+      } /* --- .about_inner */
+    } /* --- #introduce */
 
     // #advantage
     /* advantage */
     #advantage {
+      @include sectionBasic();
+      
       position: relative;
-      width: 100%;
-      height: 100%;
       display: flex;
       padding: 40px 100px;
-      // padding-top: 140px;
       z-index: 1;
 
       .advantageBox {
@@ -366,12 +381,14 @@
           background: $color_blue;
           height: 3px;
         }
-      }
+      } /* --- .advantage_txt */
+
       .advantageBox:hover .advantage_inner figure {
         height: 25vh;
         filter: saturate(120%);
         transform: translateY(3vh);
       }
+
       .advantageBox::before {
         content: "";
         display: block;
@@ -384,7 +401,10 @@
         opacity: 0;
         transition: 1s;
       }
-      .advantageBox .advantage_inner {
+
+      /* .advantage_inner */
+      // .advantage_inner
+      .advantage_inner {
         width: 100%;
         height: 100%;
         display: flex;
@@ -405,7 +425,8 @@
             color: $color_red;
             transition: 1s;
           }
-        }
+        } /* --- .advantage_txt */
+
         .advantage_txt h2::after {
           content: "";
           display: block;
@@ -415,16 +436,20 @@
           margin-top: 20px;
           transition: 1.5s;
         }
+
         .advantage_txt p {
           font-size: map-get($map: $font_size, $key: pointcontent);
           font-weight: $font_weight_bold;
         }
+
         .advantage_txt p:last-child {
           font-size: map-get($map: $font_size, $key: content1);
           font-weight: $font_weight_regular;
           margin-top: 10px;
         }
 
+        // figure
+        /* figure */
         figure {
           width: 100%;
           height: 118px;
@@ -441,9 +466,9 @@
             height: 100%;
             object-fit: cover;
           }
-        }
-      }
-    } /* #advantage */
+        } /* --- figure */
+      } /* --- .advantage_inner */
+    } /* --- #advantage */
 
     // #project
     /* #project */
@@ -456,30 +481,23 @@
         @include h2;
         padding: 0 100px;
       }
+
       .portfolio_content {
         margin-top: 32px;
         padding: 40px 100px 0;
+
         // 프로젝트 설명
         /* 프로젝트 설명 */
-        // @include projectIntro();
         .project_intro {
           @include projectIntro();
           
           @include introTxt();
 
-          .mokup {
-            width: 632px;
-            height: 483px;
-            // background-color: #eee;
+          @include guideMockup();
+        } /* --- project_intro - 프로젝트 설명 */
 
-            img {
-              width: 100%;
-            }
-          }
-        }/* project_intro - 프로젝트 설명 */
-
-        // 가이드라인 
-        /* 가이드라인 */
+        /* .guide - 가이드라인 */
+        // .guide - 가이드라인 
         .guide {
           @include guideBox();
 
@@ -487,8 +505,8 @@
             @include guidelineh3 ();
           }
 
-          // 포트폴리오 프로젝트 설명
-          /* 포트폴리오 프로젝트 설명 */
+          /* .guide_content -포트폴리오 프로젝트 설명 */
+          // .guide_content - 포트폴리오 프로젝트 설명
           .guide_content {
             @include guideflex();
 
@@ -522,7 +540,7 @@
                 p{
                   @include logoInP();
                 }
-              }
+              } /* --- .logo */
 
               h5 {
                 @include h5();
@@ -530,6 +548,8 @@
                 margin-left: 5px;
               }
 
+              /* .logo_font */
+              // .logo_font
               .logo_font {
                 width: 340px;
                 margin-top: 10px;
@@ -558,9 +578,11 @@
                       font-size: map-get($map: $font_size, $key: content2);
                       font-weight: $font_weight_regular;
                     }
-                  } /* .font_name - 폰트명 */
-                } /* .logoFontEx - 폰트 예시 이미지 */
+                  } /* --- .font_name - 폰트명 */
+                } /* --- .logoFontEx - 폰트 예시 이미지 */
 
+                /* .fontExp */
+                // .fontExp
                 .fontExp {
                   width: 214px;
                   height: auto;
@@ -573,8 +595,9 @@
                     font-size: map-get($map: $font_size, $key: content1);
                     margin-top: 12px;
                   }
-                } /* 글꼴 설명 */
-              }
+                } /* --- .fontExp = 글꼴 설명 */
+              } /* --- .logo_font */
+
               .colorSubTilte {
                 @include h5();
                 margin: 55px 0 20px 5px;
@@ -586,8 +609,9 @@
                 display: flex;
                 flex-direction: column;
 
+                /* .color_list */
+                // .color_list
                 .color_list {
-                  // height: 70px;
                   display: flex;
 
                   .list_yellow {
@@ -612,9 +636,11 @@
                     border-left: 12px solid transparent;
                     border-right: 12px solid transparent;
                   }
-                } /* .color_list */
-              } /* .font_color - 폰트 색상 */
+                } /* --- .color_list */
+              } /* --- .font_color - 폰트 색상 */
 
+              /* .fontColorExp */
+              // .fontColorExp
               .fontColorExp {
                 margin-top: 10px;
                 p {
@@ -624,18 +650,20 @@
                   margin-top: 12px;
                   font-size: map-get($map: $font_size, $key: content1);
                 }
-              } /* .fontColorExp */
-            } /* .logo_part - 로고 가이드라인 */
+              } /* --- .fontColorExp */
+            } /* --- .logo_part - 로고 가이드라인 */
           
+            /* .font_part */
+            // .font_part
             .font_part {
               @include fontPartBox(); /* .font_size - 폰트 사이즈 가이드라인 */ // 폰트 사이즈 가이드라인
-
+              
               .fontSize32 {
                 p {
                   font-size: map-get($map: $font_size, $key: projecttitle);
                   letter-spacing: 10px;
                 }
-              } /* .fontSize32 */
+              } /* --- .fontSize32 */
 
               .fontSize11 {
                 @include fontSizeEx();
@@ -644,17 +672,13 @@
                   font-size: map-get($map: $font_size, $key: fnb);
                   letter-spacing: 10px;
                 }
-              } /* .fontSize11 */
-            } /* .font_part - 폰트 설명  */
+              } /* --- .fontSize11 */
+            } /* --- .font_part - 폰트 설명  */
 
             // color_part - 가이드라인 color부분
             /* color_part  - 가이드라인 color부분 */
             .color_part {
-              width: 300px;
-              height: auto;
-              margin-top: 30px;
-              display: flex;
-              flex-direction: column;
+              @include colorPartBox();
               
               h4 {
                 @include h4();
@@ -670,6 +694,8 @@
                   @include ColorRgbTxt();
                 }
 
+                /* .icon_color */
+                // .icon_color
                 .icon_color {
                   margin-top: 18px;
                   display: flex;
@@ -685,8 +711,10 @@
                       border-radius: 50%;
                       background-color: $color_yellow;
                     }
-                  } /* .icon_yellow */
+                  } /* --- .icon_yellow */
 
+                  /* .icon_bule */
+                  // .icon_bule
                   .icon_bule {
                     display: flex;
                     flex-direction: column;
@@ -697,7 +725,10 @@
                       border-radius: 50%;
                       background-color: $color_blue;
                     }
-                  } /* .icon_bule */
+                  } /* --- .icon_bule */
+
+                  /* .icon_orange */
+                  // .icon_orange
                   .icon_orange {
                     display: flex;
                     flex-direction: column;
@@ -708,9 +739,11 @@
                       border-radius: 50%;
                       background-color: $color_orange;
                     }
-                  } /* .icon_orange */
-                } /* .icon_color */
+                  } /* --- .icon_orange */
+                } /* --- .icon_color */
 
+                /* .bottom_color */
+                // .bottom_color
                 .bottom_color {
                   margin-top: 30px;
                   display: flex;
@@ -728,7 +761,10 @@
                       border-radius: 50%;
                       background-color: $color_red;
                     }
-                  } /* .point_color */
+                  } /* --- .point_color */
+
+                  /* .background_color */
+                  // .background_color
                   .background_color {
                     display: flex;
                     flex-direction: column;
@@ -747,10 +783,12 @@
                       text-align-last: left;
                       margin-left: 8.77px;
                     }
-                  } /* .background_color */
-                } /* .bottom_color */
-              } /* .color_content - 사용한 색상 가이드라인 */
+                  } /* --- .background_color */
+                } /* --- .bottom_color */
+              } /* --- .color_content - 사용한 색상 가이드라인 */
 
+              /* .button_color */
+              // .button_color
               .button_color {
                 margin-top: 94px;
                 display: flex;
@@ -758,6 +796,8 @@
                 gap: 20px;
                 font-weight: $font_weight_medium;
                 
+                /* .button_content */
+                // .button_content
                 .button_content {
                   width: 294px;
                   display: flex;
@@ -779,10 +819,10 @@
                     @include fnb ();
                     background-color: $color_orange;
                   }
-                } /* .button_content */
+                } /* --- .button_content */
 
-                // 버튼 마우스 오버 시 색상 및 굵기
-                /* 버튼 마우스 오버 시 색상 및 굵기 */
+                /* .button_hover - 버튼 마우스 오버 시 색상 및 굵기 */
+                // .button_hover - 버튼 마우스 오버 시 색상 및 굵기
                 .button_hover {
                   display: flex;
                   margin-left: 5px;
@@ -802,6 +842,8 @@
                     font-weight: $font_weight_regular;
                   }
 
+                  /* .nomal_part */
+                  // .nomal_part
                   .nomal_part {
                     .nomal_ex {
                       width: 100px;
@@ -812,8 +854,10 @@
                       border: 1.5px solid $color_grayC;
                       border-radius: 4px;
                     }
-                  } /* .nomal_part */
+                  } /* --- .nomal_part */
 
+                  /* .hover_part */
+                  // .hover_part
                   .hover_part {
                     .hover_ex {
                       width: 100px;
@@ -832,25 +876,23 @@
                       p {
                         color: $color_red;
                       }
-                    } /* .hover_ex */
-                  } /* .hover_part */
-                } /* .button_hover */
-              } /* .button_color */
-            } /* color_part  - 가이드라인 color부분 */ // color_part  - 가이드라인 color부분
-          } /* .port_content - 포트폴리오 프로젝트 설명 */
-        } /* guide - 가이드라인부분 */ // guide -가이드라인부분
+                    } /* --- .hover_ex */
+                  } /* --- .hover_part */
+                } /* --- .button_hover */
+              } /* --- .button_color */
+            } /* --- color_part  - 가이드라인 color부분 */ // color_part  - 가이드라인 color부분
+          } /* --- .port_content - 포트폴리오 프로젝트 설명 */
+        } /* --- .guide - 가이드라인부분 */ // guide -가이드라인부분
 
-        // 사이트 주기능 설명
-        /* 사이트 주기능 설명 */
+        /* .pagever_intro - 사이트 주기능 설명 */
+        // .pagever_intro - 사이트 주기능 설명
         .pagever_intro {
-          width: 100%;
-          height: auto;
-          padding-top: 40px;
+          @include pageIntro();
 
           h3 {
             @include guidelineh3 ();
           }
-          .portfolio_mokup {
+          .portfolio_mockup {
             width: 526px;
             height: 960px;
             margin-top: 36px;
@@ -858,53 +900,49 @@
             background-size: 100% 100%;
           }
 
-          .page_explanation {}
+          .page_explanation {
 
-          .arrowLineBlue svg{
-            width: auto;
-            stroke-width: 3px;
-            position: relative;
-            top: 150px;
-            left: 410px;
+            
+            .arrowLineBlue svg {
+              @include arrowSvg();
+              top: 150px;
+              left: 410px;
+            }
+            .arrowLineYellow svg {
+              @include arrowSvg();
+              top: 450px;
+              left: 358px;
+            }
+            .arrowLineOrenge svg {
+              @include arrowSvg();
+              top: 650px;
+              left: 397px;
+            }
           }
-          .arrowLineYellow svg{
-            width: auto;
-            stroke-width: 3px;
-            position: relative;
-            top: 450px;
-            left: 358px;
-          }
-          .arrowLineOrenge svg{
-            width: auto;
-            stroke-width: 3px;
-            position: relative;
-            top: 650px;
-            left: 397px;
-          }
-        } /* pagever_intro - 사이트 주기능 설명 */
-      } /* .portfolio_content - 포트폴리오 프로젝트 설명 */
+        } /* --- pagever_intro - 사이트 주기능 설명 */
+      } /* --- .portfolio_content - 포트폴리오 프로젝트 설명 */
 
-      // 마녀배달부키키 프로젝트 설명
-      /* 마녀배달부키키 프로젝트 설명 */
+      /* .kiki_content - 마녀배달부키키 프로젝트 설명 */
+      // .kiki_content - 마녀배달부키키 프로젝트 설명
       .kiki_content {
         background-color: #A5C2D3;
         padding: 92px 100px 0;
 
+        /* .project_intro */
+        // .project_intro
         .project_intro {
           @include projectIntro();
 
-          .mokup {
-            width: 632px;
-            height: 483px;
-
-            img {
-              width: 100%;
-            }
-          }
+          /* .mockup */
+          // .mockup
+          @include guideMockup();
 
           @include introTxt();
         }
-      }
+      } /* --- .kiki_content */
+
+      /* .guide */
+      // .guide
       .guide {
         @include guideBox();
         color: $color_green;
@@ -913,15 +951,21 @@
           @include guidelineh3();
         }
 
+        /* .guide_content */
+        // .guide_content
         .guide_content {
           @include guideflex();
 
+          /* .logo_part */
+          //.logo_part
           .logo_part {
             @include guidelogoContent ();
 
             h4 {
               @include h4();
             }
+            /* .logo */
+            // .logo
             .logo {
               @include logoMargin();
 
@@ -936,12 +980,16 @@
                 font-size: map-get($map: $font_size, $key: fnb);
                 color: $color_gray
               }
-            }
+            } /* --- .logo */
+
             h5 {
               @include h5();
               margin-top: 24px;
               margin-left: 5px;
             }
+
+            /* .button_box */
+            // .button_box
             .button_box {
               margin-top: 20px;
               display: flex;
@@ -949,16 +997,23 @@
               column-gap: 30px;
               row-gap: 15px;
 
+              /* .button_content */
+              // .button_content
               .button_content {
                 width: 78px;
                 height: 96px;
                 border: 1.5px solid $color_green;
                 border-radius: 4px;
+                display: flex;
+                flex-wrap: wrap;
 
                 img {
                   width: 100%;
-                  height: 54px;
+                  height: 60px;
                 }
+
+                /* .font_name */
+                // .font_name
                 .font_name {
                   @include fontName();
 
@@ -970,33 +1025,48 @@
                     text-align: center;
                     line-height: 27px;
                   }
-                }
+                } /* --- .font_name */
+              } /* --- .button_content */
+            } /* --- .button_box */
+            .cursor_box {
+              margin-top: 20px;
+              display: flex;
+              gap: 20px;
+
+              p {
+                font-size: map-get($map: $font_size, $key: content1)
               }
             }
-          }
-        }
+          } /* --- .logo_part */
+        } /* --- .guide_content */
+
+        /* .font_part */
+        // .font_part
         .font_part {
           @include fontPartBox();
 
           .font_regular, .font_medium, .font_bold {
             background-color: $color_white;
           }
+
           .fontSize96 {
             p {
               font-size: 44px;
               letter-spacing: 10px;
             }
-          } /* 96 */
+          } /* --- .fontSize96 */
 
           .fontSize12 {
             p {
               font-size: map-get($map: $font_size, $key: content2);
               letter-spacing: 10px;
             }
-          } /* .fontSize12 */
-        }
-      }
+          } /* --- .fontSize12 */
+        } /* --- .font_part */
+      } /* --- .guide */
 
+      /* .color_part */
+      // .color_part
       .color_part {
         @include colorPartBox();
 
@@ -1010,6 +1080,8 @@
           margin-left: 5px;
         }
 
+        /* .back_color */
+        // .back_color
         .back_color {
           display: flex;
           margin-top: 18px;
@@ -1028,6 +1100,8 @@
             line-height: 31px;
           }
 
+          /* .back_content */
+          // .back_content
           .back_content {
             @include backPointColor();
 
@@ -1061,9 +1135,12 @@
               @include back_shapes();
               background-color: #4f4259;
             }
-          }
-        }
-      }
+          } /* --- .back_content */
+        } /* --- .back_color */
+      } /* --- .color_part */
+
+      /* .point_part */
+      // .point_part
       .point_part {
         margin-top: 30px;
         
@@ -1071,12 +1148,16 @@
           @include h4();
         }
 
+        /* .kikiPointColor */
+        // .kikiPointColor
         .kikiPointColor {
           display: flex;
           gap: 32px;
           margin-top: 18px;
           margin-left: 5px;
 
+          /* .kikiPointContent */
+          // .kikiPointContent
           .kikiPointContent {
             display: flex;
             flex-direction: column;
@@ -1085,6 +1166,9 @@
               margin-top: 0px;
               margin-left: 0px;
             }
+
+            /* .back_red */
+            // .back_red
             .back_red {
               @include backPointColor();
               margin: auto;
@@ -1104,8 +1188,11 @@
                 @include back_shapes();
                 background-color: #d71e15;
               }
-            }
-          }
+            } /* --- .back_red */
+          } /* --- .kikiPointContent */
+
+          /* .kikiPointfont */
+          // .kikiPointfont
           .kikiPointfont {
             display: flex;
             flex-direction: column;
@@ -1131,19 +1218,26 @@
                 text-align: center;
                 line-height: 68px;
               }
+
+              /* .font_name */
+              // .font_name
               .font_name {
                 @include fontName();
                 
                 height: auto;
                 padding: 2px 4px;
+
                 p { 
                   font-size: map-get($map: $font_size, $key: content2);
                 }
-              }
-            }
-          }
-        } /* .font_bold */
-      }
+              } /* --- .font_name */
+            } /* --- .font_bold */
+          } /* --- .kikiPointfont */
+        } /* --- .font_bold */
+      } /* --- .point_part */
+
+      /* .pointFontSize */
+      // .pointFontSize
       .pointFontSize {
         margin-top: 15px;
         margin-left: 5px;
@@ -1157,15 +1251,19 @@
           letter-spacing: 10px;
           text-transform: uppercase;
         }
-      }
+      } /* --- .pointFontSize */
+
+      /* .pagever_intro */
+      // .pagever_intro
       .pagever_intro {
-        width: 100%;
-        height: auto;
-        padding-top: 40px;
+        @include pageIntro();
 
         h3 {
           @include guidelineh3 ();
         }
+
+        /* .pagever_content */
+        // .pagever_content
         .pagever_content {
           display: flex;
           gap: 30px;
@@ -1175,38 +1273,30 @@
             width: 526px;
             height: 960px;
             background-color: #eee;
-            
           }
           
           .page_explanation {
             width: 524px;
             background-color: #eee;
 
-            // .arrow_line {
-            //   width: 173px;
-            //   height: 0px;
-            //   flex-shrink: 0;
-            //   stroke-width: 3px;
-            //   stroke: var(--blue, #006DA9);
-            // }
-          }
-          
-          // .page_explanation::after {
-          //   content: '';
-          //   width: 173px;
-          //   margin: 10px 0;
-          //   position: relative;
-          //   top: 150px;
-          //   left: 397px;
-          //   display: block;
-          //   flex-grow: 1;
-          //   font-size: 0px;
-          //   line-height: 0px;
-          //   border: 1px solid $color_blue;
-          // }
-
-        }
-      }
+            .arrowLineRed {
+              @include arrowSvg();
+              top: 150px;
+              right: 110px;
+            }
+            .arrowLineIndigo {
+              @include arrowSvg();
+              top: 450px;
+              right: 140px;
+            }
+            .arrowLineGreen {
+              @include arrowSvg();
+              top: 650px;
+              right: 100px;
+            }
+          } /* --- .page_explanation */
+        } /* --- .pagever_content */
+      } /* --- .pagever_intro */
     } /* #project */
 
     // #contact
@@ -1229,8 +1319,7 @@
         display: flex;
         background-image: url(../../img/endingImg.JPG);
         background-size: 100% 100%;
-      }
-      // } /* img_container */
+      } /* --- img_container */
 
       p {
         width: 100%;
@@ -1243,6 +1332,8 @@
         text-transform: capitalize;
       }
 
+      /* .personal_data */
+      // .personal_data
       .personal_data {
         
         p:first-child {
@@ -1262,10 +1353,10 @@
           margin-top: 25px;
           text-align: center;
           font-size: map-get($map: $font_size, $key: content1);
-        } /* a */
-      } /* .personal_data */
-    } /* #contact */
-  } /* #main */
+        } /* --- a */
+      } /* --- .personal_data */
+    } /* --- #contact */
+  } /* --- #main */
 
   // #footBox
   /* #footBox */
@@ -1275,6 +1366,8 @@
     bottom: 0px;
     z-index: 51;
     
+    /* .footinner */
+    // .footinner
     .footinner {
       background-color: rgb(255, 255, 255);
       border-top: 1px solid rgb(229, 229, 229);
@@ -1286,6 +1379,8 @@
       text-align: center;
       width: 100%;
   
+      /* .fnb_container */
+      // .fnb_container
       .fnb_container {
         -webkit-box-align: center;
         align-items: center;
@@ -1315,17 +1410,19 @@
           width: 1px;
         } /* .verical_divider */
 
+        /* .fnb */
+        // .fnb
         .fnb {
-          -webkit-box-align: center;
-          align-items: center;
+          width: 100%;
+          height: 36px;
           display: flex;
           flex-direction: row;
-          height: 36px;
-          -webkit-box-pack: start;
+          align-items: center;
           justify-content: flex-start;
-          width: 100%;
           font-size: map-get($map: $font_size, $key: fnb);
           font-weight: $font_weight_medium;
+          -webkit-box-align: center;
+          -webkit-box-pack: start;
           
           & label {
             width: 10%;
@@ -1334,11 +1431,12 @@
           }
 
           label:hover {
-            color: $color_red;
-            font-weight: $font_weight_bold;
+            @include navHover();
           }
         } /* .fnb */
 
+        /* .link_btn */
+        // .link_btn
         .link_btn {
           width: 100%;
           height: 36px;
