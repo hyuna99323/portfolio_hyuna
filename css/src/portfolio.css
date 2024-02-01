@@ -200,8 +200,8 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  top: 585px;
-  left: 760px;
+  top: 540px;
+  left: 768px;
   transform: rotate(36.306deg);
   background-color: #FDD131;
 }
@@ -513,12 +513,6 @@
   width: 100%;
   height: auto;
   padding-top: 40px;
-  /* --- .portfolio_content - 포트폴리오 프로젝트 설명 */
-  /* .kiki_content - 마녀배달부키키 프로젝트 설명 */
-  /* --- .kiki_content */
-  /* .guide */
-  /* --- .guide */
-  /* .color_part */
   /* --- .color_part */
   /* .point_part */
   /* --- .point_part */
@@ -545,7 +539,6 @@
   /* .guide - 가이드라인 */
   /* --- .guide - 가이드라인부분 */
   /* .pagever_intro - 사이트 주기능 설명 */
-  /* --- pagever_intro - 사이트 주기능 설명 */
 }
 
 #wrap main #project .portfolio_content .project_intro {
@@ -1260,40 +1253,72 @@
   background-size: 100% 100%;
 }
 
+#wrap main #project .portfolio_content .pagever_intro .page_explanation p {
+  width: 300px;
+  position: relative;
+  font-size: 14px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+  bottom: 120px;
+  left: 140px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
+  width: auto;
+  stroke-width: 3px;
+  position: relative;
+  bottom: 177px;
+  left: 456px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue p {
+  top: 240px;
+  left: 30px;
+}
+
 #wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 150px;
-  left: 410px;
+  top: 194px;
+  left: 375px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow p {
+  top: 300px;
+  left: 20px;
 }
 
 #wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 450px;
-  left: 358px;
+  top: 250px;
+  left: 330px;
+}
+
+#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge p {
+  top: 500px;
+  left: 90px;
 }
 
 #wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 650px;
+  top: 450px;
   left: 397px;
 }
 
 #wrap main #project .kiki_content {
   background-color: #A5C2D3;
   padding: 92px 100px 0;
-  /* .project_intro */
 }
 
 #wrap main #project .kiki_content .project_intro {
   display: flex;
   gap: 88px;
-  /* .mockup */
   /* --- .mockup */
 }
 
@@ -1354,10 +1379,6 @@
   height: auto;
   padding: 40px 0;
   color: #0A4B41;
-  /* .guide_content */
-  /* --- .guide_content */
-  /* .font_part */
-  /* --- .font_part */
 }
 
 #wrap main #project .guide h3 {
@@ -1369,8 +1390,6 @@
 #wrap main #project .guide .guide_content {
   display: flex;
   gap: 44px;
-  /* .logo_part */
-  /* --- .logo_part */
 }
 
 #wrap main #project .guide .guide_content .logo_part {
@@ -1379,10 +1398,6 @@
   margin-top: 30px;
   flex-direction: column;
   margin-left: 15px;
-  /* .logo */
-  /* --- .logo */
-  /* .button_box */
-  /* --- .button_box */
 }
 
 #wrap main #project .guide .guide_content .logo_part h4 {
@@ -1426,8 +1441,6 @@
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 15px;
-  /* .button_content */
-  /* --- .button_content */
 }
 
 #wrap main #project .guide .guide_content .logo_part .button_box .button_content {
@@ -1437,8 +1450,6 @@
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
-  /* .font_name */
-  /* --- .font_name */
 }
 
 #wrap main #project .guide .guide_content .logo_part .button_box .button_content img {
@@ -1483,8 +1494,6 @@
   margin-top: 30px;
   /* .font_ex */
   /* 폰트 사이즈 가이드라인 */
-  /* --- .fontSize96 */
-  /* --- .fontSize12 */
 }
 
 #wrap main #project .guide .font_part h4 {
@@ -1913,7 +1922,13 @@
   background-color: #eee;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineRed {
+#wrap main #project .pagever_intro .pagever_content .page_explanation p {
+  width: 300px;
+  position: relative;
+  font-size: 14px;
+}
+
+#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -1921,7 +1936,7 @@
   right: 110px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineIndigo {
+#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineIndigo svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -1929,7 +1944,7 @@
   right: 140px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineGreen {
+#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineGreen svg {
   width: auto;
   stroke-width: 3px;
   position: relative;

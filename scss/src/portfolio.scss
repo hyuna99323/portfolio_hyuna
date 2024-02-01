@@ -176,8 +176,8 @@
           width: 70px;
           height: 70px;
           border-radius: 50%;
-          top: 585px;
-          left: 760px;          
+          top: 540px;
+          left: 768px;    
           transform: rotate(36.306deg);
           background-color: $color_yellow;
         }
@@ -901,47 +901,80 @@
           }
 
           .page_explanation {
+            p {
+              @include arrowSvgTxt();
+            }
+            // 빨간 선
+            .arrowLineRed {
+              p {
+                bottom: 120px;
+                left: 140px;
+              }
+              svg {
+                @include arrowSvg();
+                bottom: 177px;
+                left: 456px;
+              }
+            }
 
-            
-            .arrowLineBlue svg {
-              @include arrowSvg();
-              top: 150px;
-              left: 410px;
+            // 파란선
+            .arrowLineBlue {
+              p {
+                top: 240px;
+                left: 30px;
+              }
+              svg {
+                @include arrowSvg();
+                top: 194px;
+                left: 375px;
+              }
             }
-            .arrowLineYellow svg {
-              @include arrowSvg();
-              top: 450px;
-              left: 358px;
-            }
-            .arrowLineOrenge svg {
-              @include arrowSvg();
-              top: 650px;
-              left: 397px;
-            }
-          }
-        } /* --- pagever_intro - 사이트 주기능 설명 */
-      } /* --- .portfolio_content - 포트폴리오 프로젝트 설명 */
 
-      /* .kiki_content - 마녀배달부키키 프로젝트 설명 */
+            // 노란선
+            .arrowLineYellow {
+              p {
+                top: 300px;
+                left: 20px;
+              }
+              svg {
+                @include arrowSvg();
+                top: 250px;
+                left: 330px;
+              }
+            }
+
+            // 주황선
+            .arrowLineOrenge {
+              p {
+                top: 500px;
+                left: 90px;
+              }
+              svg {
+                @include arrowSvg();
+                top: 450px;
+                left: 397px;
+              }
+            }
+          } // --- .page_explanation
+        } // --- pagever_intro - 사이트 주기능 설명
+      } // --- .portfolio_content - 포트폴리오 프로젝트 설명
+
       // .kiki_content - 마녀배달부키키 프로젝트 설명
       .kiki_content {
         background-color: #A5C2D3;
         padding: 92px 100px 0;
 
-        /* .project_intro */
         // .project_intro
         .project_intro {
           @include projectIntro();
 
-          /* .mockup */
           // .mockup
           @include guideMockup();
 
           @include introTxt();
         }
-      } /* --- .kiki_content */
+      } // --- .kiki_content
 
-      /* .guide */
       // .guide
       .guide {
         @include guideBox();
@@ -951,12 +984,10 @@
           @include guidelineh3();
         }
 
-        /* .guide_content */
         // .guide_content
         .guide_content {
           @include guideflex();
 
-          /* .logo_part */
           //.logo_part
           .logo_part {
             @include guidelogoContent ();
@@ -964,7 +995,7 @@
             h4 {
               @include h4();
             }
-            /* .logo */
+
             // .logo
             .logo {
               @include logoMargin();
@@ -980,7 +1011,7 @@
                 font-size: map-get($map: $font_size, $key: fnb);
                 color: $color_gray
               }
-            } /* --- .logo */
+            } // --- .logo
 
             h5 {
               @include h5();
@@ -988,7 +1019,6 @@
               margin-left: 5px;
             }
 
-            /* .button_box */
             // .button_box
             .button_box {
               margin-top: 20px;
@@ -997,7 +1027,6 @@
               column-gap: 30px;
               row-gap: 15px;
 
-              /* .button_content */
               // .button_content
               .button_content {
                 width: 78px;
@@ -1012,7 +1041,6 @@
                   height: 60px;
                 }
 
-                /* .font_name */
                 // .font_name
                 .font_name {
                   @include fontName();
@@ -1025,9 +1053,10 @@
                     text-align: center;
                     line-height: 27px;
                   }
-                } /* --- .font_name */
-              } /* --- .button_content */
-            } /* --- .button_box */
+                } // --- .font_name
+              } // --- .button_content 
+            } // --- .button_box
+
             .cursor_box {
               margin-top: 20px;
               display: flex;
@@ -1037,10 +1066,9 @@
                 font-size: map-get($map: $font_size, $key: content1)
               }
             }
-          } /* --- .logo_part */
-        } /* --- .guide_content */
+          } // --- .logo_part
+        } // --- .guide_content
 
-        /* .font_part */
         // .font_part
         .font_part {
           @include fontPartBox();
@@ -1054,18 +1082,17 @@
               font-size: 44px;
               letter-spacing: 10px;
             }
-          } /* --- .fontSize96 */
+          } // --- .fontSize96
 
           .fontSize12 {
             p {
               font-size: map-get($map: $font_size, $key: content2);
               letter-spacing: 10px;
             }
-          } /* --- .fontSize12 */
-        } /* --- .font_part */
-      } /* --- .guide */
+          } // --- .fontSize12
+        } // --- .font_part
+      } // --- .guide
 
-      /* .color_part */
       // .color_part
       .color_part {
         @include colorPartBox();
@@ -1279,20 +1306,41 @@
             width: 524px;
             background-color: #eee;
 
-            .arrowLineRed {
-              @include arrowSvg();
-              top: 150px;
-              right: 110px;
+            p {
+              @include arrowSvgTxt();
             }
+
+            // 어두운 빨간 선
+            .arrowLineDWRed {
+              p {}
+
+              svg {
+                @include arrowSvg();
+                top: 150px;
+                right: 110px;
+              }
+            }
+
+            // 남색선
             .arrowLineIndigo {
-              @include arrowSvg();
-              top: 450px;
-              right: 140px;
+              p {}
+
+              svg {
+                @include arrowSvg();
+                top: 450px;
+                right: 140px;
+              }
             }
+            
+            // 초록선
             .arrowLineGreen {
-              @include arrowSvg();
-              top: 650px;
-              right: 100px;
+              p {}
+
+              svg {
+                @include arrowSvg();
+                top: 650px;
+                right: 100px;
+              }
             }
           } /* --- .page_explanation */
         } /* --- .pagever_content */

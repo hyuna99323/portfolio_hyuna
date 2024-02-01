@@ -325,6 +325,12 @@
 
 }
 
+@mixin arrowSvgTxt() {
+  width: 300px;
+  position: relative;
+  font-size: map-get($map: $font_size, $key: content1)
+}
+
 // 인트로 텍스트 - 프로젝트 설명 텍스트 설정
 @mixin introTxt() {
   .intro_txt {
