@@ -1,3 +1,4 @@
+// advantage part 마우스 올라가면 비디오 재생
 const items = document.querySelectorAll(".advantageBox");
 
 for(let el of items){
@@ -7,5 +8,4 @@ for(let el of items){
   el.addEventListener("mouseleave", (e) => {
     e.currentTarget.querySelector("video").pause();
   });
-
 }

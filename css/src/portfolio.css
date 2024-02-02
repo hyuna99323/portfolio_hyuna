@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Black Han Sans';
   src: url("../../font/Black_Han_Sans/BlackHanSans-Regular.ttf");
   font-weight: 400;
   font-style: normal;
@@ -28,12 +28,6 @@
   background-color: #fff;
   font-family: "S-Core_Dream_OTF";
   font-weight: 300;
-  /* #headbox */
-  /* --- #headBox */
-  /* main */
-  /* --- #main */
-  /* #footBox */
-  /* #footBox */
 }
 
 #wrap #headbox {
@@ -47,10 +41,6 @@
   box-sizing: border-box;
   background-color: #fff;
   z-index: 1000;
-  /* .headinner */
-  /*  --- .headinner */
-  /* .gnb */
-  /* --- .gnb */
 }
 
 #wrap #headbox .headinner {
@@ -59,13 +49,11 @@
   box-sizing: border-box;
   display: flex;
   /* logo */
-  /* --- h1 */
 }
 
 #wrap #headbox .headinner h1 {
   width: auto;
   height: 100%;
-  /* --- a */
 }
 
 #wrap #headbox .headinner h1 a {
@@ -110,27 +98,11 @@
   font-weight: 600;
 }
 
-#wrap main {
-  /* #home */
-  /* --- #home */
-  /* #introduce */
-  /* --- #introduce */
-  /* advantage */
-  /* --- #advantage */
-  /* #project */
-  /* #project */
-  /* #contact */
-  /* --- #contact */
-}
-
 #wrap main #home {
   width: 100%;
   height: 92vh;
   display: flex;
   padding: 40px 100px;
-  /* --- .middle_content */
-  /* .right_span */
-  /* --- .right_span */
 }
 
 #wrap main #home .left_span {
@@ -139,7 +111,7 @@
   position: relative;
   right: 13.8%;
   top: 298px;
-  rotate: 90deg;
+  transform: rotate(90deg);
   display: inline-block;
   text-align: center;
   line-height: 62px;
@@ -239,8 +211,6 @@
   width: 100%;
   height: 100%;
   padding: 40px 100px;
-  /* .about_inner */
-  /* --- .about_inner */
 }
 
 #wrap main #introduce h2 {
@@ -254,18 +224,10 @@
 #wrap main #introduce .about_inner {
   width: 100%;
   display: flex;
-  /* --- .about_left */
-  /* .about_midle */
-  /* --- .about_midle */
-  /* .about_right */
-  /* --- .about_right */
 }
 
 #wrap main #introduce .about_inner .about_left {
   width: 455px;
-  /* --- .greeting */
-  /* .id_picture */
-  /* --- .sort_introduce */
 }
 
 #wrap main #introduce .about_inner .about_left .greeting {
@@ -323,15 +285,12 @@
 
 #wrap main #introduce .about_inner .about_right {
   width: 310px;
-  /* --- .skill */
 }
 
 #wrap main #introduce .about_inner .about_right .skill {
   margin-top: 90px;
   display: flex;
   justify-content: end;
-  /* .skillBox */
-  /* --- .skillBox */
 }
 
 #wrap main #introduce .about_inner .about_right .skill .skill_title {
@@ -355,7 +314,6 @@
 #wrap main #introduce .about_inner .about_right .skill .skillBox {
   display: flex;
   flex-direction: column;
-  /* --- .skill_inner */
 }
 
 #wrap main #introduce .about_inner .about_right .skill .skillBox .skill_inner {
@@ -383,9 +341,6 @@
   display: flex;
   padding: 40px 100px;
   z-index: 1;
-  /* --- .advantage_txt */
-  /* .advantage_inner */
-  /* --- .advantage_inner */
 }
 
 #wrap main #advantage .advantageBox {
@@ -450,9 +405,6 @@
   flex-wrap: wrap;
   align-content: space-between;
   position: relative;
-  /* --- .advantage_txt */
-  /* figure */
-  /* --- figure */
 }
 
 #wrap main #advantage .advantage_inner .advantage_txt {
@@ -513,13 +465,6 @@
   width: 100%;
   height: auto;
   padding-top: 40px;
-  /* --- .color_part */
-  /* .point_part */
-  /* --- .point_part */
-  /* .pointFontSize */
-  /* --- .pointFontSize */
-  /* .pagever_intro */
-  /* --- .pagever_intro */
 }
 
 #wrap main #project h2 {
@@ -534,11 +479,6 @@
 #wrap main #project .portfolio_content {
   margin-top: 32px;
   padding: 40px 100px 0;
-  /* 프로젝트 설명 */
-  /* --- project_intro - 프로젝트 설명 */
-  /* .guide - 가이드라인 */
-  /* --- .guide - 가이드라인부분 */
-  /* .pagever_intro - 사이트 주기능 설명 */
 }
 
 #wrap main #project .portfolio_content .project_intro {
@@ -603,8 +543,6 @@
   width: 100%;
   height: auto;
   padding: 40px 0;
-  /* .guide_content -포트폴리오 프로젝트 설명 */
-  /* --- .port_content - 포트폴리오 프로젝트 설명 */
 }
 
 #wrap main #project .portfolio_content .guide h3 {
@@ -616,11 +554,6 @@
 #wrap main #project .portfolio_content .guide .guide_content {
   display: flex;
   gap: 44px;
-  /* --- .logo_part - 로고 가이드라인 */
-  /* .font_part */
-  /* --- .font_part - 폰트 설명  */
-  /* color_part  - 가이드라인 color부분 */
-  /* --- color_part  - 가이드라인 color부분 */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .logo_part {
@@ -629,12 +562,6 @@
   margin-top: 30px;
   flex-direction: column;
   margin-left: 15px;
-  /* --- .logo */
-  /* .logo_font */
-  /* --- .logo_font */
-  /* --- .font_color - 폰트 색상 */
-  /* .fontColorExp */
-  /* --- .fontColorExp */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .logo_part h4 {
@@ -687,9 +614,6 @@
   margin-left: 5px;
   display: flex;
   gap: 14px;
-  /* --- .logoFontEx - 폰트 예시 이미지 */
-  /* .fontExp */
-  /* --- .fontExp = 글꼴 설명 */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx {
@@ -697,7 +621,6 @@
   height: 156px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
-  /* --- .font_name - 폰트명 */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx span {
@@ -755,8 +678,6 @@
   margin-left: 5px;
   display: flex;
   flex-direction: column;
-  /* .color_list */
-  /* --- .color_list */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list {
@@ -805,9 +726,6 @@
   margin-top: 30px;
   /* .font_ex */
   /* 폰트 사이즈 가이드라인 */
-  /* .font_size - 폰트 사이즈 가이드라인 */
-  /* --- .fontSize32 */
-  /* --- .fontSize11 */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .font_part h4 {
@@ -993,9 +911,6 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  /* --- .color_content - 사용한 색상 가이드라인 */
-  /* .button_color */
-  /* --- .button_color */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .color_part h4 {
@@ -1010,10 +925,6 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  /* .icon_color */
-  /* --- .icon_color */
-  /* .bottom_color */
-  /* --- .bottom_color */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .colorSubTitle {
@@ -1034,11 +945,6 @@
   margin-top: 18px;
   display: flex;
   gap: 50px;
-  /* --- .icon_yellow */
-  /* .icon_bule */
-  /* --- .icon_bule */
-  /* .icon_orange */
-  /* --- .icon_orange */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow {
@@ -1081,9 +987,6 @@
   margin-top: 30px;
   display: flex;
   gap: 24px;
-  /* --- .point_color */
-  /* .background_color */
-  /* --- .background_color */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color {
@@ -1126,10 +1029,6 @@
   flex-direction: column;
   gap: 20px;
   font-weight: 500;
-  /* .button_content */
-  /* --- .button_content */
-  /* .button_hover - 버튼 마우스 오버 시 색상 및 굵기 */
-  /* --- .button_hover */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content {
@@ -1177,10 +1076,6 @@
   display: flex;
   margin-left: 5px;
   gap: 30px;
-  /* .nomal_part */
-  /* --- .nomal_part */
-  /* .hover_part */
-  /* --- .hover_part */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover h5 {
@@ -1208,10 +1103,6 @@
   text-align: center;
   border: 1.5px solid #ccc;
   border-radius: 4px;
-}
-
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part {
-  /* --- .hover_ex */
 }
 
 #wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
@@ -1679,8 +1570,6 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  /* .back_color */
-  /* --- .back_color */
 }
 
 #wrap main #project .color_part h4 {
@@ -1705,8 +1594,6 @@
   flex-wrap: wrap;
   column-gap: 26px;
   row-gap: 20px;
-  /* .back_content */
-  /* --- .back_content */
 }
 
 #wrap main #project .color_part .back_color span {
@@ -1765,8 +1652,6 @@
 
 #wrap main #project .point_part {
   margin-top: 30px;
-  /* .kikiPointColor */
-  /* --- .font_bold */
 }
 
 #wrap main #project .point_part h4 {
@@ -1780,17 +1665,11 @@
   gap: 32px;
   margin-top: 18px;
   margin-left: 5px;
-  /* .kikiPointContent */
-  /* --- .kikiPointContent */
-  /* .kikiPointfont */
-  /* --- .kikiPointfont */
 }
 
 #wrap main #project .point_part .kikiPointColor .kikiPointContent {
   display: flex;
   flex-direction: column;
-  /* .back_red */
-  /* --- .back_red */
 }
 
 #wrap main #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
@@ -1827,7 +1706,6 @@
 #wrap main #project .point_part .kikiPointColor .kikiPointfont {
   display: flex;
   flex-direction: column;
-  /* --- .font_bold */
 }
 
 #wrap main #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
@@ -1842,8 +1720,6 @@
   border-radius: 4px;
   margin-top: 10px;
   background-color: #fff;
-  /* .font_name */
-  /* --- .font_name */
 }
 
 #wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold span {
@@ -1894,8 +1770,6 @@
   width: 100%;
   height: auto;
   padding-top: 40px;
-  /* .pagever_content */
-  /* --- .pagever_content */
 }
 
 #wrap main #project .pagever_intro h3 {
@@ -1908,18 +1782,13 @@
   display: flex;
   gap: 30px;
   margin-top: 36px;
-  /* --- .page_explanation */
 }
 
 #wrap main #project .pagever_intro .pagever_content .kiki_mockup {
   width: 526px;
   height: 960px;
-  background-color: #eee;
-}
-
-#wrap main #project .pagever_intro .pagever_content .page_explanation {
-  width: 524px;
-  background-color: #eee;
+  background-image: url(../../img/kiki_capture.png);
+  background-size: 100% 100%;
 }
 
 #wrap main #project .pagever_intro .pagever_content .page_explanation p {
@@ -1928,28 +1797,43 @@
   font-size: 14px;
 }
 
+#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed p {
+  top: 86px;
+  left: 170px;
+}
+
 #wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 150px;
-  right: 110px;
+  top: 50px;
+  right: 350px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineIndigo svg {
+#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineBeige p {
+  top: 408px;
+  left: 150px;
+}
+
+#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineBeige svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 450px;
-  right: 140px;
+  top: 350px;
+  right: 40px;
+}
+
+#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineGreen p {
+  top: 536px;
+  left: 222px;
 }
 
 #wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineGreen svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 650px;
-  right: 100px;
+  top: 500px;
+  right: 40px;
 }
 
 #wrap main #contact {
@@ -1957,9 +1841,6 @@
   height: 600px;
   padding: 40px 100px;
   background-color: #fffffc;
-  /* --- img_container */
-  /* .personal_data */
-  /* --- .personal_data */
 }
 
 #wrap main #contact h2 {
@@ -1991,11 +1872,6 @@
   text-transform: capitalize;
 }
 
-#wrap main #contact .personal_data {
-  /* p:first-child */
-  /* --- a */
-}
-
 #wrap main #contact .personal_data p:first-child {
   width: 100%;
   height: 18px;
@@ -2020,8 +1896,6 @@
   position: sticky;
   bottom: 0px;
   z-index: 51;
-  /* .footinner */
-  /* .footinner */
 }
 
 #wrap #footBox .footinner {
@@ -2034,8 +1908,6 @@
   position: relative;
   text-align: center;
   width: 100%;
-  /* .fnb_container */
-  /* .fnb_container */
 }
 
 #wrap #footBox .footinner .fnb_container {
@@ -2044,12 +1916,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 16px;
-  /* h1 */
-  /* .verical_divider */
-  /* .fnb */
-  /* .fnb */
-  /* .link_btn */
-  /* .link_btn */
 }
 
 #wrap #footBox .footinner .fnb_container h1 {
@@ -2130,5 +1996,3 @@
   background-color: #FB8145;
   border-radius: 10px;
 }
-
-/* #wrap */
