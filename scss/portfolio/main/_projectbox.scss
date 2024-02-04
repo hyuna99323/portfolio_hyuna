@@ -1,0 +1,852 @@
+// #project
+#project {
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+
+  h2 {
+    @include h2;
+    padding: 0 100px;
+  }
+
+  .portfolio_content {
+    margin-top: 32px;
+    padding: 40px 100px 0;
+
+    // 프로젝트 설명
+    .project_intro {
+      @include projectIntro();
+      
+      @include introTxt();
+
+      @include guideMockup();
+    } // --- project_intro - 프로젝트 설명
+
+    // .guide - 가이드라인 
+    .guide {
+      @include guideBox();
+
+      h3 {
+        @include guidelineh3 ();
+      }
+
+      // .guide_content - 포트폴리오 프로젝트 설명
+      .guide_content {
+        @include guideflex();
+
+        .logo_part {
+          @include guidelogoContent ();
+
+          h4 {
+            @include h4();
+          }
+          .logo {
+            @include logoMargin();
+
+
+            span{
+              font-weight: $font_weight_regular;
+              font-family: $font-family_black;
+              font-size: map-get($map: $font_size, $key: projectsub);
+              letter-spacing: 9px;
+            }
+
+            .title_O {
+              color: $color_yellow;
+            }
+            .title_H {
+              color: $color_blue;
+            }
+            .title_A {
+              color: $color_orange;
+            }
+
+            p{
+              @include logoInP();
+            }
+          } // --- .logo
+
+          h5 {
+            @include h5();
+            margin-top: 94px;
+            margin-left: 5px;
+          }
+
+          // .logo_font
+          .logo_font {
+            width: 340px;
+            margin-top: 10px;
+            margin-left: 5px;
+            display: flex;
+            gap: 14px;
+
+            .logoFontEx {
+              width: 112px;
+              height: 156px;
+              border: 1.5px solid $color_grayC;
+              border-radius: 4px;
+
+              span {
+                width: 100%;
+                height: 104px;
+                display: block;
+                font-family: $font-family_black;
+                font-size: 36px;
+                text-align: center;
+                line-height: 104px;
+              }
+              .font_name {
+                @include fontName ();
+                p:last-child {
+                  font-size: map-get($map: $font_size, $key: content2);
+                  font-weight: $font_weight_regular;
+                }
+              } // --- .font_name - 폰트명
+            } // --- .logoFontEx - 폰트 예시 이미지
+
+            // .fontExp
+            .fontExp {
+              width: 214px;
+              height: auto;
+              
+              .explanation {
+                font-size: map-get($map: $font_size, $key: content1);
+              }
+              
+              .explanation:nth-last-child(-n+2) {
+                font-size: map-get($map: $font_size, $key: content1);
+                margin-top: 12px;
+              }
+            } // --- .fontExp = 글꼴 설명
+          } // --- .logo_font
+
+          .colorSubTilte {
+            @include h5();
+            margin: 55px 0 20px 5px;
+          }
+
+          .font_color {
+            width: 100%;
+            margin-left: 5px;
+            display: flex;
+            flex-direction: column;
+
+            // .color_list
+            .color_list {
+              display: flex;
+
+              .list_yellow {
+                width: 22px;
+                height: 22px;
+                margin-right: 14px;
+                border-radius: 50%;
+                background: $color_yellow;
+              }
+
+              .list_bule {
+                width: 22px;
+                height: 22px;
+                margin-right: 14px;
+                background: $color_blue;
+              }
+
+              .list_orange {
+                width: 0px;
+                height: 0px;
+                border-bottom: 22px solid #FB8145;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+              }
+            } // --- .color_list
+          } // --- .font_color - 폰트 색상
+
+          // .fontColorExp
+          .fontColorExp {
+            margin-top: 10px;
+            p {
+              font-size: map-get($map: $font_size, $key: content1);
+            }
+            p:last-child {
+              margin-top: 12px;
+              font-size: map-get($map: $font_size, $key: content1);
+            }
+          } // --- .fontColorExp
+        } // --- .logo_part - 로고 가이드라인
+      
+        // .font_part
+        .font_part {
+          @include fontPartBox(); // --- .font_size - 폰트 사이즈 가이드라인
+          
+          .fontSize32 {
+            p {
+              font-size: map-get($map: $font_size, $key: projecttitle);
+              letter-spacing: 10px;
+            }
+          } // --- .fontSize32
+
+          .fontSize11 {
+            @include fontSizeEx();
+      
+            p {
+              font-size: map-get($map: $font_size, $key: fnb);
+              letter-spacing: 10px;
+            }
+          } // --- .fontSize11
+        } // --- .font_part - 폰트 설명 
+
+        // color_part - 가이드라인 color부분
+        .color_part {
+          @include colorPartBox();
+          
+          h4 {
+            @include h4();
+          }
+          .color_content {
+            @include colorPartBox();
+          
+            .colorSubTitle {
+              @include h5();
+            }
+
+            span {
+              @include ColorRgbTxt();
+            }
+
+            // .icon_color
+            .icon_color {
+              margin-top: 18px;
+              display: flex;
+              gap: 50px;
+            
+              .icon_yellow {
+                display: flex;
+                flex-direction: column;
+              
+                .yellow_shapes {
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background-color: $color_yellow;
+                }
+              } // --- .icon_yellow
+
+              // .icon_bule
+              .icon_bule {
+                display: flex;
+                flex-direction: column;
+
+                .bule_shapes {
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background-color: $color_blue;
+                }
+              } // --- .icon_bule
+
+              // .icon_orange
+              .icon_orange {
+                display: flex;
+                flex-direction: column;
+              
+                .orange_shapes {
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background-color: $color_orange;
+                }
+              } // --- .icon_orange
+            } // --- .icon_color
+
+            // .bottom_color
+            .bottom_color {
+              margin-top: 30px;
+              display: flex;
+              gap: 24px;
+            
+              .point_color {
+                display: flex;
+                flex-direction: column;
+              
+                .icon_red {
+                  width: 60px;
+                  height: 60px;
+                  margin: auto;
+                  margin-top: 10px;
+                  border-radius: 50%;
+                  background-color: $color_red;
+                }
+              } // --- .point_color
+
+              // .background_color
+              .background_color {
+                display: flex;
+                flex-direction: column;
+              
+                .icon_white {
+                  width: 60px;
+                  height: 60px;
+                  margin-left: 8.77px;
+                  margin-top: 10px;
+                  border: 1px solid #cfcfcf;
+                  border-radius: 50%;
+                  background-color: $color_graywhite;
+                }
+
+                .backgroundColorTxt {
+                  text-align-last: left;
+                  margin-left: 8.77px;
+                }
+              } // --- .background_color
+            } // --- .bottom_color
+          } // --- .color_content - 사용한 색상 가이드라인
+
+          // .button_color
+          .button_color {
+            margin-top: 94px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-weight: $font_weight_medium;
+            
+            // .button_content
+            .button_content {
+              width: 294px;
+              display: flex;
+              margin-left: 5px;
+              gap: 18px;
+            
+              .resume_btn {
+                @include fnb ();
+                background-color: $color_yellow;
+              }
+
+              .github_btn {
+                @include fnb ();
+                background-color: $color_blue;
+                color: $color_white;
+              }
+
+              .notion_btn {
+                @include fnb ();
+                background-color: $color_orange;
+              }
+            } // --- .button_content
+
+            // .button_hover - 버튼 마우스 오버 시 색상 및 굵기
+            .button_hover {
+              display: flex;
+              margin-left: 5px;
+              gap: 30px;
+            
+              h5 {
+                @include h5();
+              }
+
+              span {
+                font-size: 36px;
+                font-weight: $font_weight_regular;
+              }
+
+              p {
+                font-size: map-get($map: $font_size, $key: content1);
+                font-weight: $font_weight_regular;
+              }
+
+              // .nomal_part
+              .nomal_part {
+                .nomal_ex {
+                  width: 100px;
+                  height: 100px;
+                  margin-top: 10px;
+                  padding-top: 20px;
+                  text-align: center;
+                  border: 1.5px solid $color_grayC;
+                  border-radius: 4px;
+                }
+              } // --- .nomal_part
+
+              // .hover_part
+              .hover_part {
+                .hover_ex {
+                  width: 100px;
+                  height: 100px;
+                  margin-top: 10px;
+                  padding-top: 20px;
+                  text-align: center;
+                  border: 1.5px solid $color_grayC;
+                  border-radius: 4px;
+                
+                  span {
+                    font-weight: $font_weight_medium;
+                    color: $color_red;
+                  }
+
+                  p {
+                    color: $color_red;
+                  }
+                } // --- .hover_ex
+              } // --- .hover_part
+            } // --- .button_hover
+          } // --- .button_color
+        } // --- color_part  - 가이드라인 color부분
+      } // --- .port_content - 포트폴리오 프로젝트 설명
+    } // --- .guide - 가이드라인부분
+
+    // .pagever_intro - 사이트 주기능 설명
+    .pagever_intro {
+      @include pageIntro();
+
+      h3 {
+        @include guidelineh3 ();
+      }
+      .portfolio_mockup {
+        width: 526px;
+        height: 960px;
+        margin-top: 36px;
+        background-image: url(../../img/portfolio_capture.png);
+        background-size: 100% 100%;
+      }
+
+      .page_explanation {
+        p {
+          @include arrowSvgTxt();
+        }
+        // 빨간 선
+        .arrowLineRed {
+          p {
+            top: 20px;
+            left: 0px;
+          }
+          svg {
+            @include arrowSvg();
+            bottom: 30px;
+            left: 320px;
+          }
+        }
+
+        // 파란선
+        .arrowLineBlue {
+          p {
+            top: 240px;
+            left: 60px;
+          }
+          svg {
+            @include arrowSvg();
+            top: 185px;
+            left: 360px;
+          }
+        }
+
+        // 노란선
+        .arrowLineYellow {
+          p {
+            top: 300px;
+            left: 20px;
+          }
+          svg {
+            @include arrowSvg();
+            top: 250px;
+            left: 330px;
+          }
+        }
+
+        // 주황선
+        .arrowLineOrenge {
+          p {
+            top: 480px;
+            left: 90px;
+          }
+          svg {
+            @include arrowSvg();
+            top: 450px;
+            left: 397px;
+          }
+        }
+      } // --- .page_explanation
+    } // --- pagever_intro - 사이트 주기능 설명
+  } // --- .portfolio_content - 포트폴리오 프로젝트 설명
+
+  // .kiki_content - 마녀배달부키키 프로젝트 설명
+  .kiki_content {
+    background-color: #A5C2D3;
+    padding: 92px 100px 0;
+
+    // .project_intro
+    .project_intro {
+      @include projectIntro();
+
+      // .mockup
+      @include guideMockup();
+
+      @include introTxt();
+    }
+  } // --- .kiki_content
+
+  // .guide
+  .guide {
+    @include guideBox();
+    color: $color_green;
+
+    h3 {
+      @include guidelineh3();
+    }
+
+    // .guide_content
+    .guide_content {
+      @include guideflex();
+
+      //.logo_part
+      .logo_part {
+        @include guidelogoContent ();
+
+        h4 {
+          @include h4();
+        }
+
+        // .logo
+        .logo {
+          @include logoMargin();
+
+          img {
+            width: 118px;
+            height: 22px;
+          }
+          p {
+            @include logoInP();
+          }
+          p:last-child {
+            font-size: map-get($map: $font_size, $key: fnb);
+            color: $color_gray
+          }
+        } // --- .logo
+
+        h5 {
+          @include h5();
+          margin-top: 24px;
+          margin-left: 5px;
+        }
+
+        // .button_box
+        .button_box {
+          margin-top: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 30px;
+          row-gap: 15px;
+
+          // .button_content
+          .button_content {
+            width: 78px;
+            height: 96px;
+            border: 1.5px solid $color_green;
+            border-radius: 4px;
+            display: flex;
+            flex-wrap: wrap;
+
+            img {
+              width: 100%;
+              height: 60px;
+            }
+
+            // .font_name
+            .font_name {
+              @include fontName();
+
+              background-color: $color_white;
+              padding: 3px 0;
+
+              p {
+                font-size: map-get($map: $font_size, $key: content2);
+                text-align: center;
+                line-height: 27px;
+              }
+            } // --- .font_name
+          } // --- .button_content 
+        } // --- .button_box
+
+        .cursor_box {
+          margin-top: 20px;
+          display: flex;
+          gap: 20px;
+
+          p {
+            font-size: map-get($map: $font_size, $key: content1)
+          }
+        }
+      } // --- .logo_part
+    } // --- .guide_content
+
+    // .font_part
+    .font_part {
+      @include fontPartBox();
+
+      .font_regular, .font_medium, .font_bold {
+        background-color: $color_white;
+      }
+
+      .fontSize96 {
+        p {
+          font-size: 44px;
+          letter-spacing: 10px;
+        }
+      } // --- .fontSize96
+
+      .fontSize12 {
+        p {
+          font-size: map-get($map: $font_size, $key: content2);
+          letter-spacing: 10px;
+        }
+      } // --- .fontSize12
+    } // --- .font_part
+  } // --- .guide
+
+  // .color_part
+  .color_part {
+    @include colorPartBox();
+
+    h4 {
+      @include h4();
+    }
+
+    .colorSubTitle {
+      @include h5();
+      margin-top: 18px;
+      margin-left: 5px;
+    }
+
+    // .back_color
+    .back_color {
+      display: flex;
+      margin-top: 18px;
+      margin-left: 5px;
+      flex-wrap: wrap;
+      column-gap: 26px;
+      row-gap: 20px;
+
+      span {
+        width: 100%;
+        height: 34px;
+        display: block;
+        font-size: map-get($map: $font_size, $key: content1);
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 31px;
+      }
+
+      // .back_content
+      .back_content {
+        @include backPointColor();
+
+
+        .green_shapes {
+          @include back_shapes();
+          background-color: #0a4b41;
+        }
+
+        .blue_shapes {
+          @include back_shapes();
+          background-color: #1145a2;
+        }
+
+        .bagie_shapes {
+          @include back_shapes();
+          background-color: #d7dac7;
+        }
+
+        .black_shapes {
+          @include back_shapes();
+          background-color: #000000;
+        }
+
+        .skyBule_shapes {
+          @include back_shapes();
+          background-color: #b7cae8;
+        }
+
+        .purple_shapes {
+          @include back_shapes();
+          background-color: #4f4259;
+        }
+      } // --- .back_content
+    } // --- .back_color
+  } // --- .color_part
+
+  // .point_part
+  .point_part {
+    margin-top: 30px;
+    
+    h4 {
+      @include h4();
+    }
+
+    // .kikiPointColor
+    .kikiPointColor {
+      display: flex;
+      gap: 32px;
+      margin-top: 18px;
+      margin-left: 5px;
+
+      // .kikiPointContent
+      .kikiPointContent {
+        display: flex;
+        flex-direction: column;
+
+        .colorSubTitle {
+          margin-top: 0px;
+          margin-left: 0px;
+        }
+
+        // .back_red
+        .back_red {
+          @include backPointColor();
+          margin: auto;
+          margin-top: 10px;
+
+          span {
+            width: 100%;
+            height: 34px;
+            display: block;
+            font-size: map-get($map: $font_size, $key: content1);
+            text-align: center;
+            line-height: 31px;
+            text-transform: uppercase;
+          }
+
+          .red_shapes {
+            @include back_shapes();
+            background-color: #d71e15;
+          }
+        } // --- .back_red
+      } // --- .kikiPointContent
+
+      // .kikiPointfont
+      .kikiPointfont {
+        display: flex;
+        flex-direction: column;
+
+        .colorSubTitle {
+          margin-top: 0px;
+          margin-left: 0px;
+        }
+        .font_bold {
+          width: 84px;
+          height: 104px;
+          border: 1.5px solid #ccc;
+          border-radius: 4px;
+          margin-top: 10px;
+          background-color: $color_white;
+    
+          span {
+            width: 100%;
+            height: 66px;
+            display: block;
+            font-size: 36px;
+            font-weight: $font_weight_bold;
+            text-align: center;
+            line-height: 68px;
+          }
+
+          // .font_name
+          .font_name {
+            @include fontName();
+            
+            height: auto;
+            padding: 2px 4px;
+
+            p { 
+              font-size: map-get($map: $font_size, $key: content2);
+            }
+          } // --- .font_name
+        } // --- .font_bold
+      } // --- .kikiPointfont
+    } // --- .font_bold
+  } // --- .point_part
+
+  // .pointFontSize
+  .pointFontSize {
+    margin-top: 15px;
+    margin-left: 5px;
+
+    span {
+      font-size: map-get($map: $font_size, $key: content1);
+    }
+
+    p {
+      font-size: map-get($map: $font_size, $key: projecttitle);
+      letter-spacing: 10px;
+      text-transform: uppercase;
+    }
+  } // --- .pointFontSize
+
+  // .pagever_intro
+  .pagever_intro {
+    @include pageIntro();
+
+    h3 {
+      @include guidelineh3 ();
+    }
+
+    // .pagever_content
+    .pagever_content {
+      display: flex;
+      gap: 30px;
+      margin-top: 36px;
+
+      .kiki_mockup {
+        width: 526px;
+        height: 960px;
+        background-image: url(../../img/kiki_capture.png);
+        background-size: 100% 100%;
+      }
+      
+      .page_explanation {
+
+        p {
+          @include arrowSvgTxt();
+        }
+
+        // 어두운 빨간 선
+        .arrowLineDWRed {
+          p {
+            top: 86px;
+            left: 170px;
+          }
+
+          svg {
+            @include arrowSvg();
+            top: 50px;
+            right: 350px;
+          }
+        }
+
+        // 베이지색 선
+        .arrowLineBeige {
+          p {
+            top: 408px;
+            left: 150px;
+          }
+
+          svg {
+            @include arrowSvg();
+            top: 350px;
+            right: 40px;
+          }
+        }
+        
+        // 초록선
+        .arrowLineGreen {
+          p {
+            top: 536px;
+            left: 222px;
+          }
+
+          svg {
+            @include arrowSvg();
+            top: 500px;
+            right: 40px;
+          }
+        }
+      } // --- .page_explanation
+    } // --- .pagever_content
+  } // --- .pagever_intro
+} // #project

@@ -30,7 +30,7 @@
   font-weight: 300;
 }
 
-#wrap #headbox {
+#headbox {
   width: 100%;
   height: 70px;
   line-height: 30px;
@@ -43,7 +43,7 @@
   z-index: 1000;
 }
 
-#wrap #headbox .headinner {
+.headinner {
   width: 75%;
   height: 100%;
   box-sizing: border-box;
@@ -51,31 +51,31 @@
   /* logo */
 }
 
-#wrap #headbox .headinner h1 {
+.headinner h1 {
   width: auto;
   height: 100%;
 }
 
-#wrap #headbox .headinner h1 a {
+.headinner h1 a {
   font-family: "Black Han Sans", sans-serif;
   font-size: 20px;
   font-weight: bolder;
   letter-spacing: 9px;
 }
 
-#wrap #headbox .headinner h1 a .title_O {
+.title_O {
   color: #FDD131;
 }
 
-#wrap #headbox .headinner h1 a .title_H {
+.title_H {
   color: #006DA9;
 }
 
-#wrap #headbox .headinner h1 a .title_A {
+.title_A {
   color: #FB8145;
 }
 
-#wrap #headbox .gnb {
+.gnb {
   width: 100%;
   height: 100%;
   margin: auto;
@@ -87,25 +87,25 @@
   color: #000;
 }
 
-#wrap #headbox .gnb label {
+.gnb label {
   width: 20%;
   height: auto;
   text-align: center;
 }
 
-#wrap #headbox .gnb label:hover {
+.gnb label:hover {
   color: #D71C02;
   font-weight: 600;
 }
 
-#wrap main #home {
+#home {
   width: 100%;
   height: 92vh;
   display: flex;
   padding: 40px 100px;
 }
 
-#wrap main #home .left_span {
+.left_span {
   width: 338px;
   height: 40px;
   position: relative;
@@ -118,14 +118,21 @@
   flex-shrink: 0;
 }
 
-#wrap main #home .middle_content {
+.left_span span {
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.middle_content {
   width: 420px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-#wrap main #home .middle_content p:first-child {
+.middle_content p:first-child {
   width: 100%;
   margin-top: 20%;
   font-size: 18px;
@@ -133,11 +140,11 @@
   color: #D71C02;
 }
 
-#wrap main #home .middle_content .cover_img {
+.cover_img {
   margin-top: 30px;
 }
 
-#wrap main #home .middle_content .coverImgInner {
+.coverImgInner {
   width: 335px;
   height: 322px;
   background-image: url(../../img/coverImg.JPG);
@@ -145,7 +152,7 @@
   display: inline-block;
 }
 
-#wrap main #home .middle_content .blue_H {
+.blue_H {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -155,7 +162,7 @@
   background: #006DA9;
 }
 
-#wrap main #home .middle_content .orange_A {
+.orange_A {
   position: absolute;
   width: 0px;
   height: 0px;
@@ -167,7 +174,7 @@
   transform: rotate(36.306deg);
 }
 
-#wrap main #home .middle_content .yellow_O {
+.yellow_O {
   position: absolute;
   width: 70px;
   height: 70px;
@@ -178,7 +185,7 @@
   background-color: #FDD131;
 }
 
-#wrap main #home .middle_content p:last-child {
+.middle_content p:last-child {
   width: 100%;
   margin-top: 10%;
   font-size: 18px;
@@ -186,7 +193,7 @@
   color: #D71C02;
 }
 
-#wrap main #home .right_span {
+.right_span {
   width: 338px;
   height: 40px;
   position: relative;
@@ -198,7 +205,7 @@
   line-height: 60px;
 }
 
-#wrap main #home .right_span span {
+.right_span span {
   color: #D71C02;
   text-align: center;
   font-size: 18px;
@@ -207,13 +214,13 @@
   line-height: normal;
 }
 
-#wrap main #introduce {
+#introduce {
   width: 100%;
   height: 100%;
   padding: 40px 100px;
 }
 
-#wrap main #introduce h2 {
+#introduce h2 {
   text-align: right;
   font-size: 16px;
   font-weight: 500;
@@ -221,26 +228,26 @@
   text-transform: uppercase;
 }
 
-#wrap main #introduce .about_inner {
+.about_inner {
   width: 100%;
   display: flex;
 }
 
-#wrap main #introduce .about_inner .about_left {
+.about_left {
   width: 455px;
 }
 
-#wrap main #introduce .about_inner .about_left .greeting {
+.greeting {
   width: 269px;
   height: 66px;
 }
 
-#wrap main #introduce .about_inner .about_left .greeting p {
+.greeting p {
   font-size: 18px;
   font-weight: 500;
 }
 
-#wrap main #introduce .about_inner .about_left .id_picture {
+.id_picture {
   width: 232px;
   height: 232px;
   margin-top: 15px;
@@ -249,21 +256,21 @@
   background-size: 246px 300px;
 }
 
-#wrap main #introduce .about_inner .about_left .sort_introduce {
+.sort_introduce {
   width: 298px;
   height: 187px;
   margin-top: 30px;
 }
 
-#wrap main #introduce .about_inner .about_left .sort_introduce span {
+.sort_introduce span {
   font-size: 14px;
 }
 
-#wrap main #introduce .about_inner .about_midle {
+.about_midle {
   width: 315px;
 }
 
-#wrap main #introduce .about_inner .about_midle article h3 {
+.about_midle article h3 {
   width: auto;
   height: 24px;
   font-size: 16px;
@@ -273,34 +280,34 @@
   margin-top: 46px;
 }
 
-#wrap main #introduce .about_inner .about_midle .profile h3 {
+.profile h3 {
   margin-top: 90px;
 }
 
-#wrap main #introduce .about_inner .about_midle p {
+.about_midle p {
   margin-top: 15px;
   line-height: 22px;
   font-size: 14px;
 }
 
-#wrap main #introduce .about_inner .about_right {
+.about_right {
   width: 310px;
 }
 
-#wrap main #introduce .about_inner .about_right .skill {
+.skill {
   margin-top: 90px;
   display: flex;
   justify-content: end;
 }
 
-#wrap main #introduce .about_inner .about_right .skill .skill_title {
+.skill_title {
   width: 66px;
   height: 55px;
   font-size: 14px;
   font-weight: 600;
 }
 
-#wrap main #introduce .about_inner .about_right .skill .skill_title span:first-child::after {
+.skill_title span:first-child::after {
   content: '';
   width: 13px;
   margin: 10px 0;
@@ -311,22 +318,22 @@
   border: 1px solid #000;
 }
 
-#wrap main #introduce .about_inner .about_right .skill .skillBox {
+.skillBox {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #introduce .about_inner .about_right .skill .skillBox .skill_inner {
+.skill_inner {
   width: auto;
   display: flex;
   margin: 12px 0;
 }
 
-#wrap main #introduce .about_inner .about_right .skill .skillBox .skill_inner p {
+.skill_inner p {
   font-size: 14px;
 }
 
-#wrap main #introduce .about_inner .about_right .skill .skillBox .skill_inner .checkbox {
+.checkbox {
   width: 18px;
   height: 18px;
   line-height: 24px;
@@ -334,7 +341,7 @@
   margin-right: 14px;
 }
 
-#wrap main #advantage {
+#advantage {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -343,7 +350,7 @@
   z-index: 1;
 }
 
-#wrap main #advantage .advantageBox {
+.advantageBox {
   position: relative;
   flex: 1;
   padding: 90px 26px 37px;
@@ -353,39 +360,39 @@
   cursor: pointer;
 }
 
-#wrap main #advantage .advantageBox:hover {
+.advantageBox:hover {
   flex: 1.5;
   opacity: 1;
   z-index: 2;
 }
 
-#wrap main #advantage .advantageBox:hover::before {
+.advantageBox:hover::before {
   left: 0px;
   opacity: 1;
 }
 
-#wrap main #advantage .advantageBox:hover .advantage_inner .advantage_txt {
+.advantageBox:hover .advantage_inner .advantage_txt {
   width: 75%;
 }
 
-#wrap main #advantage .advantageBox:hover .advantage_inner .advantage_txt h2 {
+.advantageBox:hover .advantage_inner .advantage_txt h2 {
   font-size: 5vw;
   padding-top: 0px;
 }
 
-#wrap main #advantage .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+.advantageBox:hover .advantage_inner .advantage_txt h2::after {
   width: 120px;
   background: #006DA9;
   height: 3px;
 }
 
-#wrap main #advantage .advantageBox:hover .advantage_inner figure {
+.advantageBox:hover .advantage_inner figure {
   height: 25vh;
   filter: saturate(120%);
   transform: translateY(3vh);
 }
 
-#wrap main #advantage .advantageBox::before {
+.advantageBox::before {
   content: "";
   display: block;
   width: 80%;
@@ -398,7 +405,7 @@
   transition: 1s;
 }
 
-#wrap main #advantage .advantage_inner {
+.advantage_inner {
   width: 100%;
   height: 100%;
   display: flex;
@@ -407,13 +414,13 @@
   position: relative;
 }
 
-#wrap main #advantage .advantage_inner .advantage_txt {
+.advantage_txt {
   width: 100%;
   transition: 0.5s;
   margin-bottom: 40px;
 }
 
-#wrap main #advantage .advantage_inner .advantage_txt h2 {
+.advantage_txt h2 {
   margin-bottom: 40px;
   padding-top: 70px;
   font-size: 30px;
@@ -422,7 +429,7 @@
   transition: 1s;
 }
 
-#wrap main #advantage .advantage_inner .advantage_txt h2::after {
+.advantage_txt h2::after {
   content: "";
   display: block;
   width: 40px;
@@ -432,18 +439,18 @@
   transition: 1.5s;
 }
 
-#wrap main #advantage .advantage_inner .advantage_txt p {
+.advantage_txt p {
   font-size: 18px;
   font-weight: 600;
 }
 
-#wrap main #advantage .advantage_inner .advantage_txt p:last-child {
+.advantage_txt p:last-child {
   font-size: 14px;
   font-weight: 300;
   margin-top: 10px;
 }
 
-#wrap main #advantage .advantage_inner figure {
+.advantage_inner figure {
   width: 100%;
   height: 118px;
   background: #777;
@@ -455,19 +462,19 @@
   transition: 1s;
 }
 
-#wrap main #advantage .advantage_inner figure video {
+.advantage_inner figure video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#wrap main #project {
+#project {
   width: 100%;
   height: auto;
   padding-top: 40px;
 }
 
-#wrap main #project h2 {
+#project h2 {
   text-align: right;
   font-size: 16px;
   font-weight: 500;
@@ -476,87 +483,87 @@
   padding: 0 100px;
 }
 
-#wrap main #project .portfolio_content {
+#project .portfolio_content {
   margin-top: 32px;
   padding: 40px 100px 0;
 }
 
-#wrap main #project .portfolio_content .project_intro {
+#project .portfolio_content .project_intro {
   display: flex;
   gap: 88px;
   /* --- .mockup */
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt {
+#project .portfolio_content .project_intro .intro_txt {
   width: 350px;
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt h3 {
+#project .portfolio_content .project_intro .intro_txt h3 {
   font-size: 32px;
   font-weight: 600;
   text-align: center;
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt .sub_txt {
+#project .portfolio_content .project_intro .intro_txt .sub_txt {
   font-size: 14px;
   text-align: center;
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt .detail {
+#project .portfolio_content .project_intro .intro_txt .detail {
   display: flex;
   gap: 36px;
   margin-top: 50px;
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt .detail .subtitle p {
+#project .portfolio_content .project_intro .intro_txt .detail .subtitle p {
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt .detail .intro_content p {
+#project .portfolio_content .project_intro .intro_txt .detail .intro_content p {
   font-size: 14px;
   line-height: 30px;
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt .project_explanation {
+#project .portfolio_content .project_intro .intro_txt .project_explanation {
   width: 350px;
   height: 197px;
   margin-top: 50px;
 }
 
-#wrap main #project .portfolio_content .project_intro .intro_txt .project_explanation p {
+#project .portfolio_content .project_intro .intro_txt .project_explanation p {
   font-size: 14px;
   line-height: 25px;
 }
 
-#wrap main #project .portfolio_content .project_intro .mockup {
+#project .portfolio_content .project_intro .mockup {
   width: 632px;
   height: 483px;
 }
 
-#wrap main #project .portfolio_content .project_intro .mockup img {
+#project .portfolio_content .project_intro .mockup img {
   width: 100%;
 }
 
-#wrap main #project .portfolio_content .guide {
+#project .portfolio_content .guide {
   width: 100%;
   height: auto;
   padding: 40px 0;
 }
 
-#wrap main #project .portfolio_content .guide h3 {
+#project .portfolio_content .guide h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content {
+#project .portfolio_content .guide .guide_content {
   display: flex;
   gap: 44px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part {
+#project .portfolio_content .guide .guide_content .logo_part {
   width: 350px;
   height: auto;
   margin-top: 30px;
@@ -564,42 +571,42 @@
   margin-left: 15px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part h4 {
+#project .portfolio_content .guide .guide_content .logo_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo {
+#project .portfolio_content .guide .guide_content .logo_part .logo {
   margin-top: 22px;
   margin-left: 5px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo span {
+#project .portfolio_content .guide .guide_content .logo_part .logo span {
   font-weight: 300;
   font-family: "Black Han Sans", sans-serif;
   font-size: 20px;
   letter-spacing: 9px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo .title_O {
+#project .portfolio_content .guide .guide_content .logo_part .logo .title_O {
   color: #FDD131;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo .title_H {
+#project .portfolio_content .guide .guide_content .logo_part .logo .title_H {
   color: #006DA9;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo .title_A {
+#project .portfolio_content .guide .guide_content .logo_part .logo .title_A {
   color: #FB8145;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo p {
+#project .portfolio_content .guide .guide_content .logo_part .logo p {
   margin-top: 10px;
   font-size: 14px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part h5 {
+#project .portfolio_content .guide .guide_content .logo_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -608,7 +615,7 @@
   margin-left: 5px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font {
   width: 340px;
   margin-top: 10px;
   margin-left: 5px;
@@ -616,14 +623,14 @@
   gap: 14px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx {
   width: 112px;
   height: 156px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx span {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx span {
   width: 100%;
   height: 104px;
   display: block;
@@ -633,7 +640,7 @@
   line-height: 104px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -641,31 +648,31 @@
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p:last-child {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p:last-child {
   font-size: 12px;
   font-weight: 300;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp {
   width: 214px;
   height: auto;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation {
   font-size: 14px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation:nth-last-child(-n+2) {
+#project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation:nth-last-child(-n+2) {
   font-size: 14px;
   margin-top: 12px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .colorSubTilte {
+#project .portfolio_content .guide .guide_content .logo_part .colorSubTilte {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -673,18 +680,18 @@
   margin: 55px 0 20px 5px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color {
+#project .portfolio_content .guide .guide_content .logo_part .font_color {
   width: 100%;
   margin-left: 5px;
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list {
+#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list {
   display: flex;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_yellow {
+#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_yellow {
   width: 22px;
   height: 22px;
   margin-right: 14px;
@@ -692,14 +699,14 @@
   background: #FDD131;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_bule {
+#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_bule {
   width: 22px;
   height: 22px;
   margin-right: 14px;
   background: #006DA9;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_orange {
+#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_orange {
   width: 0px;
   height: 0px;
   border-bottom: 22px solid #FB8145;
@@ -707,20 +714,20 @@
   border-right: 12px solid transparent;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .fontColorExp {
+#project .portfolio_content .guide .guide_content .logo_part .fontColorExp {
   margin-top: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .fontColorExp p {
+#project .portfolio_content .guide .guide_content .logo_part .fontColorExp p {
   font-size: 14px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .logo_part .fontColorExp p:last-child {
+#project .portfolio_content .guide .guide_content .logo_part .fontColorExp p:last-child {
   margin-top: 12px;
   font-size: 14px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part {
+#project .portfolio_content .guide .guide_content .font_part {
   width: 328px;
   height: 482px;
   margin-top: 30px;
@@ -728,13 +735,13 @@
   /* 폰트 사이즈 가이드라인 */
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part h4 {
+#project .portfolio_content .guide .guide_content .font_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part h5 {
+#project .portfolio_content .guide .guide_content .font_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -742,7 +749,7 @@
   margin-top: 18px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex {
+#project .portfolio_content .guide .guide_content .font_part .font_ex {
   margin-top: 18px;
   display: flex;
   gap: 18px;
@@ -752,7 +759,7 @@
   /* .font_bold */
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex span {
+#project .portfolio_content .guide .guide_content .font_part .font_ex span {
   width: 100%;
   height: 72px;
   display: block;
@@ -762,7 +769,7 @@
   line-height: 76px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -770,36 +777,36 @@
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p:last-child {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p:last-child {
   font-size: 12px;
   font-weight: 300;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_regular {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_regular {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium span {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium span {
   width: 100%;
   height: 72px;
   display: block;
@@ -809,14 +816,14 @@
   line-height: 76px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold span {
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold span {
   width: 100%;
   height: 72px;
   display: block;
@@ -826,7 +833,7 @@
   line-height: 76px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size {
+#project .portfolio_content .guide .guide_content .font_part .font_size {
   margin-top: 15px;
   /* .fontSize30 */
   /* .fontSize20 */
@@ -835,77 +842,77 @@
   /* .fontSize14 */
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size span {
+#project .portfolio_content .guide .guide_content .font_part .font_size span {
   font-size: 14px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .small_exp {
+#project .portfolio_content .guide .guide_content .font_part .font_size .small_exp {
   margin-top: 20px;
   font-size: 11px;
   text-align: right;
   color: #888;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize30 {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize30 {
   margin-top: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize30 p {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize30 p {
   font-size: 30px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize20 {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize20 {
   margin-top: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize20 p {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize20 p {
   font-size: 20px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize18 {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize18 {
   margin-top: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize18 p {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize18 p {
   font-size: 18px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize16 {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize16 {
   margin-top: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize16 p {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize16 p {
   font-size: 16px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize14 {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize14 {
   margin-top: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .font_size .fontSize14 p {
+#project .portfolio_content .guide .guide_content .font_part .font_size .fontSize14 p {
   font-size: 14px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .fontSize32 p {
+#project .portfolio_content .guide .guide_content .font_part .fontSize32 p {
   font-size: 32px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .fontSize11 {
+#project .portfolio_content .guide .guide_content .font_part .fontSize11 {
   margin-top: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .font_part .fontSize11 p {
+#project .portfolio_content .guide .guide_content .font_part .fontSize11 p {
   font-size: 11px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part {
+#project .portfolio_content .guide .guide_content .color_part {
   width: 300px;
   height: auto;
   margin-top: 30px;
@@ -913,13 +920,13 @@
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part h4 {
+#project .portfolio_content .guide .guide_content .color_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content {
+#project .portfolio_content .guide .guide_content .color_part .color_content {
   width: 300px;
   height: auto;
   margin-top: 30px;
@@ -927,74 +934,74 @@
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .colorSubTitle {
+#project .portfolio_content .guide .guide_content .color_part .color_content .colorSubTitle {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
   color: #888;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content span {
+#project .portfolio_content .guide .guide_content .color_part .color_content span {
   font-size: 14px;
   text-align: center;
   margin-top: 5px;
   text-transform: uppercase;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color {
+#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color {
   margin-top: 18px;
   display: flex;
   gap: 50px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow {
+#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow .yellow_shapes {
+#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow .yellow_shapes {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: #FDD131;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule {
+#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule .bule_shapes {
+#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule .bule_shapes {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: #006DA9;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange {
+#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange .orange_shapes {
+#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange .orange_shapes {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: #FB8145;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color {
+#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color {
   margin-top: 30px;
   display: flex;
   gap: 24px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color {
+#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color .icon_red {
+#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color .icon_red {
   width: 60px;
   height: 60px;
   margin: auto;
@@ -1003,12 +1010,12 @@
   background-color: #D71C02;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color {
+#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .icon_white {
+#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .icon_white {
   width: 60px;
   height: 60px;
   margin-left: 8.77px;
@@ -1018,12 +1025,12 @@
   background-color: #fffffc;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .backgroundColorTxt {
+#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .backgroundColorTxt {
   text-align-last: left;
   margin-left: 8.77px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color {
+#project .portfolio_content .guide .guide_content .color_part .button_color {
   margin-top: 94px;
   display: flex;
   flex-direction: column;
@@ -1031,14 +1038,14 @@
   font-weight: 500;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_content {
   width: 294px;
   display: flex;
   margin-left: 5px;
   gap: 18px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content .resume_btn {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_content .resume_btn {
   width: 86px;
   height: 24px;
   line-height: 24px;
@@ -1049,7 +1056,7 @@
   background-color: #FDD131;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content .github_btn {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_content .github_btn {
   width: 86px;
   height: 24px;
   line-height: 24px;
@@ -1061,7 +1068,7 @@
   color: #fff;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_content .notion_btn {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_content .notion_btn {
   width: 86px;
   height: 24px;
   line-height: 24px;
@@ -1072,30 +1079,30 @@
   background-color: #FB8145;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover {
   display: flex;
   margin-left: 5px;
   gap: 30px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover h5 {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
   color: #888;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover span {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover span {
   font-size: 36px;
   font-weight: 300;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover p {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover p {
   font-size: 14px;
   font-weight: 300;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part .nomal_ex {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part .nomal_ex {
   width: 100px;
   height: 100px;
   margin-top: 10px;
@@ -1105,7 +1112,7 @@
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
   width: 100px;
   height: 100px;
   margin-top: 10px;
@@ -1115,28 +1122,28 @@
   border-radius: 4px;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex span {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex span {
   font-weight: 500;
   color: #D71C02;
 }
 
-#wrap main #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex p {
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex p {
   color: #D71C02;
 }
 
-#wrap main #project .portfolio_content .pagever_intro {
+#project .portfolio_content .pagever_intro {
   width: 100%;
   height: auto;
   padding-top: 40px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro h3 {
+#project .portfolio_content .pagever_intro h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .portfolio_mockup {
+#project .portfolio_content .pagever_intro .portfolio_mockup {
   width: 526px;
   height: 960px;
   margin-top: 36px;
@@ -1144,44 +1151,44 @@
   background-size: 100% 100%;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation p {
+#project .portfolio_content .pagever_intro .page_explanation p {
   width: 300px;
   position: relative;
   font-size: 14px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
-  bottom: 120px;
-  left: 140px;
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+  top: 20px;
+  left: 0px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  bottom: 177px;
-  left: 456px;
+  bottom: 30px;
+  left: 320px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue p {
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue p {
   top: 240px;
-  left: 30px;
+  left: 60px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 194px;
-  left: 375px;
+  top: 185px;
+  left: 360px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow p {
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow p {
   top: 300px;
   left: 20px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -1189,12 +1196,12 @@
   left: 330px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge p {
-  top: 500px;
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge p {
+  top: 480px;
   left: 90px;
 }
 
-#wrap main #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -1202,88 +1209,88 @@
   left: 397px;
 }
 
-#wrap main #project .kiki_content {
+#project .kiki_content {
   background-color: #A5C2D3;
   padding: 92px 100px 0;
 }
 
-#wrap main #project .kiki_content .project_intro {
+#project .kiki_content .project_intro {
   display: flex;
   gap: 88px;
   /* --- .mockup */
 }
 
-#wrap main #project .kiki_content .project_intro .mockup {
+#project .kiki_content .project_intro .mockup {
   width: 632px;
   height: 483px;
 }
 
-#wrap main #project .kiki_content .project_intro .mockup img {
+#project .kiki_content .project_intro .mockup img {
   width: 100%;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt {
+#project .kiki_content .project_intro .intro_txt {
   width: 350px;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt h3 {
+#project .kiki_content .project_intro .intro_txt h3 {
   font-size: 32px;
   font-weight: 600;
   text-align: center;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt .sub_txt {
+#project .kiki_content .project_intro .intro_txt .sub_txt {
   font-size: 14px;
   text-align: center;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt .detail {
+#project .kiki_content .project_intro .intro_txt .detail {
   display: flex;
   gap: 36px;
   margin-top: 50px;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt .detail .subtitle p {
+#project .kiki_content .project_intro .intro_txt .detail .subtitle p {
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt .detail .intro_content p {
+#project .kiki_content .project_intro .intro_txt .detail .intro_content p {
   font-size: 14px;
   line-height: 30px;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt .project_explanation {
+#project .kiki_content .project_intro .intro_txt .project_explanation {
   width: 350px;
   height: 197px;
   margin-top: 50px;
 }
 
-#wrap main #project .kiki_content .project_intro .intro_txt .project_explanation p {
+#project .kiki_content .project_intro .intro_txt .project_explanation p {
   font-size: 14px;
   line-height: 25px;
 }
 
-#wrap main #project .guide {
+#project .guide {
   width: 100%;
   height: auto;
   padding: 40px 0;
   color: #0A4B41;
 }
 
-#wrap main #project .guide h3 {
+#project .guide h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-#wrap main #project .guide .guide_content {
+#project .guide .guide_content {
   display: flex;
   gap: 44px;
 }
 
-#wrap main #project .guide .guide_content .logo_part {
+#project .guide .guide_content .logo_part {
   width: 350px;
   height: auto;
   margin-top: 30px;
@@ -1291,33 +1298,33 @@
   margin-left: 15px;
 }
 
-#wrap main #project .guide .guide_content .logo_part h4 {
+#project .guide .guide_content .logo_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .guide .guide_content .logo_part .logo {
+#project .guide .guide_content .logo_part .logo {
   margin-top: 22px;
   margin-left: 5px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .logo img {
+#project .guide .guide_content .logo_part .logo img {
   width: 118px;
   height: 22px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .logo p {
+#project .guide .guide_content .logo_part .logo p {
   margin-top: 10px;
   font-size: 14px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .logo p:last-child {
+#project .guide .guide_content .logo_part .logo p:last-child {
   font-size: 11px;
   color: #888;
 }
 
-#wrap main #project .guide .guide_content .logo_part h5 {
+#project .guide .guide_content .logo_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1326,7 +1333,7 @@
   margin-left: 5px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .button_box {
+#project .guide .guide_content .logo_part .button_box {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -1334,7 +1341,7 @@
   row-gap: 15px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .button_box .button_content {
+#project .guide .guide_content .logo_part .button_box .button_content {
   width: 78px;
   height: 96px;
   border: 1.5px solid #0A4B41;
@@ -1343,12 +1350,12 @@
   flex-wrap: wrap;
 }
 
-#wrap main #project .guide .guide_content .logo_part .button_box .button_content img {
+#project .guide .guide_content .logo_part .button_box .button_content img {
   width: 100%;
   height: 60px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .button_box .button_content .font_name {
+#project .guide .guide_content .logo_part .button_box .button_content .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -1358,28 +1365,28 @@
   padding: 3px 0;
 }
 
-#wrap main #project .guide .guide_content .logo_part .button_box .button_content .font_name p {
+#project .guide .guide_content .logo_part .button_box .button_content .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#wrap main #project .guide .guide_content .logo_part .button_box .button_content .font_name p {
+#project .guide .guide_content .logo_part .button_box .button_content .font_name p {
   font-size: 12px;
   text-align: center;
   line-height: 27px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .cursor_box {
+#project .guide .guide_content .logo_part .cursor_box {
   margin-top: 20px;
   display: flex;
   gap: 20px;
 }
 
-#wrap main #project .guide .guide_content .logo_part .cursor_box p {
+#project .guide .guide_content .logo_part .cursor_box p {
   font-size: 14px;
 }
 
-#wrap main #project .guide .font_part {
+#project .guide .font_part {
   width: 328px;
   height: 482px;
   margin-top: 30px;
@@ -1387,13 +1394,13 @@
   /* 폰트 사이즈 가이드라인 */
 }
 
-#wrap main #project .guide .font_part h4 {
+#project .guide .font_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .guide .font_part h5 {
+#project .guide .font_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1401,7 +1408,7 @@
   margin-top: 18px;
 }
 
-#wrap main #project .guide .font_part .font_ex {
+#project .guide .font_part .font_ex {
   margin-top: 18px;
   display: flex;
   gap: 18px;
@@ -1411,7 +1418,7 @@
   /* .font_bold */
 }
 
-#wrap main #project .guide .font_part .font_ex span {
+#project .guide .font_part .font_ex span {
   width: 100%;
   height: 72px;
   display: block;
@@ -1421,7 +1428,7 @@
   line-height: 76px;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_name {
+#project .guide .font_part .font_ex .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -1429,36 +1436,36 @@
   border-radius: 4px;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_name p {
+#project .guide .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_name p {
+#project .guide .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_name p:last-child {
+#project .guide .font_part .font_ex .font_name p:last-child {
   font-size: 12px;
   font-weight: 300;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_regular {
+#project .guide .font_part .font_ex .font_regular {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_medium {
+#project .guide .font_part .font_ex .font_medium {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_medium span {
+#project .guide .font_part .font_ex .font_medium span {
   width: 100%;
   height: 72px;
   display: block;
@@ -1468,14 +1475,14 @@
   line-height: 76px;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_bold {
+#project .guide .font_part .font_ex .font_bold {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#wrap main #project .guide .font_part .font_ex .font_bold span {
+#project .guide .font_part .font_ex .font_bold span {
   width: 100%;
   height: 72px;
   display: block;
@@ -1485,7 +1492,7 @@
   line-height: 76px;
 }
 
-#wrap main #project .guide .font_part .font_size {
+#project .guide .font_part .font_size {
   margin-top: 15px;
   /* .fontSize30 */
   /* .fontSize20 */
@@ -1494,77 +1501,77 @@
   /* .fontSize14 */
 }
 
-#wrap main #project .guide .font_part .font_size span {
+#project .guide .font_part .font_size span {
   font-size: 14px;
 }
 
-#wrap main #project .guide .font_part .font_size .small_exp {
+#project .guide .font_part .font_size .small_exp {
   margin-top: 20px;
   font-size: 11px;
   text-align: right;
   color: #888;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize30 {
+#project .guide .font_part .font_size .fontSize30 {
   margin-top: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize30 p {
+#project .guide .font_part .font_size .fontSize30 p {
   font-size: 30px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize20 {
+#project .guide .font_part .font_size .fontSize20 {
   margin-top: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize20 p {
+#project .guide .font_part .font_size .fontSize20 p {
   font-size: 20px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize18 {
+#project .guide .font_part .font_size .fontSize18 {
   margin-top: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize18 p {
+#project .guide .font_part .font_size .fontSize18 p {
   font-size: 18px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize16 {
+#project .guide .font_part .font_size .fontSize16 {
   margin-top: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize16 p {
+#project .guide .font_part .font_size .fontSize16 p {
   font-size: 16px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize14 {
+#project .guide .font_part .font_size .fontSize14 {
   margin-top: 10px;
 }
 
-#wrap main #project .guide .font_part .font_size .fontSize14 p {
+#project .guide .font_part .font_size .fontSize14 p {
   font-size: 14px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .guide .font_part .font_regular, #wrap main #project .guide .font_part .font_medium, #wrap main #project .guide .font_part .font_bold {
+#project .guide .font_part .font_regular, #project .guide .font_part .font_medium, #project .guide .font_part .font_bold {
   background-color: #fff;
 }
 
-#wrap main #project .guide .font_part .fontSize96 p {
+#project .guide .font_part .fontSize96 p {
   font-size: 44px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .guide .font_part .fontSize12 p {
+#project .guide .font_part .fontSize12 p {
   font-size: 12px;
   letter-spacing: 10px;
 }
 
-#wrap main #project .color_part {
+#project .color_part {
   width: 300px;
   height: auto;
   margin-top: 30px;
@@ -1572,13 +1579,13 @@
   flex-direction: column;
 }
 
-#wrap main #project .color_part h4 {
+#project .color_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .color_part .colorSubTitle {
+#project .color_part .colorSubTitle {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1587,7 +1594,7 @@
   margin-left: 5px;
 }
 
-#wrap main #project .color_part .back_color {
+#project .color_part .back_color {
   display: flex;
   margin-top: 18px;
   margin-left: 5px;
@@ -1596,7 +1603,7 @@
   row-gap: 20px;
 }
 
-#wrap main #project .color_part .back_color span {
+#project .color_part .back_color span {
   width: 100%;
   height: 34px;
   display: block;
@@ -1606,7 +1613,7 @@
   line-height: 31px;
 }
 
-#wrap main #project .color_part .back_color .back_content {
+#project .color_part .back_color .back_content {
   width: 76px;
   height: 104px;
   border: 1.5px solid #888;
@@ -1614,70 +1621,70 @@
   background-color: #fff;
 }
 
-#wrap main #project .color_part .back_color .back_content .green_shapes {
+#project .color_part .back_color .back_content .green_shapes {
   width: 73px;
   height: 72px;
   background-color: #0a4b41;
 }
 
-#wrap main #project .color_part .back_color .back_content .blue_shapes {
+#project .color_part .back_color .back_content .blue_shapes {
   width: 73px;
   height: 72px;
   background-color: #1145a2;
 }
 
-#wrap main #project .color_part .back_color .back_content .bagie_shapes {
+#project .color_part .back_color .back_content .bagie_shapes {
   width: 73px;
   height: 72px;
   background-color: #d7dac7;
 }
 
-#wrap main #project .color_part .back_color .back_content .black_shapes {
+#project .color_part .back_color .back_content .black_shapes {
   width: 73px;
   height: 72px;
   background-color: #000000;
 }
 
-#wrap main #project .color_part .back_color .back_content .skyBule_shapes {
+#project .color_part .back_color .back_content .skyBule_shapes {
   width: 73px;
   height: 72px;
   background-color: #b7cae8;
 }
 
-#wrap main #project .color_part .back_color .back_content .purple_shapes {
+#project .color_part .back_color .back_content .purple_shapes {
   width: 73px;
   height: 72px;
   background-color: #4f4259;
 }
 
-#wrap main #project .point_part {
+#project .point_part {
   margin-top: 30px;
 }
 
-#wrap main #project .point_part h4 {
+#project .point_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#wrap main #project .point_part .kikiPointColor {
+#project .point_part .kikiPointColor {
   display: flex;
   gap: 32px;
   margin-top: 18px;
   margin-left: 5px;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointContent {
+#project .point_part .kikiPointColor .kikiPointContent {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+#project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
   margin-top: 0px;
   margin-left: 0px;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointContent .back_red {
+#project .point_part .kikiPointColor .kikiPointContent .back_red {
   width: 76px;
   height: 104px;
   border: 1.5px solid #888;
@@ -1687,7 +1694,7 @@
   margin-top: 10px;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointContent .back_red span {
+#project .point_part .kikiPointColor .kikiPointContent .back_red span {
   width: 100%;
   height: 34px;
   display: block;
@@ -1697,23 +1704,23 @@
   text-transform: uppercase;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointContent .back_red .red_shapes {
+#project .point_part .kikiPointColor .kikiPointContent .back_red .red_shapes {
   width: 73px;
   height: 72px;
   background-color: #d71e15;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointfont {
+#project .point_part .kikiPointColor .kikiPointfont {
   display: flex;
   flex-direction: column;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+#project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
   margin-top: 0px;
   margin-left: 0px;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold {
+#project .point_part .kikiPointColor .kikiPointfont .font_bold {
   width: 84px;
   height: 104px;
   border: 1.5px solid #ccc;
@@ -1722,7 +1729,7 @@
   background-color: #fff;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold span {
+#project .point_part .kikiPointColor .kikiPointfont .font_bold span {
   width: 100%;
   height: 66px;
   display: block;
@@ -1732,7 +1739,7 @@
   line-height: 68px;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
+#project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -1742,67 +1749,67 @@
   padding: 2px 4px;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+#project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#wrap main #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+#project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
   font-size: 12px;
 }
 
-#wrap main #project .pointFontSize {
+#project .pointFontSize {
   margin-top: 15px;
   margin-left: 5px;
 }
 
-#wrap main #project .pointFontSize span {
+#project .pointFontSize span {
   font-size: 14px;
 }
 
-#wrap main #project .pointFontSize p {
+#project .pointFontSize p {
   font-size: 32px;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
 
-#wrap main #project .pagever_intro {
+#project .pagever_intro {
   width: 100%;
   height: auto;
   padding-top: 40px;
 }
 
-#wrap main #project .pagever_intro h3 {
+#project .pagever_intro h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-#wrap main #project .pagever_intro .pagever_content {
+#project .pagever_intro .pagever_content {
   display: flex;
   gap: 30px;
   margin-top: 36px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .kiki_mockup {
+#project .pagever_intro .pagever_content .kiki_mockup {
   width: 526px;
   height: 960px;
   background-image: url(../../img/kiki_capture.png);
   background-size: 100% 100%;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation p {
+#project .pagever_intro .pagever_content .page_explanation p {
   width: 300px;
   position: relative;
   font-size: 14px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed p {
+#project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed p {
   top: 86px;
   left: 170px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed svg {
+#project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -1810,12 +1817,12 @@
   right: 350px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineBeige p {
+#project .pagever_intro .pagever_content .page_explanation .arrowLineBeige p {
   top: 408px;
   left: 150px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineBeige svg {
+#project .pagever_intro .pagever_content .page_explanation .arrowLineBeige svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -1823,12 +1830,12 @@
   right: 40px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineGreen p {
+#project .pagever_intro .pagever_content .page_explanation .arrowLineGreen p {
   top: 536px;
   left: 222px;
 }
 
-#wrap main #project .pagever_intro .pagever_content .page_explanation .arrowLineGreen svg {
+#project .pagever_intro .pagever_content .page_explanation .arrowLineGreen svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -1836,14 +1843,14 @@
   right: 40px;
 }
 
-#wrap main #contact {
+#contact {
   width: 100%;
   height: 600px;
   padding: 40px 100px;
   background-color: #fffffc;
 }
 
-#wrap main #contact h2 {
+#contact h2 {
   text-align: right;
   font-size: 16px;
   font-weight: 500;
@@ -1851,7 +1858,7 @@
   text-transform: uppercase;
 }
 
-#wrap main #contact .img_container {
+#contact .img_container {
   width: 240px;
   height: 240px;
   margin: auto;
@@ -1861,7 +1868,7 @@
   background-size: 100% 100%;
 }
 
-#wrap main #contact p {
+#contact p {
   width: 100%;
   height: 36px;
   margin-top: 35px;
@@ -1872,7 +1879,7 @@
   text-transform: capitalize;
 }
 
-#wrap main #contact .personal_data p:first-child {
+#contact .personal_data p:first-child {
   width: 100%;
   height: 18px;
   margin-top: 60px;
@@ -1881,7 +1888,7 @@
   text-align: center;
 }
 
-#wrap main #contact .personal_data a {
+#contact .personal_data a {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1891,14 +1898,14 @@
   font-size: 14px;
 }
 
-#wrap #footBox {
+#footBox {
   width: 100%;
   position: sticky;
   bottom: 0px;
   z-index: 51;
 }
 
-#wrap #footBox .footinner {
+.footinner {
   background-color: white;
   border-top: 1px solid #e5e5e5;
   bottom: 0px;
@@ -1910,7 +1917,7 @@
   width: 100%;
 }
 
-#wrap #footBox .footinner .fnb_container {
+.fnb_container {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -1918,7 +1925,7 @@
   padding: 0px 16px;
 }
 
-#wrap #footBox .footinner .fnb_container h1 {
+.fnb_container h1 {
   width: auto;
   height: 100%;
   line-height: 36px;
@@ -1928,7 +1935,7 @@
   letter-spacing: 9px;
 }
 
-#wrap #footBox .footinner .fnb_container .verical_divider {
+.verical_divider {
   background-color: #e1e1e1;
   flex-grow: 0;
   height: 12px;
@@ -1937,7 +1944,7 @@
   width: 1px;
 }
 
-#wrap #footBox .footinner .fnb_container .fnb {
+.fnb {
   width: 100%;
   height: 36px;
   display: flex;
@@ -1950,18 +1957,18 @@
   -webkit-box-pack: start;
 }
 
-#wrap #footBox .footinner .fnb_container .fnb label {
+.fnb label {
   width: 10%;
   height: auto;
   text-align: center;
 }
 
-#wrap #footBox .footinner .fnb_container .fnb label:hover {
+.fnb label:hover {
   color: #D71C02;
   font-weight: 600;
 }
 
-#wrap #footBox .footinner .fnb_container .link_btn {
+.link_btn {
   width: 100%;
   height: 36px;
   display: flex;
@@ -1974,25 +1981,25 @@
   -webkit-box-pack: end;
 }
 
-#wrap #footBox .footinner .fnb_container .link_btn a {
+.link_btn a {
   width: 86px;
   height: 24px;
   line-height: 24px;
   font-weight: 500;
 }
 
-#wrap #footBox .footinner .fnb_container .link_btn .resume_btn {
+.resume_btn {
   background-color: #FDD131;
   border-radius: 10px;
 }
 
-#wrap #footBox .footinner .fnb_container .link_btn .github_btn {
+.github_btn {
   background-color: #006DA9;
   color: #fff;
   border-radius: 10px;
 }
 
-#wrap #footBox .footinner .fnb_container .link_btn .notion_btn {
+.notion_btn {
   background-color: #FB8145;
   border-radius: 10px;
 }

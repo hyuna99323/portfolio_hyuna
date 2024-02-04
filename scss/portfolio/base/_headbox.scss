@@ -1,0 +1,64 @@
+  // #headbox
+#headbox {
+  width: 100%;
+  height: 70px;
+  line-height: 30px;
+  padding: 20px 100px;
+  position: sticky;
+  display: flex;
+  top: 0;
+  box-sizing: border-box;
+  background-color: $color_white;
+  z-index: 1000;
+  @at-root .headinner {
+    width: 75%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    
+    /* logo */
+    h1 {
+      width: auto;
+      height: 100%;
+      
+      a {
+        font-family: $font-family_black;
+        font-size: map-get($map: $font_size, $key: projectsub);
+        font-weight: bolder;
+        letter-spacing: 9px;
+        
+        @at-root .title_O {
+          color: $color_yellow;
+        }
+        @at-root .title_H {
+          color: $color_blue;
+        }
+        @at-root .title_A {
+          color: $color_orange;
+        }
+      }
+    }
+  }
+  // .gnb
+  @at-root .gnb {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    font-family: $font_family_score;
+    font-size: map-get($map:$font_size , $key:content1);
+    text-transform: uppercase;
+    color: $color_black;
+
+    label {
+      width: 20%; 
+      height: auto; 
+      text-align: center; 
+    }
+    
+    label:hover {
+      @include navHover();
+    }
+  }
+}

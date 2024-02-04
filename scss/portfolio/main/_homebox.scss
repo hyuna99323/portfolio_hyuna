@@ -1,0 +1,110 @@
+// #home
+#home {
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  padding: 40px 100px;
+  
+  @at-root .left_span {
+    width: 338px;
+    height: 40px;
+    position: relative;
+    right: 13.8%;
+    top: 298px;
+    transform: rotate(90deg);
+    display: inline-block;
+    text-align: center;
+    line-height: 62px;
+    flex-shrink: 0;
+
+    span {
+      text-align: center;
+      font-size: map-get($map: $font_size, $key: pointcontent);
+      font-style: normal;
+      line-height: normal;
+    }
+  }
+  @at-root .middle_content {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & p:first-child {
+      width: 100%;
+      margin-top: 20%;
+      font-size: map-get($map: $font_size, $key: pointcontent);
+      font-weight: $font_weight_bold;
+      color: $color_red;
+    }
+    @at-root .cover_img {
+      margin-top: 30px;
+    }
+    @at-root .coverImgInner {
+      width: 335px;
+      height: 322px;
+      background-image: url(../../img/coverImg.JPG);
+      background-size: 100% 100%;
+      display: inline-block;
+    }
+    @at-root .blue_H {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 385px;
+      left: 410px;
+      transform: rotate(-8.67deg);
+      background: $color_blue;
+    }
+    @at-root .orange_A {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-bottom: 65px solid $color_orange;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      top: 250px;
+      left: 800px;
+      transform: rotate(36.306deg);
+    }
+    @at-root .yellow_O {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      top: 540px;
+      left: 768px;    
+      transform: rotate(36.306deg);
+      background-color: $color_yellow;
+    }
+    & p:last-child {
+      width: 100%;
+      margin-top: 10%;
+      font-size: map-get($map: $font_size, $key: pointcontent);
+      font-weight: $font_weight_medium;
+      color: $color_red;
+    }
+  } // --- .middle_content
+
+  // .right_span
+  @at-root .right_span {
+    width: 338px;
+    height: 40px;
+    position: relative;
+    left: 13.8%;
+    top: 298px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    text-align: center;
+    line-height: 60px;
+
+    span {
+      color: $color_red;
+      text-align: center;
+      font-size: map-get($map: $font_size, $key: pointcontent);
+      font-style: normal;
+      font-weight: $font_weight_bold;
+      line-height: normal;
+    }
+  } // --- .right_span
+} // --- #home

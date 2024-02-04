@@ -1,0 +1,120 @@
+// #introduce
+#introduce {
+  width: 100%;
+  height: 100%;
+  padding: 40px 100px;
+
+
+  h2 {
+    @include h2;
+  }
+
+  // .about_inner
+  @at-root .about_inner {
+    width: 100%;
+    display: flex;
+    
+    @at-root .about_left {
+      width:  455px;
+
+      @at-root .greeting {
+        width: 269px;
+        height: 66px;
+
+        p {
+          font-size: map-get($map: $font_size, $key: pointcontent);
+          font-weight: $font_weight_medium;
+        }
+      } // --- .greeting
+
+      // .id_picture
+      @at-root .id_picture {
+        width: 232px;
+        height: 232px;
+        margin-top: 15px;
+        border-radius: 50%;
+        background-image: url(../../img/introduceImg.JPG);
+        background-size: 246px 300px;
+      }
+      @at-root .sort_introduce {
+        width: 298px;
+        height: 187px;
+        margin-top: 30px;
+
+        span {
+          font-size: map-get($map: $font_size, $key: content1);
+        }
+      } // --- .sort_introduce
+    } // --- .about_left
+
+    // .about_midle
+    @at-root .about_midle {
+      width: 315px;
+
+      article h3 {
+        @include h3;
+        margin-top: 46px;
+      }
+      @at-root .profile h3 {
+        margin-top: 90px;
+      }
+      p {
+        margin-top: 15px;
+        line-height: 22px;
+        font-size: map-get($map: $font_size, $key: content1);
+      }
+    } // --- .about_midle
+
+    // .about_right
+    @at-root .about_right {
+      width: 310px;
+
+      @at-root .skill {
+        margin-top: 90px;
+        display: flex;
+        justify-content: end;
+
+        @at-root .skill_title {
+          width: 66px;
+          height: 55px;
+          font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_bold;
+        }
+        @at-root .skill_title span:first-child::after {
+          content: '';
+          width: 13px;
+          margin: 10px 0;
+          display: block;
+          flex-grow: 1;
+          font-size: 0px;
+          line-height: 0px;
+          border: 1px solid #000
+        }
+
+        // .skillBox
+        @at-root .skillBox {
+          display: flex;
+          flex-direction: column;
+
+          @at-root .skill_inner {
+            width: auto;
+            display: flex;
+            margin: 12px 0;
+            
+            p {
+              font-size: map-get($map: $font_size, $key: content1);
+            }
+
+            @at-root .checkbox {
+              width: 18px;
+              height: 18px;
+              line-height: 24px;
+              border: 1px solid #cdcdcd;
+              margin-right: 14px;
+            }
+          } // --- .skill_inner
+        } // --- .skillBox
+      } // --- .skill
+    } // --- .about_right
+  } // --- .about_inner
+} // --- #introduce
