@@ -66,6 +66,10 @@
       width: 10%;
       height: auto;
       text-align: center;
+
+      @include tablet() {
+        width: 16.203%;
+      }
     }
     label:hover {
       @include navHover();
@@ -104,6 +108,9 @@
       background-color: $color_orange;
       border-radius: 10px;
     }
+  }
+  @include mobile() {
+    display: none;
   }
 }
 

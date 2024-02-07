@@ -8,41 +8,140 @@
   z-index: 1;
 
   @at-root .advantageBox {
-    position: relative;
-    flex: 1;
-    padding: 90px 26px 37px;
-    opacity: 0.6;
-    transition: flex 1s, opacity 1s;
-    z-index: 1;
-    cursor: pointer;
+
+    @include tablet() {
+      width: 31.32%;
+    }
+
+    @include laptop() {
+      position: relative;
+      flex: 1;
+      padding: 84px 6px 36px;
+      opacity: 0.6;
+      transition: flex 1s, opacity 1s;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    @include pc() {
+      position: relative;
+      flex: 1;
+      padding: 84px 6px 36px;
+      opacity: 0.6;
+      transition: flex 1s, opacity 1s;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    @include pcfull() {
+      position: relative;
+      flex: 1;
+      padding: 84px 6px 36px;
+      opacity: 0.6;
+      transition: flex 1s, opacity 1s;
+      z-index: 1;
+      cursor: pointer;
+    }
   }
   @at-root .advantageBox:hover {
-    flex: 1.5;
-    opacity: 1;
-    z-index: 2;
+
+    @include laptop() {
+      flex: 1.5;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    @include pc() {
+      flex: 1.5;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    @include pcfull() {
+      flex: 1.5;
+      opacity: 1;
+      z-index: 2;
+    }
   }
   @at-root .advantageBox:hover::before {
-    left: 0px;
-    opacity: 1;
+    
+    @include laptop() {
+      left: 0px;
+      opacity: 1;
+    }
+
+    @include pc() {
+      left: 0px;
+      opacity: 1;
+    }
+
+    @include pcfull() {
+      left: 0px;
+      opacity: 1;
+    }
   }
   @at-root .advantageBox:hover .advantage_inner .advantage_txt {
-    width: 75%;
 
-    h2 {
-      font-size: 5vw;
-      padding-top: 0px;
+    @include laptop() {
+      width: 75%;
+      
+      h2 {
+        font-size: 5vw;
+        padding-top: 0px;
+      }
+      h2::after {
+        width: 120px;
+        background: $color_blue;
+        height: 3px;
+      }
     }
-    h2::after {
-      width: 120px;
-      background: $color_blue;
-      height: 3px;
+
+    @include pc() {
+      width: 75%;
+      
+      h2 {
+        font-size: 5vw;
+        padding-top: 0px;
+      }
+      h2::after {
+        width: 120px;
+        background: $color_blue;
+        height: 3px;
+      }
+    }
+
+    @include pcfull() {
+      width: 75%;
+      
+      h2 {
+        font-size: 5vw;
+        padding-top: 0px;
+      }
+      h2::after {
+        width: 120px;
+        background: $color_blue;
+        height: 3px;
+      }
     }
   } // --- .advantage_txt
 
   @at-root .advantageBox:hover .advantage_inner figure {
-    height: 25vh;
-    filter: saturate(120%);
-    transform: translateY(3vh);
+
+    @include laptop() {
+      height: 25vh;
+      filter: saturate(120%);
+      transform: translateY(3vh);
+    }
+    @include pc() {
+      height: 25vh;
+      filter: saturate(120%);
+      transform: translateY(3vh);
+    }
+    @include pcfull() {
+      height: 25vh;
+      filter: saturate(120%);
+      transform: translateY(3vh);
+    }
   }
 
   @at-root .advantageBox::before {
@@ -56,6 +155,10 @@
     left: -50px;
     opacity: 0;
     transition: 1s;
+
+    @include tablet() {
+      display: none;
+    }
   }
 
   // .advantage_inner
@@ -79,17 +182,45 @@
         font-weight: $font_weight_bold;
         color: $color_red;
         transition: 1s;
+
+        @include tablet() {
+          margin-bottom: 20px;
+          padding-top: 0px;
+        }
       }
     } // --- .advantage_txt
 
     @at-root .advantage_txt h2::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 2px;
-      background: #777;
-      margin-top: 20px;
-      transition: 1.5s;
+
+      @include laptop() {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #777;
+        margin-top: 20px;
+        transition: 1.5s;
+      }
+
+      @include pc() {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #777;
+        margin-top: 20px;
+        transition: 1.5s;
+      }
+
+      @include pcfull() {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #777;
+        margin-top: 20px;
+        transition: 1.5s;
+      }
     }
 
     @at-root .advantage_txt p {
@@ -120,6 +251,22 @@
         height: 100%;
         object-fit: cover;
       }
+
+      @include tablet() {
+        filter: saturate(100%);
+      }
     } // --- figure
   } // --- .advantage_inner
+
+  @include mobile() {
+    display: none;
+  }
+
+  @include tablet() {
+    height: auto;
+    padding: 3.907% 6.511%;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 50px;
+  }
 } // --- #advantage

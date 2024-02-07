@@ -4,6 +4,9 @@
   height: 100%;
   padding: 40px 100px;
 
+  @include mobile() {
+    padding: 10px;
+  }
 
   h2 {
     @include h2;
@@ -13,9 +16,18 @@
   @at-root .about_inner {
     width: 100%;
     display: flex;
+
+    @include mobile() {
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
     
     @at-root .about_left {
       width:  455px;
+
+      @include mobile() {
+        width: 100%;
+      }
 
       @at-root .greeting {
         width: 269px;
@@ -24,6 +36,18 @@
         p {
           font-size: map-get($map: $font_size, $key: pointcontent);
           font-weight: $font_weight_medium;
+
+          @include mobile() {
+            font-size: map-get($map: $font_size_m, $key: pointcontent);
+          }
+
+          @include tablet() {
+            font-size: map-get($map: $font_size_m, $key: pointcontent);
+          }
+        }
+        @include tablet() {
+          width: 100%;
+          height: auto;
         }
       } // --- .greeting
 
@@ -35,25 +59,71 @@
         border-radius: 50%;
         background-image: url(../../img/introduceImg.JPG);
         background-size: 246px 300px;
+
+        @include mobile() {
+          display: none;
+        }
+
+        @include tablet() {
+          width: 210px;
+          height: 210px;
+          background-size: 240px 300px;
+        }
       }
       @at-root .sort_introduce {
         width: 298px;
-        height: 187px;
+        height: auto;
         margin-top: 30px;
 
         span {
           font-size: map-get($map: $font_size, $key: content1);
+
+          @include mobile() {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
+
+          @include tablet() {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
+        }
+
+        @include mobile() {
+          margin-top: 0px;
+          height: auto;
+          line-height: 21px;
+        }
+
+        @include tablet() {
+          width: 100%;
+          height: auto;
+          line-height: 20px;
         }
       } // --- .sort_introduce
+
+      @include tablet() {
+        width: 36.609%;
+      }
     } // --- .about_left
 
     // .about_midle
-    @at-root .about_midle {
+    @at-root .about_middle {
       width: 315px;
+
+      @include mobile() {
+        width: 100%;
+      }
 
       article h3 {
         @include h3;
         margin-top: 46px;
+
+        @include mobile() {
+          margin-top: 20px;
+        }
+
+        @include tablet() {
+          margin-top: 25px;
+        }
       }
       @at-root .profile h3 {
         margin-top: 90px;
@@ -62,6 +132,20 @@
         margin-top: 15px;
         line-height: 22px;
         font-size: map-get($map: $font_size, $key: content1);
+
+        @include mobile() {
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
+
+        @include tablet() {
+          margin-top: 10px;
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
+      }
+
+      @include tablet() {
+        width: 32.614%;
+        margin-top: 50px;
       }
     } // --- .about_midle
 
@@ -69,16 +153,32 @@
     @at-root .about_right {
       width: 310px;
 
+      @include mobile() {
+        width: 100%;
+        // display: none;
+      }
+
       @at-root .skill {
         margin-top: 90px;
         display: flex;
         justify-content: end;
+
+        @include mobile() {
+          margin-top: 30px;
+          justify-content: flex-start;
+        }
 
         @at-root .skill_title {
           width: 66px;
           height: 55px;
           font-size: map-get($map: $font_size, $key: content1);
           font-weight: $font_weight_bold;
+
+          @include tablet() {
+            width: auto;
+            height: auto;
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
         }
         @at-root .skill_title span:first-child::after {
           content: '';
@@ -103,6 +203,10 @@
             
             p {
               font-size: map-get($map: $font_size, $key: content1);
+
+              @include mobile() {
+                font-size: map-get($map: $font_size_m, $key: content1);
+              }
             }
 
             @at-root .checkbox {
@@ -114,7 +218,25 @@
             }
           } // --- .skill_inner
         } // --- .skillBox
+
+        @include tablet() {
+          margin-top: 70px;
+          gap: 6%;
+        }
       } // --- .skill
+
+      @include tablet() {
+        width: 20.959%;
+      }
     } // --- .about_right
+
+    @include tablet() {
+      height: -webkit-fill-available;
+      gap: 5%;
+    }
   } // --- .about_inner
+
+  @include tablet() {
+    padding: 3.907% 6.511%;
+  }
 } // --- #introduce

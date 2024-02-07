@@ -1,51 +1,112 @@
 // #home
 #home {
   width: 100%;
-  height: 92vh;
+  // height: 100vh;
   display: flex;
   padding: 40px 100px;
+
+  @include mobile() {
+    height: max-content;
+    padding: 10px;
+    flex-wrap: wrap-reverse;
+  }
   
   @at-root .left_span {
-    width: 338px;
-    height: 40px;
-    position: relative;
-    right: 13.8%;
-    top: 298px;
-    transform: rotate(90deg);
-    display: inline-block;
+    width: 22.2223%;
+    // height: 40px;
     text-align: center;
+    align-self: center;
     line-height: 62px;
-    flex-shrink: 0;
 
     span {
+      // height: 88.8vh;
+      display: block;
+      text-orientation: sideways;
       text-align: center;
       font-size: map-get($map: $font_size, $key: pointcontent);
-      font-style: normal;
-      line-height: normal;
+
+      @include mobile() {
+        margin: 4.667% 0 10% 0;;
+        font-size: map-get($map: $font_size_m, $key: pointcontent);
+        height: auto;
+        text-orientation: sideways;
+      }
+
+      @include tablet() {
+        // height: 91.8vh;
+        font-size: map-get($map: $font_size_m, $key: pointcontent);
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+      }
+
+      @include laptop() {
+        writing-mode: vertical-rl;
+      }
+      
+      @include pc() {
+        writing-mode: vertical-rl;
+      }
+
+      @include pcfull() {
+        writing-mode: vertical-rl;
+      }
+    }
+
+    @include mobile() {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      transform: rotate(0deg);
+      line-height: 25px;
+      top: 0px;
+      right: 0px;
     }
   }
   @at-root .middle_content {
-    width: 420px;
+    width: 55.556%;
+    // height: min-content;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     text-align: center;
 
     & p:first-child {
       width: 100%;
-      margin-top: 20%;
+      margin: 7% 0 10% 0;
       font-size: map-get($map: $font_size, $key: pointcontent);
       font-weight: $font_weight_bold;
       color: $color_red;
+
+      @include mobile() {
+        height: 20px;
+        margin-top: 4.667%;
+        font-size: map-get($map: $font_size_m, $key: pointcontent);
+      }
+
+      @include tablet() {
+        margin: 0 0 10% 0;
+      }
     }
     @at-root .cover_img {
-      margin-top: 30px;
+      margin: auto;
+
+      @include mobile() {
+        margin-top: 15px;
+      }
+
+      @include tablet() {
+        margin: 20% auto;
+      }
     }
     @at-root .coverImgInner {
       width: 335px;
       height: 322px;
       background-image: url(../../img/coverImg.JPG);
       background-size: 100% 100%;
-      display: inline-block;
+
+      @include mobile() {
+        width: 216px;
+        height: 200px;
+      }
     }
     @at-root .blue_H {
       position: absolute;
@@ -55,6 +116,19 @@
       left: 410px;
       transform: rotate(-8.67deg);
       background: $color_blue;
+
+      @include mobile() {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 150px;
+        left: 40px;
+      }
+
+      @include tablet() {
+        top: 332px;
+        left: 23.959%;
+      }
     }
     @at-root .orange_A {
       position: absolute;
@@ -66,6 +140,19 @@
       top: 250px;
       left: 800px;
       transform: rotate(36.306deg);
+
+      @include mobile() {
+        position: absolute;
+        border-bottom: 30px solid $color_orange;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        top: 100px;
+        left: 260px;
+      }
+      @include tablet() {
+        top: 236px;
+        left: 69.011%;
+      }
     }
     @at-root .yellow_O {
       position: absolute;
@@ -76,6 +163,18 @@
       left: 768px;    
       transform: rotate(36.306deg);
       background-color: $color_yellow;
+
+      @include mobile() {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 290px;
+        left: 260px;
+      }
+      @include tablet() {
+        top: 500px;
+        left: 67.969%;
+      }
     }
     & p:last-child {
       width: 100%;
@@ -83,28 +182,64 @@
       font-size: map-get($map: $font_size, $key: pointcontent);
       font-weight: $font_weight_medium;
       color: $color_red;
+
+      @include mobile() {
+        display: none;
+      }
+      @include tablet() {
+        margin-top: 10%;
+      }
+    }
+    @include mobile() {
+      width: 100%;
+      height: auto;
+    }
+
+    @include tablet() {
+    }
+
+    @include laptop() {
+      height: min-content;
+    }
+    @include pc() {
+      height: min-content;
+    }
+    @include pcfull() {
+      height: min-content;
     }
   } // --- .middle_content
 
   // .right_span
   @at-root .right_span {
-    width: 338px;
-    height: 40px;
-    position: relative;
-    left: 13.8%;
-    top: 298px;
+    width: 22.2223%;
     display: inline-block;
-    transform: rotate(-90deg);
-    text-align: center;
-    line-height: 60px;
+    text-align: -webkit-right;
+    align-self: center;
+
+    @include mobile() {
+      display: none;
+    }
 
     span {
-      color: $color_red;
-      text-align: center;
+      // height: 88.8vh;
+      display: block;
       font-size: map-get($map: $font_size, $key: pointcontent);
-      font-style: normal;
       font-weight: $font_weight_bold;
-      line-height: normal;
+      text-align: center;
+      color: $color_red;
+      transform: rotate(180deg);
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+
+      @include tablet() {
+        // height: 91.8vh;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+      }
     }
   } // --- .right_span
+
+  @include tablet() {
+    padding: 3.907% 6.511%;
+  }
 } // --- #home
