@@ -20,6 +20,10 @@
   font-weight: $font_weight_medium;
   color: $color_blue;
   text-transform: uppercase;
+
+  @include mobile() {
+    font-size: map-get($map: $font_size_m, $key: subtitle);
+    }
 }
 
 @mixin h3() {
@@ -29,6 +33,14 @@
   font-weight: $font_weight_bold;
   text-transform: uppercase;
   line-height: 24px;
+
+  @include mobile() {
+    font-size: map-get($map: $font_size_m, $key: subtitle);
+  }
+
+  @include tablet() {
+    font-size: map-get($map: $font_size_m, $key: subtitle);
+  }
 }
 
 // 가이드 라인 소제목
@@ -36,12 +48,24 @@
   font-size: map-get($map: $font_size, $key: projectsub);
   font-weight: $font_weight_bold;
   text-transform: capitalize;
+
+  @include mobile() {
+    font-size: map-get($map: $font_size_m, $key: projectsub);
+  }
+
+  @include tablet() {
+    font-size: map-get($map: $font_size_m, $key: projectsub);
+  }
 }
 
 @mixin h4() {
   font-size: map-get($map: $font_size, $key: subtitle);
   font-weight: $font_weight_medium;
   text-transform: capitalize;
+
+  @include tablet() {
+    font-size: map-get($map: $font_size_m, $key: pointcontent);
+  }
 }
 
 @mixin h5() {
@@ -49,6 +73,14 @@
   font-size: map-get($map: $font_size, $key: subtitle);
   font-weight: $font_weight_medium;
   color: $color_gray;
+
+  @include mobile() {
+    font-size: map-get($map: $font_size_m, $key: subtitle);
+  }
+
+  @include tablet() {
+    font-size: map-get($map: $font_size_m, $key: subtitle);
+  }
 }
 
 // project ---------------------------
@@ -60,6 +92,20 @@
 
     img {
       width: 100%;
+      
+      @include mobile() {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @include mobile() {
+      width: 300px;
+      height: 216px;
+    }
+    
+    @include tablet() {
+      width: 100%;
+      height: auto;
     }
   } /* --- .mockup */
 }
@@ -67,13 +113,28 @@
 @mixin guideBox() {
   width: 100%;
   height: auto;
-  padding: 40px 0;
+  padding: 5.989% 0;
+
+  @include tablet() {
+    padding: 5.989% 0;
+  }
 }
 
 // 가이드 라인 레이아웃 flex 설정
 @mixin guideflex() {
   display: flex;
   gap: 44px;
+
+  @include mobile() {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  @include tablet() {
+    flex-wrap: wrap;
+    gap: 3%;
+    row-gap: 50px;
+  }
 }
 
 // 가이드 라인 로고
@@ -83,6 +144,18 @@
   margin-top: 30px;
   flex-direction: column;
   margin-left: 15px;
+
+  @include mobile() {
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 0px;
+  }
+
+  @include tablet() {
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
 }
 
 // 폰트 한눈에 보기 상자
@@ -96,6 +169,23 @@
   p {
     font-size: map-get($map: $font_size, $key: content1);
     font-weight: $font_weight_medium;
+
+    @include mobile() {
+      font-size: map-get($map: $font_size_m, $key: content1);
+    }
+
+    @include tablet() {
+      font-size: map-get($map: $font_size_m, $key: content1);
+    }
+  }
+
+  @include mobile() {
+    height: auto;
+    padding: 2px;
+  }
+
+  @include tablet() {
+    height: 32px;
   }
 }
 
@@ -109,6 +199,14 @@
 @mixin logoInP {
   margin-top: 10px;
   font-size: map-get($map: $font_size, $key: content1);
+
+  @include mobile() {
+    font-size: map-get($map: $font_size_m, $key: content1);
+  }
+
+  @include tablet() {
+    font-size: map-get($map: $font_size_m, $key: content1);
+  }
 }
 
 // 폰트 상자 설정
@@ -124,6 +222,10 @@
   h5 {
     @include h5();
     margin-top: 18px;
+
+    @include mobile() {
+      margin-top: 8px;
+    }
   }
 
   .font_ex {
@@ -142,7 +244,6 @@
     }
 
     .font_name {
-      @include fontName();
       p {
         font-size: 14px;
         font-weight: 500;
@@ -152,6 +253,7 @@
         font-size: 12px;
         font-weight: 300;
       }
+      @include fontName();
     } /* .font_name */
 
     .font_regular {
@@ -159,6 +261,11 @@
       height: 118px;
       border: 1.5px solid #ccc;
       border-radius: 4px;
+
+      @include mobile() {
+        width: 92px;
+        height: 112px;
+      }
     } /* .font_regular */
 
     .font_medium {
@@ -175,6 +282,11 @@
         font-weight: $font_weight_medium;
         text-align: center;
         line-height: 76px;
+      }
+
+      @include mobile() {
+        width: 92px;
+        height: 112px;
       }
     } /* .font_medium */
 
@@ -193,15 +305,30 @@
         text-align: center;
         line-height: 76px;
       }
+
+      @include mobile() {
+        width: 92px;
+        height: 112px;
+      }
     } /* .font_bold */
+
+    @include mobile() {
+      margin-top: 10px;
+      gap: 12px;
+    }
   } /* .font_ex */
 
   // 폰트 사이즈 가이드라인
   /* 폰트 사이즈 가이드라인 */
   .font_size {
     margin-top: 15px;
+
     span {
       font-size: map-get($map: $font_size, $key: content1);
+
+      @include mobile() {
+        font-size: map-get($map: $font_size_m, $key: content1);
+      }
     }
 
     .small_exp {
@@ -256,6 +383,19 @@
       }
     } /* .fontSize14 */
   }
+
+  @include mobile() {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  @include tablet() {
+    width: 49.102%;
+    height: auto;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
 }
 
 // 컬러 상자 설정
@@ -264,7 +404,18 @@
   height: auto;
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include mobile() {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  @include tablet() {
+    height: fit-content;
+    margin-top: 16px;
+    margin-left: 5px;
+  }
 }
 
 // 가이드라인 컬러 색상표 글자 설정
@@ -310,12 +461,27 @@
 @mixin projectIntro() {
   display: flex;
   gap: 88px;
+
+  @include mobile() {
+    height: auto;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include tablet() {
+    height: auto;
+  }
 }
 
 @mixin pageIntro() {
   width: 100%;
   height: auto;
   padding-top: 40px;
+
+  @include mobile() {
+    padding-top: 0px;
+  }
 }
 
 @mixin arrowSvg() {
@@ -328,7 +494,12 @@
 @mixin arrowSvgTxt() {
   width: 300px;
   position: relative;
-  font-size: map-get($map: $font_size, $key: content1)
+  font-size: map-get($map: $font_size, $key: content1);
+  margin-top: 15px;
+
+  @include tablet() {
+    font-size: map-get($map: $font_size_m, $key: content1);
+  }
 }
 
 // 인트로 텍스트 - 프로젝트 설명 텍스트 설정
@@ -340,10 +511,18 @@
       font-size: map-get($map: $font_size, $key: projecttitle);
       font-weight: $font_weight_bold;
       text-align: center;
+
+      @include mobile() {
+        font-size: map-get($map: $font_size_m, $key: projecttitle);
+      }
     }
     .sub_txt {
       font-size: map-get($map: $font_size, $key: content1);
       text-align: center;
+
+      @include mobile() {
+        font-size: map-get($map: $font_size_m, $key: content1);
+      }
     }
     .detail {
       display: flex;
@@ -355,13 +534,34 @@
           font-size: map-get($map: $font_size, $key: subtitle);
           font-weight: $font_weight_bold;
           line-height: 30px;
+
+          @include mobile() {
+          font-size: map-get($map: $font_size_m, $key: subtitle);
+          }
+        }
+
+        @include mobile() {
+          width: 50px;
         }
       }
       .intro_content {
         p {
           font-size: map-get($map: $font_size, $key: content1);
           line-height: 30px;
+
+          @include mobile() {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
         }
+      }
+
+      @include mobile() {
+        margin-top: 30px;
+        gap: 30px;
+      }
+
+      @include tablet() {
+        width: 100%;
       }
     }
     .project_explanation {
@@ -372,7 +572,33 @@
       p {
         font-size: map-get($map: $font_size, $key: content1);
         line-height: 25px;
+
+        @include mobile() {
+          font-size: map-get($map: $font_size_m, $key: content1);
+          line-height: 21px;
+        }
+
+        @include tablet() {
+          margin-top: 30px;
+        }
       }
+
+      @include mobile() {
+        width: 100%;
+        height: auto;
+      }
+
+      @include tablet() {
+        display: contents;
+        align-items: end;
+      }
+    }
+    @include mobile() {
+      width: 100%;
+    }
+
+    @include tablet() {
+      width: 100%;
     }
   }
 }
@@ -386,7 +612,7 @@
 
 // @media query --------------------------------------
 $mobile : 320px;
-$tablet : 680px;
+$tablet : 768px;
 $laptop : 1280px;
 $pc:1440px;
 $pcfull : 1920px;

@@ -7,24 +7,38 @@
   h2 {
     @include h2;
     padding: 0 100px;
+
+    @include mobile() {
+      padding: 0 10px;
+    }
   }
 
   .portfolio_content {
     margin-top: 32px;
     padding: 40px 100px 0;
 
+    @include mobile() {
+      padding: 0 10px;
+    }
+
     // 프로젝트 설명
     .project_intro {
       @include projectIntro();
-      
+
       @include introTxt();
 
       @include guideMockup();
+
+      @include tablet() {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
     } // --- project_intro - 프로젝트 설명
 
     // .guide - 가이드라인 
     .guide {
       @include guideBox();
+      color: $color_black;
 
       h3 {
         @include guidelineh3 ();
@@ -36,6 +50,7 @@
 
         .logo_part {
           @include guidelogoContent ();
+
 
           h4 {
             @include h4();
@@ -66,111 +81,207 @@
             }
           } // --- .logo
 
-          h5 {
-            @include h5();
-            margin-top: 94px;
-            margin-left: 5px;
-          }
-
-          // .logo_font
-          .logo_font {
-            width: 340px;
-            margin-top: 10px;
-            margin-left: 5px;
-            display: flex;
-            gap: 14px;
-
-            .logoFontEx {
-              width: 112px;
-              height: 156px;
-              border: 1.5px solid $color_grayC;
-              border-radius: 4px;
-
-              span {
-                width: 100%;
-                height: 104px;
-                display: block;
-                font-family: $font-family_black;
-                font-size: 36px;
-                text-align: center;
-                line-height: 104px;
-              }
-              .font_name {
-                @include fontName ();
-                p:last-child {
-                  font-size: map-get($map: $font_size, $key: content2);
-                  font-weight: $font_weight_regular;
-                }
-              } // --- .font_name - 폰트명
-            } // --- .logoFontEx - 폰트 예시 이미지
-
-            // .fontExp
-            .fontExp {
-              width: 214px;
-              height: auto;
-              
-              .explanation {
-                font-size: map-get($map: $font_size, $key: content1);
-              }
-              
-              .explanation:nth-last-child(-n+2) {
-                font-size: map-get($map: $font_size, $key: content1);
-                margin-top: 12px;
-              }
-            } // --- .fontExp = 글꼴 설명
-          } // --- .logo_font
-
-          .colorSubTilte {
-            @include h5();
-            margin: 55px 0 20px 5px;
-          }
-
-          .font_color {
-            width: 100%;
-            margin-left: 5px;
-            display: flex;
-            flex-direction: column;
-
-            // .color_list
-            .color_list {
+          .mobile_guide {
+            @include tablet() {
               display: flex;
-
-              .list_yellow {
-                width: 22px;
-                height: 22px;
-                margin-right: 14px;
-                border-radius: 50%;
-                background: $color_yellow;
-              }
-
-              .list_bule {
-                width: 22px;
-                height: 22px;
-                margin-right: 14px;
-                background: $color_blue;
-              }
-
-              .list_orange {
-                width: 0px;
-                height: 0px;
-                border-bottom: 22px solid #FB8145;
-                border-left: 12px solid transparent;
-                border-right: 12px solid transparent;
-              }
-            } // --- .color_list
-          } // --- .font_color - 폰트 색상
-
-          // .fontColorExp
-          .fontColorExp {
-            margin-top: 10px;
-            p {
-              font-size: map-get($map: $font_size, $key: content1);
             }
-            p:last-child {
-              margin-top: 12px;
-              font-size: map-get($map: $font_size, $key: content1);
+
+            h5 {
+              @include h5();
+              margin-top: 94px;
+              margin-left: 5px;
+
+              @include mobile() {
+                margin-top: 20px;
+                margin-left: 0px;
+              }
+
+              @include tablet() {
+                margin-top: 40px;
+              }
             }
-          } // --- .fontColorExp
+
+            // .logo_font
+            .logo_font {
+
+              
+              .font_inner {
+                width: 340px;
+                margin-top: 10px;
+                margin-left: 5px;
+                display: flex;
+                gap: 14px;
+
+                .logoFontEx {
+                  width: 112px;
+                  height: 156px;
+                  border: 1.5px solid $color_grayC;
+                  border-radius: 4px;
+
+                  span {
+                    width: 100%;
+                    height: 104px;
+                    display: block;
+                    font-family: $font-family_black;
+                    font-size: 36px;
+                    text-align: center;
+                    line-height: 104px;
+
+                    @include tablet() {
+                      height: 85px;
+                      line-height: 90px;
+                    }
+                  }
+                  .font_name {
+                    @include fontName();
+                    p:last-child {
+                      font-size: map-get($map: $font_size, $key: content2);
+                      font-weight: $font_weight_regular;
+                    }
+                  } // --- .font_name - 폰트명
+
+                  @include mobile() {
+                    width: 100px;
+                    height: 143px;
+                  }
+
+                  @include tablet() {
+                    height: 134px;
+                  }
+                } // --- .logoFontEx - 폰트 예시 이미지
+
+                @include tablet() {
+                  width: auto;
+                  margin-top: 15px;
+                }
+              }
+
+              // .fontExp
+              .fontExp {
+                width: 214px;
+                height: auto;
+
+                .explanation {
+                  font-size: map-get($map: $font_size, $key: content1);
+
+                  @include mobile() {
+                    font-size: map-get($map: $font_size_m, $key: content1);
+                  }
+
+                  @include tablet() {
+                    font-size: map-get($map: $font_size_m, $key: content1);
+                  }
+                }
+
+                .explanation:nth-last-child(-n+2) {
+                  // font-size: map-get($map: $font_size, $key: content1);
+                  margin-top: 12px;
+
+                  @include mobile() {
+                    margin-top: 9px;
+                  }
+                }
+
+                @include mobile() {
+                  width: 198px;
+                  height: auto;
+                }
+              } // --- .fontExp = 글꼴 설명
+
+              @include mobile() {
+                width: 100%;
+                gap: 8px;
+              }
+
+              @include tablet() {
+                width: 50%;
+              }
+            } // --- .logo_font
+
+            
+            .font_color {
+
+              .colorSubTilte {
+                @include h5();
+                margin: 55px 0 20px 5px;
+  
+                @include mobile() {
+                  margin: 20px 0 10px 0;
+                }
+  
+                @include tablet() {
+                  margin-top: 40px;
+                }
+              }
+              .color_inner {
+                width: 100%;
+                margin-left: 5px;
+                display: flex;
+                flex-wrap: wrap;
+
+                // .color_list
+                .color_list {
+                  display: flex;
+
+                  .list_yellow {
+                    width: 22px;
+                    height: 22px;
+                    margin-right: 14px;
+                    border-radius: 50%;
+                    background: $color_yellow;
+                  }
+
+                  .list_bule {
+                    width: 22px;
+                    height: 22px;
+                    margin-right: 14px;
+                    background: $color_blue;
+                  }
+
+                  .list_orange {
+                    width: 0px;
+                    height: 0px;
+                    border-bottom: 22px solid #FB8145;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                  }
+                } // --- .color_list
+
+
+                // .fontColorExp
+                .fontColorExp {
+                  margin-top: 10px;
+                  p {
+                    font-size: map-get($map: $font_size, $key: content1);
+                  
+                    @include mobile() {
+                      font-size: map-get($map: $font_size_m, $key: content1);
+                    }
+                  
+                    @include tablet() {
+                      font-size: map-get($map: $font_size_m, $key: content1);
+                    }
+                  }
+                  p:last-child {
+                    margin-top: 12px;
+                  
+                    @include mobile() {
+                      margin-top: 8px;
+                    }
+                  }
+                } // --- .fontColorExp
+              }
+
+              @include tablet() {
+                width: 47%;
+              }
+            } // --- .font_color - 폰트 색상
+
+            @include tablet() {
+              display: flex;
+              gap: 3%;
+            }
+          }
         } // --- .logo_part - 로고 가이드라인
       
         // .font_part
@@ -201,104 +312,148 @@
           h4 {
             @include h4();
           }
-          .color_content {
-            @include colorPartBox();
-          
-            .colorSubTitle {
-              @include h5();
-            }
+          .icon_inner {
 
-            span {
-              @include ColorRgbTxt();
-            }
-
-            // .icon_color
-            .icon_color {
-              margin-top: 18px;
-              display: flex;
-              gap: 50px;
+            .color_content {
+              @include colorPartBox();
+              width: 100%;
             
-              .icon_yellow {
+              .colorSubTitle {
+                @include h5();
+              }
+
+              span {
+                @include ColorRgbTxt();
+              }
+
+              // .icon_color
+              .icon_color {
+                margin-top: 18px;
                 display: flex;
-                flex-direction: column;
+                gap: 50px;
               
-                .yellow_shapes {
-                  width: 60px;
-                  height: 60px;
-                  border-radius: 50%;
-                  background-color: $color_yellow;
-                }
-              } // --- .icon_yellow
+                .icon_yellow {
+                  display: flex;
+                  flex-direction: column;
+                
+                  .yellow_shapes {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: $color_yellow;
 
-              // .icon_bule
-              .icon_bule {
-                display: flex;
-                flex-direction: column;
+                    @include mobile() {
+                      width: 70px;
+                      height: 70px;
+                    }
+                  }
+                } // --- .icon_yellow
 
-                .bule_shapes {
-                  width: 60px;
-                  height: 60px;
-                  border-radius: 50%;
-                  background-color: $color_blue;
-                }
-              } // --- .icon_bule
+                // .icon_bule
+                .icon_bule {
+                  display: flex;
+                  flex-direction: column;
 
-              // .icon_orange
-              .icon_orange {
-                display: flex;
-                flex-direction: column;
-              
-                .orange_shapes {
-                  width: 60px;
-                  height: 60px;
-                  border-radius: 50%;
-                  background-color: $color_orange;
-                }
-              } // --- .icon_orange
-            } // --- .icon_color
+                  .bule_shapes {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: $color_blue;
 
-            // .bottom_color
-            .bottom_color {
-              margin-top: 30px;
-              display: flex;
-              gap: 24px;
-            
-              .point_color {
-                display: flex;
-                flex-direction: column;
-              
-                .icon_red {
-                  width: 60px;
-                  height: 60px;
-                  margin: auto;
+                    @include mobile() {
+                      width: 70px;
+                      height: 70px;
+                    }
+                  }
+                } // --- .icon_bule
+
+                // .icon_orange
+                .icon_orange {
+                  display: flex;
+                  flex-direction: column;
+                
+                  .orange_shapes {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: $color_orange;
+
+                    @include mobile() {
+                      width: 70px;
+                      height: 70px;
+                    }
+                  }
+                } // --- .icon_orange
+
+                @include mobile() {
                   margin-top: 10px;
-                  border-radius: 50%;
-                  background-color: $color_red;
+                  gap: 35px;
                 }
-              } // --- .point_color
+              } // --- .icon_color
 
-              // .background_color
-              .background_color {
+              // .bottom_color
+              .bottom_color {
+                margin-top: 30px;
                 display: flex;
-                flex-direction: column;
+                gap: 24px;
               
-                .icon_white {
-                  width: 60px;
-                  height: 60px;
-                  margin-left: 8.77px;
-                  margin-top: 10px;
-                  border: 1px solid #cfcfcf;
-                  border-radius: 50%;
-                  background-color: $color_graywhite;
+                .point_color {
+                  display: flex;
+                  flex-direction: column;
+                
+                  .icon_red {
+                    width: 60px;
+                    height: 60px;
+                    margin: auto;
+                    margin-top: 10px;
+                    border-radius: 50%;
+                    background-color: $color_red;
+
+                    @include mobile() {
+                      width: 70px;
+                      height: 70px;
+                    }
+                  }
+                } // --- .point_color
+
+                // .background_color
+                .background_color {
+                  display: flex;
+                  flex-direction: column;
+                
+                  .icon_white {
+                    width: 60px;
+                    height: 60px;
+                    // margin-left: 8.77px;
+                    margin-top: 10px;
+                    border: 1px solid #cfcfcf;
+                    border-radius: 50%;
+                    background-color: $color_graywhite;
+
+                    @include mobile() {
+                      width: 70px;
+                      height: 70px;
+                    }
+                  }
+
+                  .backgroundColorTxt {
+                    text-align-last: left;
+                    margin-left: 8.77px;
+                  }
+                } // --- .background_color
+
+                @include mobile() {
+                  margin-top: 20px;
+                  gap: 35px;
                 }
 
-                .backgroundColorTxt {
-                  text-align-last: left;
-                  margin-left: 8.77px;
+                @include tablet() {
+                  margin-top: 26px;
                 }
-              } // --- .background_color
-            } // --- .bottom_color
-          } // --- .color_content - 사용한 색상 가이드라인
+              } // --- .bottom_color
+              
+            } // --- .color_content - 사용한 색상 가이드라인
+          }
 
           // .button_color
           .button_color {
@@ -329,6 +484,10 @@
               .notion_btn {
                 @include fnb ();
                 background-color: $color_orange;
+              }
+
+              @include mobile() {
+                display: none;
               }
             } // --- .button_content
 
@@ -387,6 +546,15 @@
                 } // --- .hover_ex
               } // --- .hover_part
             } // --- .button_hover
+
+            @include mobile() {
+              margin-top: 28px;
+            }
+
+            @include tablet() {
+              width: 100%;
+              margin-top: 40px;
+            }
           } // --- .button_color
         } // --- color_part  - 가이드라인 color부분
       } // --- .port_content - 포트폴리오 프로젝트 설명
@@ -399,77 +567,225 @@
       h3 {
         @include guidelineh3 ();
       }
-      .portfolio_mockup {
-        width: 526px;
-        height: 960px;
+
+      .pagever_content {
+        display: flex;
+        gap: 30px;
         margin-top: 36px;
-        background-image: url(../../img/portfolio_capture.png);
-        background-size: 100% 100%;
+
+        @include mobile() {
+          flex-wrap: wrap-reverse;
+        }
+        .portfolio_mockup {
+          width: 526px;
+          height: 960px;
+          margin-top: 36px;
+          background-image: url(../../img/portfolio_capture.png);
+          background-size: 100% 100%;
+
+          @include mobile() {
+            width: 100%;
+            height: 550px;
+            margin-top: 0;
+          }
+
+          @include tablet() {
+            width: 50.3%;
+            height: 628px;
+            margin-top: 0;
+          }
+        }
+        
+        @include mobile() {
+          margin-top: 8px;
+        }
+
+        @include tablet() {
+          margin-top: 16px;
+        }
       }
 
       .page_explanation {
+        h4 {
+          @include h4();
+        }
         p {
           @include arrowSvgTxt();
         }
         // 빨간 선
         .arrowLineRed {
+          position: relative;
+          top: 20px;
+          left: 0px;
           p {
-            top: 20px;
-            left: 0px;
+            @include mobile() {
+              top: 0;
+              left: 0;
+            }
+
+            @include tablet() {
+              top: 4px;
+              left: 0;
+              margin-top: 10px;
+            }
           }
           svg {
             @include arrowSvg();
-            bottom: 30px;
+            bottom: 84px;
             left: 320px;
+
+            @include mobile() {
+              display: none;
+            }
+
+            @include tablet() {
+              width: 150px;
+              bottom: 98px;
+              left: 200px;
+            }
+          }
+
+          @include tablet() {
+            width: 100%;
+            top: 0;
+            left: 0;
           }
         }
 
         // 파란선
         .arrowLineBlue {
+          position: relative;
+          top: 209px;
+          left: 58px;
           p {
-            top: 240px;
-            left: 60px;
+            @include mobile() {
+              top: 0;
+              left: 0;
+            }
           }
           svg {
             @include arrowSvg();
-            top: 185px;
-            left: 360px;
+            bottom: 92px;
+            left: 300px;
+
+            @include mobile() {
+              display: none;
+            }
+
+            @include tablet() {
+              width: 124px;
+              bottom: 102px;
+              left: 206px;
+            }
+          }
+
+          @include mobile() {
+            margin-top: 10px;
+          }
+
+          @include tablet() {
+            top: 86px;
+            left: 0;
           }
         }
 
         // 노란선
         .arrowLineYellow {
+          position: relative;
+          top: 246px;
+          left: 20px;
           p {
-            top: 300px;
-            left: 20px;
+            @include mobile() {
+              top: 0;
+              left: 0;
+            }
           }
           svg {
             @include arrowSvg();
-            top: 250px;
+            bottom: 80px;
             left: 330px;
+
+            @include mobile() {
+              display: none;
+            }
+
+            @include tablet() {
+              width: 350px;
+              bottom: 70px;
+              left: 170px;
+            }
+          }
+
+          @include mobile() {
+            margin-top: 10px;
+          }
+
+          @include tablet() {
+            top: 100px;
+            left: 0;
           }
         }
 
         // 주황선
         .arrowLineOrenge {
+          position: relative;
+          top: 424px;
+          left: 80px;
+
           p {
-            top: 480px;
-            left: 90px;
+            @include mobile() {
+              top: 0;
+              left: 0;
+            }
           }
           svg {
             @include arrowSvg();
-            top: 450px;
-            left: 397px;
+            bottom: 50px;
+            left: 324px;
+            
+            @include mobile() {
+              display: none;
+            }
+
+            @include tablet() {
+              width: 120px;
+              bottom: 70px;
+              left: 210px;
+            }
           }
+
+          @include mobile() {
+            margin-top: 10px;
+          }
+
+          @include tablet() {
+            top: 170px;
+            left: 30px;        
+          }
+        }
+
+        @include mobile() {
+          width: 100%;
+          height: auto;
+          margin-bottom: 40px;
+        }
+
+        @include tablet() {
+          width: 45%;
         }
       } // --- .page_explanation
     } // --- pagever_intro - 사이트 주기능 설명
+
+    @include tablet() {
+      padding: 0 6.511% 6.511%;
+    }
   } // --- .portfolio_content - 포트폴리오 프로젝트 설명
 
   // .kiki_content - 마녀배달부키키 프로젝트 설명
   .kiki_content {
-    background-color: #A5C2D3;
     padding: 92px 100px 0;
+    background-color: #A5C2D3;
+    color: $color_green;
 
     // .project_intro
     .project_intro {
@@ -479,11 +795,27 @@
       @include guideMockup();
 
       @include introTxt();
+
+      @include mobile() {
+        flex-wrap: wrap-reverse;
+      }
+
+      @include tablet() {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
+    @include mobile() {
+      padding: 40px 10px;
+    }
+
+    @include tablet() {
+      padding: 3.907% 6.511%;
     }
   } // --- .kiki_content
 
   // .guide
-  .guide {
+  .kiki_guide {
     @include guideBox();
     color: $color_green;
 
@@ -543,9 +875,30 @@
             display: flex;
             flex-wrap: wrap;
 
-            img {
+            .button_img {
               width: 100%;
               height: 60px;
+              
+              i {
+                width: 100%;
+                line-height: 60px;
+                text-align: center;
+              }
+              .ghi {
+                width: 30px;
+                height: 30px;
+                margin: 15px 22px;
+              }
+              .net {
+                width: 65px;
+                height: 40px;
+                margin: 10px 5px;
+              }
+              .wav {
+                width: 64px;
+                height: 16px;
+                margin: 22px 5px;
+              }
             }
 
             // .font_name
@@ -608,10 +961,15 @@
       @include h4();
     }
 
-    .colorSubTitle {
+    .kiki_SubTitle {
       @include h5();
       margin-top: 18px;
       margin-left: 5px;
+
+      @include mobile() {
+        margin-top: 0px;
+        margin-left: 0px;
+      }
     }
 
     // .back_color
@@ -625,9 +983,10 @@
 
       span {
         width: 100%;
-        height: 34px;
+        height: auto;
         display: block;
         font-size: map-get($map: $font_size, $key: content1);
+        font-weight: $font_weight_medium;
         text-align: center;
         text-transform: uppercase;
         line-height: 31px;
@@ -692,6 +1051,7 @@
         flex-direction: column;
 
         .colorSubTitle {
+          @include h5();
           margin-top: 0px;
           margin-left: 0px;
         }
@@ -725,6 +1085,8 @@
         flex-direction: column;
 
         .colorSubTitle {
+          @include h5();
+
           margin-top: 0px;
           margin-left: 0px;
         }
@@ -781,13 +1143,13 @@
   // .pagever_intro
   .pagever_intro {
     @include pageIntro();
-
+  
     h3 {
       @include guidelineh3 ();
     }
 
     // .pagever_content
-    .pagever_content {
+    .kikipagever_content {
       display: flex;
       gap: 30px;
       margin-top: 36px;
@@ -797,56 +1159,155 @@
         height: 960px;
         background-image: url(../../img/kiki_capture.png);
         background-size: 100% 100%;
+
+        @include mobile() {
+          width: 100%;
+          height: 550px;
+          margin-top: 0;
+        }
+
+        @include tablet() {
+          width: 50.3%;
+          height: 628px;
+          margin-top: 0;
+        }
       }
       
       .page_explanation {
-
+        h4 {
+          @include h4();
+        }
         p {
           @include arrowSvgTxt();
         }
 
         // 어두운 빨간 선
         .arrowLineDWRed {
+          width: fit-content;
+          position: relative;
+          top: 80px;
+          left: 80px;
           p {
-            top: 86px;
-            left: 170px;
+            @include mobile() {
+              top: 0;
+              left: 0;
+            }
           }
 
           svg {
             @include arrowSvg();
-            top: 50px;
-            right: 350px;
+            bottom: 88px;
+            right: 520px;        
+
+            @include mobile() {
+              display: none;
+            }
+
+            @include tablet() {
+              display: none;
+            }
+          }
+
+          @include mobile() {
+            margin-top: 10px;
+          }
+          
+          @include tablet() {
+            width: inherit;
+            top: 80px;
+            left: 22px;
           }
         }
 
         // 베이지색 선
         .arrowLineBeige {
+          width: fit-content;
+          position: relative;
+          top: 350px;
+          left: 150px;
+
           p {
-            top: 408px;
-            left: 150px;
+            @include mobile() {
+              top: 0;
+              left: 0;
+            }
           }
 
           svg {
             @include arrowSvg();
-            top: 350px;
-            right: 40px;
+            bottom: 120px;
+            right: 200px;
+
+            @include mobile() {
+              display: none;
+            }
+            
+            @include tablet() {
+              display: none;
+            }
+          }
+
+          @include mobile() {
+            margin-top: 10px;
+          }
+
+          @include tablet() {
+            width: inherit;
+            top: 200px;
+            left: 22px;
           }
         }
         
         // 초록선
         .arrowLineGreen {
+          width: fit-content;
+          position: relative;
+          top: 536px;
+          left: 222px;
           p {
-            top: 536px;
-            left: 222px;
+
+            @include mobile() {
+              top: 0;
+              left: 0;
+            }
           }
 
           svg {
             @include arrowSvg();
-            top: 500px;
-            right: 40px;
+            bottom: 88px;
+            right: 280px;
+
+            @include mobile() {
+              display: none;
+            }
+
+            @include tablet() {
+              display: none;
+            }
+          }
+
+          @include mobile() {
+            margin-top: 10px;
+          }
+
+          @include tablet() {
+            top: 310px;
+            left: 22px;
           }
         }
+
+        @include tablet() {
+          width: 49.7%;
+        }
       } // --- .page_explanation
+
+      @include mobile() {
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+      @include tablet() {
+        gap: 0;
+      }
     } // --- .pagever_content
   } // --- .pagever_intro
 } // #project

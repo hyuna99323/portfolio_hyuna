@@ -32,9 +32,9 @@
 
 #headbox {
   width: 100%;
-  height: 70px;
+  height: 60px;
   line-height: 30px;
-  padding: 20px 100px;
+  padding: 16px 100px;
   position: sticky;
   display: flex;
   top: 0;
@@ -43,8 +43,16 @@
   z-index: 1000;
 }
 
+@media all and (max-width: 767px) {
+  #headbox {
+    height: 40px;
+    line-height: 40px;
+    padding: 2.188% 3.125%;
+  }
+}
+
 .headinner {
-  width: 75%;
+  width: 100%;
   height: 100%;
   box-sizing: border-box;
   display: flex;
@@ -63,6 +71,12 @@
   letter-spacing: 9px;
 }
 
+@media all and (max-width: 767px) {
+  .headinner h1 a {
+    font-size: 16px;
+  }
+}
+
 .title_O {
   color: #FDD131;
 }
@@ -73,6 +87,103 @@
 
 .title_A {
   color: #FB8145;
+}
+
+@media all and (max-width: 767px) {
+  .headinner h1 {
+    width: 92%;
+    line-height: 26px;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .burger_inner {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .burger_inner {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .burger_inner {
+    display: none;
+  }
+}
+
+.burger_inner .navbar_overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+.burger_inner .navbar_burger {
+  width: 100%;
+  height: 26px;
+  cursor: pointer;
+  color: #000;
+}
+
+.burger_inner .navbar_menu {
+  width: 60%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #FDD131;
+  padding: 15.625% 3.125%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateX(100%);
+  z-index: 999;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.burger_inner .navbar_menu a {
+  position: relative;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.burger_inner .navbar_menu .navbar_burger_back {
+  width: 26px;
+  height: 26px;
+  top: 6px;
+  right: 10px;
+  position: fixed;
+  cursor: pointer;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .burger_inner .navbar_menu .navbar_burger_back {
+    top: 2.539%;
+    right: 10.852%;
+  }
+}
+
+.burger_inner .navbar_menu.active {
+  transform: translateX(0);
+}
+
+.burger_inner .navbar_overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .gnb {
@@ -98,50 +209,143 @@
   font-weight: 600;
 }
 
+@media all and (max-width: 767px) {
+  .gnb {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .gnb {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #headbox {
+    height: 54px;
+    padding: 1.563% 6.511%;
+  }
+}
+
 #home {
   width: 100%;
-  height: 92vh;
   display: flex;
   padding: 40px 100px;
 }
 
+@media all and (max-width: 767px) {
+  #home {
+    height: max-content;
+    padding: 10px;
+    flex-wrap: wrap-reverse;
+  }
+}
+
 .left_span {
-  width: 338px;
-  height: 40px;
-  position: relative;
-  right: 13.8%;
-  top: 298px;
-  transform: rotate(90deg);
-  display: inline-block;
+  width: 22.2223%;
   text-align: center;
+  align-self: center;
   line-height: 62px;
-  flex-shrink: 0;
 }
 
 .left_span span {
+  display: block;
+  text-orientation: sideways;
   text-align: center;
   font-size: 18px;
-  font-style: normal;
-  line-height: normal;
+}
+
+@media all and (max-width: 767px) {
+  .left_span span {
+    margin: 4.667% 0 10% 0;
+    font-size: 15px;
+    height: auto;
+    text-orientation: sideways;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .left_span span {
+    font-size: 15px;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .left_span span {
+    writing-mode: vertical-rl;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .left_span span {
+    writing-mode: vertical-rl;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .left_span span {
+    writing-mode: vertical-rl;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .left_span {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transform: rotate(0deg);
+    line-height: 25px;
+    top: 0px;
+    right: 0px;
+  }
 }
 
 .middle_content {
-  width: 420px;
+  width: 55.556%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
 }
 
 .middle_content p:first-child {
   width: 100%;
-  margin-top: 20%;
+  margin: 7% 0 10% 0;
   font-size: 18px;
   font-weight: 600;
   color: #D71C02;
 }
 
+@media all and (max-width: 767px) {
+  .middle_content p:first-child {
+    height: 20px;
+    margin-top: 4.667%;
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .middle_content p:first-child {
+    margin: 0 0 10% 0;
+  }
+}
+
 .cover_img {
-  margin-top: 30px;
+  margin: auto;
+}
+
+@media all and (max-width: 767px) {
+  .cover_img {
+    margin-top: 15px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .cover_img {
+    margin: 20% auto;
+  }
 }
 
 .coverImgInner {
@@ -149,7 +353,13 @@
   height: 322px;
   background-image: url(../../img/coverImg.JPG);
   background-size: 100% 100%;
-  display: inline-block;
+}
+
+@media all and (max-width: 767px) {
+  .coverImgInner {
+    width: 216px;
+    height: 200px;
+  }
 }
 
 .blue_H {
@@ -160,6 +370,23 @@
   left: 410px;
   transform: rotate(-8.67deg);
   background: #006DA9;
+}
+
+@media all and (max-width: 767px) {
+  .blue_H {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 150px;
+    left: 40px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .blue_H {
+    top: 332px;
+    left: 23.959%;
+  }
 }
 
 .orange_A {
@@ -174,6 +401,24 @@
   transform: rotate(36.306deg);
 }
 
+@media all and (max-width: 767px) {
+  .orange_A {
+    position: absolute;
+    border-bottom: 30px solid #FB8145;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    top: 100px;
+    left: 260px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .orange_A {
+    top: 236px;
+    left: 69.011%;
+  }
+}
+
 .yellow_O {
   position: absolute;
   width: 70px;
@@ -185,6 +430,23 @@
   background-color: #FDD131;
 }
 
+@media all and (max-width: 767px) {
+  .yellow_O {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 290px;
+    left: 260px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .yellow_O {
+    top: 500px;
+    left: 67.969%;
+  }
+}
+
 .middle_content p:last-child {
   width: 100%;
   margin-top: 10%;
@@ -193,31 +455,90 @@
   color: #D71C02;
 }
 
+@media all and (max-width: 767px) {
+  .middle_content p:last-child {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .middle_content p:last-child {
+    margin-top: 10%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .middle_content {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .middle_content {
+    height: min-content;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .middle_content {
+    height: min-content;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .middle_content {
+    height: min-content;
+  }
+}
+
 .right_span {
-  width: 338px;
-  height: 40px;
-  position: relative;
-  left: 13.8%;
-  top: 298px;
+  width: 22.2223%;
   display: inline-block;
-  transform: rotate(-90deg);
-  text-align: center;
-  line-height: 60px;
+  text-align: -webkit-right;
+  align-self: center;
+}
+
+@media all and (max-width: 767px) {
+  .right_span {
+    display: none;
+  }
 }
 
 .right_span span {
-  color: #D71C02;
-  text-align: center;
+  display: block;
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  text-align: center;
+  color: #D71C02;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .right_span span {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #home {
+    padding: 3.907% 6.511%;
+  }
 }
 
 #introduce {
   width: 100%;
   height: 100%;
   padding: 40px 100px;
+}
+
+@media all and (max-width: 767px) {
+  #introduce {
+    padding: 10px;
+  }
 }
 
 #introduce h2 {
@@ -228,13 +549,32 @@
   text-transform: uppercase;
 }
 
+@media all and (max-width: 767px) {
+  #introduce h2 {
+    font-size: 14px;
+  }
+}
+
 .about_inner {
   width: 100%;
   display: flex;
 }
 
+@media all and (max-width: 767px) {
+  .about_inner {
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+}
+
 .about_left {
   width: 455px;
+}
+
+@media all and (max-width: 767px) {
+  .about_left {
+    width: 100%;
+  }
 }
 
 .greeting {
@@ -247,6 +587,25 @@
   font-weight: 500;
 }
 
+@media all and (max-width: 767px) {
+  .greeting p {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .greeting p {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .greeting {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .id_picture {
   width: 232px;
   height: 232px;
@@ -256,9 +615,23 @@
   background-size: 246px 300px;
 }
 
+@media all and (max-width: 767px) {
+  .id_picture {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .id_picture {
+    width: 210px;
+    height: 210px;
+    background-size: 240px 300px;
+  }
+}
+
 .sort_introduce {
   width: 298px;
-  height: 187px;
+  height: auto;
   margin-top: 30px;
 }
 
@@ -266,11 +639,51 @@
   font-size: 14px;
 }
 
-.about_midle {
+@media all and (max-width: 767px) {
+  .sort_introduce span {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .sort_introduce span {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .sort_introduce {
+    margin-top: 0px;
+    height: auto;
+    line-height: 21px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .sort_introduce {
+    width: 100%;
+    height: auto;
+    line-height: 20px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .about_left {
+    width: 36.609%;
+  }
+}
+
+.about_middle {
   width: 315px;
 }
 
-.about_midle article h3 {
+@media all and (max-width: 767px) {
+  .about_middle {
+    width: 100%;
+  }
+}
+
+.about_middle article h3 {
   width: auto;
   height: 24px;
   font-size: 16px;
@@ -280,18 +693,68 @@
   margin-top: 46px;
 }
 
+@media all and (max-width: 767px) {
+  .about_middle article h3 {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .about_middle article h3 {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .about_middle article h3 {
+    margin-top: 20px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .about_middle article h3 {
+    margin-top: 25px;
+  }
+}
+
 .profile h3 {
   margin-top: 90px;
 }
 
-.about_midle p {
+.about_middle p {
   margin-top: 15px;
   line-height: 22px;
   font-size: 14px;
 }
 
+@media all and (max-width: 767px) {
+  .about_middle p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .about_middle p {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .about_middle {
+    width: 32.614%;
+    margin-top: 50px;
+  }
+}
+
 .about_right {
   width: 310px;
+}
+
+@media all and (max-width: 767px) {
+  .about_right {
+    width: 100%;
+  }
 }
 
 .skill {
@@ -300,11 +763,26 @@
   justify-content: end;
 }
 
+@media all and (max-width: 767px) {
+  .skill {
+    margin-top: 30px;
+    justify-content: flex-start;
+  }
+}
+
 .skill_title {
   width: 66px;
   height: 55px;
   font-size: 14px;
   font-weight: 600;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .skill_title {
+    width: auto;
+    height: auto;
+    font-size: 13px;
+  }
 }
 
 .skill_title span:first-child::after {
@@ -333,12 +811,44 @@
   font-size: 14px;
 }
 
+@media all and (max-width: 767px) {
+  .skill_inner p {
+    font-size: 13px;
+  }
+}
+
 .checkbox {
   width: 18px;
   height: 18px;
   line-height: 24px;
   border: 1px solid #cdcdcd;
   margin-right: 14px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .skill {
+    margin-top: 70px;
+    gap: 6%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .about_right {
+    width: 20.959%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .about_inner {
+    height: -webkit-fill-available;
+    gap: 5%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #introduce {
+    padding: 3.907% 6.511%;
+  }
 }
 
 #advantage {
@@ -350,46 +860,160 @@
   z-index: 1;
 }
 
-.advantageBox {
-  position: relative;
-  flex: 1;
-  padding: 90px 26px 37px;
-  opacity: 0.6;
-  transition: flex 1s, opacity 1s;
-  z-index: 1;
-  cursor: pointer;
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .advantageBox {
+    width: 31.32%;
+  }
 }
 
-.advantageBox:hover {
-  flex: 1.5;
-  opacity: 1;
-  z-index: 2;
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .advantageBox {
+    position: relative;
+    flex: 1;
+    padding: 84px 6px 36px;
+    opacity: 0.6;
+    transition: flex 1s, opacity 1s;
+    z-index: 1;
+    cursor: pointer;
+  }
 }
 
-.advantageBox:hover::before {
-  left: 0px;
-  opacity: 1;
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .advantageBox {
+    position: relative;
+    flex: 1;
+    padding: 84px 6px 36px;
+    opacity: 0.6;
+    transition: flex 1s, opacity 1s;
+    z-index: 1;
+    cursor: pointer;
+  }
 }
 
-.advantageBox:hover .advantage_inner .advantage_txt {
-  width: 75%;
+@media all and (min-width: 1920px) {
+  .advantageBox {
+    position: relative;
+    flex: 1;
+    padding: 84px 6px 36px;
+    opacity: 0.6;
+    transition: flex 1s, opacity 1s;
+    z-index: 1;
+    cursor: pointer;
+  }
 }
 
-.advantageBox:hover .advantage_inner .advantage_txt h2 {
-  font-size: 5vw;
-  padding-top: 0px;
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .advantageBox:hover {
+    flex: 1.5;
+    opacity: 1;
+    z-index: 2;
+  }
 }
 
-.advantageBox:hover .advantage_inner .advantage_txt h2::after {
-  width: 120px;
-  background: #006DA9;
-  height: 3px;
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .advantageBox:hover {
+    flex: 1.5;
+    opacity: 1;
+    z-index: 2;
+  }
 }
 
-.advantageBox:hover .advantage_inner figure {
-  height: 25vh;
-  filter: saturate(120%);
-  transform: translateY(3vh);
+@media all and (min-width: 1920px) {
+  .advantageBox:hover {
+    flex: 1.5;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .advantageBox:hover::before {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .advantageBox:hover::before {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .advantageBox:hover::before {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .advantageBox:hover .advantage_inner .advantage_txt {
+    width: 75%;
+  }
+  .advantageBox:hover .advantage_inner .advantage_txt h2 {
+    font-size: 5vw;
+    padding-top: 0px;
+  }
+  .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+    width: 120px;
+    background: #006DA9;
+    height: 3px;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .advantageBox:hover .advantage_inner .advantage_txt {
+    width: 75%;
+  }
+  .advantageBox:hover .advantage_inner .advantage_txt h2 {
+    font-size: 5vw;
+    padding-top: 0px;
+  }
+  .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+    width: 120px;
+    background: #006DA9;
+    height: 3px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .advantageBox:hover .advantage_inner .advantage_txt {
+    width: 75%;
+  }
+  .advantageBox:hover .advantage_inner .advantage_txt h2 {
+    font-size: 5vw;
+    padding-top: 0px;
+  }
+  .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+    width: 120px;
+    background: #006DA9;
+    height: 3px;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .advantageBox:hover .advantage_inner figure {
+    height: 25vh;
+    filter: saturate(120%);
+    transform: translateY(3vh);
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .advantageBox:hover .advantage_inner figure {
+    height: 25vh;
+    filter: saturate(120%);
+    transform: translateY(3vh);
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .advantageBox:hover .advantage_inner figure {
+    height: 25vh;
+    filter: saturate(120%);
+    transform: translateY(3vh);
+  }
 }
 
 .advantageBox::before {
@@ -403,6 +1027,12 @@
   left: -50px;
   opacity: 0;
   transition: 1s;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .advantageBox::before {
+    display: none;
+  }
 }
 
 .advantage_inner {
@@ -429,14 +1059,47 @@
   transition: 1s;
 }
 
-.advantage_txt h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: #777;
-  margin-top: 20px;
-  transition: 1.5s;
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .advantage_txt h2 {
+    margin-bottom: 20px;
+    padding-top: 0px;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .advantage_txt h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #777;
+    margin-top: 20px;
+    transition: 1.5s;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .advantage_txt h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #777;
+    margin-top: 20px;
+    transition: 1.5s;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .advantage_txt h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #777;
+    margin-top: 20px;
+    transition: 1.5s;
+  }
 }
 
 .advantage_txt p {
@@ -468,6 +1131,28 @@
   object-fit: cover;
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .advantage_inner figure {
+    filter: saturate(100%);
+  }
+}
+
+@media all and (max-width: 767px) {
+  #advantage {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #advantage {
+    height: auto;
+    padding: 3.907% 6.511%;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 50px;
+  }
+}
+
 #project {
   width: 100%;
   height: auto;
@@ -483,15 +1168,48 @@
   padding: 0 100px;
 }
 
+@media all and (max-width: 767px) {
+  #project h2 {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project h2 {
+    padding: 0 10px;
+  }
+}
+
 #project .portfolio_content {
   margin-top: 32px;
   padding: 40px 100px 0;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content {
+    padding: 0 10px;
+  }
 }
 
 #project .portfolio_content .project_intro {
   display: flex;
   gap: 88px;
   /* --- .mockup */
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro {
+    height: auto;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .project_intro {
+    height: auto;
+  }
 }
 
 #project .portfolio_content .project_intro .intro_txt {
@@ -504,9 +1222,21 @@
   text-align: center;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt h3 {
+    font-size: 28px;
+  }
+}
+
 #project .portfolio_content .project_intro .intro_txt .sub_txt {
   font-size: 14px;
   text-align: center;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt .sub_txt {
+    font-size: 13px;
+  }
 }
 
 #project .portfolio_content .project_intro .intro_txt .detail {
@@ -521,9 +1251,40 @@
   line-height: 30px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt .detail .subtitle p {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt .detail .subtitle {
+    width: 50px;
+  }
+}
+
 #project .portfolio_content .project_intro .intro_txt .detail .intro_content p {
   font-size: 14px;
   line-height: 30px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt .detail .intro_content p {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt .detail {
+    margin-top: 30px;
+    gap: 30px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .project_intro .intro_txt .detail {
+    width: 100%;
+  }
 }
 
 #project .portfolio_content .project_intro .intro_txt .project_explanation {
@@ -537,6 +1298,45 @@
   line-height: 25px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt .project_explanation p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .project_intro .intro_txt .project_explanation p {
+    margin-top: 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt .project_explanation {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .project_intro .intro_txt .project_explanation {
+    display: contents;
+    align-items: end;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .intro_txt {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .project_intro .intro_txt {
+    width: 100%;
+  }
+}
+
 #project .portfolio_content .project_intro .mockup {
   width: 632px;
   height: 483px;
@@ -546,10 +1346,45 @@
   width: 100%;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .mockup img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .project_intro .mockup {
+    width: 300px;
+    height: 216px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .project_intro .mockup {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .project_intro {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
 #project .portfolio_content .guide {
   width: 100%;
   height: auto;
-  padding: 40px 0;
+  padding: 5.989% 0;
+  color: #000;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide {
+    padding: 5.989% 0;
+  }
 }
 
 #project .portfolio_content .guide h3 {
@@ -558,9 +1393,36 @@
   text-transform: capitalize;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide h3 {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide h3 {
+    font-size: 16px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content {
   display: flex;
   gap: 44px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content {
+    flex-wrap: wrap;
+    gap: 3%;
+    row-gap: 50px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .logo_part {
@@ -571,10 +1433,32 @@
   margin-left: 15px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part {
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 0px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part {
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .logo_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part h4 {
+    font-size: 15px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .logo_part .logo {
@@ -606,7 +1490,25 @@
   font-size: 14px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part h5 {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .logo p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .logo p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide {
+    display: flex;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -615,7 +1517,32 @@
   margin-left: 5px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide h5 {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide h5 {
+    margin-top: 40px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner {
   width: 340px;
   margin-top: 10px;
   margin-left: 5px;
@@ -623,14 +1550,14 @@
   gap: 14px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
   width: 112px;
   height: 156px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx span {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx span {
   width: 100%;
   height: 104px;
   display: block;
@@ -640,7 +1567,14 @@
   line-height: 104px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name {
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx span {
+    height: 85px;
+    line-height: 90px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -648,31 +1582,113 @@
   border-radius: 4px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .logoFontEx .font_name p:last-child {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
+    height: auto;
+    padding: 2px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
+    height: 32px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name p:last-child {
   font-size: 12px;
   font-weight: 300;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
+    width: 100px;
+    height: 143px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
+    height: 134px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner {
+    width: auto;
+    margin-top: 15px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp {
   width: 214px;
   height: auto;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp .explanation {
   font-size: 14px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .logo_font .fontExp .explanation:nth-last-child(-n+2) {
-  font-size: 14px;
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp .explanation {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp .explanation {
+    font-size: 13px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp .explanation:nth-last-child(-n+2) {
   margin-top: 12px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .colorSubTilte {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp .explanation:nth-last-child(-n+2) {
+    margin-top: 9px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp {
+    width: 198px;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font {
+    width: 100%;
+    gap: 8px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font {
+    width: 50%;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .colorSubTilte {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -680,18 +1696,42 @@
   margin: 55px 0 20px 5px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .font_color {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .colorSubTilte {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .colorSubTilte {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .colorSubTilte {
+    margin: 20px 0 10px 0;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .colorSubTilte {
+    margin-top: 40px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner {
   width: 100%;
   margin-left: 5px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .color_list {
   display: flex;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_yellow {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .color_list .list_yellow {
   width: 22px;
   height: 22px;
   margin-right: 14px;
@@ -699,14 +1739,14 @@
   background: #FDD131;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_bule {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .color_list .list_bule {
   width: 22px;
   height: 22px;
   margin-right: 14px;
   background: #006DA9;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .font_color .color_list .list_orange {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .color_list .list_orange {
   width: 0px;
   height: 0px;
   border-bottom: 22px solid #FB8145;
@@ -714,17 +1754,47 @@
   border-right: 12px solid transparent;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .fontColorExp {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .fontColorExp {
   margin-top: 10px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .fontColorExp p {
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .fontColorExp p {
   font-size: 14px;
 }
 
-#project .portfolio_content .guide .guide_content .logo_part .fontColorExp p:last-child {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .fontColorExp p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .fontColorExp p {
+    font-size: 13px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .fontColorExp p:last-child {
   margin-top: 12px;
-  font-size: 14px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .fontColorExp p:last-child {
+    margin-top: 8px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color {
+    width: 47%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide {
+    display: flex;
+    gap: 3%;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .font_part {
@@ -741,12 +1811,36 @@
   text-transform: capitalize;
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .font_part h4 {
+    font-size: 15px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .font_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
   color: #888;
   margin-top: 18px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .font_part h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part h5 {
+    margin-top: 8px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex {
@@ -782,14 +1876,39 @@
   font-weight: 500;
 }
 
+#project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p:last-child {
+  font-size: 12px;
+  font-weight: 300;
+}
+
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p:last-child {
-  font-size: 12px;
-  font-weight: 300;
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
+    height: auto;
+    padding: 2px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
+    height: 32px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_regular {
@@ -797,6 +1916,13 @@
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_regular {
+    width: 92px;
+    height: 112px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium {
@@ -816,6 +1942,13 @@
   line-height: 76px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium {
+    width: 92px;
+    height: 112px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold {
   width: 98px;
   height: 118px;
@@ -833,6 +1966,20 @@
   line-height: 76px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold {
+    width: 92px;
+    height: 112px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex {
+    margin-top: 10px;
+    gap: 12px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .font_part .font_size {
   margin-top: 15px;
   /* .fontSize30 */
@@ -844,6 +1991,12 @@
 
 #project .portfolio_content .guide .guide_content .font_part .font_size span {
   font-size: 14px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_size span {
+    font-size: 13px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_size .small_exp {
@@ -898,6 +2051,23 @@
   letter-spacing: 10px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .font_part {
+    width: 49.102%;
+    height: auto;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .font_part .fontSize32 p {
   font-size: 32px;
   letter-spacing: 10px;
@@ -917,7 +2087,22 @@
   height: auto;
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part {
+    height: fit-content;
+    margin-top: 16px;
+    margin-left: 5px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .color_part h4 {
@@ -926,82 +2111,144 @@
   text-transform: capitalize;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content {
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part h4 {
+    font-size: 15px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content {
   width: 300px;
   height: auto;
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .colorSubTitle {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content {
+    height: fit-content;
+    margin-top: 16px;
+    margin-left: 5px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .colorSubTitle {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
   color: #888;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content span {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .colorSubTitle {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .colorSubTitle {
+    font-size: 14px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content span {
   font-size: 14px;
   text-align: center;
   margin-top: 5px;
   text-transform: uppercase;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color {
   margin-top: 18px;
   display: flex;
   gap: 50px;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_yellow {
   display: flex;
   flex-direction: column;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_yellow .yellow_shapes {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_yellow .yellow_shapes {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: #FDD131;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_yellow .yellow_shapes {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_bule {
   display: flex;
   flex-direction: column;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_bule .bule_shapes {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_bule .bule_shapes {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: #006DA9;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_bule .bule_shapes {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange {
   display: flex;
   flex-direction: column;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .icon_color .icon_orange .orange_shapes {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange .orange_shapes {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: #FB8145;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange .orange_shapes {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color {
+    margin-top: 10px;
+    gap: 35px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color {
   margin-top: 30px;
   display: flex;
   gap: 24px;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .point_color {
   display: flex;
   flex-direction: column;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .point_color .icon_red {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .point_color .icon_red {
   width: 60px;
   height: 60px;
   margin: auto;
@@ -1010,24 +2257,50 @@
   background-color: #D71C02;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .point_color .icon_red {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color {
   display: flex;
   flex-direction: column;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .icon_white {
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color .icon_white {
   width: 60px;
   height: 60px;
-  margin-left: 8.77px;
   margin-top: 10px;
   border: 1px solid #cfcfcf;
   border-radius: 50%;
   background-color: #fffffc;
 }
 
-#project .portfolio_content .guide .guide_content .color_part .color_content .bottom_color .background_color .backgroundColorTxt {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color .icon_white {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color .backgroundColorTxt {
   text-align-last: left;
   margin-left: 8.77px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color {
+    margin-top: 20px;
+    gap: 35px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color {
+    margin-top: 26px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .color_part .button_color {
@@ -1079,6 +2352,12 @@
   background-color: #FB8145;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_content {
+    display: none;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover {
   display: flex;
   margin-left: 5px;
@@ -1090,6 +2369,18 @@
   font-size: 16px;
   font-weight: 500;
   color: #888;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover h5 {
+    font-size: 14px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover span {
@@ -1131,10 +2422,29 @@
   color: #D71C02;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color {
+    margin-top: 28px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
 #project .portfolio_content .pagever_intro {
   width: 100%;
   height: auto;
   padding-top: 40px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro {
+    padding-top: 0px;
+  }
 }
 
 #project .portfolio_content .pagever_intro h3 {
@@ -1143,7 +2453,31 @@
   text-transform: capitalize;
 }
 
-#project .portfolio_content .pagever_intro .portfolio_mockup {
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro h3 {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro h3 {
+    font-size: 16px;
+  }
+}
+
+#project .portfolio_content .pagever_intro .pagever_content {
+  display: flex;
+  gap: 30px;
+  margin-top: 36px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .pagever_content {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+#project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
   width: 526px;
   height: 960px;
   margin-top: 36px;
@@ -1151,73 +2485,299 @@
   background-size: 100% 100%;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
+    width: 100%;
+    height: 550px;
+    margin-top: 0;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
+    width: 50.3%;
+    height: 628px;
+    margin-top: 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .pagever_content {
+    margin-top: 8px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .pagever_content {
+    margin-top: 16px;
+  }
+}
+
+#project .portfolio_content .pagever_intro .page_explanation h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation h4 {
+    font-size: 15px;
+  }
+}
+
 #project .portfolio_content .pagever_intro .page_explanation p {
   width: 300px;
   position: relative;
   font-size: 14px;
+  margin-top: 15px;
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation p {
+    font-size: 13px;
+  }
+}
+
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineRed {
+  position: relative;
   top: 20px;
   left: 0px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+    top: 0;
+    left: 0;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+    top: 4px;
+    left: 0;
+    margin-top: 10px;
+  }
 }
 
 #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  bottom: 30px;
+  bottom: 84px;
   left: 320px;
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue p {
-  top: 240px;
-  left: 60px;
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
+    width: 150px;
+    bottom: 98px;
+    left: 200px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue {
+  position: relative;
+  top: 209px;
+  left: 58px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue p {
+    top: 0;
+    left: 0;
+  }
 }
 
 #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 185px;
-  left: 360px;
+  bottom: 92px;
+  left: 300px;
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow p {
-  top: 300px;
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
+    width: 124px;
+    bottom: 102px;
+    left: 206px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue {
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue {
+    top: 86px;
+    left: 0;
+  }
+}
+
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow {
+  position: relative;
+  top: 246px;
   left: 20px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow p {
+    top: 0;
+    left: 0;
+  }
 }
 
 #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 250px;
+  bottom: 80px;
   left: 330px;
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge p {
-  top: 480px;
-  left: 90px;
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
+    width: 350px;
+    bottom: 70px;
+    left: 170px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow {
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow {
+    top: 100px;
+    left: 0;
+  }
+}
+
+#project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge {
+  position: relative;
+  top: 424px;
+  left: 80px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge p {
+    top: 0;
+    left: 0;
+  }
 }
 
 #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 450px;
-  left: 397px;
+  bottom: 50px;
+  left: 324px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
+    width: 120px;
+    bottom: 70px;
+    left: 210px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge {
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge {
+    top: 170px;
+    left: 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro .page_explanation {
+    width: 45%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content {
+    padding: 0 6.511% 6.511%;
+  }
 }
 
 #project .kiki_content {
-  background-color: #A5C2D3;
   padding: 92px 100px 0;
+  background-color: #A5C2D3;
+  color: #0A4B41;
 }
 
 #project .kiki_content .project_intro {
   display: flex;
   gap: 88px;
   /* --- .mockup */
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro {
+    height: auto;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .project_intro {
+    height: auto;
+  }
 }
 
 #project .kiki_content .project_intro .mockup {
@@ -1227,6 +2787,27 @@
 
 #project .kiki_content .project_intro .mockup img {
   width: 100%;
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .mockup img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .mockup {
+    width: 300px;
+    height: 216px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .project_intro .mockup {
+    width: 100%;
+    height: auto;
+  }
 }
 
 #project .kiki_content .project_intro .intro_txt {
@@ -1239,9 +2820,21 @@
   text-align: center;
 }
 
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt h3 {
+    font-size: 28px;
+  }
+}
+
 #project .kiki_content .project_intro .intro_txt .sub_txt {
   font-size: 14px;
   text-align: center;
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt .sub_txt {
+    font-size: 13px;
+  }
 }
 
 #project .kiki_content .project_intro .intro_txt .detail {
@@ -1256,9 +2849,40 @@
   line-height: 30px;
 }
 
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt .detail .subtitle p {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt .detail .subtitle {
+    width: 50px;
+  }
+}
+
 #project .kiki_content .project_intro .intro_txt .detail .intro_content p {
   font-size: 14px;
   line-height: 30px;
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt .detail .intro_content p {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt .detail {
+    margin-top: 30px;
+    gap: 30px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .project_intro .intro_txt .detail {
+    width: 100%;
+  }
 }
 
 #project .kiki_content .project_intro .intro_txt .project_explanation {
@@ -1272,25 +2896,121 @@
   line-height: 25px;
 }
 
-#project .guide {
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt .project_explanation p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .project_intro .intro_txt .project_explanation p {
+    margin-top: 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt .project_explanation {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .project_intro .intro_txt .project_explanation {
+    display: contents;
+    align-items: end;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro .intro_txt {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .project_intro .intro_txt {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .project_intro {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .project_intro {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content {
+    padding: 40px 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content {
+    padding: 3.907% 6.511%;
+  }
+}
+
+#project .kiki_guide {
   width: 100%;
   height: auto;
-  padding: 40px 0;
+  padding: 5.989% 0;
   color: #0A4B41;
 }
 
-#project .guide h3 {
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide {
+    padding: 5.989% 0;
+  }
+}
+
+#project .kiki_guide h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-#project .guide .guide_content {
+@media all and (max-width: 767px) {
+  #project .kiki_guide h3 {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide h3 {
+    font-size: 16px;
+  }
+}
+
+#project .kiki_guide .guide_content {
   display: flex;
   gap: 44px;
 }
 
-#project .guide .guide_content .logo_part {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .guide_content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .guide_content {
+    flex-wrap: wrap;
+    gap: 3%;
+    row-gap: 50px;
+  }
+}
+
+#project .kiki_guide .guide_content .logo_part {
   width: 350px;
   height: auto;
   margin-top: 30px;
@@ -1298,33 +3018,67 @@
   margin-left: 15px;
 }
 
-#project .guide .guide_content .logo_part h4 {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .guide_content .logo_part {
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 0px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .guide_content .logo_part {
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+}
+
+#project .kiki_guide .guide_content .logo_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#project .guide .guide_content .logo_part .logo {
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .guide_content .logo_part h4 {
+    font-size: 15px;
+  }
+}
+
+#project .kiki_guide .guide_content .logo_part .logo {
   margin-top: 22px;
   margin-left: 5px;
 }
 
-#project .guide .guide_content .logo_part .logo img {
+#project .kiki_guide .guide_content .logo_part .logo img {
   width: 118px;
   height: 22px;
 }
 
-#project .guide .guide_content .logo_part .logo p {
+#project .kiki_guide .guide_content .logo_part .logo p {
   margin-top: 10px;
   font-size: 14px;
 }
 
-#project .guide .guide_content .logo_part .logo p:last-child {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .guide_content .logo_part .logo p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .guide_content .logo_part .logo p {
+    font-size: 13px;
+  }
+}
+
+#project .kiki_guide .guide_content .logo_part .logo p:last-child {
   font-size: 11px;
   color: #888;
 }
 
-#project .guide .guide_content .logo_part h5 {
+#project .kiki_guide .guide_content .logo_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1333,7 +3087,19 @@
   margin-left: 5px;
 }
 
-#project .guide .guide_content .logo_part .button_box {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .guide_content .logo_part h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .guide_content .logo_part h5 {
+    font-size: 14px;
+  }
+}
+
+#project .kiki_guide .guide_content .logo_part .button_box {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -1341,7 +3107,7 @@
   row-gap: 15px;
 }
 
-#project .guide .guide_content .logo_part .button_box .button_content {
+#project .kiki_guide .guide_content .logo_part .button_box .button_content {
   width: 78px;
   height: 96px;
   border: 1.5px solid #0A4B41;
@@ -1350,12 +3116,36 @@
   flex-wrap: wrap;
 }
 
-#project .guide .guide_content .logo_part .button_box .button_content img {
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img {
   width: 100%;
   height: 60px;
 }
 
-#project .guide .guide_content .logo_part .button_box .button_content .font_name {
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img i {
+  width: 100%;
+  line-height: 60px;
+  text-align: center;
+}
+
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .ghi {
+  width: 30px;
+  height: 30px;
+  margin: 15px 22px;
+}
+
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .net {
+  width: 65px;
+  height: 40px;
+  margin: 10px 5px;
+}
+
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .wav {
+  width: 64px;
+  height: 16px;
+  margin: 22px 5px;
+}
+
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -1365,28 +3155,53 @@
   padding: 3px 0;
 }
 
-#project .guide .guide_content .logo_part .button_box .button_content .font_name p {
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#project .guide .guide_content .logo_part .button_box .button_content .font_name p {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
+    height: auto;
+    padding: 2px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
+    height: 32px;
+  }
+}
+
+#project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
   font-size: 12px;
   text-align: center;
   line-height: 27px;
 }
 
-#project .guide .guide_content .logo_part .cursor_box {
+#project .kiki_guide .guide_content .logo_part .cursor_box {
   margin-top: 20px;
   display: flex;
   gap: 20px;
 }
 
-#project .guide .guide_content .logo_part .cursor_box p {
+#project .kiki_guide .guide_content .logo_part .cursor_box p {
   font-size: 14px;
 }
 
-#project .guide .font_part {
+#project .kiki_guide .font_part {
   width: 328px;
   height: 482px;
   margin-top: 30px;
@@ -1394,13 +3209,19 @@
   /* 폰트 사이즈 가이드라인 */
 }
 
-#project .guide .font_part h4 {
+#project .kiki_guide .font_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-#project .guide .font_part h5 {
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .font_part h4 {
+    font-size: 15px;
+  }
+}
+
+#project .kiki_guide .font_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1408,7 +3229,25 @@
   margin-top: 18px;
 }
 
-#project .guide .font_part .font_ex {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .font_part h5 {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part h5 {
+    margin-top: 8px;
+  }
+}
+
+#project .kiki_guide .font_part .font_ex {
   margin-top: 18px;
   display: flex;
   gap: 18px;
@@ -1418,7 +3257,7 @@
   /* .font_bold */
 }
 
-#project .guide .font_part .font_ex span {
+#project .kiki_guide .font_part .font_ex span {
   width: 100%;
   height: 72px;
   display: block;
@@ -1428,7 +3267,7 @@
   line-height: 76px;
 }
 
-#project .guide .font_part .font_ex .font_name {
+#project .kiki_guide .font_part .font_ex .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -1436,36 +3275,68 @@
   border-radius: 4px;
 }
 
-#project .guide .font_part .font_ex .font_name p {
+#project .kiki_guide .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#project .guide .font_part .font_ex .font_name p {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-#project .guide .font_part .font_ex .font_name p:last-child {
+#project .kiki_guide .font_part .font_ex .font_name p:last-child {
   font-size: 12px;
   font-weight: 300;
 }
 
-#project .guide .font_part .font_ex .font_regular {
+#project .kiki_guide .font_part .font_ex .font_name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part .font_ex .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .font_part .font_ex .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part .font_ex .font_name {
+    height: auto;
+    padding: 2px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .font_part .font_ex .font_name {
+    height: 32px;
+  }
+}
+
+#project .kiki_guide .font_part .font_ex .font_regular {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#project .guide .font_part .font_ex .font_medium {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part .font_ex .font_regular {
+    width: 92px;
+    height: 112px;
+  }
+}
+
+#project .kiki_guide .font_part .font_ex .font_medium {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#project .guide .font_part .font_ex .font_medium span {
+#project .kiki_guide .font_part .font_ex .font_medium span {
   width: 100%;
   height: 72px;
   display: block;
@@ -1475,14 +3346,21 @@
   line-height: 76px;
 }
 
-#project .guide .font_part .font_ex .font_bold {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part .font_ex .font_medium {
+    width: 92px;
+    height: 112px;
+  }
+}
+
+#project .kiki_guide .font_part .font_ex .font_bold {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#project .guide .font_part .font_ex .font_bold span {
+#project .kiki_guide .font_part .font_ex .font_bold span {
   width: 100%;
   height: 72px;
   display: block;
@@ -1492,7 +3370,21 @@
   line-height: 76px;
 }
 
-#project .guide .font_part .font_size {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part .font_ex .font_bold {
+    width: 92px;
+    height: 112px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part .font_ex {
+    margin-top: 10px;
+    gap: 12px;
+  }
+}
+
+#project .kiki_guide .font_part .font_size {
   margin-top: 15px;
   /* .fontSize30 */
   /* .fontSize20 */
@@ -1501,72 +3393,95 @@
   /* .fontSize14 */
 }
 
-#project .guide .font_part .font_size span {
+#project .kiki_guide .font_part .font_size span {
   font-size: 14px;
 }
 
-#project .guide .font_part .font_size .small_exp {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part .font_size span {
+    font-size: 13px;
+  }
+}
+
+#project .kiki_guide .font_part .font_size .small_exp {
   margin-top: 20px;
   font-size: 11px;
   text-align: right;
   color: #888;
 }
 
-#project .guide .font_part .font_size .fontSize30 {
+#project .kiki_guide .font_part .font_size .fontSize30 {
   margin-top: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize30 p {
+#project .kiki_guide .font_part .font_size .fontSize30 p {
   font-size: 30px;
   letter-spacing: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize20 {
+#project .kiki_guide .font_part .font_size .fontSize20 {
   margin-top: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize20 p {
+#project .kiki_guide .font_part .font_size .fontSize20 p {
   font-size: 20px;
   letter-spacing: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize18 {
+#project .kiki_guide .font_part .font_size .fontSize18 {
   margin-top: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize18 p {
+#project .kiki_guide .font_part .font_size .fontSize18 p {
   font-size: 18px;
   letter-spacing: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize16 {
+#project .kiki_guide .font_part .font_size .fontSize16 {
   margin-top: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize16 p {
+#project .kiki_guide .font_part .font_size .fontSize16 p {
   font-size: 16px;
   letter-spacing: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize14 {
+#project .kiki_guide .font_part .font_size .fontSize14 {
   margin-top: 10px;
 }
 
-#project .guide .font_part .font_size .fontSize14 p {
+#project .kiki_guide .font_part .font_size .fontSize14 p {
   font-size: 14px;
   letter-spacing: 10px;
 }
 
-#project .guide .font_part .font_regular, #project .guide .font_part .font_medium, #project .guide .font_part .font_bold {
+@media all and (max-width: 767px) {
+  #project .kiki_guide .font_part {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_guide .font_part {
+    width: 49.102%;
+    height: auto;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+}
+
+#project .kiki_guide .font_part .font_regular, #project .kiki_guide .font_part .font_medium, #project .kiki_guide .font_part .font_bold {
   background-color: #fff;
 }
 
-#project .guide .font_part .fontSize96 p {
+#project .kiki_guide .font_part .fontSize96 p {
   font-size: 44px;
   letter-spacing: 10px;
 }
 
-#project .guide .font_part .fontSize12 p {
+#project .kiki_guide .font_part .fontSize12 p {
   font-size: 12px;
   letter-spacing: 10px;
 }
@@ -1576,7 +3491,22 @@
   height: auto;
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 767px) {
+  #project .color_part {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .color_part {
+    height: fit-content;
+    margin-top: 16px;
+    margin-left: 5px;
+  }
 }
 
 #project .color_part h4 {
@@ -1585,13 +3515,38 @@
   text-transform: capitalize;
 }
 
-#project .color_part .colorSubTitle {
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .color_part h4 {
+    font-size: 15px;
+  }
+}
+
+#project .color_part .kiki_SubTitle {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
   color: #888;
   margin-top: 18px;
   margin-left: 5px;
+}
+
+@media all and (max-width: 767px) {
+  #project .color_part .kiki_SubTitle {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .color_part .kiki_SubTitle {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .color_part .kiki_SubTitle {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }
 
 #project .color_part .back_color {
@@ -1605,9 +3560,10 @@
 
 #project .color_part .back_color span {
   width: 100%;
-  height: 34px;
+  height: auto;
   display: block;
   font-size: 14px;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   line-height: 31px;
@@ -1667,6 +3623,12 @@
   text-transform: capitalize;
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .point_part h4 {
+    font-size: 15px;
+  }
+}
+
 #project .point_part .kikiPointColor {
   display: flex;
   gap: 32px;
@@ -1680,8 +3642,24 @@
 }
 
 #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
   margin-top: 0px;
   margin-left: 0px;
+}
+
+@media all and (max-width: 767px) {
+  #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+    font-size: 14px;
+  }
 }
 
 #project .point_part .kikiPointColor .kikiPointContent .back_red {
@@ -1716,8 +3694,24 @@
 }
 
 #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
   margin-top: 0px;
   margin-left: 0px;
+}
+
+@media all and (max-width: 767px) {
+  #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+    font-size: 14px;
+  }
 }
 
 #project .point_part .kikiPointColor .kikiPointfont .font_bold {
@@ -1754,6 +3748,31 @@
   font-weight: 500;
 }
 
+@media all and (max-width: 767px) {
+  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
+    height: auto;
+    padding: 2px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
+    height: 32px;
+  }
+}
+
 #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
   font-size: 12px;
 }
@@ -1779,68 +3798,244 @@
   padding-top: 40px;
 }
 
+@media all and (max-width: 767px) {
+  #project .pagever_intro {
+    padding-top: 0px;
+  }
+}
+
 #project .pagever_intro h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-#project .pagever_intro .pagever_content {
+@media all and (max-width: 767px) {
+  #project .pagever_intro h3 {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro h3 {
+    font-size: 16px;
+  }
+}
+
+#project .pagever_intro .kikipagever_content {
   display: flex;
   gap: 30px;
   margin-top: 36px;
 }
 
-#project .pagever_intro .pagever_content .kiki_mockup {
+#project .pagever_intro .kikipagever_content .kiki_mockup {
   width: 526px;
   height: 960px;
   background-image: url(../../img/kiki_capture.png);
   background-size: 100% 100%;
 }
 
-#project .pagever_intro .pagever_content .page_explanation p {
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .kiki_mockup {
+    width: 100%;
+    height: 550px;
+    margin-top: 0;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .kiki_mockup {
+    width: 50.3%;
+    height: 628px;
+    margin-top: 0;
+  }
+}
+
+#project .pagever_intro .kikipagever_content .page_explanation h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation h4 {
+    font-size: 15px;
+  }
+}
+
+#project .pagever_intro .kikipagever_content .page_explanation p {
   width: 300px;
   position: relative;
   font-size: 14px;
+  margin-top: 15px;
 }
 
-#project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed p {
-  top: 86px;
-  left: 170px;
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation p {
+    font-size: 13px;
+  }
 }
 
-#project .pagever_intro .pagever_content .page_explanation .arrowLineDWRed svg {
+#project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
+  width: fit-content;
+  position: relative;
+  top: 80px;
+  left: 80px;
+}
+
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed p {
+    top: 0;
+    left: 0;
+  }
+}
+
+#project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 50px;
-  right: 350px;
+  bottom: 88px;
+  right: 520px;
 }
 
-#project .pagever_intro .pagever_content .page_explanation .arrowLineBeige p {
-  top: 408px;
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
+    width: inherit;
+    top: 80px;
+    left: 22px;
+  }
+}
+
+#project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
+  width: fit-content;
+  position: relative;
+  top: 350px;
   left: 150px;
 }
 
-#project .pagever_intro .pagever_content .page_explanation .arrowLineBeige svg {
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige p {
+    top: 0;
+    left: 0;
+  }
+}
+
+#project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 350px;
-  right: 40px;
+  bottom: 120px;
+  right: 200px;
 }
 
-#project .pagever_intro .pagever_content .page_explanation .arrowLineGreen p {
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
+    width: inherit;
+    top: 200px;
+    left: 22px;
+  }
+}
+
+#project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
+  width: fit-content;
+  position: relative;
   top: 536px;
   left: 222px;
 }
 
-#project .pagever_intro .pagever_content .page_explanation .arrowLineGreen svg {
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen p {
+    top: 0;
+    left: 0;
+  }
+}
+
+#project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
-  top: 500px;
-  right: 40px;
+  bottom: 88px;
+  right: 280px;
+}
+
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
+    top: 310px;
+    left: 22px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content .page_explanation {
+    width: 49.7%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .pagever_intro .kikipagever_content {
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .pagever_intro .kikipagever_content {
+    gap: 0;
+  }
 }
 
 #contact {
@@ -1858,6 +4053,12 @@
   text-transform: uppercase;
 }
 
+@media all and (max-width: 767px) {
+  #contact h2 {
+    font-size: 14px;
+  }
+}
+
 #contact .img_container {
   width: 240px;
   height: 240px;
@@ -1866,6 +4067,14 @@
   display: flex;
   background-image: url(../../img/endingImg.JPG);
   background-size: 100% 100%;
+}
+
+@media all and (max-width: 767px) {
+  #contact .img_container {
+    width: 186px;
+    height: 186px;
+    margin-top: 38px;
+  }
 }
 
 #contact p {
@@ -1879,6 +4088,13 @@
   text-transform: capitalize;
 }
 
+@media all and (max-width: 767px) {
+  #contact p {
+    height: auto;
+    font-size: 20px;
+  }
+}
+
 #contact .personal_data p:first-child {
   width: 100%;
   height: 18px;
@@ -1886,6 +4102,13 @@
   font-size: 16px;
   font-weight: 600;
   text-align: center;
+}
+
+@media all and (max-width: 767px) {
+  #contact .personal_data p:first-child {
+    height: auto;
+    margin-top: 40px;
+  }
 }
 
 #contact .personal_data a {
@@ -1896,6 +4119,26 @@
   margin-top: 25px;
   text-align: center;
   font-size: 14px;
+  letter-spacing: 1px;
+}
+
+@media all and (max-width: 767px) {
+  #contact .personal_data a {
+    margin-top: 10px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #contact {
+    height: auto;
+    padding: 40px 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #contact {
+    padding: 3.907% 6.511%;
+  }
 }
 
 #footBox {
@@ -1963,6 +4206,12 @@
   text-align: center;
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .fnb label {
+    width: 16.203%;
+  }
+}
+
 .fnb label:hover {
   color: #D71C02;
   font-weight: 600;
@@ -2002,4 +4251,10 @@
 .notion_btn {
   background-color: #FB8145;
   border-radius: 10px;
+}
+
+@media all and (max-width: 767px) {
+  #footBox {
+    display: none;
+  }
 }
