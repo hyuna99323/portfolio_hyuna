@@ -43,14 +43,6 @@
   z-index: 1000;
 }
 
-@media all and (max-width: 767px) {
-  #headbox {
-    height: 40px;
-    line-height: 40px;
-    padding: 2.188% 3.125%;
-  }
-}
-
 .headinner {
   width: 100%;
   height: 100%;
@@ -221,6 +213,14 @@
   }
 }
 
+@media all and (max-width: 767px) {
+  #headbox {
+    height: 40px;
+    line-height: 40px;
+    padding: 7px 10px;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #headbox {
     height: 54px;
@@ -377,8 +377,8 @@
     position: absolute;
     width: 24px;
     height: 24px;
-    top: 150px;
-    left: 40px;
+    top: 185px;
+    left: 12.5%;
   }
 }
 
@@ -407,8 +407,8 @@
     border-bottom: 30px solid #FB8145;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
-    top: 100px;
-    left: 260px;
+    top: 135px;
+    left: 81.25%;
   }
 }
 
@@ -435,8 +435,8 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 290px;
-    left: 260px;
+    top: 320px;
+    left: 81.25%;
   }
 }
 
@@ -523,6 +523,12 @@
   }
 }
 
+@media all and (max-width: 767px) {
+  #home {
+    padding: 2.188% 3.125%;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #home {
     padding: 3.907% 6.511%;
@@ -533,12 +539,6 @@
   width: 100%;
   height: 100%;
   padding: 40px 100px;
-}
-
-@media all and (max-width: 767px) {
-  #introduce {
-    padding: 10px;
-  }
 }
 
 #introduce h2 {
@@ -656,6 +656,7 @@
     margin-top: 0px;
     height: auto;
     line-height: 21px;
+    margin-top: 12.293%;
   }
 }
 
@@ -701,13 +702,14 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .about_middle article h3 {
+    height: auto;
     font-size: 14px;
   }
 }
 
 @media all and (max-width: 767px) {
   .about_middle article h3 {
-    margin-top: 20px;
+    margin-top: 11.499%;
   }
 }
 
@@ -735,7 +737,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .about_middle p {
-    margin-top: 10px;
+    margin-top: 4.6%;
     font-size: 13px;
   }
 }
@@ -743,7 +745,7 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .about_middle {
     width: 32.614%;
-    margin-top: 50px;
+    margin-top: 7.486%;
   }
 }
 
@@ -826,8 +828,14 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
+  .skill_inner {
+    margin: 13.7% 0;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
   .skill {
-    margin-top: 70px;
+    margin-top: 50.102%;
     gap: 6%;
   }
 }
@@ -842,6 +850,12 @@
   .about_inner {
     height: -webkit-fill-available;
     gap: 5%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #introduce {
+    padding: 2.188% 3.125%;
   }
 }
 
@@ -1181,13 +1195,13 @@
 }
 
 #project .portfolio_content {
-  margin-top: 32px;
-  padding: 40px 100px 0;
+  margin-top: 2.5%;
+  padding: 3.125% 7.813% 0;
 }
 
 @media all and (max-width: 767px) {
   #project .portfolio_content {
-    padding: 0 10px;
+    padding: 0 3.334%;
   }
 }
 
@@ -1200,7 +1214,6 @@
 @media all and (max-width: 767px) {
   #project .portfolio_content .project_intro {
     height: auto;
-    padding: 0 10px;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -1276,8 +1289,8 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .project_intro .intro_txt .detail {
-    margin-top: 30px;
-    gap: 30px;
+    margin-top: 10.715%;
+    gap: 10.715%;
   }
 }
 
@@ -1355,8 +1368,8 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .project_intro .mockup {
-    width: 300px;
-    height: 216px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1407,7 +1420,7 @@
 
 #project .portfolio_content .guide .guide_content {
   display: flex;
-  gap: 44px;
+  gap: 4.1%;
 }
 
 @media all and (max-width: 767px) {
@@ -1426,7 +1439,7 @@
 }
 
 #project .portfolio_content .guide .guide_content .logo_part {
-  width: 350px;
+  width: 33%;
   height: auto;
   margin-top: 30px;
   flex-direction: column;
@@ -1513,8 +1526,8 @@
   font-size: 16px;
   font-weight: 500;
   color: #888;
-  margin-top: 94px;
-  margin-left: 5px;
+  margin-top: 26.9%;
+  margin-left: 1.433%;
 }
 
 @media all and (max-width: 767px) {
@@ -1531,7 +1544,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide h5 {
-    margin-top: 20px;
+    margin-top: 6.6667%;
     margin-left: 0px;
   }
 }
@@ -1544,10 +1557,10 @@
 
 #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner {
   width: 340px;
-  margin-top: 10px;
-  margin-left: 5px;
+  margin-top: 2.863%;
+  margin-left: 1.433%;
   display: flex;
-  gap: 14px;
+  gap: 3.9%;
 }
 
 #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
@@ -1565,6 +1578,12 @@
   font-size: 36px;
   text-align: center;
   line-height: 104px;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx span {
+    height: 12.395vh;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
@@ -1601,8 +1620,8 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
-    height: auto;
-    padding: 2px;
+    height: 5.1vh;
+    padding: 2.36%;
   }
 }
 
@@ -1619,14 +1638,22 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
-    width: 100px;
-    height: 143px;
+    width: 29.226%;
+    height: 17.606vh;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
     height: 134px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner {
+    width: auto;
+    margin-top: 3.334%;
+    margin-left: 1.667%;
   }
 }
 
@@ -1670,7 +1697,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp {
-    width: 198px;
+    width: 67.12%;
     height: auto;
   }
 }
@@ -1693,7 +1720,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #888;
-  margin: 55px 0 20px 5px;
+  margin: 15.74% 0 5.724% 1.433%;
 }
 
 @media all and (max-width: 767px) {
@@ -1710,7 +1737,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .colorSubTilte {
-    margin: 20px 0 10px 0;
+    margin: 6.667% 0 3.3335% 0;
   }
 }
 
@@ -1784,6 +1811,12 @@
   }
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner {
+    margin-left: 1.667%;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color {
     width: 47%;
@@ -1798,9 +1831,9 @@
 }
 
 #project .portfolio_content .guide .guide_content .font_part {
-  width: 328px;
-  height: 482px;
-  margin-top: 30px;
+  width: 30.371%;
+  height: auto;
+  margin-top: 2.778%;
   /* .font_ex */
   /* 폰트 사이즈 가이드라인 */
 }
@@ -1839,7 +1872,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .font_part h5 {
-    margin-top: 8px;
+    margin-top: 2.612%;
   }
 }
 
@@ -1900,8 +1933,8 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
-    height: auto;
-    padding: 2px;
+    height: 5.1vh;
+    padding: 2.36%;
   }
 }
 
@@ -1975,13 +2008,14 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .font_part .font_ex {
-    margin-top: 10px;
-    gap: 12px;
+    margin-top: 3.265%;
+    gap: 4.85%;
+    justify-content: center;
   }
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_size {
-  margin-top: 15px;
+  margin-top: 4.575%;
   /* .fontSize30 */
   /* .fontSize20 */
   /* .fontSize18 */
@@ -2052,6 +2086,12 @@
 }
 
 @media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_size {
+    margin-top: 4.898%;
+  }
+}
+
+@media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .font_part {
     width: 100%;
     height: auto;
@@ -2083,9 +2123,9 @@
 }
 
 #project .portfolio_content .guide .guide_content .color_part {
-  width: 300px;
+  width: 28%;
   height: auto;
-  margin-top: 30px;
+  margin-top: 2.778%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -2093,12 +2133,12 @@
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part {
     width: 100%;
-    margin-top: 8px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .color_part {
+    width: 45.654%;
     height: fit-content;
     margin-top: 16px;
     margin-left: 5px;
@@ -2118,9 +2158,9 @@
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content {
-  width: 300px;
+  width: 28%;
   height: auto;
-  margin-top: 30px;
+  margin-top: 2.778%;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -2129,12 +2169,12 @@
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content {
     width: 100%;
-    margin-top: 8px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content {
+    width: 45.654%;
     height: fit-content;
     margin-top: 16px;
     margin-left: 5px;
@@ -2163,11 +2203,11 @@
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content span {
   font-size: 14px;
   text-align: center;
-  margin-top: 5px;
   text-transform: uppercase;
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color {
+  width: 100%;
   margin-top: 18px;
   display: flex;
   gap: 50px;
@@ -2175,6 +2215,7 @@
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_yellow {
   display: flex;
+  row-gap: 5px;
   flex-direction: column;
 }
 
@@ -2187,13 +2228,14 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_yellow .yellow_shapes {
-    width: 70px;
-    height: 70px;
+    width: 78px;
+    height: 78px;
   }
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_bule {
   display: flex;
+  row-gap: 5px;
   flex-direction: column;
 }
 
@@ -2206,13 +2248,14 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_bule .bule_shapes {
-    width: 70px;
-    height: 70px;
+    width: 78px;
+    height: 78px;
   }
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange {
   display: flex;
+  row-gap: 5px;
   flex-direction: column;
 }
 
@@ -2225,19 +2268,21 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange .orange_shapes {
-    width: 70px;
-    height: 70px;
+    width: 78px;
+    height: 78px;
   }
 }
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color {
     margin-top: 10px;
-    gap: 35px;
+    gap: 36px;
+    justify-content: center;
   }
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color {
+  width: 100%;
   margin-top: 30px;
   display: flex;
   gap: 24px;
@@ -2259,13 +2304,14 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .point_color .icon_red {
-    width: 70px;
-    height: 70px;
+    width: 78px;
+    height: 78px;
   }
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color {
   display: flex;
+  row-gap: 5px;
   flex-direction: column;
 }
 
@@ -2280,8 +2326,8 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color .icon_white {
-    width: 70px;
-    height: 70px;
+    width: 78px;
+    height: 78px;
   }
 }
 
@@ -2292,8 +2338,9 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color {
-    margin-top: 20px;
-    gap: 35px;
+    margin-top: 6.53%;
+    gap: 36px;
+    justify-content: center;
   }
 }
 
@@ -2304,6 +2351,7 @@
 }
 
 #project .portfolio_content .guide .guide_content .color_part .button_color {
+  width: 100%;
   margin-top: 94px;
   display: flex;
   flex-direction: column;
@@ -2359,6 +2407,7 @@
 }
 
 #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover {
+  width: 100%;
   display: flex;
   margin-left: 5px;
   gap: 30px;
@@ -2423,8 +2472,15 @@
 }
 
 @media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover {
+    margin-left: 2.177%;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .color_part .button_color {
-    margin-top: 28px;
+    margin-top: 9.143%;
   }
 }
 
@@ -2487,15 +2543,16 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
-    width: 100%;
-    height: 550px;
+    width: 350px;
+    height: 77.465vh;
+    margin: auto;
     margin-top: 0;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
-    width: 50.3%;
+    width: 100%;
     height: 628px;
     margin-top: 0;
   }
@@ -2532,6 +2589,13 @@
   margin-top: 15px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation p {
+    margin: auto;
+    text-align: center;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .pagever_intro .page_explanation p {
     font-size: 13px;
@@ -2546,6 +2610,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+    margin-top: 2.667%;
     top: 0;
     left: 0;
   }
@@ -2581,6 +2646,14 @@
   }
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed {
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed {
     width: 100%;
@@ -2597,6 +2670,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue p {
+    margin-top: 2.667%;
     top: 0;
     left: 0;
   }
@@ -2626,7 +2700,10 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue {
-    margin-top: 10px;
+    margin-top: 5%;
+    top: 0;
+    left: 0;
+    text-align: center;
   }
 }
 
@@ -2645,6 +2722,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow p {
+    margin-top: 2.667%;
     top: 0;
     left: 0;
   }
@@ -2674,7 +2752,10 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow {
-    margin-top: 10px;
+    margin-top: 5%;
+    top: 0;
+    left: 0;
+    text-align: center;
   }
 }
 
@@ -2693,6 +2774,7 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge p {
+    margin-top: 2.667%;
     top: 0;
     left: 0;
   }
@@ -2722,7 +2804,10 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge {
-    margin-top: 10px;
+    margin-top: 5%;
+    top: 0;
+    left: 0;
+    text-align: center;
   }
 }
 
@@ -2747,6 +2832,12 @@
   }
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content {
+    padding: 0 2.137%;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content {
     padding: 0 6.511% 6.511%;
@@ -2768,7 +2859,6 @@
 @media all and (max-width: 767px) {
   #project .kiki_content .project_intro {
     height: auto;
-    padding: 0 10px;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -2798,8 +2888,8 @@
 
 @media all and (max-width: 767px) {
   #project .kiki_content .project_intro .mockup {
-    width: 300px;
-    height: 216px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -2874,8 +2964,8 @@
 
 @media all and (max-width: 767px) {
   #project .kiki_content .project_intro .intro_txt .detail {
-    margin-top: 30px;
-    gap: 30px;
+    margin-top: 10.715%;
+    gap: 10.715%;
   }
 }
 
@@ -2947,19 +3037,7 @@
   }
 }
 
-@media all and (max-width: 767px) {
-  #project .kiki_content {
-    padding: 40px 10px;
-  }
-}
-
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_content {
-    padding: 3.907% 6.511%;
-  }
-}
-
-#project .kiki_guide {
+#project .kiki_content .kiki_guide {
   width: 100%;
   height: auto;
   padding: 5.989% 0;
@@ -2967,51 +3045,51 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide {
+  #project .kiki_content .kiki_guide {
     padding: 5.989% 0;
   }
 }
 
-#project .kiki_guide h3 {
+#project .kiki_content .kiki_guide h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide h3 {
+  #project .kiki_content .kiki_guide h3 {
     font-size: 16px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide h3 {
+  #project .kiki_content .kiki_guide h3 {
     font-size: 16px;
   }
 }
 
-#project .kiki_guide .guide_content {
+#project .kiki_content .kiki_guide .guide_content {
   display: flex;
-  gap: 44px;
+  gap: 4.1%;
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .guide_content {
+  #project .kiki_content .kiki_guide .guide_content {
     flex-wrap: wrap;
     gap: 20px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .guide_content {
+  #project .kiki_content .kiki_guide .guide_content {
     flex-wrap: wrap;
     gap: 3%;
     row-gap: 50px;
   }
 }
 
-#project .kiki_guide .guide_content .logo_part {
-  width: 350px;
+#project .kiki_content .kiki_guide .guide_content .logo_part {
+  width: 33%;
   height: auto;
   margin-top: 30px;
   flex-direction: column;
@@ -3019,7 +3097,7 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .guide_content .logo_part {
+  #project .kiki_content .kiki_guide .guide_content .logo_part {
     width: 100%;
     margin-top: 8px;
     margin-left: 0px;
@@ -3027,58 +3105,58 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .guide_content .logo_part {
+  #project .kiki_content .kiki_guide .guide_content .logo_part {
     width: 100%;
     margin-top: 16px;
     margin-left: 10px;
   }
 }
 
-#project .kiki_guide .guide_content .logo_part h4 {
+#project .kiki_content .kiki_guide .guide_content .logo_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .guide_content .logo_part h4 {
+  #project .kiki_content .kiki_guide .guide_content .logo_part h4 {
     font-size: 15px;
   }
 }
 
-#project .kiki_guide .guide_content .logo_part .logo {
+#project .kiki_content .kiki_guide .guide_content .logo_part .logo {
   margin-top: 22px;
   margin-left: 5px;
 }
 
-#project .kiki_guide .guide_content .logo_part .logo img {
+#project .kiki_content .kiki_guide .guide_content .logo_part .logo img {
   width: 118px;
   height: 22px;
 }
 
-#project .kiki_guide .guide_content .logo_part .logo p {
+#project .kiki_content .kiki_guide .guide_content .logo_part .logo p {
   margin-top: 10px;
   font-size: 14px;
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .guide_content .logo_part .logo p {
+  #project .kiki_content .kiki_guide .guide_content .logo_part .logo p {
     font-size: 13px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .guide_content .logo_part .logo p {
+  #project .kiki_content .kiki_guide .guide_content .logo_part .logo p {
     font-size: 13px;
   }
 }
 
-#project .kiki_guide .guide_content .logo_part .logo p:last-child {
+#project .kiki_content .kiki_guide .guide_content .logo_part .logo p:last-child {
   font-size: 11px;
   color: #888;
 }
 
-#project .kiki_guide .guide_content .logo_part h5 {
+#project .kiki_content .kiki_guide .guide_content .logo_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -3088,18 +3166,18 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .guide_content .logo_part h5 {
+  #project .kiki_content .kiki_guide .guide_content .logo_part h5 {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .guide_content .logo_part h5 {
+  #project .kiki_content .kiki_guide .guide_content .logo_part h5 {
     font-size: 14px;
   }
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -3107,7 +3185,7 @@
   row-gap: 15px;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content {
   width: 78px;
   height: 96px;
   border: 1.5px solid #0A4B41;
@@ -3116,36 +3194,36 @@
   flex-wrap: wrap;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .button_img {
   width: 100%;
   height: 60px;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img i {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .button_img i {
   width: 100%;
   line-height: 60px;
   text-align: center;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .ghi {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .ghi {
   width: 30px;
   height: 30px;
   margin: 15px 22px;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .net {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .net {
   width: 65px;
   height: 40px;
   margin: 10px 5px;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .wav {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .button_img .wav {
   width: 64px;
   height: 16px;
   margin: 22px 5px;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -3155,73 +3233,73 @@
   padding: 3px 0;
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
+  #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
     font-size: 13px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
+  #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
     font-size: 13px;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
-    height: auto;
-    padding: 2px;
+  #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
+    height: 5.1vh;
+    padding: 2.36%;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
+  #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
     height: 32px;
   }
 }
 
-#project .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
+#project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name p {
   font-size: 12px;
   text-align: center;
   line-height: 27px;
 }
 
-#project .kiki_guide .guide_content .logo_part .cursor_box {
+#project .kiki_content .kiki_guide .guide_content .logo_part .cursor_box {
   margin-top: 20px;
   display: flex;
   gap: 20px;
 }
 
-#project .kiki_guide .guide_content .logo_part .cursor_box p {
+#project .kiki_content .kiki_guide .guide_content .logo_part .cursor_box p {
   font-size: 14px;
 }
 
-#project .kiki_guide .font_part {
-  width: 328px;
-  height: 482px;
-  margin-top: 30px;
+#project .kiki_content .kiki_guide .font_part {
+  width: 30.371%;
+  height: auto;
+  margin-top: 2.778%;
   /* .font_ex */
   /* 폰트 사이즈 가이드라인 */
 }
 
-#project .kiki_guide .font_part h4 {
+#project .kiki_content .kiki_guide .font_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .font_part h4 {
+  #project .kiki_content .kiki_guide .font_part h4 {
     font-size: 15px;
   }
 }
 
-#project .kiki_guide .font_part h5 {
+#project .kiki_content .kiki_guide .font_part h5 {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -3230,24 +3308,24 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part h5 {
+  #project .kiki_content .kiki_guide .font_part h5 {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .font_part h5 {
+  #project .kiki_content .kiki_guide .font_part h5 {
     font-size: 14px;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part h5 {
-    margin-top: 8px;
+  #project .kiki_content .kiki_guide .font_part h5 {
+    margin-top: 2.612%;
   }
 }
 
-#project .kiki_guide .font_part .font_ex {
+#project .kiki_content .kiki_guide .font_part .font_ex {
   margin-top: 18px;
   display: flex;
   gap: 18px;
@@ -3257,7 +3335,7 @@
   /* .font_bold */
 }
 
-#project .kiki_guide .font_part .font_ex span {
+#project .kiki_content .kiki_guide .font_part .font_ex span {
   width: 100%;
   height: 72px;
   display: block;
@@ -3267,7 +3345,7 @@
   line-height: 76px;
 }
 
-#project .kiki_guide .font_part .font_ex .font_name {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -3275,47 +3353,47 @@
   border-radius: 4px;
 }
 
-#project .kiki_guide .font_part .font_ex .font_name p {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
-#project .kiki_guide .font_part .font_ex .font_name p:last-child {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_name p:last-child {
   font-size: 12px;
   font-weight: 300;
 }
 
-#project .kiki_guide .font_part .font_ex .font_name p {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part .font_ex .font_name p {
+  #project .kiki_content .kiki_guide .font_part .font_ex .font_name p {
     font-size: 13px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .font_part .font_ex .font_name p {
+  #project .kiki_content .kiki_guide .font_part .font_ex .font_name p {
     font-size: 13px;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part .font_ex .font_name {
-    height: auto;
-    padding: 2px;
+  #project .kiki_content .kiki_guide .font_part .font_ex .font_name {
+    height: 5.1vh;
+    padding: 2.36%;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .font_part .font_ex .font_name {
+  #project .kiki_content .kiki_guide .font_part .font_ex .font_name {
     height: 32px;
   }
 }
 
-#project .kiki_guide .font_part .font_ex .font_regular {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_regular {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
@@ -3323,20 +3401,20 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part .font_ex .font_regular {
+  #project .kiki_content .kiki_guide .font_part .font_ex .font_regular {
     width: 92px;
     height: 112px;
   }
 }
 
-#project .kiki_guide .font_part .font_ex .font_medium {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_medium {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#project .kiki_guide .font_part .font_ex .font_medium span {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_medium span {
   width: 100%;
   height: 72px;
   display: block;
@@ -3347,20 +3425,20 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part .font_ex .font_medium {
+  #project .kiki_content .kiki_guide .font_part .font_ex .font_medium {
     width: 92px;
     height: 112px;
   }
 }
 
-#project .kiki_guide .font_part .font_ex .font_bold {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_bold {
   width: 98px;
   height: 118px;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
-#project .kiki_guide .font_part .font_ex .font_bold span {
+#project .kiki_content .kiki_guide .font_part .font_ex .font_bold span {
   width: 100%;
   height: 72px;
   display: block;
@@ -3371,21 +3449,22 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part .font_ex .font_bold {
+  #project .kiki_content .kiki_guide .font_part .font_ex .font_bold {
     width: 92px;
     height: 112px;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part .font_ex {
-    margin-top: 10px;
-    gap: 12px;
+  #project .kiki_content .kiki_guide .font_part .font_ex {
+    margin-top: 3.265%;
+    gap: 4.85%;
+    justify-content: center;
   }
 }
 
-#project .kiki_guide .font_part .font_size {
-  margin-top: 15px;
+#project .kiki_content .kiki_guide .font_part .font_size {
+  margin-top: 4.575%;
   /* .fontSize30 */
   /* .fontSize20 */
   /* .fontSize18 */
@@ -3393,70 +3472,76 @@
   /* .fontSize14 */
 }
 
-#project .kiki_guide .font_part .font_size span {
+#project .kiki_content .kiki_guide .font_part .font_size span {
   font-size: 14px;
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part .font_size span {
+  #project .kiki_content .kiki_guide .font_part .font_size span {
     font-size: 13px;
   }
 }
 
-#project .kiki_guide .font_part .font_size .small_exp {
+#project .kiki_content .kiki_guide .font_part .font_size .small_exp {
   margin-top: 20px;
   font-size: 11px;
   text-align: right;
   color: #888;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize30 {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize30 {
   margin-top: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize30 p {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize30 p {
   font-size: 30px;
   letter-spacing: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize20 {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize20 {
   margin-top: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize20 p {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize20 p {
   font-size: 20px;
   letter-spacing: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize18 {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize18 {
   margin-top: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize18 p {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize18 p {
   font-size: 18px;
   letter-spacing: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize16 {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize16 {
   margin-top: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize16 p {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize16 p {
   font-size: 16px;
   letter-spacing: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize14 {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize14 {
   margin-top: 10px;
 }
 
-#project .kiki_guide .font_part .font_size .fontSize14 p {
+#project .kiki_content .kiki_guide .font_part .font_size .fontSize14 p {
   font-size: 14px;
   letter-spacing: 10px;
 }
 
 @media all and (max-width: 767px) {
-  #project .kiki_guide .font_part {
+  #project .kiki_content .kiki_guide .font_part .font_size {
+    margin-top: 4.898%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .kiki_guide .font_part {
     width: 100%;
     height: auto;
     margin-top: 10px;
@@ -3464,7 +3549,7 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_guide .font_part {
+  #project .kiki_content .kiki_guide .font_part {
     width: 49.102%;
     height: auto;
     margin-top: 16px;
@@ -3472,56 +3557,56 @@
   }
 }
 
-#project .kiki_guide .font_part .font_regular, #project .kiki_guide .font_part .font_medium, #project .kiki_guide .font_part .font_bold {
+#project .kiki_content .kiki_guide .font_part .font_regular, #project .kiki_content .kiki_guide .font_part .font_medium, #project .kiki_content .kiki_guide .font_part .font_bold {
   background-color: #fff;
 }
 
-#project .kiki_guide .font_part .fontSize96 p {
+#project .kiki_content .kiki_guide .font_part .fontSize96 p {
   font-size: 44px;
   letter-spacing: 10px;
 }
 
-#project .kiki_guide .font_part .fontSize12 p {
+#project .kiki_content .kiki_guide .font_part .fontSize12 p {
   font-size: 12px;
   letter-spacing: 10px;
 }
 
-#project .color_part {
-  width: 300px;
+#project .kiki_content .color_part {
+  width: 28%;
   height: auto;
-  margin-top: 30px;
+  margin-top: 2.778%;
   display: flex;
   flex-wrap: wrap;
 }
 
 @media all and (max-width: 767px) {
-  #project .color_part {
+  #project .kiki_content .color_part {
     width: 100%;
-    margin-top: 8px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .color_part {
+  #project .kiki_content .color_part {
+    width: 45.654%;
     height: fit-content;
     margin-top: 16px;
     margin-left: 5px;
   }
 }
 
-#project .color_part h4 {
+#project .kiki_content .color_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .color_part h4 {
+  #project .kiki_content .color_part h4 {
     font-size: 15px;
   }
 }
 
-#project .color_part .kiki_SubTitle {
+#project .kiki_content .color_part .kiki_SubTitle {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -3531,25 +3616,25 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .color_part .kiki_SubTitle {
+  #project .kiki_content .color_part .kiki_SubTitle {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .color_part .kiki_SubTitle {
+  #project .kiki_content .color_part .kiki_SubTitle {
     font-size: 14px;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .color_part .kiki_SubTitle {
+  #project .kiki_content .color_part .kiki_SubTitle {
     margin-top: 0px;
     margin-left: 0px;
   }
 }
 
-#project .color_part .back_color {
+#project .kiki_content .color_part .back_color {
   display: flex;
   margin-top: 18px;
   margin-left: 5px;
@@ -3558,7 +3643,7 @@
   row-gap: 20px;
 }
 
-#project .color_part .back_color span {
+#project .kiki_content .color_part .back_color span {
   width: 100%;
   height: auto;
   display: block;
@@ -3569,7 +3654,7 @@
   line-height: 31px;
 }
 
-#project .color_part .back_color .back_content {
+#project .kiki_content .color_part .back_color .back_content {
   width: 76px;
   height: 104px;
   border: 1.5px solid #888;
@@ -3577,71 +3662,71 @@
   background-color: #fff;
 }
 
-#project .color_part .back_color .back_content .green_shapes {
+#project .kiki_content .color_part .back_color .back_content .green_shapes {
   width: 73px;
   height: 72px;
   background-color: #0a4b41;
 }
 
-#project .color_part .back_color .back_content .blue_shapes {
+#project .kiki_content .color_part .back_color .back_content .blue_shapes {
   width: 73px;
   height: 72px;
   background-color: #1145a2;
 }
 
-#project .color_part .back_color .back_content .bagie_shapes {
+#project .kiki_content .color_part .back_color .back_content .bagie_shapes {
   width: 73px;
   height: 72px;
   background-color: #d7dac7;
 }
 
-#project .color_part .back_color .back_content .black_shapes {
+#project .kiki_content .color_part .back_color .back_content .black_shapes {
   width: 73px;
   height: 72px;
   background-color: #000000;
 }
 
-#project .color_part .back_color .back_content .skyBule_shapes {
+#project .kiki_content .color_part .back_color .back_content .skyBule_shapes {
   width: 73px;
   height: 72px;
   background-color: #b7cae8;
 }
 
-#project .color_part .back_color .back_content .purple_shapes {
+#project .kiki_content .color_part .back_color .back_content .purple_shapes {
   width: 73px;
   height: 72px;
   background-color: #4f4259;
 }
 
-#project .point_part {
+#project .kiki_content .point_part {
   margin-top: 30px;
 }
 
-#project .point_part h4 {
+#project .kiki_content .point_part h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .point_part h4 {
+  #project .kiki_content .point_part h4 {
     font-size: 15px;
   }
 }
 
-#project .point_part .kikiPointColor {
+#project .kiki_content .point_part .kikiPointColor {
   display: flex;
   gap: 32px;
   margin-top: 18px;
   margin-left: 5px;
 }
 
-#project .point_part .kikiPointColor .kikiPointContent {
+#project .kiki_content .point_part .kikiPointColor .kikiPointContent {
   display: flex;
   flex-direction: column;
 }
 
-#project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+#project .kiki_content .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -3651,18 +3736,18 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+  #project .kiki_content .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
+  #project .kiki_content .point_part .kikiPointColor .kikiPointContent .colorSubTitle {
     font-size: 14px;
   }
 }
 
-#project .point_part .kikiPointColor .kikiPointContent .back_red {
+#project .kiki_content .point_part .kikiPointColor .kikiPointContent .back_red {
   width: 76px;
   height: 104px;
   border: 1.5px solid #888;
@@ -3672,7 +3757,7 @@
   margin-top: 10px;
 }
 
-#project .point_part .kikiPointColor .kikiPointContent .back_red span {
+#project .kiki_content .point_part .kikiPointColor .kikiPointContent .back_red span {
   width: 100%;
   height: 34px;
   display: block;
@@ -3682,18 +3767,18 @@
   text-transform: uppercase;
 }
 
-#project .point_part .kikiPointColor .kikiPointContent .back_red .red_shapes {
+#project .kiki_content .point_part .kikiPointColor .kikiPointContent .back_red .red_shapes {
   width: 73px;
   height: 72px;
   background-color: #d71e15;
 }
 
-#project .point_part .kikiPointColor .kikiPointfont {
+#project .kiki_content .point_part .kikiPointColor .kikiPointfont {
   display: flex;
   flex-direction: column;
 }
 
-#project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+#project .kiki_content .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -3703,18 +3788,18 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+  #project .kiki_content .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
+  #project .kiki_content .point_part .kikiPointColor .kikiPointfont .colorSubTitle {
     font-size: 14px;
   }
 }
 
-#project .point_part .kikiPointColor .kikiPointfont .font_bold {
+#project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold {
   width: 84px;
   height: 104px;
   border: 1.5px solid #ccc;
@@ -3723,7 +3808,7 @@
   background-color: #fff;
 }
 
-#project .point_part .kikiPointColor .kikiPointfont .font_bold span {
+#project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold span {
   width: 100%;
   height: 66px;
   display: block;
@@ -3733,7 +3818,7 @@
   line-height: 68px;
 }
 
-#project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
+#project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
   width: 100%;
   height: 33px;
   padding: 8.3px;
@@ -3743,92 +3828,92 @@
   padding: 2px 4px;
 }
 
-#project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+#project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
   font-size: 14px;
   font-weight: 500;
 }
 
 @media all and (max-width: 767px) {
-  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+  #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
     font-size: 13px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+  #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
     font-size: 13px;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
-    height: auto;
-    padding: 2px;
+  #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
+    height: 5.1vh;
+    padding: 2.36%;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
+  #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
     height: 32px;
   }
 }
 
-#project .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
+#project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name p {
   font-size: 12px;
 }
 
-#project .pointFontSize {
+#project .kiki_content .pointFontSize {
   margin-top: 15px;
   margin-left: 5px;
 }
 
-#project .pointFontSize span {
+#project .kiki_content .pointFontSize span {
   font-size: 14px;
 }
 
-#project .pointFontSize p {
+#project .kiki_content .pointFontSize p {
   font-size: 32px;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
 
-#project .pagever_intro {
+#project .kiki_content .pagever_intro {
   width: 100%;
   height: auto;
   padding-top: 40px;
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro {
+  #project .kiki_content .pagever_intro {
     padding-top: 0px;
   }
 }
 
-#project .pagever_intro h3 {
+#project .kiki_content .pagever_intro h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro h3 {
+  #project .kiki_content .pagever_intro h3 {
     font-size: 16px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro h3 {
+  #project .kiki_content .pagever_intro h3 {
     font-size: 16px;
   }
 }
 
-#project .pagever_intro .kikipagever_content {
+#project .kiki_content .pagever_intro .kikipagever_content {
   display: flex;
   gap: 30px;
   margin-top: 36px;
 }
 
-#project .pagever_intro .kikipagever_content .kiki_mockup {
+#project .kiki_content .pagever_intro .kikipagever_content .kiki_mockup {
   width: 526px;
   height: 960px;
   background-image: url(../../img/kiki_capture.png);
@@ -3836,47 +3921,55 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .kiki_mockup {
-    width: 100%;
-    height: 550px;
+  #project .kiki_content .pagever_intro .kikipagever_content .kiki_mockup {
+    width: 350px;
+    height: 77.465vh;
+    margin: auto;
     margin-top: 0;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .kiki_mockup {
-    width: 50.3%;
+  #project .kiki_content .pagever_intro .kikipagever_content .kiki_mockup {
+    width: 100%;
     height: 628px;
     margin-top: 0;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation h4 {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation h4 {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation h4 {
     font-size: 15px;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation p {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation p {
   width: 300px;
   position: relative;
   font-size: 14px;
   margin-top: 15px;
 }
 
+@media all and (max-width: 767px) {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation p {
+    margin: auto;
+    text-align: center;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation p {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation p {
     font-size: 13px;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
   width: fit-content;
   position: relative;
   top: 80px;
@@ -3884,13 +3977,15 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed p {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed p {
+    margin-top: 2.667%;
+    text-align: center;
     top: 0;
     left: 0;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -3899,32 +3994,35 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
     display: none;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed svg {
     display: none;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
-    margin-top: 10px;
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
+    margin: auto;
+    top: 0;
+    left: 0;
+    text-align: center;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
     width: inherit;
     top: 80px;
     left: 22px;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
   width: fit-content;
   position: relative;
   top: 350px;
@@ -3932,13 +4030,15 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige p {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige p {
+    margin-top: 2.667%;
+    text-align: center;
     top: 0;
     left: 0;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -3947,32 +4047,36 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
     display: none;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige svg {
     display: none;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
-    margin-top: 10px;
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
+    margin: auto;
+    margin-top: 5%;
+    top: 0;
+    left: 0;
+    text-align: center;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
     width: inherit;
     top: 200px;
     left: 22px;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
   width: fit-content;
   position: relative;
   top: 536px;
@@ -3980,13 +4084,14 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen p {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen p {
+    margin-top: 2.667%;
     top: 0;
     left: 0;
   }
 }
 
-#project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
+#project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -3995,46 +4100,62 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
     display: none;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen svg {
     display: none;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
-    margin-top: 10px;
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
+    margin: auto;
+    margin-top: 5%;
+    top: 0;
+    left: 0;
+    text-align: center;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
     top: 310px;
     left: 22px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content .page_explanation {
+  #project .kiki_content .pagever_intro .kikipagever_content .page_explanation {
     width: 49.7%;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .pagever_intro .kikipagever_content {
+  #project .kiki_content .pagever_intro .kikipagever_content {
     flex-wrap: wrap;
     margin-top: 8px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .pagever_intro .kikipagever_content {
+  #project .kiki_content .pagever_intro .kikipagever_content {
     gap: 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content {
+    padding: 12.5% 3.125%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content {
+    padding: 3.907% 6.511%;
   }
 }
 
@@ -4073,7 +4194,7 @@
   #contact .img_container {
     width: 186px;
     height: 186px;
-    margin-top: 38px;
+    margin-top: 12.667%;
   }
 }
 
@@ -4131,7 +4252,7 @@
 @media all and (max-width: 767px) {
   #contact {
     height: auto;
-    padding: 40px 10px;
+    padding: 12.5% 3.125%;
   }
 }
 

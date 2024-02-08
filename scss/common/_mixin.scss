@@ -39,6 +39,7 @@
   }
 
   @include tablet() {
+    height: auto;
     font-size: map-get($map: $font_size_m, $key: subtitle);
   }
 }
@@ -99,8 +100,8 @@
       }
     }
     @include mobile() {
-      width: 300px;
-      height: 216px;
+      width: 100%;
+      height: auto;
     }
     
     @include tablet() {
@@ -123,7 +124,7 @@
 // 가이드 라인 레이아웃 flex 설정
 @mixin guideflex() {
   display: flex;
-  gap: 44px;
+  gap: 4.1%;
 
   @include mobile() {
     flex-wrap: wrap;
@@ -139,7 +140,7 @@
 
 // 가이드 라인 로고
 @mixin guidelogoContent() {
-  width: 350px;
+  width: 33%;
   height: auto;
   margin-top: 30px;
   flex-direction: column;
@@ -180,8 +181,8 @@
   }
 
   @include mobile() {
-    height: auto;
-    padding: 2px;
+    height: 5.1vh;
+    padding: 2.36%;
   }
 
   @include tablet() {
@@ -211,9 +212,9 @@
 
 // 폰트 상자 설정
 @mixin fontPartBox() {
-  width: 328px;
-  height: 482px;
-  margin-top: 30px;
+  width: 30.371%;
+  height: auto;
+  margin-top: 2.778%;
 
   h4 {
     @include h4();
@@ -224,7 +225,7 @@
     margin-top: 18px;
 
     @include mobile() {
-      margin-top: 8px;
+      margin-top: 2.612%;
     }
   }
 
@@ -313,15 +314,16 @@
     } /* .font_bold */
 
     @include mobile() {
-      margin-top: 10px;
-      gap: 12px;
+      margin-top: 3.265%;
+      gap: 4.85%;
+      justify-content: center;
     }
   } /* .font_ex */
 
   // 폰트 사이즈 가이드라인
   /* 폰트 사이즈 가이드라인 */
   .font_size {
-    margin-top: 15px;
+    margin-top: 4.575%;
 
     span {
       font-size: map-get($map: $font_size, $key: content1);
@@ -382,6 +384,10 @@
         letter-spacing: 10px;
       }
     } /* .fontSize14 */
+
+    @include mobile() {
+      margin-top: 4.898%;
+    }
   }
 
   @include mobile() {
@@ -400,18 +406,18 @@
 
 // 컬러 상자 설정
 @mixin colorPartBox() {
-  width: 300px;
+  width: 28%;
   height: auto;
-  margin-top: 30px;
+  margin-top: 2.778%;
   display: flex;
   flex-wrap: wrap;
 
   @include mobile() {
     width: 100%;
-    margin-top: 8px;
   }
 
   @include tablet() {
+    width: 45.654%;
     height: fit-content;
     margin-top: 16px;
     margin-left: 5px;
@@ -422,7 +428,6 @@
 @mixin ColorRgbTxt() {
   font-size: map-get($map: $font_size, $key: content1);
   text-align: center;
-  margin-top: 5px;
   text-transform: uppercase;
 }
 
@@ -464,7 +469,6 @@
 
   @include mobile() {
     height: auto;
-    padding: 0 10px;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -496,6 +500,11 @@
   position: relative;
   font-size: map-get($map: $font_size, $key: content1);
   margin-top: 15px;
+
+  @include mobile() {
+    margin: auto;
+    text-align: center;
+  }
 
   @include tablet() {
     font-size: map-get($map: $font_size_m, $key: content1);
@@ -556,8 +565,8 @@
       }
 
       @include mobile() {
-        margin-top: 30px;
-        gap: 30px;
+        margin-top: 10.715%;
+        gap: 10.715%;
       }
 
       @include tablet() {

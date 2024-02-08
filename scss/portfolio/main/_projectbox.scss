@@ -14,11 +14,11 @@
   }
 
   .portfolio_content {
-    margin-top: 32px;
-    padding: 40px 100px 0;
+    margin-top: 2.5%;
+    padding: 3.125% 7.813% 0;
 
     @include mobile() {
-      padding: 0 10px;
+      padding: 0 3.334%;
     }
 
     // 프로젝트 설명
@@ -49,7 +49,7 @@
         @include guideflex();
 
         .logo_part {
-          @include guidelogoContent ();
+          @include guidelogoContent();
 
 
           h4 {
@@ -88,11 +88,11 @@
 
             h5 {
               @include h5();
-              margin-top: 94px;
-              margin-left: 5px;
+              margin-top: 26.9%;
+              margin-left: 1.433%;
 
               @include mobile() {
-                margin-top: 20px;
+                margin-top: 6.6667%;
                 margin-left: 0px;
               }
 
@@ -107,10 +107,10 @@
               
               .font_inner {
                 width: 340px;
-                margin-top: 10px;
-                margin-left: 5px;
+                margin-top: 2.863%;
+                margin-left: 1.433%;
                 display: flex;
-                gap: 14px;
+                gap: 3.9%;
 
                 .logoFontEx {
                   width: 112px;
@@ -127,6 +127,10 @@
                     text-align: center;
                     line-height: 104px;
 
+                    @include mobile() {
+                      height: 12.395vh;
+                    }
+
                     @include tablet() {
                       height: 85px;
                       line-height: 90px;
@@ -141,8 +145,8 @@
                   } // --- .font_name - 폰트명
 
                   @include mobile() {
-                    width: 100px;
-                    height: 143px;
+                    width: 29.226%;
+                    height: 17.606vh;
                   }
 
                   @include tablet() {
@@ -150,6 +154,11 @@
                   }
                 } // --- .logoFontEx - 폰트 예시 이미지
 
+                @include mobile() {
+                  width: auto;
+                  margin-top: 3.334%;
+                  margin-left: 1.667%;
+                }
                 @include tablet() {
                   width: auto;
                   margin-top: 15px;
@@ -183,7 +192,7 @@
                 }
 
                 @include mobile() {
-                  width: 198px;
+                  width: 67.12%;
                   height: auto;
                 }
               } // --- .fontExp = 글꼴 설명
@@ -203,10 +212,10 @@
 
               .colorSubTilte {
                 @include h5();
-                margin: 55px 0 20px 5px;
+                margin: 15.74% 0 5.724% 1.433%;
   
                 @include mobile() {
-                  margin: 20px 0 10px 0;
+                  margin: 6.667% 0 3.3335% 0;
                 }
   
                 @include tablet() {
@@ -270,6 +279,10 @@
                     }
                   }
                 } // --- .fontColorExp
+
+                @include mobile() {
+                  margin-left: 1.667%;
+                }
               }
 
               @include tablet() {
@@ -328,12 +341,14 @@
 
               // .icon_color
               .icon_color {
+                width: 100%;
                 margin-top: 18px;
                 display: flex;
                 gap: 50px;
               
                 .icon_yellow {
                   display: flex;
+                  row-gap: 5px;
                   flex-direction: column;
                 
                   .yellow_shapes {
@@ -343,8 +358,8 @@
                     background-color: $color_yellow;
 
                     @include mobile() {
-                      width: 70px;
-                      height: 70px;
+                      width: 78px;
+                      height: 78px;
                     }
                   }
                 } // --- .icon_yellow
@@ -352,6 +367,7 @@
                 // .icon_bule
                 .icon_bule {
                   display: flex;
+                  row-gap: 5px;
                   flex-direction: column;
 
                   .bule_shapes {
@@ -361,8 +377,8 @@
                     background-color: $color_blue;
 
                     @include mobile() {
-                      width: 70px;
-                      height: 70px;
+                      width: 78px;
+                      height: 78px;
                     }
                   }
                 } // --- .icon_bule
@@ -370,6 +386,7 @@
                 // .icon_orange
                 .icon_orange {
                   display: flex;
+                  row-gap: 5px;
                   flex-direction: column;
                 
                   .orange_shapes {
@@ -379,20 +396,22 @@
                     background-color: $color_orange;
 
                     @include mobile() {
-                      width: 70px;
-                      height: 70px;
+                      width: 78px;
+                      height: 78px;
                     }
                   }
                 } // --- .icon_orange
 
                 @include mobile() {
                   margin-top: 10px;
-                  gap: 35px;
+                  gap: 36px;
+                  justify-content: center;
                 }
               } // --- .icon_color
 
               // .bottom_color
               .bottom_color {
+                width: 100%;
                 margin-top: 30px;
                 display: flex;
                 gap: 24px;
@@ -410,8 +429,8 @@
                     background-color: $color_red;
 
                     @include mobile() {
-                      width: 70px;
-                      height: 70px;
+                      width: 78px;
+                      height: 78px;
                     }
                   }
                 } // --- .point_color
@@ -419,6 +438,7 @@
                 // .background_color
                 .background_color {
                   display: flex;
+                  row-gap: 5px;
                   flex-direction: column;
                 
                   .icon_white {
@@ -431,8 +451,8 @@
                     background-color: $color_graywhite;
 
                     @include mobile() {
-                      width: 70px;
-                      height: 70px;
+                      width: 78px;
+                      height: 78px;
                     }
                   }
 
@@ -443,8 +463,9 @@
                 } // --- .background_color
 
                 @include mobile() {
-                  margin-top: 20px;
-                  gap: 35px;
+                  margin-top: 6.53%;
+                  gap: 36px;
+                  justify-content: center;
                 }
 
                 @include tablet() {
@@ -457,6 +478,7 @@
 
           // .button_color
           .button_color {
+            width: 100%;
             margin-top: 94px;
             display: flex;
             flex-direction: column;
@@ -493,6 +515,7 @@
 
             // .button_hover - 버튼 마우스 오버 시 색상 및 굵기
             .button_hover {
+              width: 100%;
               display: flex;
               margin-left: 5px;
               gap: 30px;
@@ -545,10 +568,15 @@
                   }
                 } // --- .hover_ex
               } // --- .hover_part
+
+              @include mobile() {
+                margin-left: 2.177%;
+                justify-content: center;
+              }
             } // --- .button_hover
 
             @include mobile() {
-              margin-top: 28px;
+              margin-top: 9.143%;
             }
 
             @include tablet() {
@@ -584,13 +612,14 @@
           background-size: 100% 100%;
 
           @include mobile() {
-            width: 100%;
-            height: 550px;
+            width: 350px;
+            height: 77.465vh;
+            margin: auto;
             margin-top: 0;
           }
 
           @include tablet() {
-            width: 50.3%;
+            width: 100%;
             height: 628px;
             margin-top: 0;
           }
@@ -619,6 +648,7 @@
           left: 0px;
           p {
             @include mobile() {
+              margin-top: 2.667%;
               top: 0;
               left: 0;
             }
@@ -645,6 +675,12 @@
             }
           }
 
+          @include mobile() {
+            top: 0;
+            left: 0;
+            text-align: center;
+          }
+
           @include tablet() {
             width: 100%;
             top: 0;
@@ -659,6 +695,7 @@
           left: 58px;
           p {
             @include mobile() {
+              margin-top: 2.667%;
               top: 0;
               left: 0;
             }
@@ -680,7 +717,10 @@
           }
 
           @include mobile() {
-            margin-top: 10px;
+            margin-top: 5%;
+            top: 0;
+            left: 0;
+            text-align: center;
           }
 
           @include tablet() {
@@ -696,6 +736,7 @@
           left: 20px;
           p {
             @include mobile() {
+              margin-top: 2.667%;
               top: 0;
               left: 0;
             }
@@ -717,7 +758,10 @@
           }
 
           @include mobile() {
-            margin-top: 10px;
+            margin-top: 5%;
+            top: 0;
+            left: 0;
+            text-align: center;
           }
 
           @include tablet() {
@@ -734,6 +778,7 @@
 
           p {
             @include mobile() {
+              margin-top: 2.667%;
               top: 0;
               left: 0;
             }
@@ -755,7 +800,10 @@
           }
 
           @include mobile() {
-            margin-top: 10px;
+            margin-top: 5%;
+            top: 0;
+            left: 0;
+            text-align: center;
           }
 
           @include tablet() {
@@ -775,6 +823,10 @@
         }
       } // --- .page_explanation
     } // --- pagever_intro - 사이트 주기능 설명
+
+    @include mobile() {
+      padding: 0 2.137%;
+    }
 
     @include tablet() {
       padding: 0 6.511% 6.511%;
@@ -805,509 +857,526 @@
       }
     }
 
-    @include mobile() {
-      padding: 40px 10px;
-    }
 
-    @include tablet() {
-      padding: 3.907% 6.511%;
-    }
-  } // --- .kiki_content
 
-  // .guide
-  .kiki_guide {
-    @include guideBox();
-    color: $color_green;
+    // .guide
+    .kiki_guide {
+      @include guideBox();
+      color: $color_green;
 
-    h3 {
-      @include guidelineh3();
-    }
+      h3 {
+        @include guidelineh3();
+      }
 
-    // .guide_content
-    .guide_content {
-      @include guideflex();
+      // .guide_content
+      .guide_content {
+        @include guideflex();
 
-      //.logo_part
-      .logo_part {
-        @include guidelogoContent ();
+        //.logo_part
+        .logo_part {
+          @include guidelogoContent ();
 
-        h4 {
-          @include h4();
-        }
-
-        // .logo
-        .logo {
-          @include logoMargin();
-
-          img {
-            width: 118px;
-            height: 22px;
+          h4 {
+            @include h4();
           }
-          p {
-            @include logoInP();
+
+          // .logo
+          .logo {
+            @include logoMargin();
+
+            img {
+              width: 118px;
+              height: 22px;
+            }
+            p {
+              @include logoInP();
+            }
+            p:last-child {
+              font-size: map-get($map: $font_size, $key: fnb);
+              color: $color_gray
+            }
+          } // --- .logo
+
+          h5 {
+            @include h5();
+            margin-top: 24px;
+            margin-left: 5px;
           }
-          p:last-child {
-            font-size: map-get($map: $font_size, $key: fnb);
-            color: $color_gray
-          }
-        } // --- .logo
 
-        h5 {
-          @include h5();
-          margin-top: 24px;
-          margin-left: 5px;
-        }
-
-        // .button_box
-        .button_box {
-          margin-top: 20px;
-          display: flex;
-          flex-wrap: wrap;
-          column-gap: 30px;
-          row-gap: 15px;
-
-          // .button_content
-          .button_content {
-            width: 78px;
-            height: 96px;
-            border: 1.5px solid $color_green;
-            border-radius: 4px;
+          // .button_box
+          .button_box {
+            margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
+            column-gap: 30px;
+            row-gap: 15px;
 
-            .button_img {
-              width: 100%;
-              height: 60px;
-              
-              i {
+            // .button_content
+            .button_content {
+              width: 78px;
+              height: 96px;
+              border: 1.5px solid $color_green;
+              border-radius: 4px;
+              display: flex;
+              flex-wrap: wrap;
+
+              .button_img {
                 width: 100%;
-                line-height: 60px;
-                text-align: center;
+                height: 60px;
+
+                i {
+                  width: 100%;
+                  line-height: 60px;
+                  text-align: center;
+                }
+                .ghi {
+                  width: 30px;
+                  height: 30px;
+                  margin: 15px 22px;
+                }
+                .net {
+                  width: 65px;
+                  height: 40px;
+                  margin: 10px 5px;
+                }
+                .wav {
+                  width: 64px;
+                  height: 16px;
+                  margin: 22px 5px;
+                }
               }
-              .ghi {
-                width: 30px;
-                height: 30px;
-                margin: 15px 22px;
-              }
-              .net {
-                width: 65px;
-                height: 40px;
-                margin: 10px 5px;
-              }
-              .wav {
-                width: 64px;
-                height: 16px;
-                margin: 22px 5px;
-              }
+
+              // .font_name
+              .font_name {
+                @include fontName();
+
+                background-color: $color_white;
+                padding: 3px 0;
+
+                p {
+                  font-size: map-get($map: $font_size, $key: content2);
+                  text-align: center;
+                  line-height: 27px;
+                }
+              } // --- .font_name
+            } // --- .button_content 
+          } // --- .button_box
+
+          .cursor_box {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            p {
+              font-size: map-get($map: $font_size, $key: content1)
+            }
+          }
+        } // --- .logo_part
+      } // --- .guide_content
+
+      // .font_part
+      .font_part {
+        @include fontPartBox();
+
+        .font_regular, .font_medium, .font_bold {
+          background-color: $color_white;
+        }
+
+        .fontSize96 {
+          p {
+            font-size: 44px;
+            letter-spacing: 10px;
+          }
+        } // --- .fontSize96
+
+        .fontSize12 {
+          p {
+            font-size: map-get($map: $font_size, $key: content2);
+            letter-spacing: 10px;
+          }
+        } // --- .fontSize12
+      } // --- .font_part
+    } // --- .guide
+
+    // .color_part
+    .color_part {
+      @include colorPartBox();
+
+      h4 {
+        @include h4();
+      }
+
+      .kiki_SubTitle {
+        @include h5();
+        margin-top: 18px;
+        margin-left: 5px;
+
+        @include mobile() {
+          margin-top: 0px;
+          margin-left: 0px;
+        }
+      }
+
+      // .back_color
+      .back_color {
+        display: flex;
+        margin-top: 18px;
+        margin-left: 5px;
+        flex-wrap: wrap;
+        column-gap: 26px;
+        row-gap: 20px;
+
+        span {
+          width: 100%;
+          height: auto;
+          display: block;
+          font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_medium;
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 31px;
+        }
+
+        // .back_content
+        .back_content {
+          @include backPointColor();
+
+
+          .green_shapes {
+            @include back_shapes();
+            background-color: #0a4b41;
+          }
+
+          .blue_shapes {
+            @include back_shapes();
+            background-color: #1145a2;
+          }
+
+          .bagie_shapes {
+            @include back_shapes();
+            background-color: #d7dac7;
+          }
+
+          .black_shapes {
+            @include back_shapes();
+            background-color: #000000;
+          }
+
+          .skyBule_shapes {
+            @include back_shapes();
+            background-color: #b7cae8;
+          }
+
+          .purple_shapes {
+            @include back_shapes();
+            background-color: #4f4259;
+          }
+        } // --- .back_content
+      } // --- .back_color
+    } // --- .color_part
+
+    // .point_part
+    .point_part {
+      margin-top: 30px;
+
+      h4 {
+        @include h4();
+      }
+
+      // .kikiPointColor
+      .kikiPointColor {
+        display: flex;
+        gap: 32px;
+        margin-top: 18px;
+        margin-left: 5px;
+
+        // .kikiPointContent
+        .kikiPointContent {
+          display: flex;
+          flex-direction: column;
+
+          .colorSubTitle {
+            @include h5();
+            margin-top: 0px;
+            margin-left: 0px;
+          }
+
+          // .back_red
+          .back_red {
+            @include backPointColor();
+            margin: auto;
+            margin-top: 10px;
+
+            span {
+              width: 100%;
+              height: 34px;
+              display: block;
+              font-size: map-get($map: $font_size, $key: content1);
+              text-align: center;
+              line-height: 31px;
+              text-transform: uppercase;
+            }
+
+            .red_shapes {
+              @include back_shapes();
+              background-color: #d71e15;
+            }
+          } // --- .back_red
+        } // --- .kikiPointContent
+
+        // .kikiPointfont
+        .kikiPointfont {
+          display: flex;
+          flex-direction: column;
+
+          .colorSubTitle {
+            @include h5();
+
+            margin-top: 0px;
+            margin-left: 0px;
+          }
+          .font_bold {
+            width: 84px;
+            height: 104px;
+            border: 1.5px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+            background-color: $color_white;
+          
+            span {
+              width: 100%;
+              height: 66px;
+              display: block;
+              font-size: 36px;
+              font-weight: $font_weight_bold;
+              text-align: center;
+              line-height: 68px;
             }
 
             // .font_name
             .font_name {
               @include fontName();
 
-              background-color: $color_white;
-              padding: 3px 0;
+              height: auto;
+              padding: 2px 4px;
 
-              p {
+              p { 
                 font-size: map-get($map: $font_size, $key: content2);
-                text-align: center;
-                line-height: 27px;
               }
             } // --- .font_name
-          } // --- .button_content 
-        } // --- .button_box
+          } // --- .font_bold
+        } // --- .kikiPointfont
+      } // --- .font_bold
+    } // --- .point_part
 
-        .cursor_box {
-          margin-top: 20px;
-          display: flex;
-          gap: 20px;
-
-          p {
-            font-size: map-get($map: $font_size, $key: content1)
-          }
-        }
-      } // --- .logo_part
-    } // --- .guide_content
-
-    // .font_part
-    .font_part {
-      @include fontPartBox();
-
-      .font_regular, .font_medium, .font_bold {
-        background-color: $color_white;
-      }
-
-      .fontSize96 {
-        p {
-          font-size: 44px;
-          letter-spacing: 10px;
-        }
-      } // --- .fontSize96
-
-      .fontSize12 {
-        p {
-          font-size: map-get($map: $font_size, $key: content2);
-          letter-spacing: 10px;
-        }
-      } // --- .fontSize12
-    } // --- .font_part
-  } // --- .guide
-
-  // .color_part
-  .color_part {
-    @include colorPartBox();
-
-    h4 {
-      @include h4();
-    }
-
-    .kiki_SubTitle {
-      @include h5();
-      margin-top: 18px;
+    // .pointFontSize
+    .pointFontSize {
+      margin-top: 15px;
       margin-left: 5px;
-
-      @include mobile() {
-        margin-top: 0px;
-        margin-left: 0px;
-      }
-    }
-
-    // .back_color
-    .back_color {
-      display: flex;
-      margin-top: 18px;
-      margin-left: 5px;
-      flex-wrap: wrap;
-      column-gap: 26px;
-      row-gap: 20px;
 
       span {
-        width: 100%;
-        height: auto;
-        display: block;
         font-size: map-get($map: $font_size, $key: content1);
-        font-weight: $font_weight_medium;
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 31px;
       }
 
-      // .back_content
-      .back_content {
-        @include backPointColor();
+      p {
+        font-size: map-get($map: $font_size, $key: projecttitle);
+        letter-spacing: 10px;
+        text-transform: uppercase;
+      }
+    } // --- .pointFontSize
 
-
-        .green_shapes {
-          @include back_shapes();
-          background-color: #0a4b41;
-        }
-
-        .blue_shapes {
-          @include back_shapes();
-          background-color: #1145a2;
-        }
-
-        .bagie_shapes {
-          @include back_shapes();
-          background-color: #d7dac7;
-        }
-
-        .black_shapes {
-          @include back_shapes();
-          background-color: #000000;
-        }
-
-        .skyBule_shapes {
-          @include back_shapes();
-          background-color: #b7cae8;
-        }
-
-        .purple_shapes {
-          @include back_shapes();
-          background-color: #4f4259;
-        }
-      } // --- .back_content
-    } // --- .back_color
-  } // --- .color_part
-
-  // .point_part
-  .point_part {
-    margin-top: 30px;
+    // .pagever_intro
+    .pagever_intro {
+      @include pageIntro();
     
-    h4 {
-      @include h4();
-    }
+      h3 {
+        @include guidelineh3 ();
+      }
 
-    // .kikiPointColor
-    .kikiPointColor {
-      display: flex;
-      gap: 32px;
-      margin-top: 18px;
-      margin-left: 5px;
-
-      // .kikiPointContent
-      .kikiPointContent {
+      // .pagever_content
+      .kikipagever_content {
         display: flex;
-        flex-direction: column;
+        gap: 30px;
+        margin-top: 36px;
 
-        .colorSubTitle {
-          @include h5();
-          margin-top: 0px;
-          margin-left: 0px;
+        .kiki_mockup {
+          width: 526px;
+          height: 960px;
+          background-image: url(../../img/kiki_capture.png);
+          background-size: 100% 100%;
+
+          @include mobile() {
+            width: 350px;
+            height: 77.465vh;
+            margin: auto;
+            margin-top: 0;
+          }
+
+          @include tablet() {
+            width: 100%;
+            height: 628px;
+            margin-top: 0;
+          }
         }
 
-        // .back_red
-        .back_red {
-          @include backPointColor();
-          margin: auto;
-          margin-top: 10px;
-
-          span {
-            width: 100%;
-            height: 34px;
-            display: block;
-            font-size: map-get($map: $font_size, $key: content1);
-            text-align: center;
-            line-height: 31px;
-            text-transform: uppercase;
+        .page_explanation {
+          h4 {
+            @include h4();
+          }
+          p {
+            @include arrowSvgTxt();
           }
 
-          .red_shapes {
-            @include back_shapes();
-            background-color: #d71e15;
-          }
-        } // --- .back_red
-      } // --- .kikiPointContent
-
-      // .kikiPointfont
-      .kikiPointfont {
-        display: flex;
-        flex-direction: column;
-
-        .colorSubTitle {
-          @include h5();
-
-          margin-top: 0px;
-          margin-left: 0px;
-        }
-        .font_bold {
-          width: 84px;
-          height: 104px;
-          border: 1.5px solid #ccc;
-          border-radius: 4px;
-          margin-top: 10px;
-          background-color: $color_white;
-    
-          span {
-            width: 100%;
-            height: 66px;
-            display: block;
-            font-size: 36px;
-            font-weight: $font_weight_bold;
-            text-align: center;
-            line-height: 68px;
-          }
-
-          // .font_name
-          .font_name {
-            @include fontName();
-            
-            height: auto;
-            padding: 2px 4px;
-
-            p { 
-              font-size: map-get($map: $font_size, $key: content2);
+          // 어두운 빨간 선
+          .arrowLineDWRed {
+            width: fit-content;
+            position: relative;
+            top: 80px;
+            left: 80px;
+            p {
+              @include mobile() {
+                margin-top: 2.667%;
+                text-align: center;
+                top: 0;
+                left: 0;
+              }
             }
-          } // --- .font_name
-        } // --- .font_bold
-      } // --- .kikiPointfont
-    } // --- .font_bold
-  } // --- .point_part
 
-  // .pointFontSize
-  .pointFontSize {
-    margin-top: 15px;
-    margin-left: 5px;
+            svg {
+              @include arrowSvg();
+              bottom: 88px;
+              right: 520px;        
 
-    span {
-      font-size: map-get($map: $font_size, $key: content1);
-    }
+              @include mobile() {
+                display: none;
+              }
 
-    p {
-      font-size: map-get($map: $font_size, $key: projecttitle);
-      letter-spacing: 10px;
-      text-transform: uppercase;
-    }
-  } // --- .pointFontSize
+              @include tablet() {
+                display: none;
+              }
+            }
 
-  // .pagever_intro
-  .pagever_intro {
-    @include pageIntro();
-  
-    h3 {
-      @include guidelineh3 ();
-    }
+            @include mobile() {
+              margin: auto;
+              top: 0;
+              left: 0;
+              text-align: center;
+            }
 
-    // .pagever_content
-    .kikipagever_content {
-      display: flex;
-      gap: 30px;
-      margin-top: 36px;
+            @include tablet() {
+              width: inherit;
+              top: 80px;
+              left: 22px;
+            }
+          }
 
-      .kiki_mockup {
-        width: 526px;
-        height: 960px;
-        background-image: url(../../img/kiki_capture.png);
-        background-size: 100% 100%;
+          // 베이지색 선
+          .arrowLineBeige {
+            width: fit-content;
+            position: relative;
+            top: 350px;
+            left: 150px;
+
+            p {
+              @include mobile() {
+                margin-top: 2.667%;
+                text-align: center;
+                top: 0;
+                left: 0;
+              }
+            }
+
+            svg {
+              @include arrowSvg();
+              bottom: 120px;
+              right: 200px;
+
+              @include mobile() {
+                display: none;
+              }
+
+              @include tablet() {
+                display: none;
+              }
+            }
+
+            @include mobile() {
+              margin: auto;
+              margin-top: 5%;
+              top: 0;
+              left: 0;
+              text-align: center;
+            }
+
+            @include tablet() {
+              width: inherit;
+              top: 200px;
+              left: 22px;
+            }
+          }
+
+          // 초록선
+          .arrowLineGreen {
+            width: fit-content;
+            position: relative;
+            top: 536px;
+            left: 222px;
+            p {
+              @include mobile() {
+                margin-top: 2.667%;
+                top: 0;
+                left: 0;
+              }
+            }
+
+            svg {
+              @include arrowSvg();
+              bottom: 88px;
+              right: 280px;
+
+              @include mobile() {
+                display: none;
+              }
+
+              @include tablet() {
+                display: none;
+              }
+            }
+
+            @include mobile() {
+              margin: auto;
+              margin-top: 5%;
+              top: 0;
+              left: 0;
+              text-align: center;
+            }
+
+            @include tablet() {
+              top: 310px;
+              left: 22px;
+            }
+          }
+
+          @include tablet() {
+            width: 49.7%;
+          }
+        } // --- .page_explanation
 
         @include mobile() {
-          width: 100%;
-          height: 550px;
-          margin-top: 0;
+          flex-wrap: wrap;
+          margin-top: 8px;
         }
-
         @include tablet() {
-          width: 50.3%;
-          height: 628px;
-          margin-top: 0;
+          gap: 0;
         }
-      }
-      
-      .page_explanation {
-        h4 {
-          @include h4();
-        }
-        p {
-          @include arrowSvgTxt();
-        }
+      } // --- .pagever_content
+    } // --- .pagever_intro
+    @include mobile() {
+      padding: 12.5% 3.125%;
+    }
 
-        // 어두운 빨간 선
-        .arrowLineDWRed {
-          width: fit-content;
-          position: relative;
-          top: 80px;
-          left: 80px;
-          p {
-            @include mobile() {
-              top: 0;
-              left: 0;
-            }
-          }
-
-          svg {
-            @include arrowSvg();
-            bottom: 88px;
-            right: 520px;        
-
-            @include mobile() {
-              display: none;
-            }
-
-            @include tablet() {
-              display: none;
-            }
-          }
-
-          @include mobile() {
-            margin-top: 10px;
-          }
-          
-          @include tablet() {
-            width: inherit;
-            top: 80px;
-            left: 22px;
-          }
-        }
-
-        // 베이지색 선
-        .arrowLineBeige {
-          width: fit-content;
-          position: relative;
-          top: 350px;
-          left: 150px;
-
-          p {
-            @include mobile() {
-              top: 0;
-              left: 0;
-            }
-          }
-
-          svg {
-            @include arrowSvg();
-            bottom: 120px;
-            right: 200px;
-
-            @include mobile() {
-              display: none;
-            }
-            
-            @include tablet() {
-              display: none;
-            }
-          }
-
-          @include mobile() {
-            margin-top: 10px;
-          }
-
-          @include tablet() {
-            width: inherit;
-            top: 200px;
-            left: 22px;
-          }
-        }
-        
-        // 초록선
-        .arrowLineGreen {
-          width: fit-content;
-          position: relative;
-          top: 536px;
-          left: 222px;
-          p {
-
-            @include mobile() {
-              top: 0;
-              left: 0;
-            }
-          }
-
-          svg {
-            @include arrowSvg();
-            bottom: 88px;
-            right: 280px;
-
-            @include mobile() {
-              display: none;
-            }
-
-            @include tablet() {
-              display: none;
-            }
-          }
-
-          @include mobile() {
-            margin-top: 10px;
-          }
-
-          @include tablet() {
-            top: 310px;
-            left: 22px;
-          }
-        }
-
-        @include tablet() {
-          width: 49.7%;
-        }
-      } // --- .page_explanation
-
-      @include mobile() {
-        flex-wrap: wrap;
-        margin-top: 8px;
-      }
-      @include tablet() {
-        gap: 0;
-      }
-    } // --- .pagever_content
-  } // --- .pagever_intro
-} // #project
+    @include tablet() {
+      padding: 3.907% 6.511%;
+    }
+  } // --- .kiki_content
+}   // #project

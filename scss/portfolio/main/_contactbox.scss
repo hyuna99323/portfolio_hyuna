@@ -23,7 +23,7 @@
     @include mobile() {
       width: 186px;
       height: 186px;
-      margin-top: 38px;
+      margin-top: 12.667%;
     }
   } // --- img_container
 
@@ -78,7 +78,7 @@
 
   @include mobile() {
     height: auto;
-    padding: 40px 10px;
+    padding: 12.5% 3.125%;
   }
 
   @include tablet() {

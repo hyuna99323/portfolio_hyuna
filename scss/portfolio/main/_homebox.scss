@@ -121,8 +121,8 @@
         position: absolute;
         width: 24px;
         height: 24px;
-        top: 150px;
-        left: 40px;
+        top: 185px;
+        left: 12.5%;
       }
 
       @include tablet() {
@@ -146,8 +146,8 @@
         border-bottom: 30px solid $color_orange;
         border-left: 14px solid transparent;
         border-right: 14px solid transparent;
-        top: 100px;
-        left: 260px;
+        top: 135px;
+        left: 81.25%;
       }
       @include tablet() {
         top: 236px;
@@ -168,8 +168,8 @@
         position: absolute;
         width: 20px;
         height: 20px;
-        top: 290px;
-        left: 260px;
+        top: 320px;
+        left: 81.25%;
       }
       @include tablet() {
         top: 500px;
@@ -238,6 +238,10 @@
       }
     }
   } // --- .right_span
+
+  @include mobile() {
+    padding: 2.188% 3.125%;
+  }
 
   @include tablet() {
     padding: 3.907% 6.511%;
