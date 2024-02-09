@@ -2,7 +2,7 @@
 #project {
   width: 100%;
   height: auto;
-  padding-top: 40px;
+  padding-top: 3.125%;
 
   h2 {
     @include h2;
@@ -11,15 +11,19 @@
     @include mobile() {
       padding: 0 10px;
     }
+
+    @include tablet() {
+      padding: 0 6.511%;
+    }
   }
 
   .portfolio_content {
     margin-top: 2.5%;
     padding: 3.125% 7.813% 0;
 
-    @include mobile() {
-      padding: 0 3.334%;
-    }
+    // @include mobile() {
+    //   padding: 0 3.334%;
+    // }
 
     // 프로젝트 설명
     .project_intro {
@@ -97,7 +101,7 @@
               }
 
               @include tablet() {
-                margin-top: 40px;
+                margin-top: 12.16%;
               }
             }
 
@@ -132,7 +136,7 @@
                     }
 
                     @include tablet() {
-                      height: 85px;
+                      height: 11.972vh;
                       line-height: 90px;
                     }
                   }
@@ -150,7 +154,7 @@
                   }
 
                   @include tablet() {
-                    height: 134px;
+                    height: 18.874vh;
                   }
                 } // --- .logoFontEx - 폰트 예시 이미지
 
@@ -161,7 +165,7 @@
                 }
                 @include tablet() {
                   width: auto;
-                  margin-top: 15px;
+                  margin-top: 3.648%;
                 }
               }
 
@@ -195,6 +199,10 @@
                   width: 67.12%;
                   height: auto;
                 }
+
+                @include tablet() {
+                  width: 61.878%;
+                }
               } // --- .fontExp = 글꼴 설명
 
               @include mobile() {
@@ -219,7 +227,7 @@
                 }
   
                 @include tablet() {
-                  margin-top: 40px;
+                  margin-top: 12.935%;
                 }
               }
               .color_inner {
@@ -278,10 +286,18 @@
                       margin-top: 8px;
                     }
                   }
+
+                  @include tablet() {
+                    margin-top: 3.235%;
+                  }
                 } // --- .fontColorExp
 
                 @include mobile() {
                   margin-left: 1.667%;
+                }
+
+                @include tablet() {
+                  margin-left: 1.617%;
                 }
               }
 
@@ -511,6 +527,10 @@
               @include mobile() {
                 display: none;
               }
+
+              @include tablet() {
+                width: auto;
+              }
             } // --- .button_content
 
             // .button_hover - 버튼 마우스 오버 시 색상 및 굵기
@@ -581,7 +601,7 @@
 
             @include tablet() {
               width: 100%;
-              margin-top: 40px;
+              margin-top: 13.16%;
             }
           } // --- .button_color
         } // --- color_part  - 가이드라인 color부분
@@ -600,12 +620,13 @@
         display: flex;
         gap: 30px;
         margin-top: 36px;
+        justify-content: center;
 
         @include mobile() {
           flex-wrap: wrap-reverse;
         }
         .portfolio_mockup {
-          width: 526px;
+          width: 48.704%;
           height: 960px;
           margin-top: 36px;
           background-image: url(../../img/portfolio_capture.png);
@@ -619,7 +640,7 @@
           }
 
           @include tablet() {
-            width: 100%;
+            width: 368px;
             height: 628px;
             margin-top: 0;
           }
@@ -630,198 +651,199 @@
         }
 
         @include tablet() {
-          margin-top: 16px;
+          margin-top: 2.396%;
+          justify-content: center;
         }
-      }
 
-      .page_explanation {
-        h4 {
-          @include h4();
-        }
-        p {
-          @include arrowSvgTxt();
-        }
-        // 빨간 선
-        .arrowLineRed {
-          position: relative;
-          top: 20px;
-          left: 0px;
+        .page_explanation {
+          h4 {
+            @include h4();
+          }
           p {
+            @include arrowSvgTxt();
+          }
+          // 빨간 선
+          .arrowLineRed {
+            position: relative;
+            top: 20px;
+            left: 0px;
+            p {
+              @include mobile() {
+                margin-top: 2.667%;
+                top: 0;
+                left: 0;
+              }
+
+              @include tablet() {
+                top: 4px;
+                left: 0;
+                margin-top: 10px;
+              }
+            }
+            svg {
+              @include arrowSvg();
+              bottom: 84px;
+              left: 320px;
+
+              @include mobile() {
+                display: none;
+              }
+
+              @include tablet() {
+                width: 50%;
+                bottom: 98px;
+                left: 60%;
+              }
+            }
+
             @include mobile() {
-              margin-top: 2.667%;
               top: 0;
               left: 0;
+              text-align: center;
             }
 
             @include tablet() {
-              top: 4px;
-              left: 0;
-              margin-top: 10px;
-            }
-          }
-          svg {
-            @include arrowSvg();
-            bottom: 84px;
-            left: 320px;
-
-            @include mobile() {
-              display: none;
-            }
-
-            @include tablet() {
-              width: 150px;
-              bottom: 98px;
-              left: 200px;
-            }
-          }
-
-          @include mobile() {
-            top: 0;
-            left: 0;
-            text-align: center;
-          }
-
-          @include tablet() {
-            width: 100%;
-            top: 0;
-            left: 0;
-          }
-        }
-
-        // 파란선
-        .arrowLineBlue {
-          position: relative;
-          top: 209px;
-          left: 58px;
-          p {
-            @include mobile() {
-              margin-top: 2.667%;
+              width: 100%;
               top: 0;
               left: 0;
             }
-          }
-          svg {
-            @include arrowSvg();
-            bottom: 92px;
-            left: 300px;
+          } // --- arrowLineRed
+
+          // 파란선
+          .arrowLineBlue {
+            position: relative;
+            top: 209px;
+            left: 58px;
+            p {
+              @include mobile() {
+                margin-top: 2.667%;
+                top: 0;
+                left: 0;
+              }
+            }
+            svg {
+              @include arrowSvg();
+              bottom: 92px;
+              left: 300px;
+
+              @include mobile() {
+                display: none;
+              }
+
+              @include tablet() {
+                width: 41%;
+                bottom: 102px;
+                left: 65%;
+              }
+            }
 
             @include mobile() {
-              display: none;
+              margin-top: 5%;
+              top: 0;
+              left: 0;
+              text-align: center;
             }
 
             @include tablet() {
-              width: 124px;
-              bottom: 102px;
-              left: 206px;
-            }
-          }
-
-          @include mobile() {
-            margin-top: 5%;
-            top: 0;
-            left: 0;
-            text-align: center;
-          }
-
-          @include tablet() {
-            top: 86px;
-            left: 0;
-          }
-        }
-
-        // 노란선
-        .arrowLineYellow {
-          position: relative;
-          top: 246px;
-          left: 20px;
-          p {
-            @include mobile() {
-              margin-top: 2.667%;
-              top: 0;
+              top: 86px;
               left: 0;
             }
-          }
-          svg {
-            @include arrowSvg();
-            bottom: 80px;
-            left: 330px;
+          } // --- arrowLineBlue
+
+          // 노란선
+          .arrowLineYellow {
+            position: relative;
+            top: 246px;
+            left: 20px;
+            p {
+              @include mobile() {
+                margin-top: 2.667%;
+                top: 0;
+                left: 0;
+              }
+            }
+            svg {
+              @include arrowSvg();
+              bottom: 80px;
+              left: 330px;
+
+              @include mobile() {
+                display: none;
+              }
+
+              @include tablet() {
+                width: 116.667%;
+                bottom: 70px;
+                left: 46%;
+              }
+            }
 
             @include mobile() {
-              display: none;
+              margin-top: 5%;
+              top: 0;
+              left: 0;
+              text-align: center;
             }
 
             @include tablet() {
-              width: 350px;
-              bottom: 70px;
-              left: 170px;
-            }
-          }
-
-          @include mobile() {
-            margin-top: 5%;
-            top: 0;
-            left: 0;
-            text-align: center;
-          }
-
-          @include tablet() {
-            top: 100px;
-            left: 0;
-          }
-        }
-
-        // 주황선
-        .arrowLineOrenge {
-          position: relative;
-          top: 424px;
-          left: 80px;
-
-          p {
-            @include mobile() {
-              margin-top: 2.667%;
-              top: 0;
+              top: 100px;
               left: 0;
             }
-          }
-          svg {
-            @include arrowSvg();
-            bottom: 50px;
-            left: 324px;
+          } // --- arrowLineYellow
+
+          // 주황선
+          .arrowLineOrenge {
+            position: relative;
+            top: 424px;
+            left: 80px;
+
+            p {
+              @include mobile() {
+                margin-top: 2.667%;
+                top: 0;
+                left: 0;
+              }
+            }
+            svg {
+              @include arrowSvg();
+              bottom: 50px;
+              left: 324px;
+
+              @include mobile() {
+                display: none;
+              }
+
+              @include tablet() {
+                width: 40%;
+                bottom: 70px;
+                left: 63.334%;
             
+              }
+            }
+
             @include mobile() {
-              display: none;
+              margin-top: 5%;
+              top: 0;
+              left: 0;
+              text-align: center;
             }
 
             @include tablet() {
-              width: 120px;
-              bottom: 70px;
-              left: 210px;
+              top: 170px;
+              left: 30px;        
             }
-          }
-
+          } // --- arrowLineOrenge
           @include mobile() {
-            margin-top: 5%;
-            top: 0;
-            left: 0;
-            text-align: center;
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
           }
 
           @include tablet() {
-            top: 170px;
-            left: 30px;        
+            width: 45%;
           }
-        }
-
-        @include mobile() {
-          width: 100%;
-          height: auto;
-          margin-bottom: 40px;
-        }
-
-        @include tablet() {
-          width: 45%;
-        }
-      } // --- .page_explanation
+        } // --- .page_explanation
+      } // --- pagever_content
     } // --- pagever_intro - 사이트 주기능 설명
 
     @include mobile() {
@@ -829,7 +851,7 @@
     }
 
     @include tablet() {
-      padding: 0 6.511% 6.511%;
+      padding: 0 6.511% 3.907%;
     }
   } // --- .portfolio_content - 포트폴리오 프로젝트 설명
 
@@ -1198,9 +1220,10 @@
         display: flex;
         gap: 30px;
         margin-top: 36px;
+        flex-wrap: wrap-reverse;
 
         .kiki_mockup {
-          width: 526px;
+          width: 48.704%;
           height: 960px;
           background-image: url(../../img/kiki_capture.png);
           background-size: 100% 100%;
@@ -1213,7 +1236,7 @@
           }
 
           @include tablet() {
-            width: 100%;
+            width: 368px;
             height: 628px;
             margin-top: 0;
           }
@@ -1365,18 +1388,20 @@
         @include mobile() {
           flex-wrap: wrap;
           margin-top: 8px;
+          // justify-content: center;
         }
         @include tablet() {
           gap: 0;
+          justify-content: center;
         }
-      } // --- .pagever_content
+      } // --- .kikipagever_content
     } // --- .pagever_intro
     @include mobile() {
       padding: 12.5% 3.125%;
     }
 
     @include tablet() {
-      padding: 3.907% 6.511%;
+      padding: 3.125% 6.511% 3.907%;
     }
   } // --- .kiki_content
 }   // #project

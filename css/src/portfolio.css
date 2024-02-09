@@ -34,7 +34,7 @@
   width: 100%;
   height: 60px;
   line-height: 30px;
-  padding: 16px 100px;
+  padding: 1.25% 7.813%;
   position: sticky;
   display: flex;
   top: 0;
@@ -231,15 +231,7 @@
 #home {
   width: 100%;
   display: flex;
-  padding: 40px 100px;
-}
-
-@media all and (max-width: 767px) {
-  #home {
-    height: max-content;
-    padding: 10px;
-    flex-wrap: wrap-reverse;
-  }
+  padding: 3.125% 7.813%;
 }
 
 .left_span {
@@ -258,9 +250,9 @@
 
 @media all and (max-width: 767px) {
   .left_span span {
+    height: auto;
     margin: 4.667% 0 10% 0;
     font-size: 15px;
-    height: auto;
     text-orientation: sideways;
   }
 }
@@ -269,7 +261,6 @@
   .left_span span {
     font-size: 15px;
     writing-mode: vertical-rl;
-    text-orientation: sideways;
   }
 }
 
@@ -332,8 +323,15 @@
   }
 }
 
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .middle_content p:first-child {
+    margin: 2.178% 0 7.822%;
+  }
+}
+
 .cover_img {
   margin: auto;
+  position: relative;
 }
 
 @media all and (max-width: 767px) {
@@ -366,26 +364,38 @@
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 385px;
-  left: 410px;
+  top: 100px;
+  right: 91.045%;
   transform: rotate(-8.67deg);
   background: #006DA9;
 }
 
 @media all and (max-width: 767px) {
   .blue_H {
-    position: absolute;
     width: 24px;
     height: 24px;
-    top: 185px;
-    left: 12.5%;
+    top: 50px;
+    left: -3.48%;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .blue_H {
-    top: 332px;
-    left: 23.959%;
+    top: 80px;
+    left: -8.956%;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .blue_H {
+    left: 35.417%;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .blue_H {
+    top: 365px;
+    left: 760px;
   }
 }
 
@@ -396,8 +406,8 @@
   border-bottom: 65px solid #FB8145;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  top: 250px;
-  left: 800px;
+  top: 10px;
+  left: 91.5%;
   transform: rotate(36.306deg);
 }
 
@@ -407,15 +417,28 @@
     border-bottom: 30px solid #FB8145;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
-    top: 135px;
-    left: 81.25%;
+    top: 3px;
+    left: 95.373%;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .orange_A {
-    top: 236px;
-    left: 69.011%;
+    top: 3px;
+    left: 91.942%;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .orange_A {
+    left: 60.417%;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .orange_A {
+    top: 280px;
+    left: 1100px;
   }
 }
 
@@ -424,8 +447,8 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  top: 540px;
-  left: 768px;
+  top: 280px;
+  left: 86%;
   transform: rotate(36.306deg);
   background-color: #FDD131;
 }
@@ -433,17 +456,30 @@
 @media all and (max-width: 767px) {
   .yellow_O {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 320px;
-    left: 81.25%;
+    width: 24px;
+    height: 24px;
+    top: 186px;
+    left: 93.52%;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .yellow_O {
-    top: 500px;
-    left: 67.969%;
+    top: 290px;
+    left: 87.165%;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .yellow_O {
+    left: 60.278%;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .yellow_O {
+    top: 560px;
+    left: 1100px;
   }
 }
 
@@ -482,7 +518,7 @@
 
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .middle_content {
-    height: min-content;
+    height: auto;
   }
 }
 
@@ -516,16 +552,11 @@
   text-orientation: sideways;
 }
 
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  .right_span span {
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
-  }
-}
-
 @media all and (max-width: 767px) {
   #home {
+    height: max-content;
     padding: 2.188% 3.125%;
+    flex-wrap: wrap-reverse;
   }
 }
 
@@ -535,10 +566,16 @@
   }
 }
 
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  #home {
+    height: 87vh;
+  }
+}
+
 #introduce {
   width: 100%;
   height: 100%;
-  padding: 40px 100px;
+  padding: 3.125% 7.813%;
 }
 
 #introduce h2 {
@@ -558,6 +595,7 @@
 .about_inner {
   width: 100%;
   display: flex;
+  gap: 5px;
 }
 
 @media all and (max-width: 767px) {
@@ -568,7 +606,7 @@
 }
 
 .about_left {
-  width: 455px;
+  width: 41.204%;
 }
 
 @media all and (max-width: 767px) {
@@ -578,8 +616,9 @@
 }
 
 .greeting {
-  width: 269px;
-  height: 66px;
+  width: auto;
+  height: auto;
+  padding-bottom: 23px;
 }
 
 .greeting p {
@@ -630,7 +669,7 @@
 }
 
 .sort_introduce {
-  width: 298px;
+  width: 66.967%;
   height: auto;
   margin-top: 30px;
 }
@@ -675,7 +714,7 @@
 }
 
 .about_middle {
-  width: 315px;
+  width: 29.167%;
 }
 
 @media all and (max-width: 767px) {
@@ -713,18 +752,18 @@
   }
 }
 
+.about_middle .profile h3 {
+  margin-top: 28.573%;
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  .about_middle article h3 {
-    margin-top: 25px;
+  .about_middle .profile h3 {
+    margin-top: 15px;
   }
 }
 
-.profile h3 {
-  margin-top: 90px;
-}
-
 .about_middle p {
-  margin-top: 15px;
+  margin-top: 4.764%;
   line-height: 22px;
   font-size: 14px;
 }
@@ -750,7 +789,7 @@
 }
 
 .about_right {
-  width: 310px;
+  width: 28.704%;
 }
 
 @media all and (max-width: 767px) {
@@ -760,7 +799,7 @@
 }
 
 .skill {
-  margin-top: 90px;
+  margin-top: 28.573%;
   display: flex;
   justify-content: end;
 }
@@ -773,8 +812,8 @@
 }
 
 .skill_title {
-  width: 66px;
-  height: 55px;
+  width: 21.292%;
+  height: auto;
   font-size: 14px;
   font-weight: 600;
 }
@@ -806,7 +845,7 @@
 .skill_inner {
   width: auto;
   display: flex;
-  margin: 12px 0;
+  margin: 13.7% 0;
 }
 
 .skill_inner p {
@@ -831,6 +870,10 @@
   .skill_inner {
     margin: 13.7% 0;
   }
+}
+
+.skillBox .skill_inner:first-child {
+  margin-top: 0;
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
@@ -870,7 +913,7 @@
   height: 100vh;
   position: relative;
   display: flex;
-  padding: 40px 100px;
+  padding: 3.125% 7.813%;
   z-index: 1;
 }
 
@@ -1129,7 +1172,7 @@
 
 .advantage_inner figure {
   width: 100%;
-  height: 118px;
+  height: 130px;
   background: #777;
   transform-origin: left center;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
@@ -1160,7 +1203,7 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #advantage {
     height: auto;
-    padding: 3.907% 6.511%;
+    padding: 3.125% 6.511% 3.907%;
     flex-wrap: wrap;
     gap: 20px;
     row-gap: 50px;
@@ -1170,7 +1213,7 @@
 #project {
   width: 100%;
   height: auto;
-  padding-top: 40px;
+  padding-top: 3.125%;
 }
 
 #project h2 {
@@ -1194,15 +1237,15 @@
   }
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project h2 {
+    padding: 0 6.511%;
+  }
+}
+
 #project .portfolio_content {
   margin-top: 2.5%;
   padding: 3.125% 7.813% 0;
-}
-
-@media all and (max-width: 767px) {
-  #project .portfolio_content {
-    padding: 0 3.334%;
-  }
 }
 
 #project .portfolio_content .project_intro {
@@ -1226,7 +1269,7 @@
 }
 
 #project .portfolio_content .project_intro .intro_txt {
-  width: 350px;
+  width: 33.334%;
 }
 
 #project .portfolio_content .project_intro .intro_txt h3 {
@@ -1255,7 +1298,7 @@
 #project .portfolio_content .project_intro .intro_txt .detail {
   display: flex;
   gap: 36px;
-  margin-top: 50px;
+  margin-top: 13.89%;
 }
 
 #project .portfolio_content .project_intro .intro_txt .detail .subtitle p {
@@ -1301,9 +1344,9 @@
 }
 
 #project .portfolio_content .project_intro .intro_txt .project_explanation {
-  width: 350px;
-  height: 197px;
-  margin-top: 50px;
+  width: 97.223%;
+  height: auto;
+  margin-top: 13.89%;
 }
 
 #project .portfolio_content .project_intro .intro_txt .project_explanation p {
@@ -1320,7 +1363,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .project_intro .intro_txt .project_explanation p {
-    margin-top: 30px;
+    margin-top: 4.492%;
   }
 }
 
@@ -1351,8 +1394,8 @@
 }
 
 #project .portfolio_content .project_intro .mockup {
-  width: 632px;
-  height: 483px;
+  width: 58.519%;
+  height: auto;
 }
 
 #project .portfolio_content .project_intro .mockup img {
@@ -1433,7 +1476,7 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content {
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 3.2%;
     row-gap: 50px;
   }
 }
@@ -1457,8 +1500,8 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part {
     width: 100%;
-    margin-top: 16px;
-    margin-left: 10px;
+    margin-top: 2.396%;
+    margin-left: 1.498%;
   }
 }
 
@@ -1551,7 +1594,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide h5 {
-    margin-top: 40px;
+    margin-top: 12.16%;
   }
 }
 
@@ -1588,7 +1631,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx span {
-    height: 85px;
+    height: 11.972vh;
     line-height: 90px;
   }
 }
@@ -1627,7 +1670,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
-    height: 32px;
+    height: auto;
   }
 }
 
@@ -1645,7 +1688,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
-    height: 134px;
+    height: 18.874vh;
   }
 }
 
@@ -1660,7 +1703,7 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner {
     width: auto;
-    margin-top: 15px;
+    margin-top: 3.648%;
   }
 }
 
@@ -1699,6 +1742,12 @@
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp {
     width: 67.12%;
     height: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp {
+    width: 61.878%;
   }
 }
 
@@ -1743,7 +1792,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .colorSubTilte {
-    margin-top: 40px;
+    margin-top: 12.935%;
   }
 }
 
@@ -1811,9 +1860,21 @@
   }
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner .fontColorExp {
+    margin-top: 3.235%;
+  }
+}
+
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner {
     margin-left: 1.667%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .font_color .color_inner {
+    margin-left: 1.617%;
   }
 }
 
@@ -1940,7 +2001,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
-    height: 32px;
+    height: auto;
   }
 }
 
@@ -2011,6 +2072,12 @@
     margin-top: 3.265%;
     gap: 4.85%;
     justify-content: center;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex {
+    gap: 14px;
   }
 }
 
@@ -2101,10 +2168,10 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .font_part {
-    width: 49.102%;
+    width: 48.204%;
     height: auto;
-    margin-top: 16px;
-    margin-left: 10px;
+    margin-top: 2.396%;
+    margin-left: 1.498%;
   }
 }
 
@@ -2138,10 +2205,10 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .color_part {
-    width: 45.654%;
+    width: 45.51%;
     height: fit-content;
-    margin-top: 16px;
-    margin-left: 5px;
+    margin-top: 2.396%;
+    margin-left: 1.498%;
   }
 }
 
@@ -2174,10 +2241,10 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content {
-    width: 45.654%;
+    width: 45.51%;
     height: fit-content;
-    margin-top: 16px;
-    margin-left: 5px;
+    margin-top: 2.396%;
+    margin-left: 1.498%;
   }
 }
 
@@ -2406,6 +2473,12 @@
   }
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_content {
+    width: auto;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover {
   width: 100%;
   display: flex;
@@ -2487,7 +2560,7 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .guide .guide_content .color_part .button_color {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 13.16%;
   }
 }
 
@@ -2500,6 +2573,12 @@
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro {
     padding-top: 0px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .pagever_intro {
+    padding-top: 5.989%;
   }
 }
 
@@ -2525,6 +2604,7 @@
   display: flex;
   gap: 30px;
   margin-top: 36px;
+  justify-content: center;
 }
 
 @media all and (max-width: 767px) {
@@ -2534,7 +2614,7 @@
 }
 
 #project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
-  width: 526px;
+  width: 48.704%;
   height: 960px;
   margin-top: 36px;
   background-image: url(../../img/portfolio_capture.png);
@@ -2552,7 +2632,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
-    width: 100%;
+    width: 368px;
     height: 628px;
     margin-top: 0;
   }
@@ -2566,23 +2646,24 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content .pagever_intro .pagever_content {
-    margin-top: 16px;
+    margin-top: 2.396%;
+    justify-content: center;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation h4 {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation h4 {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation h4 {
     font-size: 15px;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation p {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation p {
   width: 300px;
   position: relative;
   font-size: 14px;
@@ -2590,26 +2671,26 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation p {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation p {
     margin: auto;
     text-align: center;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation p {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation p {
     font-size: 13px;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineRed {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed {
   position: relative;
   top: 20px;
   left: 0px;
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed p {
     margin-top: 2.667%;
     top: 0;
     left: 0;
@@ -2617,14 +2698,14 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed p {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed p {
     top: 4px;
     left: 0;
     margin-top: 10px;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -2633,21 +2714,21 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed svg {
     display: none;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed svg {
-    width: 150px;
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed svg {
+    width: 50%;
     bottom: 98px;
-    left: 200px;
+    left: 60%;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed {
     top: 0;
     left: 0;
     text-align: center;
@@ -2655,28 +2736,28 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineRed {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed {
     width: 100%;
     top: 0;
     left: 0;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue {
   position: relative;
   top: 209px;
   left: 58px;
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue p {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue p {
     margin-top: 2.667%;
     top: 0;
     left: 0;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -2685,21 +2766,21 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue svg {
     display: none;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue svg {
-    width: 124px;
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue svg {
+    width: 41%;
     bottom: 102px;
-    left: 206px;
+    left: 65%;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue {
     margin-top: 5%;
     top: 0;
     left: 0;
@@ -2708,27 +2789,27 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineBlue {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue {
     top: 86px;
     left: 0;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow {
   position: relative;
   top: 246px;
   left: 20px;
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow p {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow p {
     margin-top: 2.667%;
     top: 0;
     left: 0;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -2737,21 +2818,21 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow svg {
     display: none;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow svg {
-    width: 350px;
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow svg {
+    width: 116.667%;
     bottom: 70px;
-    left: 170px;
+    left: 46%;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow {
     margin-top: 5%;
     top: 0;
     left: 0;
@@ -2760,27 +2841,27 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineYellow {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow {
     top: 100px;
     left: 0;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge {
   position: relative;
   top: 424px;
   left: 80px;
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge p {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge p {
     margin-top: 2.667%;
     top: 0;
     left: 0;
   }
 }
 
-#project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
+#project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge svg {
   width: auto;
   stroke-width: 3px;
   position: relative;
@@ -2789,21 +2870,21 @@
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge svg {
     display: none;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge svg {
-    width: 120px;
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge svg {
+    width: 40%;
     bottom: 70px;
-    left: 210px;
+    left: 63.334%;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge {
     margin-top: 5%;
     top: 0;
     left: 0;
@@ -2812,14 +2893,14 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation .arrowLineOrenge {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge {
     top: 170px;
     left: 30px;
   }
 }
 
 @media all and (max-width: 767px) {
-  #project .portfolio_content .pagever_intro .page_explanation {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation {
     width: 100%;
     height: auto;
     margin-bottom: 40px;
@@ -2827,7 +2908,7 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .pagever_intro .page_explanation {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation {
     width: 45%;
   }
 }
@@ -2840,7 +2921,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .portfolio_content {
-    padding: 0 6.511% 6.511%;
+    padding: 0 6.511% 3.907%;
   }
 }
 
@@ -2871,8 +2952,8 @@
 }
 
 #project .kiki_content .project_intro .mockup {
-  width: 632px;
-  height: 483px;
+  width: 58.519%;
+  height: auto;
 }
 
 #project .kiki_content .project_intro .mockup img {
@@ -2901,7 +2982,7 @@
 }
 
 #project .kiki_content .project_intro .intro_txt {
-  width: 350px;
+  width: 33.334%;
 }
 
 #project .kiki_content .project_intro .intro_txt h3 {
@@ -2930,7 +3011,7 @@
 #project .kiki_content .project_intro .intro_txt .detail {
   display: flex;
   gap: 36px;
-  margin-top: 50px;
+  margin-top: 13.89%;
 }
 
 #project .kiki_content .project_intro .intro_txt .detail .subtitle p {
@@ -2976,9 +3057,9 @@
 }
 
 #project .kiki_content .project_intro .intro_txt .project_explanation {
-  width: 350px;
-  height: 197px;
-  margin-top: 50px;
+  width: 97.223%;
+  height: auto;
+  margin-top: 13.89%;
 }
 
 #project .kiki_content .project_intro .intro_txt .project_explanation p {
@@ -2995,7 +3076,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .project_intro .intro_txt .project_explanation p {
-    margin-top: 30px;
+    margin-top: 4.492%;
   }
 }
 
@@ -3083,7 +3164,7 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .kiki_guide .guide_content {
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 3.2%;
     row-gap: 50px;
   }
 }
@@ -3107,8 +3188,8 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .kiki_guide .guide_content .logo_part {
     width: 100%;
-    margin-top: 16px;
-    margin-left: 10px;
+    margin-top: 2.396%;
+    margin-left: 1.498%;
   }
 }
 
@@ -3259,7 +3340,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
-    height: 32px;
+    height: auto;
   }
 }
 
@@ -3389,7 +3470,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .kiki_guide .font_part .font_ex .font_name {
-    height: 32px;
+    height: auto;
   }
 }
 
@@ -3460,6 +3541,12 @@
     margin-top: 3.265%;
     gap: 4.85%;
     justify-content: center;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .kiki_guide .font_part .font_ex {
+    gap: 14px;
   }
 }
 
@@ -3550,10 +3637,10 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .kiki_guide .font_part {
-    width: 49.102%;
+    width: 48.204%;
     height: auto;
-    margin-top: 16px;
-    margin-left: 10px;
+    margin-top: 2.396%;
+    margin-left: 1.498%;
   }
 }
 
@@ -3587,10 +3674,10 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .color_part {
-    width: 45.654%;
+    width: 45.51%;
     height: fit-content;
-    margin-top: 16px;
-    margin-left: 5px;
+    margin-top: 2.396%;
+    margin-left: 1.498%;
   }
 }
 
@@ -3854,7 +3941,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
-    height: 32px;
+    height: auto;
   }
 }
 
@@ -3889,6 +3976,12 @@
   }
 }
 
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .kiki_content .pagever_intro {
+    padding-top: 5.989%;
+  }
+}
+
 #project .kiki_content .pagever_intro h3 {
   font-size: 20px;
   font-weight: 600;
@@ -3911,10 +4004,11 @@
   display: flex;
   gap: 30px;
   margin-top: 36px;
+  flex-wrap: wrap-reverse;
 }
 
 #project .kiki_content .pagever_intro .kikipagever_content .kiki_mockup {
-  width: 526px;
+  width: 48.704%;
   height: 960px;
   background-image: url(../../img/kiki_capture.png);
   background-size: 100% 100%;
@@ -3931,7 +4025,7 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .pagever_intro .kikipagever_content .kiki_mockup {
-    width: 100%;
+    width: 368px;
     height: 628px;
     margin-top: 0;
   }
@@ -4144,6 +4238,7 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content .pagever_intro .kikipagever_content {
     gap: 0;
+    justify-content: center;
   }
 }
 
@@ -4155,14 +4250,14 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #project .kiki_content {
-    padding: 3.907% 6.511%;
+    padding: 3.125% 6.511% 3.907%;
   }
 }
 
 #contact {
   width: 100%;
-  height: 600px;
-  padding: 40px 100px;
+  height: auto;
+  padding: 3.125% 7.813%;
   background-color: #fffffc;
 }
 
@@ -4200,7 +4295,7 @@
 
 #contact p {
   width: 100%;
-  height: 36px;
+  height: auto;
   margin-top: 35px;
   font-size: 30px;
   font-weight: 600;
@@ -4218,7 +4313,7 @@
 
 #contact .personal_data p:first-child {
   width: 100%;
-  height: 18px;
+  height: auto;
   margin-top: 60px;
   font-size: 16px;
   font-weight: 600;
@@ -4258,7 +4353,8 @@
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #contact {
-    padding: 3.907% 6.511%;
+    height: auto;
+    padding: 3.125% 6.511% 3.907%;
   }
 }
 
