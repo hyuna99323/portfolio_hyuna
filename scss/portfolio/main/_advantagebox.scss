@@ -7,7 +7,26 @@
   padding: 3.125% 7.813%;
   z-index: 1;
 
+  h2 {
+    @include h2();
+    width: 100%;
+
+    @include laptop() {
+      display: none;
+    }
+    @include pc() {
+      display: none;
+    }
+    @include pcfull() {
+      display: none;
+    }
+  }
+
   @at-root .advantageBox {
+
+    @include mobile() {
+
+    }
 
     @include tablet() {
       width: 31.32%;
@@ -85,11 +104,11 @@
     @include laptop() {
       width: 75%;
       
-      h2 {
+      h3 {
         font-size: 5vw;
         padding-top: 0px;
       }
-      h2::after {
+      h3::after {
         width: 120px;
         background: $color_blue;
         height: 3px;
@@ -99,11 +118,11 @@
     @include pc() {
       width: 75%;
       
-      h2 {
+      h3 {
         font-size: 5vw;
         padding-top: 0px;
       }
-      h2::after {
+      h3::after {
         width: 120px;
         background: $color_blue;
         height: 3px;
@@ -113,11 +132,11 @@
     @include pcfull() {
       width: 75%;
       
-      h2 {
+      h3 {
         font-size: 5vw;
         padding-top: 0px;
       }
-      h2::after {
+      h3::after {
         width: 120px;
         background: $color_blue;
         height: 3px;
@@ -175,13 +194,18 @@
       transition: 0.5s;
       margin-bottom: 40px;
 
-      h2 {
+      h3 {
         margin-bottom: 40px;
         padding-top: 70px;
         font-size: map-get($map: $font_size, $key: emphasis);
         font-weight: $font_weight_bold;
         color: $color_red;
         transition: 1s;
+
+        @include mobile() {
+          margin-bottom: 20px;
+          padding-top: 30px;
+        }
 
         @include tablet() {
           margin-bottom: 20px;
@@ -190,7 +214,7 @@
       }
     } // --- .advantage_txt
 
-    @at-root .advantage_txt h2::after {
+    @at-root .advantage_txt h3::after {
 
       @include laptop() {
         content: "";
@@ -258,9 +282,7 @@
     } // --- figure
   } // --- .advantage_inner
 
-  @include mobile() {
-    display: none;
-  }
+
 
   @include tablet() {
     height: auto;
@@ -268,5 +290,12 @@
     flex-wrap: wrap;
     gap: 20px;
     row-gap: 50px;
+  }
+
+  @include mobile() {
+    height: auto;
+    padding: 3.125% 6.511% 15.625%;
+    flex-wrap: wrap;
+    row-gap: 15px;
   }
 } // --- #advantage

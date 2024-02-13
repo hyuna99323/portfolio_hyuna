@@ -110,29 +110,30 @@
 
               
               .font_inner {
-                width: 340px;
+                width: 97.295%;
                 margin-top: 2.863%;
                 margin-left: 1.433%;
                 display: flex;
                 gap: 3.9%;
 
                 .logoFontEx {
-                  width: 112px;
-                  height: 156px;
+                  width: 34.176%;
+                  height: 22.395vh;
                   border: 1.5px solid $color_grayC;
                   border-radius: 4px;
 
                   span {
                     width: 100%;
-                    height: 104px;
+                    height: 14.648vh;
                     display: block;
                     font-family: $font-family_black;
                     font-size: 36px;
                     text-align: center;
-                    line-height: 104px;
+                    line-height: 14.648vh;
 
                     @include mobile() {
-                      height: 12.395vh;
+                      height: 88px;
+                      line-height: 88px;
                     }
 
                     @include tablet() {
@@ -149,8 +150,8 @@
                   } // --- .font_name - 폰트명
 
                   @include mobile() {
-                    width: 29.226%;
-                    height: 17.606vh;
+                    width: 86px;
+                    height: 128px;
                   }
 
                   @include tablet() {
@@ -171,7 +172,7 @@
 
               // .fontExp
               .fontExp {
-                width: 214px;
+                width: 61.765%;
                 height: auto;
 
                 .explanation {
@@ -364,7 +365,7 @@
               
                 .icon_yellow {
                   display: flex;
-                  row-gap: 5px;
+                  row-gap: 10px;
                   flex-direction: column;
                 
                   .yellow_shapes {
@@ -377,13 +378,18 @@
                       width: 78px;
                       height: 78px;
                     }
+
+                    @include pcfull() {
+                      width: 80px;
+                      height: 80px;
+                    }
                   }
                 } // --- .icon_yellow
 
                 // .icon_bule
                 .icon_bule {
                   display: flex;
-                  row-gap: 5px;
+                  row-gap: 10px;
                   flex-direction: column;
 
                   .bule_shapes {
@@ -396,13 +402,18 @@
                       width: 78px;
                       height: 78px;
                     }
+
+                    @include pcfull() {
+                      width: 80px;
+                      height: 80px;
+                    }
                   }
                 } // --- .icon_bule
 
                 // .icon_orange
                 .icon_orange {
                   display: flex;
-                  row-gap: 5px;
+                  row-gap: 10px;
                   flex-direction: column;
                 
                   .orange_shapes {
@@ -414,6 +425,11 @@
                     @include mobile() {
                       width: 78px;
                       height: 78px;
+                    }
+
+                    @include pcfull() {
+                      width: 80px;
+                      height: 80px;
                     }
                   }
                 } // --- .icon_orange
@@ -434,13 +450,13 @@
               
                 .point_color {
                   display: flex;
+                  row-gap: 10px;
                   flex-direction: column;
                 
                   .icon_red {
                     width: 60px;
                     height: 60px;
-                    margin: auto;
-                    margin-top: 10px;
+                    margin-top: 13px;
                     border-radius: 50%;
                     background-color: $color_red;
 
@@ -448,20 +464,24 @@
                       width: 78px;
                       height: 78px;
                     }
+
+                    @include pcfull() {
+                      width: 80px;
+                      height: 80px;
+                    }
                   }
                 } // --- .point_color
 
                 // .background_color
                 .background_color {
                   display: flex;
-                  row-gap: 5px;
+                  row-gap: 10px;
                   flex-direction: column;
                 
                   .icon_white {
                     width: 60px;
                     height: 60px;
-                    // margin-left: 8.77px;
-                    margin-top: 10px;
+                    margin-top: 13px;
                     border: 1px solid #cfcfcf;
                     border-radius: 50%;
                     background-color: $color_graywhite;
@@ -469,6 +489,11 @@
                     @include mobile() {
                       width: 78px;
                       height: 78px;
+                    }
+
+                    @include pcfull() {
+                      width: 80px;
+                      height: 80px;
                     }
                   }
 
@@ -556,24 +581,42 @@
 
               // .nomal_part
               .nomal_part {
+                width: 33.42%;
+
                 .nomal_ex {
-                  width: 100px;
-                  height: 100px;
-                  margin-top: 10px;
-                  padding-top: 20px;
+                  width: 100%;
+                  height: 14.085vh;
+                  margin-top: 10%;
+                  padding-top: 20%;              
                   text-align: center;
                   border: 1.5px solid $color_grayC;
                   border-radius: 4px;
+
+                  @include mobile() {
+                    margin-top: 10px;
+                    padding-top: 20px;
+                  }
+
+                  @include tablet() {
+                    margin-top: 10px;
+                    padding-top: 20px;
+                  }
+
+                  @include pcfull() {
+                    padding-top: 34.735%;
+                  }
                 }
               } // --- .nomal_part
 
               // .hover_part
               .hover_part {
+                width: 33.42%;
+
                 .hover_ex {
-                  width: 100px;
-                  height: 100px;
-                  margin-top: 10px;
-                  padding-top: 20px;
+                  width: 100%;
+                  height: 14.085vh;
+                  margin-top: 10%;
+                  padding-top: 20%;              
                   text-align: center;
                   border: 1.5px solid $color_grayC;
                   border-radius: 4px;
@@ -585,6 +628,20 @@
 
                   p {
                     color: $color_red;
+                  }
+
+                  @include mobile() {
+                    margin-top: 10px;
+                    padding-top: 20px;
+                  }
+
+                  @include tablet() {
+                    margin-top: 10px;
+                    padding-top: 20px;
+                  }
+
+                  @include pcfull() {
+                    padding-top: 34.735%;
                   }
                 } // --- .hover_ex
               } // --- .hover_part
@@ -644,6 +701,10 @@
             height: 628px;
             margin-top: 0;
           }
+
+          @include pcfull() {
+            height: 1400px;
+          }
         }
         
         @include mobile() {
@@ -665,8 +726,8 @@
           // 빨간 선
           .arrowLineRed {
             position: relative;
-            top: 20px;
-            left: 0px;
+            top: 2.0084%;
+            left: 0%;
             p {
               @include mobile() {
                 margin-top: 2.667%;
@@ -712,8 +773,8 @@
           // 파란선
           .arrowLineBlue {
             position: relative;
-            top: 209px;
-            left: 58px;
+            top: 20.984%;
+            left: 11.418%;
             p {
               @include mobile() {
                 margin-top: 2.667%;
@@ -748,13 +809,17 @@
               top: 86px;
               left: 0;
             }
+
+            @include pcfull() {
+              top: 24.93036%;
+            }
           } // --- arrowLineBlue
 
           // 노란선
           .arrowLineYellow {
             position: relative;
-            top: 246px;
-            left: 20px;
+            top: 24.699%;
+            left: 0%;
             p {
               @include mobile() {
                 margin-top: 2.667%;
@@ -789,13 +854,18 @@
               top: 100px;
               left: 0;
             }
+
+            @include pcfull() {
+              top: 32.73%;
+              left: 27%;
+            }
           } // --- arrowLineYellow
 
           // 주황선
           .arrowLineOrenge {
             position: relative;
-            top: 424px;
-            left: 80px;
+            top: 42.571%;
+            left: 15.749%;
 
             p {
               @include mobile() {
@@ -831,6 +901,10 @@
             @include tablet() {
               top: 170px;
               left: 30px;        
+            }
+
+            @include pcfull() {
+              top: 55.5713%;
             }
           } // --- arrowLineOrenge
           @include mobile() {
@@ -1221,6 +1295,7 @@
         gap: 30px;
         margin-top: 36px;
         flex-wrap: wrap-reverse;
+        justify-content: center;
 
         .kiki_mockup {
           width: 48.704%;
@@ -1240,6 +1315,10 @@
             height: 628px;
             margin-top: 0;
           }
+
+          @include pcfull() {
+            height: 1400px;
+          }
         }
 
         .page_explanation {
@@ -1254,7 +1333,7 @@
           .arrowLineDWRed {
             width: fit-content;
             position: relative;
-            top: 80px;
+            top: 8.334%;
             left: 80px;
             p {
               @include mobile() {
@@ -1297,7 +1376,7 @@
           .arrowLineBeige {
             width: fit-content;
             position: relative;
-            top: 350px;
+            top: 36.459%;
             left: 150px;
 
             p {
@@ -1342,7 +1421,7 @@
           .arrowLineGreen {
             width: fit-content;
             position: relative;
-            top: 536px;
+            top: 55.834%;
             left: 222px;
             p {
               @include mobile() {

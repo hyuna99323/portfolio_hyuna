@@ -164,4 +164,8 @@
     height: 54px;
     padding: 1.563% 6.511%;
   }
+
+  @include pcfull() {
+    padding: 0.8334% 7.813%;
+  }
 }

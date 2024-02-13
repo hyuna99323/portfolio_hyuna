@@ -162,8 +162,8 @@
 // 폰트 한눈에 보기 상자
 @mixin fontName() {
   width: 100%;
-  height: 33px;
-  padding: 8.3px;
+  height: auto;
+  padding: 5.3px;
   border-top: 1.5px solid #eee;
   border-radius: 4px;
 
@@ -181,12 +181,8 @@
   }
 
   @include mobile() {
-    height: 5.1vh;
+    height: 36px;
     padding: 2.36%;
-  }
-
-  @include tablet() {
-    height: auto;
   }
 }
 
@@ -232,16 +228,21 @@
   .font_ex {
     margin-top: 18px;
     display: flex;
-    gap: 18px;
+    gap: 16px;
 
     span {
       width: 100%;
-      height: 72px;
+      height: 10.141vh;
       display: block;
       font-size: 36px;
       font-weight: $font_weight_regular;
       text-align: center;
-      line-height: 76px;
+      line-height:  10.705vh;
+
+      @include mobile() {
+        height: 72px;
+        line-height: 76px;
+      }
     }
 
     .font_name {
@@ -258,8 +259,8 @@
     } /* .font_name */
 
     .font_regular {
-      width: 98px;
-      height: 118px;
+      width: 32.524%;
+      height: 17.043vh;
       border: 1.5px solid #ccc;
       border-radius: 4px;
 
@@ -270,19 +271,13 @@
     } /* .font_regular */
 
     .font_medium {
-      width: 98px;
-      height: 118px;
+      width: 32.524%;
+      height: 17.043vh;
       border: 1.5px solid #ccc;
       border-radius: 4px;
 
       span {
-        width: 100%;
-        height: 72px;
-        display: block;
-        font-size: 36px;
         font-weight: $font_weight_medium;
-        text-align: center;
-        line-height: 76px;
       }
 
       @include mobile() {
@@ -292,19 +287,13 @@
     } /* .font_medium */
 
     .font_bold {
-      width: 98px;
-      height: 118px;
+      width: 32.524%;
+      height: 17.043vh;
       border: 1.5px solid #ccc;
       border-radius: 4px;
 
       span {
-        width: 100%;
-        height: 72px;
-        display: block;
-        font-size: 36px;
         font-weight: $font_weight_bold;
-        text-align: center;
-        line-height: 76px;
       }
 
       @include mobile() {
@@ -391,6 +380,8 @@
 
     @include mobile() {
       margin-top: 4.898%;
+      display: contents;
+      // flex-direction: column;
     }
   }
 
@@ -414,7 +405,7 @@
   height: auto;
   margin-top: 2.778%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   @include mobile() {
     width: 100%;

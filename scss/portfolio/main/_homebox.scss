@@ -124,18 +124,6 @@
         top: 50px;
         left: -3.48%;
       }
-
-      @include tablet() {
-        top: 80px;
-        left: -8.956%;
-      }
-      @include pc() {
-        left: 35.417%;
-      }
-      @include pcfull() {
-        top: 365px;
-        left: 760px;
-      }
     }
     @at-root .orange_A {
       position: absolute;
@@ -156,17 +144,6 @@
         top: 3px;
         left: 95.373%;
       }
-      @include tablet() {
-        top: 3px;
-        left: 91.942%;
-      }
-      @include pc() {
-        left: 60.417%;
-      }
-      @include pcfull() {
-        top: 280px;
-        left: 1100px;
-      }
     }
     @at-root .yellow_O {
       position: absolute;
@@ -184,17 +161,6 @@
         height: 24px;
         top: 186px;
         left: 93.52%;
-      }
-      @include tablet() {
-        top: 290px;
-        left: 87.165%;
-      }
-      @include pc() {
-        left: 60.278%;
-      }
-      @include pcfull() {
-        top: 560px;
-        left: 1100px;
       }
     }
     & p:last-child {

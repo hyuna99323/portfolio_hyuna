@@ -228,6 +228,12 @@
   }
 }
 
+@media all and (min-width: 1920px) {
+  #headbox {
+    padding: 0.8334% 7.813%;
+  }
+}
+
 #home {
   width: 100%;
   display: flex;
@@ -379,26 +385,6 @@
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  .blue_H {
-    top: 80px;
-    left: -8.956%;
-  }
-}
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .blue_H {
-    left: 35.417%;
-  }
-}
-
-@media all and (min-width: 1920px) {
-  .blue_H {
-    top: 365px;
-    left: 760px;
-  }
-}
-
 .orange_A {
   position: absolute;
   width: 0px;
@@ -422,26 +408,6 @@
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  .orange_A {
-    top: 3px;
-    left: 91.942%;
-  }
-}
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .orange_A {
-    left: 60.417%;
-  }
-}
-
-@media all and (min-width: 1920px) {
-  .orange_A {
-    top: 280px;
-    left: 1100px;
-  }
-}
-
 .yellow_O {
   position: absolute;
   width: 70px;
@@ -460,26 +426,6 @@
     height: 24px;
     top: 186px;
     left: 93.52%;
-  }
-}
-
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  .yellow_O {
-    top: 290px;
-    left: 87.165%;
-  }
-}
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .yellow_O {
-    left: 60.278%;
-  }
-}
-
-@media all and (min-width: 1920px) {
-  .yellow_O {
-    top: 560px;
-    left: 1100px;
   }
 }
 
@@ -692,8 +638,9 @@
 
 @media all and (max-width: 767px) {
   .sort_introduce {
-    margin-top: 0px;
+    width: 100%;
     height: auto;
+    margin-top: 0px;
     line-height: 21px;
     margin-top: 12.293%;
   }
@@ -917,6 +864,39 @@
   z-index: 1;
 }
 
+#advantage h2 {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  color: #006DA9;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media all and (max-width: 767px) {
+  #advantage h2 {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  #advantage h2 {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  #advantage h2 {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  #advantage h2 {
+    display: none;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .advantageBox {
     width: 31.32%;
@@ -1008,11 +988,11 @@
   .advantageBox:hover .advantage_inner .advantage_txt {
     width: 75%;
   }
-  .advantageBox:hover .advantage_inner .advantage_txt h2 {
+  .advantageBox:hover .advantage_inner .advantage_txt h3 {
     font-size: 5vw;
     padding-top: 0px;
   }
-  .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+  .advantageBox:hover .advantage_inner .advantage_txt h3::after {
     width: 120px;
     background: #006DA9;
     height: 3px;
@@ -1023,11 +1003,11 @@
   .advantageBox:hover .advantage_inner .advantage_txt {
     width: 75%;
   }
-  .advantageBox:hover .advantage_inner .advantage_txt h2 {
+  .advantageBox:hover .advantage_inner .advantage_txt h3 {
     font-size: 5vw;
     padding-top: 0px;
   }
-  .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+  .advantageBox:hover .advantage_inner .advantage_txt h3::after {
     width: 120px;
     background: #006DA9;
     height: 3px;
@@ -1038,11 +1018,11 @@
   .advantageBox:hover .advantage_inner .advantage_txt {
     width: 75%;
   }
-  .advantageBox:hover .advantage_inner .advantage_txt h2 {
+  .advantageBox:hover .advantage_inner .advantage_txt h3 {
     font-size: 5vw;
     padding-top: 0px;
   }
-  .advantageBox:hover .advantage_inner .advantage_txt h2::after {
+  .advantageBox:hover .advantage_inner .advantage_txt h3::after {
     width: 120px;
     background: #006DA9;
     height: 3px;
@@ -1107,7 +1087,7 @@
   margin-bottom: 40px;
 }
 
-.advantage_txt h2 {
+.advantage_txt h3 {
   margin-bottom: 40px;
   padding-top: 70px;
   font-size: 30px;
@@ -1116,15 +1096,22 @@
   transition: 1s;
 }
 
+@media all and (max-width: 767px) {
+  .advantage_txt h3 {
+    margin-bottom: 20px;
+    padding-top: 30px;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  .advantage_txt h2 {
+  .advantage_txt h3 {
     margin-bottom: 20px;
     padding-top: 0px;
   }
 }
 
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  .advantage_txt h2::after {
+  .advantage_txt h3::after {
     content: "";
     display: block;
     width: 40px;
@@ -1136,7 +1123,7 @@
 }
 
 @media all and (min-width: 1440px) and (max-width: 1919px) {
-  .advantage_txt h2::after {
+  .advantage_txt h3::after {
     content: "";
     display: block;
     width: 40px;
@@ -1148,7 +1135,7 @@
 }
 
 @media all and (min-width: 1920px) {
-  .advantage_txt h2::after {
+  .advantage_txt h3::after {
     content: "";
     display: block;
     width: 40px;
@@ -1194,12 +1181,6 @@
   }
 }
 
-@media all and (max-width: 767px) {
-  #advantage {
-    display: none;
-  }
-}
-
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #advantage {
     height: auto;
@@ -1207,6 +1188,15 @@
     flex-wrap: wrap;
     gap: 20px;
     row-gap: 50px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #advantage {
+    height: auto;
+    padding: 3.125% 6.511% 15.625%;
+    flex-wrap: wrap;
+    row-gap: 15px;
   }
 }
 
@@ -1599,7 +1589,7 @@
 }
 
 #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner {
-  width: 340px;
+  width: 97.295%;
   margin-top: 2.863%;
   margin-left: 1.433%;
   display: flex;
@@ -1607,25 +1597,26 @@
 }
 
 #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
-  width: 112px;
-  height: 156px;
+  width: 34.176%;
+  height: 22.395vh;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
 #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx span {
   width: 100%;
-  height: 104px;
+  height: 14.648vh;
   display: block;
   font-family: "Black Han Sans", sans-serif;
   font-size: 36px;
   text-align: center;
-  line-height: 104px;
+  line-height: 14.648vh;
 }
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx span {
-    height: 12.395vh;
+    height: 88px;
+    line-height: 88px;
   }
 }
 
@@ -1638,8 +1629,8 @@
 
 #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
   width: 100%;
-  height: 33px;
-  padding: 8.3px;
+  height: auto;
+  padding: 5.3px;
   border-top: 1.5px solid #eee;
   border-radius: 4px;
 }
@@ -1663,14 +1654,8 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
-    height: 5.1vh;
+    height: 36px;
     padding: 2.36%;
-  }
-}
-
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx .font_name {
-    height: auto;
   }
 }
 
@@ -1681,8 +1666,8 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .font_inner .logoFontEx {
-    width: 29.226%;
-    height: 17.606vh;
+    width: 86px;
+    height: 128px;
   }
 }
 
@@ -1708,7 +1693,7 @@
 }
 
 #project .portfolio_content .guide .guide_content .logo_part .mobile_guide .logo_font .fontExp {
-  width: 214px;
+  width: 61.765%;
   height: auto;
 }
 
@@ -1940,7 +1925,7 @@
 #project .portfolio_content .guide .guide_content .font_part .font_ex {
   margin-top: 18px;
   display: flex;
-  gap: 18px;
+  gap: 16px;
   /* .font_name */
   /* .font_regular */
   /* .font_medium */
@@ -1949,18 +1934,25 @@
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex span {
   width: 100%;
-  height: 72px;
+  height: 10.141vh;
   display: block;
   font-size: 36px;
   font-weight: 300;
   text-align: center;
-  line-height: 76px;
+  line-height: 10.705vh;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .font_part .font_ex span {
+    height: 72px;
+    line-height: 76px;
+  }
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
   width: 100%;
-  height: 33px;
-  padding: 8.3px;
+  height: auto;
+  padding: 5.3px;
   border-top: 1.5px solid #eee;
   border-radius: 4px;
 }
@@ -1994,20 +1986,14 @@
 
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
-    height: 5.1vh;
+    height: 36px;
     padding: 2.36%;
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .portfolio_content .guide .guide_content .font_part .font_ex .font_name {
-    height: auto;
-  }
-}
-
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_regular {
-  width: 98px;
-  height: 118px;
+  width: 32.524%;
+  height: 17.043vh;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
@@ -2020,20 +2006,14 @@
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium {
-  width: 98px;
-  height: 118px;
+  width: 32.524%;
+  height: 17.043vh;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_medium span {
-  width: 100%;
-  height: 72px;
-  display: block;
-  font-size: 36px;
   font-weight: 500;
-  text-align: center;
-  line-height: 76px;
 }
 
 @media all and (max-width: 767px) {
@@ -2044,20 +2024,14 @@
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold {
-  width: 98px;
-  height: 118px;
+  width: 32.524%;
+  height: 17.043vh;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
 #project .portfolio_content .guide .guide_content .font_part .font_ex .font_bold span {
-  width: 100%;
-  height: 72px;
-  display: block;
-  font-size: 36px;
   font-weight: 600;
-  text-align: center;
-  line-height: 76px;
 }
 
 @media all and (max-width: 767px) {
@@ -2155,6 +2129,7 @@
 @media all and (max-width: 767px) {
   #project .portfolio_content .guide .guide_content .font_part .font_size {
     margin-top: 4.898%;
+    display: contents;
   }
 }
 
@@ -2194,7 +2169,7 @@
   height: auto;
   margin-top: 2.778%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 @media all and (max-width: 767px) {
@@ -2229,7 +2204,7 @@
   height: auto;
   margin-top: 2.778%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -2282,7 +2257,7 @@
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_yellow {
   display: flex;
-  row-gap: 5px;
+  row-gap: 10px;
   flex-direction: column;
 }
 
@@ -2300,9 +2275,16 @@
   }
 }
 
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_yellow .yellow_shapes {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_bule {
   display: flex;
-  row-gap: 5px;
+  row-gap: 10px;
   flex-direction: column;
 }
 
@@ -2320,9 +2302,16 @@
   }
 }
 
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_bule .bule_shapes {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange {
   display: flex;
-  row-gap: 5px;
+  row-gap: 10px;
   flex-direction: column;
 }
 
@@ -2337,6 +2326,13 @@
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange .orange_shapes {
     width: 78px;
     height: 78px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .icon_color .icon_orange .orange_shapes {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -2357,14 +2353,14 @@
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .point_color {
   display: flex;
+  row-gap: 10px;
   flex-direction: column;
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .point_color .icon_red {
   width: 60px;
   height: 60px;
-  margin: auto;
-  margin-top: 10px;
+  margin-top: 13px;
   border-radius: 50%;
   background-color: #D71C02;
 }
@@ -2376,16 +2372,23 @@
   }
 }
 
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .point_color .icon_red {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color {
   display: flex;
-  row-gap: 5px;
+  row-gap: 10px;
   flex-direction: column;
 }
 
 #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color .icon_white {
   width: 60px;
   height: 60px;
-  margin-top: 10px;
+  margin-top: 13px;
   border: 1px solid #cfcfcf;
   border-radius: 50%;
   background-color: #fffffc;
@@ -2395,6 +2398,13 @@
   #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color .icon_white {
     width: 78px;
     height: 78px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .guide .guide_content .color_part .icon_inner .color_content .bottom_color .background_color .icon_white {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -2515,21 +2525,49 @@
   font-weight: 300;
 }
 
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part {
+  width: 33.42%;
+}
+
 #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part .nomal_ex {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  padding-top: 20px;
+  width: 100%;
+  height: 14.085vh;
+  margin-top: 10%;
+  padding-top: 20%;
   text-align: center;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part .nomal_ex {
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part .nomal_ex {
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .nomal_part .nomal_ex {
+    padding-top: 34.735%;
+  }
+}
+
+#project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part {
+  width: 33.42%;
+}
+
 #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  padding-top: 20px;
+  width: 100%;
+  height: 14.085vh;
+  margin-top: 10%;
+  padding-top: 20%;
   text-align: center;
   border: 1.5px solid #ccc;
   border-radius: 4px;
@@ -2542,6 +2580,26 @@
 
 #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex p {
   color: #D71C02;
+}
+
+@media all and (max-width: 767px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .guide .guide_content .color_part .button_color .button_hover .hover_part .hover_ex {
+    padding-top: 34.735%;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -2638,6 +2696,12 @@
   }
 }
 
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .pagever_intro .pagever_content .portfolio_mockup {
+    height: 1400px;
+  }
+}
+
 @media all and (max-width: 767px) {
   #project .portfolio_content .pagever_intro .pagever_content {
     margin-top: 8px;
@@ -2685,8 +2749,8 @@
 
 #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineRed {
   position: relative;
-  top: 20px;
-  left: 0px;
+  top: 2.0084%;
+  left: 0%;
 }
 
 @media all and (max-width: 767px) {
@@ -2745,8 +2809,8 @@
 
 #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue {
   position: relative;
-  top: 209px;
-  left: 58px;
+  top: 20.984%;
+  left: 11.418%;
 }
 
 @media all and (max-width: 767px) {
@@ -2795,10 +2859,16 @@
   }
 }
 
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineBlue {
+    top: 24.93036%;
+  }
+}
+
 #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow {
   position: relative;
-  top: 246px;
-  left: 20px;
+  top: 24.699%;
+  left: 0%;
 }
 
 @media all and (max-width: 767px) {
@@ -2847,10 +2917,17 @@
   }
 }
 
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineYellow {
+    top: 32.73%;
+    left: 27%;
+  }
+}
+
 #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge {
   position: relative;
-  top: 424px;
-  left: 80px;
+  top: 42.571%;
+  left: 15.749%;
 }
 
 @media all and (max-width: 767px) {
@@ -2896,6 +2973,12 @@
   #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge {
     top: 170px;
     left: 30px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  #project .portfolio_content .pagever_intro .pagever_content .page_explanation .arrowLineOrenge {
+    top: 55.5713%;
   }
 }
 
@@ -3306,8 +3389,8 @@
 
 #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
   width: 100%;
-  height: 33px;
-  padding: 8.3px;
+  height: auto;
+  padding: 5.3px;
   border-top: 1.5px solid #eee;
   border-radius: 4px;
   background-color: #fff;
@@ -3333,14 +3416,8 @@
 
 @media all and (max-width: 767px) {
   #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
-    height: 5.1vh;
+    height: 36px;
     padding: 2.36%;
-  }
-}
-
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_content .kiki_guide .guide_content .logo_part .button_box .button_content .font_name {
-    height: auto;
   }
 }
 
@@ -3409,7 +3486,7 @@
 #project .kiki_content .kiki_guide .font_part .font_ex {
   margin-top: 18px;
   display: flex;
-  gap: 18px;
+  gap: 16px;
   /* .font_name */
   /* .font_regular */
   /* .font_medium */
@@ -3418,18 +3495,25 @@
 
 #project .kiki_content .kiki_guide .font_part .font_ex span {
   width: 100%;
-  height: 72px;
+  height: 10.141vh;
   display: block;
   font-size: 36px;
   font-weight: 300;
   text-align: center;
-  line-height: 76px;
+  line-height: 10.705vh;
+}
+
+@media all and (max-width: 767px) {
+  #project .kiki_content .kiki_guide .font_part .font_ex span {
+    height: 72px;
+    line-height: 76px;
+  }
 }
 
 #project .kiki_content .kiki_guide .font_part .font_ex .font_name {
   width: 100%;
-  height: 33px;
-  padding: 8.3px;
+  height: auto;
+  padding: 5.3px;
   border-top: 1.5px solid #eee;
   border-radius: 4px;
 }
@@ -3463,20 +3547,14 @@
 
 @media all and (max-width: 767px) {
   #project .kiki_content .kiki_guide .font_part .font_ex .font_name {
-    height: 5.1vh;
+    height: 36px;
     padding: 2.36%;
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_content .kiki_guide .font_part .font_ex .font_name {
-    height: auto;
-  }
-}
-
 #project .kiki_content .kiki_guide .font_part .font_ex .font_regular {
-  width: 98px;
-  height: 118px;
+  width: 32.524%;
+  height: 17.043vh;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
@@ -3489,20 +3567,14 @@
 }
 
 #project .kiki_content .kiki_guide .font_part .font_ex .font_medium {
-  width: 98px;
-  height: 118px;
+  width: 32.524%;
+  height: 17.043vh;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
 #project .kiki_content .kiki_guide .font_part .font_ex .font_medium span {
-  width: 100%;
-  height: 72px;
-  display: block;
-  font-size: 36px;
   font-weight: 500;
-  text-align: center;
-  line-height: 76px;
 }
 
 @media all and (max-width: 767px) {
@@ -3513,20 +3585,14 @@
 }
 
 #project .kiki_content .kiki_guide .font_part .font_ex .font_bold {
-  width: 98px;
-  height: 118px;
+  width: 32.524%;
+  height: 17.043vh;
   border: 1.5px solid #ccc;
   border-radius: 4px;
 }
 
 #project .kiki_content .kiki_guide .font_part .font_ex .font_bold span {
-  width: 100%;
-  height: 72px;
-  display: block;
-  font-size: 36px;
   font-weight: 600;
-  text-align: center;
-  line-height: 76px;
 }
 
 @media all and (max-width: 767px) {
@@ -3624,6 +3690,7 @@
 @media all and (max-width: 767px) {
   #project .kiki_content .kiki_guide .font_part .font_size {
     margin-top: 4.898%;
+    display: contents;
   }
 }
 
@@ -3663,7 +3730,7 @@
   height: auto;
   margin-top: 2.778%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 @media all and (max-width: 767px) {
@@ -3907,8 +3974,8 @@
 
 #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
   width: 100%;
-  height: 33px;
-  padding: 8.3px;
+  height: auto;
+  padding: 5.3px;
   border-top: 1.5px solid #eee;
   border-radius: 4px;
   height: auto;
@@ -3934,14 +4001,8 @@
 
 @media all and (max-width: 767px) {
   #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
-    height: 5.1vh;
+    height: 36px;
     padding: 2.36%;
-  }
-}
-
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  #project .kiki_content .point_part .kikiPointColor .kikiPointfont .font_bold .font_name {
-    height: auto;
   }
 }
 
@@ -4005,6 +4066,7 @@
   gap: 30px;
   margin-top: 36px;
   flex-wrap: wrap-reverse;
+  justify-content: center;
 }
 
 #project .kiki_content .pagever_intro .kikipagever_content .kiki_mockup {
@@ -4028,6 +4090,12 @@
     width: 368px;
     height: 628px;
     margin-top: 0;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  #project .kiki_content .pagever_intro .kikipagever_content .kiki_mockup {
+    height: 1400px;
   }
 }
 
@@ -4066,7 +4134,7 @@
 #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineDWRed {
   width: fit-content;
   position: relative;
-  top: 80px;
+  top: 8.334%;
   left: 80px;
 }
 
@@ -4119,7 +4187,7 @@
 #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineBeige {
   width: fit-content;
   position: relative;
-  top: 350px;
+  top: 36.459%;
   left: 150px;
 }
 
@@ -4173,7 +4241,7 @@
 #project .kiki_content .pagever_intro .kikipagever_content .page_explanation .arrowLineGreen {
   width: fit-content;
   position: relative;
-  top: 536px;
+  top: 55.834%;
   left: 222px;
 }
 
