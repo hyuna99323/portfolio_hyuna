@@ -560,6 +560,11 @@
           @include mobile() {
             font-size: map-get($map: $font_size_m, $key: content1);
           }
+
+          a:hover {
+            color: $color_red;
+            font-weight: $font_weight_bold;
+          }
         }
       }
 

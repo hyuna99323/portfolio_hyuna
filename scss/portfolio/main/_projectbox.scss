@@ -4,7 +4,7 @@
   height: auto;
   padding-top: 3.125%;
 
-  h2 {
+  @at-root h2 {
     @include h2;
     padding: 0 100px;
 
@@ -17,16 +17,12 @@
     }
   }
 
-  .portfolio_content {
+  @at-root .portfolio_content {
     margin-top: 2.5%;
     padding: 3.125% 7.813% 0;
 
-    // @include mobile() {
-    //   padding: 0 3.334%;
-    // }
-
     // 프로젝트 설명
-    .project_intro {
+    @at-root .project_intro {
       @include projectIntro();
 
       @include introTxt();
@@ -40,7 +36,7 @@
     } // --- project_intro - 프로젝트 설명
 
     // .guide - 가이드라인 
-    .guide {
+    @at-root .guide {
       @include guideBox();
       color: $color_black;
 
@@ -49,17 +45,17 @@
       }
 
       // .guide_content - 포트폴리오 프로젝트 설명
-      .guide_content {
+      @at-root .guide_content {
         @include guideflex();
 
-        .logo_part {
+        @at-root .logo_part {
           @include guidelogoContent();
 
 
           h4 {
             @include h4();
           }
-          .logo {
+          @at-root .logo {
             @include logoMargin();
 
 
@@ -85,7 +81,7 @@
             }
           } // --- .logo
 
-          .mobile_guide {
+          @at-root .mobile_guide {
             @include tablet() {
               display: flex;
             }
@@ -106,17 +102,17 @@
             }
 
             // .logo_font
-            .logo_font {
+            @at-root .logo_font {
 
               
-              .font_inner {
+              @at-root .font_inner {
                 width: 97.295%;
                 margin-top: 2.863%;
                 margin-left: 1.433%;
                 display: flex;
                 gap: 3.9%;
 
-                .logoFontEx {
+                @at-root .logoFontEx {
                   width: 34.176%;
                   height: 22.395vh;
                   border: 1.5px solid $color_grayC;
@@ -141,7 +137,7 @@
                       line-height: 90px;
                     }
                   }
-                  .font_name {
+                  @at-root .font_name {
                     @include fontName();
                     p:last-child {
                       font-size: map-get($map: $font_size, $key: content2);
@@ -171,7 +167,7 @@
               }
 
               // .fontExp
-              .fontExp {
+              @at-root .fontExp {
                 width: 61.765%;
                 height: auto;
 
@@ -217,7 +213,7 @@
             } // --- .logo_font
 
             
-            .font_color {
+            @at-root .font_color {
 
               .colorSubTilte {
                 @include h5();
@@ -231,14 +227,14 @@
                   margin-top: 12.935%;
                 }
               }
-              .color_inner {
+              @at-root .color_inner {
                 width: 100%;
                 margin-left: 5px;
                 display: flex;
                 flex-wrap: wrap;
 
                 // .color_list
-                .color_list {
+                @at-root .color_list {
                   display: flex;
 
                   .list_yellow {
@@ -267,7 +263,7 @@
 
 
                 // .fontColorExp
-                .fontColorExp {
+                @at-root .fontColorExp {
                   margin-top: 10px;
                   p {
                     font-size: map-get($map: $font_size, $key: content1);
@@ -315,7 +311,7 @@
         } // --- .logo_part - 로고 가이드라인
       
         // .font_part
-        .font_part {
+        @at-root .font_part {
           @include fontPartBox(); // --- .font_size - 폰트 사이즈 가이드라인
           
           .fontSize32 {
@@ -336,15 +332,15 @@
         } // --- .font_part - 폰트 설명 
 
         // color_part - 가이드라인 color부분
-        .color_part {
+        @at-root .color_part {
           @include colorPartBox();
           
           h4 {
             @include h4();
           }
-          .icon_inner {
+          @at-root .icon_inner {
 
-            .color_content {
+            @at-root .color_content {
               @include colorPartBox();
               width: 100%;
             
@@ -357,13 +353,13 @@
               }
 
               // .icon_color
-              .icon_color {
+              @at-root .icon_color {
                 width: 100%;
                 margin-top: 18px;
                 display: flex;
                 gap: 50px;
               
-                .icon_yellow {
+                @at-root .icon_yellow {
                   display: flex;
                   row-gap: 10px;
                   flex-direction: column;
@@ -387,7 +383,7 @@
                 } // --- .icon_yellow
 
                 // .icon_bule
-                .icon_bule {
+                @at-root .icon_bule {
                   display: flex;
                   row-gap: 10px;
                   flex-direction: column;
@@ -411,7 +407,7 @@
                 } // --- .icon_bule
 
                 // .icon_orange
-                .icon_orange {
+                @at-root .icon_orange {
                   display: flex;
                   row-gap: 10px;
                   flex-direction: column;
@@ -442,13 +438,13 @@
               } // --- .icon_color
 
               // .bottom_color
-              .bottom_color {
+              @at-root .bottom_color {
                 width: 100%;
                 margin-top: 30px;
                 display: flex;
                 gap: 24px;
               
-                .point_color {
+                @at-root .point_color {
                   display: flex;
                   row-gap: 10px;
                   flex-direction: column;
@@ -473,7 +469,7 @@
                 } // --- .point_color
 
                 // .background_color
-                .background_color {
+                @at-root .background_color {
                   display: flex;
                   row-gap: 10px;
                   flex-direction: column;
@@ -518,7 +514,7 @@
           }
 
           // .button_color
-          .button_color {
+          @at-root .button_color {
             width: 100%;
             margin-top: 94px;
             display: flex;
@@ -527,7 +523,7 @@
             font-weight: $font_weight_medium;
             
             // .button_content
-            .button_content {
+            @at-root .button_content {
               width: 294px;
               display: flex;
               margin-left: 5px;
@@ -559,7 +555,7 @@
             } // --- .button_content
 
             // .button_hover - 버튼 마우스 오버 시 색상 및 굵기
-            .button_hover {
+            @at-root .button_hover {
               width: 100%;
               display: flex;
               margin-left: 5px;
@@ -580,10 +576,10 @@
               }
 
               // .nomal_part
-              .nomal_part {
+              @at-root .nomal_part {
                 width: 33.42%;
 
-                .nomal_ex {
+                @at-root .nomal_ex {
                   width: 100%;
                   height: 14.085vh;
                   margin-top: 10%;
@@ -609,10 +605,10 @@
               } // --- .nomal_part
 
               // .hover_part
-              .hover_part {
+              @at-root .hover_part {
                 width: 33.42%;
 
-                .hover_ex {
+                @at-root .hover_ex {
                   width: 100%;
                   height: 14.085vh;
                   margin-top: 10%;
@@ -666,14 +662,14 @@
     } // --- .guide - 가이드라인부분
 
     // .pagever_intro - 사이트 주기능 설명
-    .pagever_intro {
+    @at-root .pagever_intro {
       @include pageIntro();
 
       h3 {
         @include guidelineh3 ();
       }
 
-      .pagever_content {
+      @at-root .pagever_content {
         display: flex;
         gap: 30px;
         margin-top: 36px;
@@ -682,7 +678,7 @@
         @include mobile() {
           flex-wrap: wrap-reverse;
         }
-        .portfolio_mockup {
+        @at-root .portfolio_mockup {
           width: 48.704%;
           height: 960px;
           margin-top: 36px;
@@ -716,7 +712,7 @@
           justify-content: center;
         }
 
-        .page_explanation {
+        @at-root .page_explanation {
           h4 {
             @include h4();
           }
@@ -724,7 +720,7 @@
             @include arrowSvgTxt();
           }
           // 빨간 선
-          .arrowLineRed {
+          @at-root .arrowLineRed {
             position: relative;
             top: 2.0084%;
             left: 0%;
@@ -771,7 +767,7 @@
           } // --- arrowLineRed
 
           // 파란선
-          .arrowLineBlue {
+          @at-root .arrowLineBlue {
             position: relative;
             top: 20.984%;
             left: 11.418%;
@@ -816,7 +812,7 @@
           } // --- arrowLineBlue
 
           // 노란선
-          .arrowLineYellow {
+          @at-root .arrowLineYellow {
             position: relative;
             top: 24.699%;
             left: 0%;
@@ -862,7 +858,7 @@
           } // --- arrowLineYellow
 
           // 주황선
-          .arrowLineOrenge {
+          @at-root .arrowLineOrenge {
             position: relative;
             top: 42.571%;
             left: 15.749%;
@@ -930,13 +926,13 @@
   } // --- .portfolio_content - 포트폴리오 프로젝트 설명
 
   // .kiki_content - 마녀배달부키키 프로젝트 설명
-  .kiki_content {
+  @at-root .kiki_content {
     padding: 92px 100px 0;
     background-color: #A5C2D3;
     color: $color_green;
 
     // .project_intro
-    .project_intro {
+    @at-root .project_intro {
       @include projectIntro();
 
       // .mockup
@@ -956,7 +952,7 @@
 
 
     // .guide
-    .kiki_guide {
+    @at-root .kiki_guide {
       @include guideBox();
       color: $color_green;
 
@@ -965,11 +961,11 @@
       }
 
       // .guide_content
-      .guide_content {
+      @at-root .guide_content {
         @include guideflex();
 
         //.logo_part
-        .logo_part {
+        @at-root .logo_part {
           @include guidelogoContent ();
 
           h4 {
@@ -977,7 +973,7 @@
           }
 
           // .logo
-          .logo {
+          @at-root .logo {
             @include logoMargin();
 
             img {
@@ -1000,7 +996,7 @@
           }
 
           // .button_box
-          .button_box {
+          @at-root .button_box {
             margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
@@ -1008,7 +1004,7 @@
             row-gap: 15px;
 
             // .button_content
-            .button_content {
+            @at-root .kikibutton_content {
               width: 78px;
               height: 96px;
               border: 1.5px solid $color_green;
@@ -1058,7 +1054,7 @@
             } // --- .button_content 
           } // --- .button_box
 
-          .cursor_box {
+          @at-root .cursor_box {
             margin-top: 20px;
             display: flex;
             gap: 20px;
@@ -1071,7 +1067,7 @@
       } // --- .guide_content
 
       // .font_part
-      .font_part {
+      @at-root .font_part {
         @include fontPartBox();
 
         .font_regular, .font_medium, .font_bold {
@@ -1092,212 +1088,212 @@
           }
         } // --- .fontSize12
       } // --- .font_part
-    } // --- .guide
 
-    // .color_part
-    .color_part {
-      @include colorPartBox();
+      // .color_part
+      @at-root .color_part {
+        @include colorPartBox();
 
-      h4 {
-        @include h4();
-      }
-
-      .kiki_SubTitle {
-        @include h5();
-        margin-top: 18px;
-        margin-left: 5px;
-
-        @include mobile() {
-          margin-top: 0px;
-          margin-left: 0px;
+        h4 {
+          @include h4();
         }
-      }
 
-      // .back_color
-      .back_color {
-        display: flex;
-        margin-top: 18px;
+        .kiki_SubTitle {
+          @include h5();
+          margin-top: 18px;
+          margin-left: 5px;
+
+          @include mobile() {
+            margin-top: 0px;
+            margin-left: 0px;
+          }
+        }
+
+        // .back_color
+        @at-root .back_color {
+          display: flex;
+          margin-top: 18px;
+          margin-left: 5px;
+          flex-wrap: wrap;
+          column-gap: 26px;
+          row-gap: 20px;
+
+          span {
+            width: 100%;
+            height: auto;
+            display: block;
+            font-size: map-get($map: $font_size, $key: content1);
+            font-weight: $font_weight_medium;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 31px;
+          }
+
+          // .back_content
+          .back_content {
+            @include backPointColor();
+
+
+            .green_shapes {
+              @include back_shapes();
+              background-color: #0a4b41;
+            }
+
+            .blue_shapes {
+              @include back_shapes();
+              background-color: #1145a2;
+            }
+
+            .bagie_shapes {
+              @include back_shapes();
+              background-color: #d7dac7;
+            }
+
+            .black_shapes {
+              @include back_shapes();
+              background-color: #000000;
+            }
+
+            .skyBule_shapes {
+              @include back_shapes();
+              background-color: #b7cae8;
+            }
+
+            .purple_shapes {
+              @include back_shapes();
+              background-color: #4f4259;
+            }
+          } // --- .back_content
+        } // --- .back_color
+      } // --- .color_part
+
+      // .point_part
+      @at-root .point_part {
+        margin-top: 30px;
+
+        h4 {
+          @include h4();
+        }
+
+        // .kikiPointColor
+        .kikiPointColor {
+          display: flex;
+          gap: 32px;
+          margin-top: 18px;
+          margin-left: 5px;
+
+          // .kikiPointContent
+          .kikiPointContent {
+            display: flex;
+            flex-direction: column;
+
+            .colorSubTitle {
+              @include h5();
+              margin-top: 0px;
+              margin-left: 0px;
+            }
+
+            // .back_red
+            .back_red {
+              @include backPointColor();
+              margin: auto;
+              margin-top: 10px;
+
+              span {
+                width: 100%;
+                height: 34px;
+                display: block;
+                font-size: map-get($map: $font_size, $key: content1);
+                text-align: center;
+                line-height: 31px;
+                text-transform: uppercase;
+              }
+
+              .red_shapes {
+                @include back_shapes();
+                background-color: #d71e15;
+              }
+            } // --- .back_red
+          } // --- .kikiPointContent
+
+          // .kikiPointfont
+          @at-root .kikiPointfont {
+            display: flex;
+            flex-direction: column;
+
+            .colorSubTitle {
+              @include h5();
+
+              margin-top: 0px;
+              margin-left: 0px;
+            }
+            .font_bold {
+              width: 84px;
+              height: 104px;
+              border: 1.5px solid #ccc;
+              border-radius: 4px;
+              margin-top: 10px;
+              background-color: $color_white;
+            
+              span {
+                width: 100%;
+                height: 66px;
+                display: block;
+                font-size: 36px;
+                font-weight: $font_weight_bold;
+                text-align: center;
+                line-height: 68px;
+              }
+
+              // .font_name
+              .font_name {
+                @include fontName();
+
+                height: auto;
+                padding: 2px 4px;
+
+                p { 
+                  font-size: map-get($map: $font_size, $key: content2);
+                }
+              } // --- .font_name
+            } // --- .font_bold
+          } // --- .kikiPointfont
+        } // --- .font_bold
+      } // --- .point_part
+
+      // .pointFontSize
+      @at-root .pointFontSize {
+        margin-top: 15px;
         margin-left: 5px;
-        flex-wrap: wrap;
-        column-gap: 26px;
-        row-gap: 20px;
 
         span {
-          width: 100%;
-          height: auto;
-          display: block;
           font-size: map-get($map: $font_size, $key: content1);
-          font-weight: $font_weight_medium;
-          text-align: center;
-          text-transform: uppercase;
-          line-height: 31px;
         }
 
-        // .back_content
-        .back_content {
-          @include backPointColor();
-
-
-          .green_shapes {
-            @include back_shapes();
-            background-color: #0a4b41;
-          }
-
-          .blue_shapes {
-            @include back_shapes();
-            background-color: #1145a2;
-          }
-
-          .bagie_shapes {
-            @include back_shapes();
-            background-color: #d7dac7;
-          }
-
-          .black_shapes {
-            @include back_shapes();
-            background-color: #000000;
-          }
-
-          .skyBule_shapes {
-            @include back_shapes();
-            background-color: #b7cae8;
-          }
-
-          .purple_shapes {
-            @include back_shapes();
-            background-color: #4f4259;
-          }
-        } // --- .back_content
-      } // --- .back_color
-    } // --- .color_part
-
-    // .point_part
-    .point_part {
-      margin-top: 30px;
-
-      h4 {
-        @include h4();
-      }
-
-      // .kikiPointColor
-      .kikiPointColor {
-        display: flex;
-        gap: 32px;
-        margin-top: 18px;
-        margin-left: 5px;
-
-        // .kikiPointContent
-        .kikiPointContent {
-          display: flex;
-          flex-direction: column;
-
-          .colorSubTitle {
-            @include h5();
-            margin-top: 0px;
-            margin-left: 0px;
-          }
-
-          // .back_red
-          .back_red {
-            @include backPointColor();
-            margin: auto;
-            margin-top: 10px;
-
-            span {
-              width: 100%;
-              height: 34px;
-              display: block;
-              font-size: map-get($map: $font_size, $key: content1);
-              text-align: center;
-              line-height: 31px;
-              text-transform: uppercase;
-            }
-
-            .red_shapes {
-              @include back_shapes();
-              background-color: #d71e15;
-            }
-          } // --- .back_red
-        } // --- .kikiPointContent
-
-        // .kikiPointfont
-        .kikiPointfont {
-          display: flex;
-          flex-direction: column;
-
-          .colorSubTitle {
-            @include h5();
-
-            margin-top: 0px;
-            margin-left: 0px;
-          }
-          .font_bold {
-            width: 84px;
-            height: 104px;
-            border: 1.5px solid #ccc;
-            border-radius: 4px;
-            margin-top: 10px;
-            background-color: $color_white;
-          
-            span {
-              width: 100%;
-              height: 66px;
-              display: block;
-              font-size: 36px;
-              font-weight: $font_weight_bold;
-              text-align: center;
-              line-height: 68px;
-            }
-
-            // .font_name
-            .font_name {
-              @include fontName();
-
-              height: auto;
-              padding: 2px 4px;
-
-              p { 
-                font-size: map-get($map: $font_size, $key: content2);
-              }
-            } // --- .font_name
-          } // --- .font_bold
-        } // --- .kikiPointfont
-      } // --- .font_bold
-    } // --- .point_part
-
-    // .pointFontSize
-    .pointFontSize {
-      margin-top: 15px;
-      margin-left: 5px;
-
-      span {
-        font-size: map-get($map: $font_size, $key: content1);
-      }
-
-      p {
-        font-size: map-get($map: $font_size, $key: projecttitle);
-        letter-spacing: 10px;
-        text-transform: uppercase;
-      }
-    } // --- .pointFontSize
-
+        p {
+          font-size: map-get($map: $font_size, $key: projecttitle);
+          letter-spacing: 10px;
+          text-transform: uppercase;
+        }
+      } // --- .pointFontSize
+    } // --- .guide
+    
     // .pagever_intro
-    .pagever_intro {
+    @at-root .pagever_intro {
       @include pageIntro();
     
       h3 {
         @include guidelineh3 ();
       }
-
+      
       // .pagever_content
-      .kikipagever_content {
+      @at-root .kikipagever_content {
         display: flex;
         gap: 30px;
         margin-top: 36px;
         flex-wrap: wrap-reverse;
         justify-content: center;
 
-        .kiki_mockup {
+        @at-root .kiki_mockup {
           width: 48.704%;
           height: 960px;
           background-image: url(../../img/kiki_capture.png);
@@ -1321,7 +1317,7 @@
           }
         }
 
-        .page_explanation {
+        @at-root .page_explanation {
           h4 {
             @include h4();
           }
@@ -1330,7 +1326,7 @@
           }
 
           // 어두운 빨간 선
-          .arrowLineDWRed {
+          @at-root .arrowLineDWRed {
             width: fit-content;
             position: relative;
             top: 8.334%;
@@ -1373,7 +1369,7 @@
           }
 
           // 베이지색 선
-          .arrowLineBeige {
+          @at-root .arrowLineBeige {
             width: fit-content;
             position: relative;
             top: 36.459%;
@@ -1418,7 +1414,7 @@
           }
 
           // 초록선
-          .arrowLineGreen {
+          @at-root .arrowLineGreen {
             width: fit-content;
             position: relative;
             top: 55.834%;
