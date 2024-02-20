@@ -58,7 +58,6 @@
           @at-root .logo {
             @include logoMargin();
 
-
             span{
               font-weight: $font_weight_regular;
               font-family: $font-family_black;
@@ -76,7 +75,7 @@
               color: $color_orange;
             }
 
-            p{
+            p {
               @include logoInP();
             }
           } // --- .logo
@@ -217,14 +216,14 @@
 
               .colorSubTilte {
                 @include h5();
-                margin: 15.74% 0 5.724% 1.433%;
+                margin: 62px 0 20px 5px;
   
                 @include mobile() {
                   margin: 6.667% 0 3.3335% 0;
                 }
   
                 @include tablet() {
-                  margin-top: 12.935%;
+                  margin-top: 24px;
                 }
               }
               @at-root .color_inner {
@@ -343,6 +342,7 @@
             @at-root .color_content {
               @include colorPartBox();
               width: 100%;
+              margin-top: 18px;
             
               .colorSubTitle {
                 @include h5();
@@ -509,14 +509,13 @@
                   margin-top: 26px;
                 }
               } // --- .bottom_color
-              
             } // --- .color_content - 사용한 색상 가이드라인
           }
 
           // .button_color
           @at-root .button_color {
             width: 100%;
-            margin-top: 94px;
+            margin-top: 64px;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -910,7 +909,7 @@
           }
 
           @include tablet() {
-            width: 45%;
+            width: auto;
           }
         } // --- .page_explanation
       } // --- pagever_content
@@ -932,7 +931,7 @@
     color: $color_green;
 
     // .project_intro
-    @at-root .project_intro {
+    @at-root .kikiproject_intro {
       @include projectIntro();
 
       // .mockup
@@ -973,7 +972,7 @@
           }
 
           // .logo
-          @at-root .logo {
+          @at-root .kikilogo {
             @include logoMargin();
 
             img {
@@ -1097,6 +1096,12 @@
           @include h4();
         }
 
+        .color_content {
+          @include tablet() {
+            width: 100%;
+          }
+        }
+
         .kiki_SubTitle {
           @include h5();
           margin-top: 18px;
@@ -1163,6 +1168,10 @@
               background-color: #4f4259;
             }
           } // --- .back_content
+
+          @include tablet() {
+            column-gap: 30px;
+          }
         } // --- .back_color
       } // --- .color_part
 
@@ -1290,7 +1299,6 @@
         display: flex;
         gap: 30px;
         margin-top: 36px;
-        flex-wrap: wrap-reverse;
         justify-content: center;
 
         @at-root .kiki_mockup {
@@ -1455,9 +1463,9 @@
             }
           }
 
-          @include tablet() {
-            width: 49.7%;
-          }
+          // @include tablet() {
+          //   width: 49.7%;
+          // }
         } // --- .page_explanation
 
         @include mobile() {
@@ -1467,7 +1475,6 @@
         }
         @include tablet() {
           gap: 0;
-          justify-content: center;
         }
       } // --- .kikipagever_content
     } // --- .pagever_intro

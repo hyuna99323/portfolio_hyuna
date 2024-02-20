@@ -276,6 +276,12 @@
         object-fit: cover;
       }
 
+      @include mobile() {
+        width: 50%;
+        margin: auto;
+        filter: saturate(100%);
+      }
+
       @include tablet() {
         filter: saturate(100%);
       }

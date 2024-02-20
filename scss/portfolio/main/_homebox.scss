@@ -79,7 +79,8 @@
       }
 
       @include tablet() {
-        margin: 0 0 10% 0;
+        // margin: 0 0 10% 0;
+        margin: 0;
       }
 
       @include pc() {
@@ -94,9 +95,9 @@
         margin-top: 15px;
       }
 
-      @include tablet() {
-        margin: 20% auto;
-      }
+      // @include tablet() {
+      //   margin: 20% auto;
+      // }
     }
     @at-root .coverImgInner {
       width: 335px;
@@ -174,15 +175,15 @@
         display: none;
       }
       @include tablet() {
-        margin-top: 10%;
+        height: fit-content;
+        position: relative;
+        top: 11.924%;
+        margin-top: 0;
       }
     }
     @include mobile() {
       width: 100%;
       height: auto;
-    }
-
-    @include tablet() {
     }
 
     @include laptop() {
@@ -227,10 +228,15 @@
   }
 
   @include tablet() {
+    height: 88.5vh;
     padding: 3.907% 6.511%;
   }
 
   @include pc() {
     height: 87vh;
+  }
+
+  @include pcfull() {
+    height: 88vh;
   }
 } // --- #home

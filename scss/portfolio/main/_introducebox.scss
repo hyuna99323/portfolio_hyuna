@@ -6,6 +6,7 @@
 
   h2 {
     @include h2;
+    padding: 0;
   }
 
   // .about_inner
@@ -59,7 +60,7 @@
         background-size: 246px 300px;
 
         @include mobile() {
-          display: none;
+          margin: auto;
         }
 
         @include tablet() {
@@ -123,6 +124,10 @@
       }
       .profile h3 {
         margin-top: 28.573%;
+
+        @include mobile() {
+          margin-top: 10.257%;
+        }
 
         @include tablet() {
           margin-top: 15px;
