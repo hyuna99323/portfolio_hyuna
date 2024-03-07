@@ -532,6 +532,9 @@
         font-size: map-get($map: $font_size_m, $key: content1);
       }
     }
+    span {
+      font-size: map-get($map: $font_size, $key: content2)
+    }
     .detail {
       display: flex;
       gap: 36px;

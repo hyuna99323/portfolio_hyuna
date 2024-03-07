@@ -34,7 +34,7 @@
   width: 100%;
   height: 60px;
   line-height: 30px;
-  padding: 1.25% 7.813%;
+  padding: 1.25% 6.9445%;
   position: sticky;
   display: flex;
   top: 0;
@@ -1252,9 +1252,215 @@ h2 {
   }
 }
 
+.ediya_content {
+  height: auto;
+  padding: 92px 100px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ediya_intro {
+  display: flex;
+  gap: 88px;
+  /* --- .mockup */
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .ediya_intro {
+    height: auto;
+  }
+}
+
+.ediya_intro .mockup {
+  width: 58.519%;
+  height: auto;
+}
+
+.ediya_intro .mockup img {
+  width: 100%;
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .mockup img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .mockup {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .ediya_intro .mockup {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.ediya_intro .intro_txt {
+  width: 33.334%;
+}
+
+.ediya_intro .intro_txt h3 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt h3 {
+    font-size: 28px;
+  }
+}
+
+.ediya_intro .intro_txt .sub_txt {
+  font-size: 14px;
+  text-align: center;
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt .sub_txt {
+    font-size: 13px;
+  }
+}
+
+.ediya_intro .intro_txt span {
+  font-size: 12px;
+}
+
+.ediya_intro .intro_txt .detail {
+  display: flex;
+  gap: 36px;
+  margin-top: 13.89%;
+}
+
+.ediya_intro .intro_txt .detail .subtitle p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt .detail .subtitle p {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt .detail .subtitle {
+    width: 50px;
+  }
+}
+
+.ediya_intro .intro_txt .detail .intro_content p {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt .detail .intro_content p {
+    font-size: 13px;
+  }
+}
+
+.ediya_intro .intro_txt .detail .intro_content p a:hover {
+  color: #D71C02;
+  font-weight: 600;
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt .detail {
+    margin-top: 10.715%;
+    gap: 10.715%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .ediya_intro .intro_txt .detail {
+    width: 100%;
+  }
+}
+
+.ediya_intro .intro_txt .project_explanation {
+  width: 97.223%;
+  height: auto;
+  margin-top: 13.89%;
+}
+
+.ediya_intro .intro_txt .project_explanation p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt .project_explanation p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .ediya_intro .intro_txt .project_explanation p {
+    margin-top: 4.492%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt .project_explanation {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .ediya_intro .intro_txt .project_explanation {
+    display: contents;
+    align-items: end;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro .intro_txt {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .ediya_intro .intro_txt {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .ediya_intro {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  .ediya_intro {
+    flex-wrap: wrap-reverse;
+  }
+}
+
 .portfolio_content {
   margin-top: 2.5%;
   padding: 3.125% 7.813% 0;
+}
+
+.portfolio_content h2 {
+  padding: 0 0 92px 0;
 }
 
 .project_intro {
@@ -1302,6 +1508,10 @@ h2 {
   .project_intro .intro_txt .sub_txt {
     font-size: 13px;
   }
+}
+
+.project_intro .intro_txt span {
+  font-size: 12px;
 }
 
 .project_intro .intro_txt .detail {
@@ -3114,6 +3324,10 @@ h2 {
   .kikiproject_intro .intro_txt .sub_txt {
     font-size: 13px;
   }
+}
+
+.kikiproject_intro .intro_txt span {
+  font-size: 12px;
 }
 
 .kikiproject_intro .intro_txt .detail {
