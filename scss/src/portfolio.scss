@@ -21,6 +21,9 @@
 *{
   cursor: url(../../img/cursor.svg) 5 5, progress;
 }
+*::selection {
+  color: $color_orange;
+}
 
 /* #wrap - 전체 레이아웃 설정 */
 // #wrap - 전체 레이아웃 설정

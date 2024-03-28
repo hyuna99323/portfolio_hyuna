@@ -19,6 +19,10 @@
   cursor: url(../../img/cursor.svg) 5 5, progress;
 }
 
+*::selection {
+  color: #FB8145;
+}
+
 /* #wrap - 전체 레이아웃 설정 */
 #wrap {
   width: 100%;
